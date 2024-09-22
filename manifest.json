@@ -36,7 +36,7 @@
         "*://*/*.ipynb*",
         "*://*/lab*"
       ],
-      "js": ["content.js","libs/jquery-1.11.0.min.js"]
+      "js": ["libs/jquery-1.11.0.min.js","content.js","wordcloudmaking.js"]
 		}
 	]
 }

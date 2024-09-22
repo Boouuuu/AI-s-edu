@@ -1,6 +1,11 @@
 import WordCloud from 'wordcloud';
 
-document.getElementById('generate-wordcloud').addEventListener('click', () => {
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM fully loaded and parsed');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('generate-wordcloud').addEventListener('click', () => {
 
     const generateButton = document.getElementById('generate-wordcloud');
     generateButton.innerText = '正在生成词云...'; // 设置按钮文本为加载状态
@@ -9,8 +14,14 @@ document.getElementById('generate-wordcloud').addEventListener('click', () => {
   chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
     chrome.tabs.sendMessage(tabs[0].id, { action: 'getCode' }, response => {
       const code = response.code;
-      const words = processCodeToWordList(code); // 处理代码为词列表
+      // const words = processCodeToWordList(code); // 处理代码为词列表
+      const words = [
+        ['hello', 12],
+        ['world', 10],
+        ['JavaScript', 14],
+      ];
       drawWordCloud(words); // 生成词云图
+      });
     });
   });
 });
