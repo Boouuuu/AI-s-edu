@@ -1,0 +1,22 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #wordcloud {
+    border: 1px solid #ccc;
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Plugin</title>
+    <style>
+        /* CSS 样式 */
+        .popup-content {
+            display: none; /* 默认隐藏 */
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-content" id="popup-content">
+        <h2>Welcome to My Plugin!</h2>
+        <p>Here is some introduction about the plugin.</p>
+    </div>
+    <script>
+        // JavaScript 代码
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查是否是第一次打开插件的标志位
+            var isFirstRun = localStorage.getItem('isFirstRun');
+
+            // 如果是第一次打开插件，则显示介绍弹窗
+            if (!isFirstRun) {
+                // 获取弹窗内容元素
+                var popupContent = document.getElementById('popup-content');
+                // 显示弹窗
+                popupContent.style.display = 'block';
+
+                // 更新标志位，表示插件已经被打开过了
+                localStorage.setItem('isFirstRun', true);
+            }
+        });
+    </script>
+</body>
+</html>
