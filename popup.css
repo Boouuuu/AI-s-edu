@@ -11,7 +11,7 @@ body {
   height: 500px;
   background-color: rgb(145, 219, 164); 
   border: 8px solid #268cf1;/*把边框改粗了一点*/
-  background-image: url(newbg.jpg);/*更换了背景图*/
+  background-image: url(./image/newbg.jpg);/*更换了背景图*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; /* 将背景图像在元素中垂直和水平方向上居中对齐 */

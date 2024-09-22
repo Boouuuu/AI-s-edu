@@ -83,15 +83,6 @@ function sendUserInput() {
   );
 }
 
-// window.onload = function () {
-//   var copyButton = document.getElementById("copyButton");
-  
-//   if (copyButton) {
-//     copyButton.addEventListener("click", copySelectedText);
-//   } else {
-//     console.error("copyButton not found in the DOM");
-//   }
-// };
 
 
 
@@ -259,12 +250,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// popup.js
-document.getElementById("wordcloud-btn").addEventListener("click", () => {
-  // 跳转到 wordcloud.html
-  window.location.href = "wordcloud.html";
+$(document).ready(function() {
+  $('body').fadeIn("slow");
 });
 
-
-
-
+$('#wordcloud-btn').on('click', function(e) {
+  e.preventDefault(); // 防止默认的立即跳转
+  $('body').fadeOut('slow', function() {
+      // 淡出完成后进行页面跳转
+      window.location.href = "wordcloud.html";
+  });
+});

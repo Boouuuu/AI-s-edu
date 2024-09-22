@@ -5,13 +5,15 @@
   "version": "1.0.0",
   "description": "Integrates Chatgpt with Google search.",
   "background": {
-    "service_worker": "service-worker.js"
+    "service_worker": "service-worker.js",
+    "type": "module"
   },
   "action": {
     "default_title": "AUTOGPT-3.5 <> Google"
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self';"
+    
   },
   "permissions": ["storage","activeTab", "clipboardWrite","sidePanel", "tabs"],
   "options_page": "option.html",
@@ -25,10 +27,10 @@
     }
   },
   "icons": {
-    	   "16": "/robot.png",
-            "32": "/robot.png",
-            "48": "/robot.png",
-            "128": "/robot.png"
+    	   "16": "./image/robot.png",
+            "32": "./image/robot.png",
+            "48": "./image/robot.png",
+            "128": "./image/robot.png"
   },
   "content_scripts": [
 	{

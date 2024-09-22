@@ -54,7 +54,7 @@ body {
   background-color: rgb(145, 219, 164);
   border: 6px solid rgb(145, 219, 164);
   /*把边框改粗了一点*/
-  background-image: url(newbg.jpg);
+  background-image: url(image/newbg.jpg);
   /*更换了背景图*/
   background-repeat: no-repeat;
   background-size: cover;
