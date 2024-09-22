@@ -3,7 +3,8 @@
 <html>
   <head>
     <title>Word Cloud</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <script src="libs/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="worcloud_style.css">
   </head>
   <body>
@@ -12,7 +13,43 @@
     <canvas id="wordcloud" width="300" height="480"></canvas>
 
 
+    <script>
+      function generateWordCloud(words) {
+        // 生成词云
+        var wordcloud = $("#wordcloud");
+        wordcloud.wordcloud({
+          list: words,
+          gridSize: 10,
+          shape: "circle",
+          backgroundColor: "white",
+          color: "black",
+          minSize: 10,
+          maxSize: 100,
+          shuffle: true,
+          rotateRatio: 0.5,
+          drawOutOfBound: true,
+          rotationSteps: 4,
+          rotationAngles: [0, 90, 90, 90],
+          onWordClick: function (word) {
+            console.log("Clicked on word: " + word);
+          }
+        });
+      }
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#generate-wordcloud").click(function () {
+          // 模拟生成词云数据
+          var words = ["Hello", "World", "Word", "Cloud", "JavaScript", "HTML", "CSS"];
+          generateWordCloud(words);
+        });
+      });
+    </script>
+    <button id="lastpage">上一步</button>
+    <button id="nextpage">下一步</button>
+
     <script src="libs/wordcloud2.js"></script>
-    <script type="module" src="wordcloud.js"></script> <!-- 将此设置为模块 -->
+    <script type="module" src="wordcloudmaking.js"></script> <!-- 将此设置为模块 -->
   </body>
 </html>
