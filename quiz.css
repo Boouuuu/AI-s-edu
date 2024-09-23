@@ -1,0 +1,83 @@
+
+
+body, html {  
+    height: 100%; /* 确保页面有完整的高度 */  
+    margin: 0;  
+    padding: 0;  
+    position: relative; /* 为绝对定位的子元素提供参照 */  
+    display: flex; /* 使用Flexbox布局 */  
+}  
+ 
+
+.container {  
+    width: 100%;  
+    height: 100%;  
+    display: flex; /* 容器内也使用Flexbox */  
+}  
+  
+.content-area {  
+    flex: 12; /* 占据页面宽度的六分之五 */  
+    display: flex;  
+    flex-direction: column; /* 垂直排列子元素 */  
+    overflow: hidden; /* 防止内容溢出容器 */  
+}  
+
+.title-container {  
+    height: 33.33%; /* 页面高度的三分之一 */  
+    width: 100%; /* 页面宽度的六分之五 */  
+    right: 1; /* 贴近页面右侧 */  
+    overflow: auto; /* 允许内容超出时显示滚动条 */  
+    position: relative; /* 如果需要定位内部元素 */  
+    border: 1px solid #ccc; /* 可选：为盒子添加边框以便观察 */  
+}  
+  
+.scrollable-title {  
+    /* 这里不需要特定的样式，除非你想对标题的显示进行进一步的自定义 */  
+    padding: 10px; /* 可选：为标题添加内边距 */  
+}  
+  
+.title {  
+    /* 这里也不需要特定的样式，除非你想对<p>标签的显示进行进一步的自定义 */  
+    margin: 0; /* 移除默认的外边距 */  
+    white-space: pre-wrap; /* 保留空白符序列，并允许文本换行（虽然在这个例子中我们主要关注滚动条） */  
+    /*word-wrap: break-word; /* 如果需要，可以在长单词或URL处换行 */  
+}
+.option-box{
+     height: 16.66%; 
+     width: 100%; 
+     overflow: auto; 
+     border: 0px 
+     
+}
+
+.control-panel {  
+    flex: 1; /* 占据页面宽度的六分之一 */  
+    display: flex;  
+    flex-direction: column; /* 垂直排列子元素 */  
+    justify-content: space-between; /* 在垂直方向上均匀分布子元素 */  
+    align-items: center; /* 水平居中子元素 */  
+    padding: 20px; /* 可选的内边距 */  
+    border-left: 5px solid #613aa1; /* 可选的左侧边框 */  
+}  
+  
+.timer, .question-info{
+    flex:0.5
+}
+.favorite-button, .button-group {  
+    flex: 1px; /* 每个元素之间的间距 */  
+}  
+  
+.button-group button {  
+    margin-top: 10px; /* 按钮之间的垂直间距 */  
+}  
+  
+.favorite-button {  
+    border: none;  
+    background-color: transparent;  
+    cursor: pointer;  
+    padding: 10px; /* 可选的内边距 */  
+}  
+  
+.favorite-button[data-favorite="true"] i {  
+    color: gold; /* 点击后填充金色 */  
+}  

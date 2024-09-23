@@ -1,0 +1,84 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Quiz Layout</title>  
+<link rel="stylesheet" href="quiz.css">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>  
+<body>  
+<div class="container">  
+    <div class="content-area">
+        <div class="title-container">  
+            <div class="scrollable-title">  
+                <p class="title">
+                    ccccccccccccccccccccccccc
+                    vvvvvvvvvvv
+                    vbjkkkkkkkkkkkkkkkkkkkk
+                    来查看全部内容。</p>  
+            </div>  
+        </div>
+        <!-- ... 其他元素如计时器和提交按钮 ... -->  
+        
+        <div class="option-box">
+            <label>  
+                <input type="radio" name="question" value="A">  
+                <span class="scrollable-content">  
+                    这是一个非常长的选项A的文本内容，它可能会超出设定的盒子宽度和高度，  
+                    因此用户需要滚动来查看全部内容。这里保留了文本的原始格式。  
+                </span>  
+            </label>  
+        </div>  
+        <div class="option-box">
+            <label>  
+                <input type="radio" name="question" value="B">  
+                <span class="scrollable-content">  
+                    选项B的文本内容，也可能很长，需要滚动查看。  
+                </span>  
+            </label>  
+        </div>  
+        <div class="option-box">
+            <label>  
+                <input type="radio" name="question" value="C">  
+                <span class="scrollable-content">  
+                    选项C的文本，同样可能超出容器大小。  
+                </span>  
+            </label>  
+        </div>  
+        <div class="option-box">
+            <label>  
+                <input type="radio" name="question" value="D">  
+                <span class="scrollable-content">  
+                    最后，选项D的文本内容，也可能需要滚动来查看全部。  
+                </span>  
+            </label>  
+        </div>  
+
+
+
+
+    </div> 
+
+    
+
+    <div class="control-panel">  
+        <div class="timer">00:05:00</div>  
+        <div class="question-info">1/10</div>  
+        <button class="favorite-button" data-favorite="false">  
+            <i class="fas fa-star" style="color: #ebe1dc;"></i>  
+        </button>  
+        <div class="button-group">  
+            <button class="submit-button"> -提交- </button>  
+            <button class="prev-question">上一题</button>  
+            <button class="next-question">下一题</button>  
+        </div>  
+    </div>  
+
+    
+
+    <!-- 引入外部 JavaScript 文件 -->
+    <script src="quiz.js"></script>
+</div>  
+</body>  
+</html>
