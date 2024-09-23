@@ -1,8 +1,9 @@
-/* styles.css */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Microsoft Yahei', 'Tahoma', Arial, sans-serif;
     margin: 0;
     padding: 10px;
+    
   }
   
   h1 {
@@ -14,10 +15,145 @@ body {
     padding: 10px;
     margin-bottom: 20px;
     cursor: pointer;
+    
   }
   
   #wordcloud {
     border: 1px solid #ccc;
     margin-top: 20px;
   }
-  
+
+  /* styles.css */
+
+.titleContent > div {
+  margin: 20px;
+}
+
+.title {
+  height: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-left: 5px;
+  padding-left: 5px;
+  position: relative;
+  color: #000;
+  z-index: 0;
+}
+
+.title1 {
+  padding-left: 10px;
+}
+
+.title1:after {
+  content: " ";
+  width: 4px;
+  height: 20px;
+  background: #12a3f5;
+  position: absolute;
+  left: 0;
+  top: 6px;
+  border-radius: 2px;
+}
+.title8 {
+  border-radius: 16px;
+  border: 1px solid #e8e9fb;
+  box-shadow: 0 0 10px #e8e9fb;
+  text-align: center;
+  width: 80px;
+  color: #12a3f5;
+
+  &:before {
+      content: "";
+      width: 300%;
+      height: 2px;
+      background: #e8e9fb;
+      position: absolute;
+      top: 15px;
+      left: 100%;
+      background: linear-gradient(to right, #e8e9fb, rgba(182, 181, 181, 0));
+  }
+}
+.navbarjustify-content{
+  justify-content: space-between;
+} 
+
+/* .navbar-brand
+{
+  font-size: medium;
+  font-weight:bold;
+} */
+.custom-navbar {
+    height: 30px; /* 调整导航栏高度 */
+    font-family: Helvetica,Arial,"Microsoft YaHei",sans-serif;
+}
+
+.navbar-brand {
+    font-size: 16px; /* 调整字体大小 */
+    color: #333; /* 字体颜色 */
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #f9fbfc; /* 浅蓝色 */
+    background-color: rgb(3, 95, 175); /* 背景色变浅 */
+    transform: translateY(-3px); /* 轻微上浮效果 */
+    padding: 5px; /* 增加一些间距使效果更柔和 */
+    border-radius: 3px; /* 圆角 */
+}
+.form-control me-2{
+  width: 700px;
+}
+.Generate{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 垂直排列 */
+    height: 50vh;
+}
+
+#generateButton{
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  display: inline-block;
+  border-radius: 50px;
+  background: #00c9b7;
+  width: 180px;
+  height: 50px;
+  position: relative;
+  color: #fff;
+  font-size: 0.97em;
+  letter-spacing: 0.094em;
+  cursor: pointer;
+  box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2);
+  text-align: center;
+  margin: 0 auto;
+  transition: all 0.5s;
+  text-transform: uppercase;
+}
+#generateButton:hover {
+  transform: translateY(-1px); /* 轻微上浮效果 */
+  box-shadow: 0px 0px 0px 0px rgba(00,00,00,0.2);
+  padding: 5px; /* 增加一些间距使效果更柔和 */
+  border-radius: 50px;
+}
+.fa{
+  font: FontAwesome 5;
+  font-size: 15px;
+}
+.far{
+  font: FontAwesome 5;
+  font-size: 20px;
+  padding-top: 10%;
+  gap: 10px; /* 设置元素之间的间距为 10px */
+}
+
+#savebutton{
+  margin: 0 10px;
+}
+
+#SearchInput{
+  width: 200px;
+}

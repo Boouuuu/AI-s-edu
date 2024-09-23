@@ -4,52 +4,89 @@
   <head>
     <title>Word Cloud</title>
     <meta charset="UTF-8">
-    <script src="libs/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.net/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="libs/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="worcloud_style.css">
   </head>
   <body>
-    <h1>Word Cloud</h1>
-    <button id="generate-wordcloud">Generate Word Cloud</button>
-    <canvas id="wordcloud" width="300" height="480"></canvas>
 
+<div class="titleContent">
+  <div class="title title8" data-text="词云图">词云图</div>
+</div>
 
+    <button id="generate-wordcloud">生成词云图</button>
+    <canvas id="wordcloud" width="300" height="450"></canvas>
+
+    <script src="./libs/wordcloud2.js"></script>
     <script>
-      function generateWordCloud(words) {
-        // 生成词云
-        var wordcloud = $("#wordcloud");
-        wordcloud.wordcloud({
-          list: words,
-          gridSize: 10,
-          shape: "circle",
-          backgroundColor: "white",
-          color: "black",
-          minSize: 10,
-          maxSize: 100,
-          shuffle: true,
-          rotateRatio: 0.5,
-          drawOutOfBound: true,
-          rotationSteps: 4,
-          rotationAngles: [0, 90, 90, 90],
-          onWordClick: function (word) {
-            console.log("Clicked on word: " + word);
+      document.addEventListener('DOMContentLoaded', () => { 
+          document.getElementById('generate-wordcloud').addEventListener('click', () => { 
+              const generateButton = document.getElementById('generate-wordcloud');
+              generateButton.innerText = '正在生成词云...';  // 设置按钮文本为加载状态
+
+              // 发送消息到 content.js，获取 Jupyter Notebook 的代码
+              chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+                  chrome.tabs.sendMessage(tabs[0].id, { action: 'getCode' }, (response) => {
+                      if (response && response.code) {
+                          const code = response.code;
+                          const words = processCodeToWordList(code);  // 处理代码为词列表
+                          console.log("处理代码成功", words);
+                          drawWordCloud(words);  // 生成词云图
+                          generateButton.innerText = '生成词云';  // 恢复按钮文本为默认状态
+                      } else {
+                          console.error("获取代码失败");
+                          generateButton.innerText = '生成失败';
+                      }
+                  });
+              });
+          });
+      });
+
+      // 将代码转换为词频列表
+      function processCodeToWordList(code) {
+          const wordMap = new Map();
+          const words = code.match(/\b\w+\b/g); // 使用\b确保匹配的是完整的单词
+          if (words) {
+              words.forEach(word => {
+                  const lowerWord = word.toLowerCase();  // 统一为小写，避免重复单词区分
+                  if (lowerWord) {
+                      wordMap.set(lowerWord, (wordMap.get(lowerWord) || 0) + 1);
+                  }
+              });
           }
-        });
+          return Array.from(wordMap.entries());
+      }
+
+      // 定义词云生成函数
+      function drawWordCloud(wordArray) {
+          const canvas = document.getElementById('wordcloud'); // 获取canvas元素
+          const options = {
+              list: wordArray,
+              gridSize: Math.round(16 * canvas.width / 1024), // 设置网格大小
+              weightFactor: 1,
+              fontFamily: 'Times, serif',
+              color: 'random-dark', // 随机深色
+              rotateRatio: 0.5,
+              backgroundColor: '#f0f0f0', // 背景颜色
+              clearCanvas: true, // 清除之前的内容
+              origin: [canvas.width / 2, canvas.height / 2], // 中心位置
+              drawOutOfBound: false, // 不允许绘制超出边界
+          };
+
+          WordCloud(canvas, options); // 在canvas上生成词云
       }
     </script>
+    
 
-    <script>
-      $(document).ready(function () {
-        $("#generate-wordcloud").click(function () {
-          // 模拟生成词云数据
-          var words = ["Hello", "World", "Word", "Cloud", "JavaScript", "HTML", "CSS"];
-          generateWordCloud(words);
-        });
-      });
-    </script>
-    <button id="lastpage">上一步</button>
-    <button id="nextpage">下一步</button>
+    <ul class="pager">
+      <li class="previous" id="lastpage"><a href="#">&larr; 上一步</a></li>
+      <li class="next" id="nextpage"><a href="#">下一步 &rarr;</a></li>
+    </ul>
 
-    <script src="libs/wordcloud2.js"></script>
+    
     <script type="module" src="wordcloudmaking.js"></script> <!-- 将此设置为模块 -->
   </body>
 </html>

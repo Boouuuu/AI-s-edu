@@ -15,7 +15,7 @@
     "extension_pages": "script-src 'self'; object-src 'self';"
     
   },
-  "permissions": ["storage","activeTab", "clipboardWrite","sidePanel", "tabs"],
+  "permissions": ["storage","activeTab", "clipboardWrite","sidePanel", "tabs","http://localhost:8888/"],
   "options_page": "option.html",
 
   "commands": {
@@ -36,7 +36,9 @@
 	{
       "matches": [
         "*://*/*.ipynb*",
-        "*://*/lab*"
+        "*://*/lab*",
+        "http://localhost/*",
+        "http://localhost:8888/"
       ],
       "js": ["libs/jquery-1.11.0.min.js","content.js","wordcloudmaking.js"]
 		}

@@ -250,6 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
 $(document).ready(function() {
   $('body').fadeIn("slow");
 });

@@ -6,19 +6,28 @@ document.addEventListener("mouseup", function () {
   }
 });
 
-// 与jupyternotebook交互
-function getNotebookCode() {
-  let codeCells = document.querySelectorAll(".code_cell .input_area textarea");
-  let allCode = "";
-  codeCells.forEach(cell => {
-    allCode += cell.value + "\n";
+// 提取 Jupyter Notebook 中代码块的函数
+chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  debugger;
+  console.log("发送消息到 content.js");  // 检查是否发送消息
+  chrome.tabs.sendMessage(tabs[0].id, { action: 'getCode' }, (response) => {
+    console.log("收到 response: ", response);  // 检查是否收到响应
+    if (response && response.code) {
+      const code = response.code;
+      console.log("收到代码: ", code);  // 输出提取的代码
+      const words = processCodeToWordList(code);
+      drawWordCloud(words);
+    } else {
+      console.error("获取代码失败");
+    }
   });
-  return allCode;
-}
+});
 
-// 向插件的其他部分发送消息，传递代码
+
+// 监听来自插件的消息请求
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "getCode") {
-    sendResponse({ code: getNotebookCode() });
+    const notebookCode = getNotebookCode();
+    sendResponse({ code: notebookCode });  // 返回提取的代码
   }
 });
