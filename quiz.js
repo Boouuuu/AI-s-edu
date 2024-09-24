@@ -1,4 +1,200 @@
-document.addEventListener('DOMContentLoaded', function() {  
+/*let currentQuestionIndex = 0; // 当前题目的索引
+let selectedAnswers = {}; // 存储用户的选择
+let selectedQuestions; // 随机选择的题目列表
+
+// 加载 data.json 数据
+fetch('data.json')
+    .then(response => {
+        if (!response.ok) throw new Error('网络错误');
+        return response.json();
+    })
+    .then(quizData => {
+        // 随机选择10个题目
+        selectedQuestions = getRandomQuestions(quizData, 10);
+        fillQuestions(selectedQuestions);
+
+        // 绑定按钮事件
+        document.querySelector('.next-question').addEventListener('click', () => {
+            if (currentQuestionIndex < selectedQuestions.length - 1) {
+                currentQuestionIndex++;
+                fillQuestions(selectedQuestions);
+            }
+        });
+
+        document.querySelector('.prev-question').addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                fillQuestions(selectedQuestions);
+            }
+        });
+    })
+    .catch(error => console.error('加载数据失败:', error));
+
+// 随机选择题目函数
+function getRandomQuestions(data, num) {
+    const shuffled = data.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, num);
+}
+
+// 填充题目和选项
+function fillQuestions(questions) {
+    const titleContainer = document.querySelector('.title-container .scrollable-title p');
+    const optionBoxes = document.querySelectorAll('.options-box');
+
+    const question = questions[currentQuestionIndex]; // 根据当前索引选择问题
+    
+    titleContainer.textContent = question.题目; // 填充题目
+    const optionsString = question.选项;
+    const options = JSON.parse(optionsString.replace(/'/g, '"'));
+
+    optionBoxes.forEach((box, idx) => {
+        const span = box.querySelector('.scrollable-content');
+        span.textContent = options[idx] || ''; // 填充选项
+
+         options.forEach((option, idx) => {
+        const optionBox = document.createElement('div');
+        optionBox.classList.add('option-box');
+        optionBox.innerHTML = `
+            <label>
+                <input type="radio" name="question" value="${idx}"> 
+                <span class="scrollable-content">${option}</span>
+            </label>
+        `;
+        optionContainer.appendChild(optionBox);
+
+        // 保留单选框的状态
+        const radioInput = box.querySelector('input[type="radio"]');
+        radioInput.value = idx; // 设置单选框的值
+        radioInput.checked = selectedAnswers[currentQuestionIndex] == idx; // 保留用户的选择
+
+        // 为单选框添加事件监听器，保存选择
+        radioInput.addEventListener('change', () => {
+            selectedAnswers[currentQuestionIndex] = idx; // 存储用户选择
+        });
+    });
+}
+*/
+
+
+console.log('quiz.js已加载');
+
+let currentQuestionIndex = 0; // 当前题目的索引
+let selectedAnswers = {}; // 存储用户的选择
+let selectedQuestions; // 随机选择的题目列表
+
+// 加载 data.json 数据
+fetch('data.json')
+    .then(response => {
+        if (!response.ok) throw new Error('网络错误');
+        return response.json();
+    })
+    .then(quizData => {
+        // 随机选择10个题目
+        selectedQuestions = getRandomQuestions(quizData, 10);
+        fillQuestions(selectedQuestions);
+
+        // 绑定按钮事件
+        document.querySelector('.next-question').addEventListener('click', () => {
+            if (currentQuestionIndex < selectedQuestions.length - 1) {
+                currentQuestionIndex++;
+                fillQuestions(selectedQuestions);
+            }
+        });
+
+        document.querySelector('.prev-question').addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                fillQuestions(selectedQuestions);
+            }
+        });
+    })
+    .catch(error => console.error('加载数据失败:', error));
+
+// 随机选择题目函数
+function getRandomQuestions(data, num) {
+    const shuffled = data.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, num);
+}
+
+// 填充题目和选项
+function fillQuestions(questions) {
+    const titleContainer = document.querySelector('.title-container .scrollable-title p');
+    const optionContainer = document.querySelector('.options-box'); // 假设这是选项的父容器
+    const questionInfo = document.querySelector('.question-info'); // 获取题目信息容器
+    optionContainer.innerHTML = ''; // 清空之前的选项
+
+    const question = questions[currentQuestionIndex]; // 根据当前索引选择问题
+    
+    titleContainer.textContent = question.题目; // 填充题目
+    const optionsString = question.选项.replace(/‘|’/g, '"').replace(/'/g, '"');
+    const options = JSON.parse(optionsString);
+
+   // 更新题目信息
+   questionInfo.textContent = `${currentQuestionIndex + 1}/${questions.length}`; // 当前题目/总题数
+
+
+    options.forEach((option, idx) => {
+        const optionBox = document.createElement('div');
+        optionBox.classList.add('option-box');
+        optionBox.innerHTML = `
+            <label>
+                <input type="radio" name="question" value="${idx}"> 
+                <span class="scrollable-content">${option}</span>
+            </label>
+        `;
+        optionContainer.appendChild(optionBox);
+
+        // 保留单选框的状态
+        const radioInput = optionBox.querySelector('input[type="radio"]');
+        radioInput.checked = selectedAnswers[currentQuestionIndex] == idx; // 保留用户的选择
+
+        // 为单选框添加事件监听器，保存选择
+        radioInput.addEventListener('change', () => {
+            selectedAnswers[currentQuestionIndex] = idx; // 存储用户选择
+        });
+    });
+}
+
+let timer; // 定义计时器
+let timeLeft = 300; // 300秒（5分钟）
+
+function startTimer() {
+    timer = setInterval(() => {
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            alert("时间到！"); // 时间到时的提示
+            // 可以添加提交逻辑
+        } else {
+            timeLeft--;
+            updateTimerDisplay();
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay() {
+    const timerElement = document.querySelector('.timer');
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
+
+// 点击提交按钮时清除计时器
+document.querySelector('.submit-button').addEventListener('click', () => {
+    clearInterval(timer);
+    alert("提交成功！"); // 提交逻辑
+});
+
+// 启动计时器
+startTimer();
+
+
+
+
+
+
+
+
+ldocument.addEventListener('DOMContentLoaded', function() {  
     const title = document.querySelector('.title');  
     const titleWrapper = document.querySelector('.title-wrapper');  
     const toggleBtn = document.querySelector('.toggle-btn');  
@@ -20,51 +216,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// 假设你的JSON文件位于与HTML相同的目录中  
-const dataUrl = 'data.json';  
-  
-// 加载JSON文件  
-fetch(dataUrl)  
-    .then(response => response.json())  
-    .then(data => {  
-        // 假设data是JSON对象数组中的一个元素，这里我们直接处理单个对象  
-        const { 题目, 选项, 答案 } = data;  
-  
-        // 更新题目标题  
-        document.getElementById('question-title').textContent = 题目;  
-  
-        // 清除之前的选项  
-        const optionsContainer = document.getElementById('options-container');  
-        optionsContainer.innerHTML = '';  
-  
-        // 动态创建选项  
-        const options = JSON.parse(选项); // 将字符串转换为数组  
-        options.forEach((optionText, index) => {  
-            const optionBox = document.createElement('div');  
-            optionBox.classList.add('option-box');  
-  
-            const label = document.createElement('label');  
-            const radio = document.createElement('input');  
-            radio.type = 'radio';  
-            radio.name = 'question';  
-            radio.value = String.fromCharCode(65 + index); // 使用A, B, C, D作为值  
-  
-            const span = document.createElement('span');  
-            span.classList.add('scrollable-content');  
-            span.textContent = optionText;  
-  
-            label.appendChild(radio);  
-            label.appendChild(span);  
-  
-            optionBox.appendChild(label);  
-            optionsContainer.appendChild(optionBox);  
-        });  
-  
-        // （可选）标记正确答案，这里以改变背景色为例  
-        const correctOption = document.querySelector(`input[value='${答案}']`);  
-        if (correctOption) {  
-            const label = correctOption.closest('label');  
-            label.style.backgroundColor = 'lightgreen';  
-        }  
-    })  
-    .catch(error => console.error('Error loading data:', error));

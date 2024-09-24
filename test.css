@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden; /* 禁止滚动条 */
 }
 /*将所有元素的边距（margin）和内边距（padding）重置为0，以确保页面布局的一致性*/
 /* 白色主题 */

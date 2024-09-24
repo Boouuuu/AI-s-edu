@@ -16,8 +16,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     return response.text(); // 获取 HTML 文本  
                 })  
                 .then(html => {  
-                    // 将加载的 HTML 内容设置为 contentBox 的 innerHTML  
-                    contentBox.innerHTML = html;  
+                    contentBox.innerHTML = html; // 设置加载的HTML内容
+
+                    const script = document.createElement('script');  
+                    script.src = 'quiz.js'; // 加载quiz.js  
+                    script.onload = () => {  
+                        console.log('quiz.js加载成功'); // 成功加载的提示  
+                    };  
+                    script.onerror = () => {  
+                        console.error('加载quiz.js失败'); // 加载失败的提示  
+                    };  
+                    contentBox.appendChild(script); // 将脚本添加到contentBox中  
                 })  
                 .catch(error => {  
                     console.error('加载内容时发生错误:', error);  
