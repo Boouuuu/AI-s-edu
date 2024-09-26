@@ -6,24 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your GPT to use</title>
   <link rel="stylesheet" type="text/css" href="sidebar.css">
-  <script src="libs/jquery-1.11.0.min.js"></script>
-  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="libs/jquery-1.7.1.min.js"></script>
+<script src="./libs/jquery.min.js"></script>
+<link rel="stylesheet" href="libs/bootstrap.min.css">
+<link rel="stylesheet" href="libs/bootstrap.min_3.4.1.css">
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
     integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="libs/css2.css" rel="stylesheet">
 </head>
 
 
 
 <body>
+  <div id="div2">
 
+  <div id="loading-container">
+    <ul><li><a href="sidepanel.html">AI对话</a></li>
+    <li><a href="Summary.html">知识回顾</a></li>
+    <li><a href="">课后小测</a></li>
+  </div>
+  
+</div>
+  <script>
+    $(function(){
+      var $window=$(window);
+      var $nav=$('#loading-container');
+      var navTop=$nav.offset().top;
+      var $div2=$('#div2');
+
+      $window.scroll(function(){
+        var scrollTop=$(document).scrollTop();
+        if(scrollTop>=navTop){
+          $nav.addClass('fixed');
+          $div2.addClass('fixed');
+        }else{
+          $nav.removeClass('fixed');
+          $div2.removeClass('fixed');
+        };
+      });
+    });
+  </script>
+  
   <div id="chatbox">
-    <button id="wordcloud-btn">Go to Word Cloud</button>
+    <button id="gotoSummary">Go to Summary</button>
     <div id="logo">
       <img src="./image/robot.png" alt="GPT Logo">
       <h1><strong>智能Jupyter-Dog</strong></h1>
     </div>
-    <!-- <div id="api-key-note"><strong>Make sure to put your OPENAI API Key in the Extension's Options Tab.</strong></div> -->
+    
+
+    
     <div id="api-key-note" role="alert">
       <a href="option.html" class="alert-link" target="_blank"><strong style="font-weight:1000; font-size: small; color:
           black">请在此输入您的OPENAI API后使用</strong></a>

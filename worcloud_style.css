@@ -2,7 +2,7 @@
 body {
     font-family: 'Microsoft Yahei', 'Tahoma', Arial, sans-serif;
     margin: 0;
-    padding: 10px;
+    padding: 5px;
     
   }
   
@@ -18,12 +18,12 @@ body {
     
   }
   
-  #wordcloud {
+  #main {
     border: 1px solid #ccc;
-    margin-top: 20px;
+    margin-top: 10px;
+    height: 500px;
   }
 
-  /* styles.css */
 
 .titleContent > div {
   margin: 20px;
@@ -73,17 +73,16 @@ body {
       background: linear-gradient(to right, #e8e9fb, rgba(182, 181, 181, 0));
   }
 }
+
 .navbarjustify-content{
   justify-content: space-between;
+  display: flex;
+  align-items: center;
 } 
 
-/* .navbar-brand
-{
-  font-size: medium;
-  font-weight:bold;
-} */
+
 .custom-navbar {
-    height: 30px; /* 调整导航栏高度 */
+    height: 25px; /* 调整导航栏高度 */
     font-family: Helvetica,Arial,"Microsoft YaHei",sans-serif;
 }
 
@@ -95,7 +94,7 @@ body {
 
 .navbar-brand:hover {
     color: #f9fbfc; /* 浅蓝色 */
-    background-color: rgb(3, 95, 175); /* 背景色变浅 */
+    background-color:#009282; /* 背景色变浅 */
     transform: translateY(-3px); /* 轻微上浮效果 */
     padding: 5px; /* 增加一些间距使效果更柔和 */
     border-radius: 3px; /* 圆角 */
@@ -103,28 +102,83 @@ body {
 .form-control me-2{
   width: 700px;
 }
+.navbar.bg-body-tertiary {
+  margin-top: 0; /* 确保没有额外的顶部外边距 */
+  margin-bottom: 0; /* 确保没有额外的底部外边距 */;
+}
 .Generate{
+  height: 80px;
   display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; /* 垂直排列 */
-    height: 50vh;
+    background-color: #f0f0f0; /* 浅灰色背景 */
+    position: relative; /* 为了分割线的位置 */
+}
+.Generate::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px; /* 分割线的高度 */
+  background-color:  #00c9b7; /* 分割线的颜色 */
+  position: absolute;
+  bottom: -2px; /* 分割线与按钮之间的距离 */
+  left: 0;
+}
+.pager{
+  bottom: 0px;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end; /* 右对齐 */
+    align-items: center;
+    background-color: #f0f0f0; /* 浅灰色背景 */
+    position: relative; /* 为了分割线的位置 */
+    padding: 10px 40px; /* 去掉内边距 */
+}
+.pager li {
+  margin-left: 100px; /* 可选：列表项之间的间距 */
+}
+.pager2{
+  bottom: 0px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between; /* 使两个 li 分开 */
+    align-items: center;
+    background-color: #f0f0f0; /* 浅灰色背景 */
+    position: relative; /* 为了分割线的位置 */
+    padding: 10px 40px; 
+}
+.pager2 li {
+  list-style: none; /* 去掉默认列表样式 */
+}
+.pager3{
+  bottom: 0px;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start; /* 左对齐 */
+    align-items: center;
+    background-color: #f0f0f0; /* 浅灰色背景 */
+    position: relative; /* 为了分割线的位置 */
+    padding: 10px 40px; /* 去掉内边距 */
+}
+.pager3 li {
+  margin-left: 100px; /* 可选：列表项之间的间距 */
 }
 
-#generateButton{
+#generateSummary{
   padding: 0;
   box-sizing: border-box;
   border: 0;
-  font: inherit;
+  font: Microsoft YaHei;
   vertical-align: baseline;
-  display: inline-block;
+  /* display: inline-block; */
   border-radius: 50px;
   background: #00c9b7;
-  width: 180px;
+  width: 120px;
   height: 50px;
   position: relative;
   color: #fff;
-  font-size: 0.97em;
+  font-size: 1.2em;
   letter-spacing: 0.094em;
   cursor: pointer;
   box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2);
@@ -133,15 +187,46 @@ body {
   transition: all 0.5s;
   text-transform: uppercase;
 }
-#generateButton:hover {
+#generateSummary:hover {
   transform: translateY(-1px); /* 轻微上浮效果 */
   box-shadow: 0px 0px 0px 0px rgba(00,00,00,0.2);
   padding: 5px; /* 增加一些间距使效果更柔和 */
   border-radius: 50px;
 }
+
+
+#generate-wordcloud{
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  display: inline-block;
+  border-radius: 50px;
+  background: #00c9b7;
+  width: 120px;
+  height: 50px;
+  position: relative;
+  color: #fff;
+  font-size: 1.2em;
+  letter-spacing: 0.094em;
+  cursor: pointer;
+  box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2);
+  text-align: center;
+  margin: 0 auto;
+  transition: all 0.5s;
+  text-transform: uppercase;
+}
+#generate-wordcloud:hover {
+  transform: translateY(-1px); /* 轻微上浮效果 */
+  box-shadow: 0px 0px 0px 0px rgba(00,00,00,0.2);
+  padding: 5px; /* 增加一些间距使效果更柔和 */
+  border-radius: 50px;
+}
+
 .fa{
   font: FontAwesome 5;
-  font-size: 15px;
+  font-size: 18px;
 }
 .far{
   font: FontAwesome 5;
@@ -150,10 +235,38 @@ body {
   gap: 10px; /* 设置元素之间的间距为 10px */
 }
 
-#savebutton{
-  margin: 0 10px;
+
+.savephotoButton-container { /* 确保给按钮一个父容器 */
+  display: flex;
+  justify-content: flex-end; /* 使内容靠右对齐 */
+  margin: 0 10px; /* 可以选择性添加外边距 */
 }
 
+#savebutton{
+  margin: 0 10px;
+  border: 1px solid rgb(25, 135, 84); /* 设置边框颜色和宽度 */
+  border-radius: 5px; /* 可选：圆角边框 */
+  /* padding: 10px; 可选：内边距 */
+  background-color: transparent; /* 可选：背景色 */
+  color: rgb(25, 135, 84); /* 可选：文本颜色 */
+  cursor: pointer; /* 可选：鼠标样式 */
+  transition: all 0.3s; /* 可选：过渡效果 */
+}
+#savebutton:hover {
+  background-color: rgba(25, 135, 84, 0.3); /* 可选：悬停时的背景色 */
+}
 #SearchInput{
   width: 200px;
+}
+
+#summary-container {
+  text-align: left; /* 左对齐 */
+  margin: 20px auto; /* 上下各留20px的空间 */
+  max-width: 800px; /* 最大宽度，确保内容不超出 */
+  min-height:300px;
+  line-height: 1.6; /* 行高，增加可读性 */
+  padding: 10px; /* 内边距，增加可读性 */
+  border: 1px solid #ccc; /* 可选：边框 */
+  border-radius: 5px; /* 可选：圆角 */
+  background-color: #f9f9f9; /* 可选：背景色 */
 }

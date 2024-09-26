@@ -9,14 +9,15 @@
     "type": "module"
   },
   "action": {
-    "default_title": "AUTOGPT-3.5 <> Google"
+    "default_title": "AI's edu"
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self';"
     
   },
-  "permissions": ["storage","activeTab", "clipboardWrite","sidePanel", "tabs","http://localhost:8888/"],
+  "permissions": ["storage","activeTab", "clipboardWrite","sidePanel", "tabs"],
   "options_page": "option.html",
+  
 
   "commands": {
     "_execute_action": {
@@ -35,12 +36,10 @@
   "content_scripts": [
 	{
       "matches": [
-        "*://*/*.ipynb*",
-        "*://*/lab*",
-        "http://localhost/*",
-        "http://localhost:8888/"
+        "*://*/*",
+         "<all_urls>"
       ],
-      "js": ["libs/jquery-1.11.0.min.js","content.js","wordcloudmaking.js"]
+      "js": ["content.js","Summary.js","wordcloudmaking.js","service-worker.js"]
 		}
 	]
 }

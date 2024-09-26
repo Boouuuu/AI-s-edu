@@ -54,6 +54,8 @@ function sendUserInput() {
     (response) => {
       // 这段代码使用 `chrome.runtime.sendMessage` 方法向浏览器扩展发送一个包含用户输入消息和指令的对象。指令是 "generate_text"，表示需要生成一段 AI 文本。
       // Display the AI's response word by word
+
+      
       let words = response.data.split(' ');
       let aiMessageElement = document.createElement('p');
       aiMessageElement.classList.add('message', 'aiMessage');
@@ -255,10 +257,10 @@ $(document).ready(function() {
   $('body').fadeIn("slow");
 });
 
-$('#wordcloud-btn').on('click', function(e) {
+$('#gotoSummary').on('click', function(e) {
   e.preventDefault(); // 防止默认的立即跳转
   $('body').fadeOut('slow', function() {
       // 淡出完成后进行页面跳转
-      window.location.href = "wordcloud.html";
+      window.location.href = "Summary.html";
   });
 });
