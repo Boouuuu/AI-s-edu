@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-i3zhc9EAuNKSxyPY618T483GlGSIJ8c1h/1W4GV65jk='">
   <title>Your GPT to use</title>
   <link rel="stylesheet" type="text/css" href="sidebar.css">
   <script src="libs/jquery-1.7.1.min.js"></script>
-<script src="./libs/jquery.min.js"></script>
-<link rel="stylesheet" href="libs/bootstrap.min.css">
-<link rel="stylesheet" href="libs/bootstrap.min_3.4.1.css">
+  <script src="./libs/jquery.min.js"></script>
+  <link rel="stylesheet" href="libs/bootstrap.min.css">
+  <link rel="stylesheet" href="libs/bootstrap.min_3.4.1.css">
+  <script src="./libs/marked.min.js"></script>
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
     integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <link href="libs/css2.css" rel="stylesheet">
@@ -20,45 +22,46 @@
 <body>
   <div id="div2">
 
-  <div id="loading-container">
-    <ul><li><a href="sidepanel.html">AI对话</a></li>
-    <li><a href="Summary.html">知识回顾</a></li>
-    <li><a href="">课后小测</a></li>
-  </div>
-  
-</div>
-  <script>
-    $(function(){
-      var $window=$(window);
-      var $nav=$('#loading-container');
-      var navTop=$nav.offset().top;
-      var $div2=$('#div2');
+    <div id="loading-container">
+      <ul>
+        <li><a href="sidepanel.html">AI对话</a></li>
+        <li><a href="Summary.html">知识回顾</a></li>
+        <li><a href="">课后小测</a></li>
+    </div>
 
-      $window.scroll(function(){
-        var scrollTop=$(document).scrollTop();
-        if(scrollTop>=navTop){
+  </div>
+  <script>
+    $(function () {
+      var $window = $(window);
+      var $nav = $('#loading-container');
+      var navTop = $nav.offset().top;
+      var $div2 = $('#div2');
+
+      $window.scroll(function () {
+        var scrollTop = $(document).scrollTop();
+        if (scrollTop >= navTop) {
           $nav.addClass('fixed');
           $div2.addClass('fixed');
-        }else{
+        } else {
           $nav.removeClass('fixed');
           $div2.removeClass('fixed');
         };
       });
     });
   </script>
-  
+
   <div id="chatbox">
     <button id="gotoSummary">Go to Summary</button>
     <div id="logo">
       <img src="./image/robot.png" alt="GPT Logo">
       <h1><strong>智能Jupyter-Dog</strong></h1>
     </div>
-    
 
-    
+
+
     <div id="api-key-note" role="alert">
       <a href="option.html" class="alert-link" target="_blank"><strong style="font-weight:1000; font-size: small; color:
-          black">请在此输入您的OPENAI API后使用</strong></a>
+          black"></strong></a>
     </div>
 
 
@@ -73,31 +76,29 @@
 
       <div class="btn-toolbar" role="toolbar" aria-label="Tool">
         <div class="btn-group" id="button-container" role="group" aria-label="Tool">
-  
-          <button id="information" class="btn btn-default"><span
-            class="glyphicon glyphicon-duplicate"></span>
+
+          <button id="information" class="btn btn-default"><span class="glyphicon glyphicon-duplicate"></span>
           </button>
-  
+
           <button id="changesize" class="btn btn-default">
             <span class="glyphicon glyphicon-text-size"></span>
           </button>
           <button id="submit_picture" class="btn btn-default" btn-lg active type="picture"><span
-            class="glyphicon glyphicon-picture"></span>
+              class="glyphicon glyphicon-picture"></span>
             <!-- 未实现 -->
           </button>
-          <button id="Copy" class="btn btn-default"><span
-              class="glyphicon glyphicon-copy"></span>
-            </button>
+          <button id="Copy" class="btn btn-default"><span class="glyphicon glyphicon-copy"></span>
+          </button>
           <button id="retry" type="button" class="btn btn-default">
             <span class="glyphicon glyphicon-repeat"></span>
-         <!-- 未实现 -->
+            <!-- 未实现 -->
           </button>
-  
+
           <button id="clear-button" type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-refresh" ></span>
-          <!-- 未实现 -->
+            <span class="glyphicon glyphicon-refresh"></span>
+            <!-- 未实现 -->
           </button>
-          
+
           <select id="search-select" name="search-select" value="Choose" class="styled-select">
             <option value="explain" id="explain">解释代码</option>
             <option value="expand" id="expand">扩写代码</option>
@@ -105,7 +106,7 @@
             <option value="check" id="check">检查语法</option>
             <option value="optimization" id="optimization">优化代码</option>
             <option value="search" selected="selected">更多功能</option>
-        </select>
+          </select>
         </div>
       </div>
       <!--实现文本框与按钮的结合-->
@@ -134,7 +135,7 @@
   <div id="changesizetip"></div>
   <div id="clear-buttontip"></div>
   <div id="submit_picturetip"></div>
-  
+
 
   <div id="bottomlogo">
     <div id="authored-by">由华南师范大学创建</div>
