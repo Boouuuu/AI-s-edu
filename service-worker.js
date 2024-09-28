@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
+const API_ENDPOINT = 'https://agentapi.baidu.com/assistant/getAnswer';  
+const APP_ID = 'pIbemxB5mjF1LZTCPdDXfCgLLydbhltb'; // 替换为实际appId  
+const SECRET_KEY = 'ngqDuVcVQtK9ScEldSdcueWMlTHJDOuH'; // 替换为实际secretKey  
 const JUYPTER_ORIGIN = 'https://8888/';
 // Allows users to open the side panel by clicking on the action toolbar icon
 chrome.sidePanel
@@ -30,37 +32,41 @@ chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
 
 
 let conversationHistory = [];
-
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.message === 'generate_text') {
     chrome.storage.local.get(['openai_key'], function (result) {
       console.log(result.openai_key);
       const openai_key = result.openai_key;
 
-      conversationHistory.push({ role: 'user', content: request.userInput });
+      conversationHistory.push({ role: 'user', content: request.UserInput });
 
-      fetch('https://api.openai.com/v1/chat/completions', {
+      fetch(`${API_ENDPOINT}?appId=${APP_ID}&secretKey=${SECRET_KEY}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${openai_key}`,
         },
         body: JSON.stringify({
-          model: 'gpt-3.5-turbo',
-          messages: conversationHistory,
-          max_tokens: 1000,
-          temperature: 0.3,
-          user: 'unique-user-id', // Replace with a unique identifier for your end-user
+          message: {  
+            content: {  
+              type: 'text',  
+              value: {  
+                showText: request.UserInput  
+              }  
+            }  
+          },  
+          source: APP_ID, // 使用实际的appId作为source  
+          from: 'openapi',  
+          openId: '123' // 替换为实际openId   // Replace with a unique identifier for your end-user
         }),
       })
         .then((response) => response.json())
-        .then((data) => {
+        .then((response) => {
           // Add the AI's message to the conversation history
           conversationHistory.push({
             role: 'assistant',
-            content: data.choices[0].message.content,
+            content: response.data.content[0].data,
           });
-          sendResponse({ data: data.choices[0].message.content });
+          sendResponse({ data: response.data.content[0].data });
         })
         .catch((error) => console.error('Error:', error));
     });

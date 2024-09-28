@@ -19,12 +19,12 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           messages: conversationHistory,
           max_tokens: 1000,
           temperature: 0.3,
-          user: 'unique-user-id', // Replace with a unique identifier for your end-user
+          user: 'unique-user-id', 
         }),
       })
         .then((response) => response.json())
         .then((data) => {
-          // Add the AI's message to the conversation history
+         
           conversationHistory.push({
             role: 'assistant',
             content: data.choices[0].message.content,
@@ -33,7 +33,16 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         })
         .catch((error) => console.error('Error:', error));
     });
-    // Must return true to indicate that the response is sent asynchronously
+    
     return true;
   }
+
+  if (request.message === 'getCodeSnippets') {
+    const snippets = getCodeSnippets();
+    console.log("code have got!")
+    sendResponse({ codeSnippets: snippets });
+  }
 });
+
+
+

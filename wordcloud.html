@@ -4,52 +4,58 @@
   <head>
     <title>Word Cloud</title>
     <meta charset="UTF-8">
-    <script src="libs/jquery-1.11.0.min.js"></script>
+
+
     <link rel="stylesheet" href="worcloud_style.css">
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap.min_5.1.0.css">
+    <link rel="stylesheet" href="libs/css2.css">
+<script src="./libs/jquery-3.7.1.min.js"></script>
+<script src="./libs/jquery.min.js"></script>
+<script src="./libs/vue@2.js"></script> 
+<script src="libs/echarts.js"></script>
+<script src="./libs/echarts.min.js"></script>
+<script src="./libs/echarts-wordcloud.min.js"></script> 
+<script src="./libs/html2canvas.min.js"></script>
+
+
+
+<link rel="stylesheet" href="worcloud_style.css">
+<link rel="stylesheet" href="./libs/font-awesome/css/all.min.css">
+
   </head>
   <body>
-    <h1>Word Cloud</h1>
-    <button id="generate-wordcloud">Generate Word Cloud</button>
-    <canvas id="wordcloud" width="300" height="480"></canvas>
+
+<!-- <div class="titleContent">
+  <div class="title title8" data-text="词云图">词云图</div>
+</div> -->
+
+<div class="Generate">
+      
+  <button id="generate-wordcloud">
+      <i class="fa fa-rocket" aria-hidden="true"></i>
+  生成词云图</button>
+  
 
 
-    <script>
-      function generateWordCloud(words) {
-        // 生成词云
-        var wordcloud = $("#wordcloud");
-        wordcloud.wordcloud({
-          list: words,
-          gridSize: 10,
-          shape: "circle",
-          backgroundColor: "white",
-          color: "black",
-          minSize: 10,
-          maxSize: 100,
-          shuffle: true,
-          rotateRatio: 0.5,
-          drawOutOfBound: true,
-          rotationSteps: 4,
-          rotationAngles: [0, 90, 90, 90],
-          onWordClick: function (word) {
-            console.log("Clicked on word: " + word);
-          }
-        });
-      }
-    </script>
+</div>
 
-    <script>
-      $(document).ready(function () {
-        $("#generate-wordcloud").click(function () {
-          // 模拟生成词云数据
-          var words = ["Hello", "World", "Word", "Cloud", "JavaScript", "HTML", "CSS"];
-          generateWordCloud(words);
-        });
-      });
-    </script>
-    <button id="lastpage">上一步</button>
-    <button id="nextpage">下一步</button>
 
-    <script src="libs/wordcloud2.js"></script>
-    <script type="module" src="wordcloudmaking.js"></script> <!-- 将此设置为模块 -->
+    <div id="main" style="width: 100%;height:470px;"></div>
+
+
+   
+
+    
+
+    <ul class="pager2">
+      <li class="previous" id="lastpage"><a href="#">&larr; 上一步</a></li>
+      <li class="next" id="nextpage"><a href="#">下一步 &rarr;</a></li>
+    </ul>
+
+    <script src="content.js"></script>
+    <script src="background.js"></script>
+    <script src="wordcloudmaking.js"></script> 
+    
   </body>
 </html>

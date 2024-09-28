@@ -4,9 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+
+    <link rel="stylesheet" href="worcloud_style.css">
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap.min_5.1.0.css">
+    <link rel="stylesheet" href="libs/css2.css">
+<script src="./libs/jquery-3.7.1.min.js"></script>
+<script src="./libs/jquery.min.js"></script>
+<script src="./libs/vue@2.js"></script> 
+<script src="./libs/marked.min.js"></script>
+
+<link rel="stylesheet" href="worcloud_style.css">
+<link rel="stylesheet" href="./libs/font-awesome/css/all.min.css">
+
 </head>
 <body>
-    <h1>Summary</h1>
-    <button id="generate-wordcloud">Generate Summary</button>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="Summary.html">总结</a>
+          <a class="navbar-brand" href="wordcloud.html">词云图</a>
+          <a class="navbar-brand" href="Mindmap.html">思维导图</a>
+        </div>
+      </nav>
+      <!-- <div class="titleContent">
+        <div class="title title8" data-text="知识总结">知识总结</div>
+      </div> -->
+
+      
+
+
+
+
+      <div class="Generate">
+        <button id="generateSummary">
+            <i class="fa fa-rocket" aria-hidden="true"></i>
+        生成知识总结</button>
+    </div>
+    
+      
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="SearchInput">
+            <button class="btn btn-outline-success" type="submit" id="SearchButton">Search</button>
+                <!-- 保存按钮 -->
+    <button id="savebutton" type="button" class="btn btn-default">
+        <i class="far fa-save" ></i>
+    </button>
+          </form>
+        </div>
+      </nav>
+      
+      
+
+
+      <div id="summary-container" style="text-align: left; margin-top: 20px;">
+        <div id="summary"></div>
+    </div>
+
+    
+    <ul class="pager">
+        <li class="next" id="nextpage"><a href="#">下一步 &rarr;</a></li>
+      </ul>
+    <script src="Summary.js"></script>
+    <script src="content.js"></script>
 </body>
 </html>
