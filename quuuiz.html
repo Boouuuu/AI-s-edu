@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quuuiz.css">
+</head>
+<body>
+    <div id="container" class="resizable-box">
+      
+    </div>
+
+
+
+<!--答题板-->
+<div id="navbar" class="draggable">
+    <!-- 第一层 -->
+    <div class="top-layer">
+        <div class="whiteboard-icon">📝</div>
+        <div id="timer">00:00</div>
+        <button id="submit-btn">提交</button>
+    </div>
+
+    <!-- 第二层 -->
+    <div class="middle-layer">
+        <div class="questions-container">
+            <div class="questions-number">
+                <!-- 动态生成题目序号 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 第三层 -->
+    <div class="bottom-layer">
+        <div id="done">已做: 0</div>
+        <div id="not-done">未做: 6</div>
+        <div id="marked">标记: 0</div>
+    </div>
+</div>
+
+<script src="quuuiz.js"></script>
+<script src="quuuiz.js" defer></script>
+</body>
+</html>

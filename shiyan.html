@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Box</title>
+    <link rel="stylesheet" href="shiyan.css">
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="toggle-container">
+            <button id="toggle-btn" onclick="toggleNavbar()">收起</button>
+        </div>
+        <button onclick="showPage('wait')">待完成</button>
+        <button onclick="showPage('quuuiz')">自定义</button>
+        <button onclick="showPage('completed')">已完成</button>
+        <button onclick="showPage('collection')">收藏题集</button>
+        <button onclick="showPage('pending')">成就</button>
+        <button onclick="showPage('analysis')">学情分析</button>
+    </div>
+    <div class="quiz-box">
+        <iframe src="quuuiz.html" id="quuuiz-iframe"></iframe>
+        <iframe src="completed.html" id="completed-iframe" style="display:none;"></iframe>
+        <iframe src="pending.html" id="pending-iframe" style="display:none;"></iframe>
+        <iframe src="wait.html" id="wait-iframe" style="display:none;"></iframe>
+        <iframe src="collection.html" id="collection-iframe" style="display:none;"></iframe>
+        <iframe src="analysis.html" id="analysis-iframe" style="display:none;"></iframe>
+    </div>
+    <script src="shiyan.js"></script>
+</body>
+</html>

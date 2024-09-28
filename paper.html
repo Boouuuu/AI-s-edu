@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="paper.css">
+</head>
+<body>
+<div id="container" class="resizable-box">
+    
+</div>
+
+
+
+<!--答题板-->
+<div id="navbar" class="draggable">
+    <!-- 第一层 -->
+    <div class="top-layer">
+        <div class="whiteboard-icon">📝</div>
+        <button id="returniu" class="return-button">返回</button>
+       <!--div id="Time"></div> 花费时间-->
+        <!--<div id="scores"></div>  分数：得分/总分 -->
+    </div>
+
+    <!-- 第二层 -->
+    <div class="time-layer">
+        <div id="submitTime"></div> <!-- 提交时间 -->
+    </div>
+
+    <!-- 第三层 -->
+    <div class="three-layer">
+        <div id="Time">用时: <span id="ttime"></span></div>
+        <div id="scores"></div> <!-- 分数：得分/总分 -->
+    </div>
+
+
+    <!-- 第4层 -->
+    <div class="middle-layer">
+        <div class="questions-container">
+            <div class="questions-number">
+            </div>
+        </div>
+    </div>
+
+    <!-- 第5层 -->
+    <div class="bottom-layer">
+        <div id="done">已做: <span id="doneCount"></span></div>
+            <div id="not-done">未做: <span id="notDoneCount"></span></div>
+            <div id="marked">标记: <span id="markedCount"></span></div>
+    </div>
+</div>
+
+<script src="paper.js"></script>
+</body>
+</html>

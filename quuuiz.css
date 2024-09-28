@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/*题目总页面*/
+#resizable-box {  
+    width: 100%; /* 宽度随页面变化 */  
+    height: 100vh; /* 使用视口高度单位vh，确保盒子高度等于视口高度 */  
+    max-height: 800px; /* 最大高度，可以根据需要调整 */  
+    overflow-y: auto; /* 超出高度时显示滚动条 */  
+    border: 1px solid #000; /* 边框，仅为了视觉效果 */  
+    padding: 10px; /* 内边距 */  
+    box-sizing: border-box; /* 使得padding和border包含在width内 */  
+}
+
+.question-box {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.question-num {
+    margin-right: 10px;
+    font-size: 14px; /* 设置小一点的字号 */
+}
+
+.purple-box {
+    background-color: purple;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px; /* 设置小一点的字号 */
+}
+
+.question-text {
+    margin: 10px 0;
+    font-size: 15px; /* 设置小一点的字号 */
+   
+}
+
+.options {
+    margin-top: 10px;
+    flex-direction: column; /* 竖向排列 */
+}
+
+.option {
+    margin: 5px 0;
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+}
+.option input {
+    margin-right: 8px; /* 输入框与文本之间的间距 */
+}
+
+
+
+/* 可拖动导航栏样式 */
+#navbar {
+    width: 190px; /* 固定宽度 */
+    height: 180px; /* 固定高度 */
+    position:  fixed;/* 修改为fixed */
+    top: 50px;
+    left: calc(50% - 55px); /* 水平居中，减去一半的宽度 */
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* 竖向布局 */
+    transition: width 0.3s, height 0.3s; /* 平滑过渡 */
+
+}
+
+/* 收起状态 */
+#navbar.collapsed {
+    width: 50px; /* 收起后宽度 */
+    height: 50px; /* 收起后高度 */
+}
+
+/* 第一层 */
+.top-layer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #b575f0;
+    color: rgb(255, 241, 44);
+}
+
+.whiteboard-icon {
+    font-size: 20px;
+    cursor: pointer; /* 鼠标指针样式 */
+}
+
+#timer {
+    font-size: 14px;
+}
+
+#submit-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: rgb(238, 245, 242);
+    color: #e10c0c;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#submit-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* 第二层 */
+.middle-layer {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden; /* 禁止横向滚动 */
+    background-color: rgb(249, 246, 250);
+}
+
+.questions-container {
+    height: 60px;
+}
+
+.questions-number {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.question-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f6f5f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.question-circle.completed {
+    background-color: #60f1cf;
+    color: rgb(3, 0, 4);
+}
+
+.question-circle.marked {
+    background-color: #FFD700;
+}
+
+/* 第三层 */
+.bottom-layer {
+    display: flex;
+    flex-direction: row; /* 横向排列 */
+    justify-content: space-around; /* 内容居中并均匀分布 */
+    align-items: center;
+    padding: 10px;
+    background-color: #d8c0f0;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+/* 鼠标拖动光标样式 */
+.draggable {
+    cursor: move;
+}
+
+/* 隐藏内容的样式 */
+.hidden {
+    display: none; /* 隐藏内容 */
+}
+
+
