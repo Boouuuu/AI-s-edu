@@ -52,6 +52,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 
   if (request.message === 'getCodeSnippets') {
+    
     const snippets = getCodeSnippets();
     sendResponse({ codeSnippets: snippets });
   }
