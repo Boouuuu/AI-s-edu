@@ -140,24 +140,6 @@ function showMessage(message) {
 }
 
 
-// 初始缩放级别
-let currentScale = 1.0;
-
-document.getElementById('zoomInButton').addEventListener('click', function() {
-    // 增加缩放级别
-    currentScale += 0.1;
-
-    // 设置插件页面缩放
-    document.body.style.transform = 'scale(' + currentScale + ')';
-});
-
-document.getElementById('zoomOutButton').addEventListener('click', function() {
-  // 增加缩放级别
-  currentScale -= 0.1;
-
-  // 设置插件页面缩放
-  document.body.style.transform = 'scale(' + currentScale + ')';
-});
 
 //悬浮文字功能
 document.addEventListener('DOMContentLoaded', function() {
@@ -276,5 +258,42 @@ $('#gotoSummary').on('click', function(e) {
   $('body').fadeOut('slow', function() {
       // 淡出完成后进行页面跳转
       window.location.href = "Summary.html";
+  });
+});
+
+function toggleButton() {
+  const input = document.getElementById('userInput');
+  const button = document.getElementById('send');
+
+  if (input.value.trim() !== '') {
+    button.classList.add('enabled'); // 启用按钮
+    button.disabled = false; // 启用按钮
+  } else {
+    button.classList.remove('enabled'); // 禁用按钮
+    button.disabled = true; // 禁用按钮
+  }
+}
+
+// 确保在页面加载完成后添加事件监听
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('userInput');
+  input.addEventListener('input', toggleButton); // 监听输入框内容变化
+});
+
+$(function () {
+  var $window = $(window);
+  var $nav = $('#loading-container');
+  var navTop = $nav.offset().top;
+  var $div2 = $('#div2');
+
+  $window.scroll(function () {
+    var scrollTop = $(document).scrollTop();
+    if (scrollTop >= navTop) {
+      $nav.addClass('fixed');
+      $div2.addClass('fixed');
+    } else {
+      $nav.removeClass('fixed');
+      $div2.removeClass('fixed');
+    };
   });
 });

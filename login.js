@@ -29,18 +29,50 @@ document.addEventListener('click', function(){
   $('.flip-modal').style.display = 'none'
 })
 
-$('.modal-login form').addEventListener('submit', function(e){
-  e.preventDefault()
-  if(!/^\w{3,8}$/.test($('.modal-login input[name=username]').value)){
-    $('.modal-login .errormsg').innerText = '用户名需输入3-8个字符，包括字母数字下划线'
-    return false
+$('.modal-login form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const username = $('.modal-login input[name=username]').value;
+  const password = $('.modal-login input[name=password]').value;
+  
+  if (!/^\w{3,11}$/.test(username)) {
+    $('.modal-login .errormsg').innerText = '用户名需输入3-11个字符，包括字母数字下划线';
+    return false;
+}
+
+  if (!/^\w{3,10}$/.test(password)) {
+    $('.modal-login .errormsg').innerText = '密码需输入6-10个字符，包括字母数字下划线';
+    return false;
   }
-  if(!/^\w{6,10}$/.test($('.modal-login input[name=password]').value)){
-    $('.modal-login .errormsg').innerText = '密码需输入6-10个字符，包括字母数字下划线'
-    return false
-  }
-  this.submit()
-})
+
+  try {
+    // 发送登录请求
+    const response = await fetch('http://localhost:5000/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password }) // 假设 username 和 password 是已经定义的变量
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      localStorage.setItem('username', data.username); // 存储用户名
+      console.log(username);
+
+      alert(data.message);
+        // 在这里可以处理登录成功后的逻辑，比如跳转到首页
+        window.location.href = 'shiyan.html'; // 替换为你的首页地址
+    } else {
+        const errorMessage = await response.text();
+        document.querySelector('.modal-login .errormsg').innerText = errorMessage; // 显示错误信息
+    }
+} catch (error) {
+    console.error('提交过程中出现错误:', error);
+}
+
+});
+
 
 $('.modal-register form').addEventListener('submit', async function(e) {
   e.preventDefault();
@@ -48,12 +80,14 @@ $('.modal-register form').addEventListener('submit', async function(e) {
   const username = $('.modal-register input[name=username]').value;
   const password = $('.modal-register input[name=password]').value;
   
-  if (!/^\w{3,8}$/.test(username)) {
-    $('.modal-register .errormsg').innerText = '用户名需输入3-8个字符，包括字母数字下划线';
+ 
+  if (!/^\w{3,11}$/.test(username)) {
+    $('.modal-login .errormsg').innerText = '用户名需输入3-11个字符，包括字母数字下划线';
     return false;
   }
-  if (!/^\w{6,10}$/.test(password)) {
-    $('.modal-register .errormsg').innerText = '密码需输入6-10个字符，包括字母数字下划线';
+
+  if (!/^\w{3,10}$/.test(password)) {
+    $('.modal-login .errormsg').innerText = '密码需输入6-10个字符，包括字母数字下划线';
     return false;
   }
   

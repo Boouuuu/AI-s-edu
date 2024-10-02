@@ -240,11 +240,14 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
+        const username = localStorage.getItem('username'); // 从 localStorage 获取用户名
+        console.log(username);
         const ttime= timerElement.textContent;
         console.log(ttime); // 检查其值
 
         const submitTime = new Date().toISOString(); // 获取当前时间
         const submissionData = {
+            username,
             submitTime,
             ttime,
             doneCount,
@@ -264,6 +267,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (response.ok) {
                 console.log('数据成功提交');
+
+                window.location.href = `paper.html?submitTime=${encodeURIComponent(submitTime)}`;
             } else {
                 console.error('数据提交失败:', response.statusText);
             }

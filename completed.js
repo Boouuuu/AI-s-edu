@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const container = document.getElementById('submission-time-container');
     
+    // 从 localStorage 获取用户名
+    const username = localStorage.getItem('username');
+    console.log(username);
     try {
         console.log('尝试获取提交时间列表...');
-        const response = await fetch('http://localhost:5000/submission-times');
+        
+        // 发送请求时附加用户名
+        const response = await fetch(`http://localhost:5000/submission-times?username=${encodeURIComponent(username)}`);
 
         if (!response.ok) {
             console.error(`请求失败，状态码: ${response.status}`);

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
     integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <link href="libs/css2.css" rel="stylesheet">
+  <link href="libs\font-awesome\css\all.min.css" rel="stylesheet">
 </head>
 
 
@@ -26,32 +27,13 @@
       <ul>
         <li><a href="sidepanel.html">AI对话</a></li>
         <li><a href="Summary.html">知识回顾</a></li>
-        <li><a href="">课后小测</a></li>
+        <li><a href="shiyan.html">课后小测</a></li>
     </div>
 
   </div>
-  <script>
-    $(function () {
-      var $window = $(window);
-      var $nav = $('#loading-container');
-      var navTop = $nav.offset().top;
-      var $div2 = $('#div2');
 
-      $window.scroll(function () {
-        var scrollTop = $(document).scrollTop();
-        if (scrollTop >= navTop) {
-          $nav.addClass('fixed');
-          $div2.addClass('fixed');
-        } else {
-          $nav.removeClass('fixed');
-          $div2.removeClass('fixed');
-        };
-      });
-    });
-  </script>
 
   <div id="chatbox">
-    <button id="gotoSummary">Go to Summary</button>
     <div id="logo">
       <img src="./image/robot.png" alt="GPT Logo">
       <h1><strong>智能Jupyter-Dog</strong></h1>
@@ -68,65 +50,46 @@
     <div id="messages"></div>
     <div id="message"></div>
 
+  </div>
 
 
 
-
-    <div id="userInputArea">
-
-      <div class="btn-toolbar" role="toolbar" aria-label="Tool">
-        <div class="btn-group" id="button-container" role="group" aria-label="Tool">
-
-          <button id="information" class="btn btn-default"><span class="glyphicon glyphicon-duplicate"></span>
-          </button>
-
-          <button id="changesize" class="btn btn-default">
-            <span class="glyphicon glyphicon-text-size"></span>
-          </button>
-          <button id="submit_picture" class="btn btn-default" btn-lg active type="picture"><span
-              class="glyphicon glyphicon-picture"></span>
-            <!-- 未实现 -->
-          </button>
-          <button id="Copy" class="btn btn-default"><span class="glyphicon glyphicon-copy"></span>
-          </button>
-          <button id="retry" type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-repeat"></span>
-            <!-- 未实现 -->
-          </button>
-
-          <button id="clear-button" type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-refresh"></span>
-            <!-- 未实现 -->
-          </button>
-
-          <select id="search-select" name="search-select" value="Choose" class="styled-select">
-            <option value="explain" id="explain">解释代码</option>
-            <option value="expand" id="expand">扩写代码</option>
-            <option value="translate" id="translate">中文翻译</option>
-            <option value="check" id="check">检查语法</option>
-            <option value="optimization" id="optimization">优化代码</option>
-            <option value="search" selected="selected">更多功能</option>
-          </select>
+  <div class="fixed-input-area"> 
+    <div class="tool-container"> 
+      <div id="tool">
+        <div class="btn-toolbar" role="toolbar" aria-label="Tool">
+          <div class="btn-group" role="group" aria-label="Tool">
+            <button id="information" class="btn btn-default"><span class="glyphicon glyphicon-duplicate"></span></button>
+            <button id="changesize" class="btn btn-default"><span class="glyphicon glyphicon-text-size"></span></button>
+            <button id="submit_picture" class="btn btn-default" btn-lg active type="picture"><span class="glyphicon glyphicon-picture"></span></button>
+            <button id="Copy" class="btn btn-default"><span class="glyphicon glyphicon-copy"></span></button>
+            <button id="retry" type="button" class="btn btn-default"><span class="glyphicon glyphicon-repeat"></span></button>
+            <button id="clear-button" type="button" class="btn btn-default"><span class="glyphicon glyphicon-refresh"></span></button>
+            <select id="search-select" name="search-select" class="styled-select">
+              <option value="explain" id="explain">解释代码</option>
+              <option value="expand" id="expand">扩写代码</option>
+              <option value="translate" id="translate">中文翻译</option>
+              <option value="check" id="check">检查语法</option>
+              <option value="optimization" id="optimization">优化代码</option>
+              <option value="search" selected="selected">更多功能</option>
+            </select>
+          </div>
         </div>
       </div>
-      <!--实现文本框与按钮的结合-->
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="input-group" id="containers">
-            <input type="text" class="form-control" id="userInput" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button id="send" class="btn btn-default" type="button">Go<span
-                  class="glyphicon glyphicon-hand-up"></span></button>
-            </span>
-          </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-      </div><!-- /.row -->
-
-
     </div>
-  </div>
-  <img id="zoomInButton" src="./image/zoomIn.png" alt="Cute Icon">
-  <img id="zoomOutButton" src="./image/zoomOut.png" alt="Cute Icon">
+    
+      <div class="input-group">
+        <textarea class="form-control" id="userInput" placeholder="输入内容..." rows="3"></textarea>
+        <span class="input-group-btn">
+          <button id="send" class="btn btn-default" type="button">
+            <i class="fas fa-paper-plane"></i> <!-- 纸飞机图标 -->
+          </button>
+        </span>
+      </div>
+    </div>
+    
+  
+
 
 
   <div id="retrytip"></div>
