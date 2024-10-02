@@ -218,6 +218,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const userAnswers = []; // 存储用户答案
 
+
+        
+
         for (let i = 0; i < num; i++) {
             const inputs = document.querySelectorAll(`#question-${i + 1} input`);
             const userSelection = Array.from(inputs)

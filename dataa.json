@@ -1,5 +1,3950 @@
 [
     {
+        "title": "Python基础",
+        "content": "下列哪个语句在Python中是非法的？",
+        "options": {
+            "a": "x = y = z = 1",
+            "b": "x = (y = z + 1)",
+            "c": "x, y = y, x",
+            "d": "x  +=  y"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于Python内存管理，下列说法错误的是",
+        "options": {
+            "a": "变量不必事先声明",
+            "b": "变量无须先创建和赋值而直接使用",
+            "c": "变量无须指定类型",
+            "d": "可以使用del释放资源"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面哪个不是Python合法的标识符",
+        "options": {
+            "a": "int32",
+            "b": "40XL",
+            "c": "self",
+            "d": "__name__"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下列哪种说法是错误的",
+        "options": {
+            "a": "除字典类型外，所有标准对象均可以用于布尔测试",
+            "b": "空字符串的布尔值是False",
+            "c": "空列表对象的布尔值是False",
+            "d": "值为0的任何数字对象的布尔值是False"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "Python不支持的数据类型有",
+        "options": {
+            "a": "char",
+            "b": "int",
+            "c": "float",
+            "d": "list"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于Python中的复数，下列说法错误的是",
+        "options": {
+            "a": "表示复数的语法是real + image j",
+            "b": "实部和虚部都是浮点数",
+            "c": "虚部必须后缀j，且必须是小写",
+            "d": "方法conjugate返回复数的共轭复数"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于字符串下列说法错误的是",
+        "options": {
+            "a": "字符应该视为长度为1的字符串",
+            "b": "字符串以\\0标志字符串的结束",
+            "c": "既可以用单引号，也可以用双引号创建字符串",
+            "d": "在三引号字符串中可以包含换行回车等特殊字符"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "以下不能创建一个字典的语句是",
+        "options": {
+            "a": "dict1 = {}",
+            "b": "dict2 = { 3 : 5 }",
+            "c": "dict3 = {[1,2,3]: “uestc”}",
+            "d": "dict4 = {(1,2,3): “uestc”}"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下列Python语句正确的是",
+        "options": {
+            "a": "min = x  if  x < y  else  y",
+            "b": "max = x > y ? x : y",
+            "c": "if (x > y) print x",
+            "d": "while True : pass"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "计算机中信息处理和信息储存用",
+        "options": {
+            "a": "二进制代码",
+            "b": "十进制代码",
+            "c": "十六进制代码",
+            "d": "ASCII代码"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "python源程序执行的方式",
+        "options": {
+            "a": "编译执行",
+            "b": "解析执行",
+            "c": "直接执行",
+            "d": "边编译边执行"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "Python语言语句块的标记是",
+        "options": {
+            "a": "分号",
+            "b": "逗号",
+            "c": "缩进",
+            "d": "/"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "以下是字符转换成字节的方法是",
+        "options": {
+            "a": "decode()",
+            "b": "encode()",
+            "c": "upper()",
+            "d": "rstrip()"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "ab + \"c\" * 2 结果是",
+        "options": {
+            "a": "abc2",
+            "b": "abcabc",
+            "c": "abcc",
+            "d": "ababcc"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "以下会出现错误的是",
+        "options": {
+            "a": "‘北京’.encode()",
+            "b": "‘北京’.decode()",
+            "c": "‘北京’.encode().decode()",
+            "d": "以上都不会错误"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "如下：\r\n\r\n str1 = \"Runoob example....wow!!!\"\r\n\r\nstr2 = \"exam\";\r\n\r\nPrint(str1.find(str2, 5)) 打印的结果是",
+        "options": {
+            "a": "6",
+            "b": "7",
+            "c": "8",
+            "d": "-1"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面对count（），index(), find()方法描述错误的是",
+        "options": {
+            "a": "count() 方法用于统计字符串里某个字符出现的次数",
+            "b": "find() 方法检测字符串中是否包含子字符串 str  如果包含子字符串返回开始的索引值，否则会报一个异常",
+            "c": "index() 方法检测字符串中是否包含子字符串 str， 如果str不在 返回-1",
+            "d": "以上都错误"
+        },
+        "answer": "B,C",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "有下面的程序段\r\n\r\nif k<=10 and k > 0:\r\n    if k >5:\r\n        if k>8:\r\n            x=0\r\n        else:\r\n            x=1\r\n    else:\r\n        if k>2:\r\n            x=3\r\n        else:\r\n    x=4\r\n\r\n其中k取那组值时  x =3",
+        "options": {
+            "a": "3,4,5",
+            "b": "3,4",
+            "c": "5,6,7",
+            "d": "4,5"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "以下不是python中的关键字",
+        "options": {
+            "a": "raise",
+            "b": "with",
+            "c": "import",
+            "d": "final"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "调用以下函数返回的值\r\ndef myfun():\r\n    pass",
+        "options": {
+            "a": "0",
+            "b": "出错不能运行",
+            "c": "空字符串",
+            "d": "None"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "函数如下：\r\n\r\ndef showNnumber(numbers):\r\n    for n in numbers:\r\n    print(n)\r\n\r\n 下面那些在调用函数时会报错",
+        "options": {
+            "a": "showNumer([2,4,5])",
+            "b": "showNnumber(‘abcesf’)",
+            "c": "showNnumber(3.4)",
+            "d": "showNumber((12,4,5))"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "函数如下\r\n\r\ndef chanageInt(number2):\r\n    number2 = number2 + 1\r\n    print(\"changeInt: number2= \",number2)\r\n\r\n#调用\r\n\r\nnumber1 = 2\r\nchanageInt(number1)\r\nprint(\"number:\",number1)\r\n\r\n打印结果哪项是正确的",
+        "options": {
+            "a": "changeInt: number2= 3 number: 3",
+            "b": "changeInt: number2= 3 number: 2",
+            "c": "number: 2 changeInt: number2= 2",
+            "d": "number: 2 changeInt: number2= 3"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于python类 说法错误的是",
+        "options": {
+            "a": "类的实例方法必须创建对象后才可以调用",
+            "b": "类的实例方法必须创建对象前才可以调用",
+            "c": "类的类方法可以用对象和类名来调用",
+            "d": "类的静态属性可以用类名和对象来调用"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "以下哪项python能正常启动",
+        "options": {
+            "a": "拼写错误",
+            "b": "错误表达式",
+            "c": "缩进错误",
+            "d": "手动抛出异常"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "有关异常说法正确的是",
+        "options": {
+            "a": "程序中抛出异常终止程序",
+            "b": "程序中抛出异常不一定终止程序",
+            "c": "拼写错误会导致程序终止",
+            "d": "缩进错误会导致程序终止"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "对以下程序描述错误的是\r\n\r\ntry:\r\n\r\n    #语句块1\r\n\r\nexcept  IndexError as i:\r\n\r\n    # 语句块2",
+        "options": {
+            "a": "改程序对异常处理了，因此一定不会终止程序",
+            "b": "改程序对异常处理了，不一定不会因异常引发终止",
+            "c": "语句块1，如果抛出IndexError 异常，不会因为异常终止程序",
+            "d": "语句块2 不一定会执行"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "导入模块的方式错误的是",
+        "options": {
+            "a": "import mo",
+            "b": "from mo import *",
+            "c": "import mo as m",
+            "d": "import m from mo"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "以下关于模块说法错误的是",
+        "options": {
+            "a": "一个xx.py就是一个模块",
+            "b": "任何一个普通的xx.py文件可以作为模块导入",
+            "c": "模块文件的扩展名不一定是 .py",
+            "d": "运行时会从制定的目录搜索导入的模块，如果没有，会报错异常"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于 Python 程序格式框架的描述，以下选项中错误的是",
+        "options": {
+            "a": "Python 语言不采用严格的“缩进”来表明程序的格式框架",
+            "b": "Python 单层缩进代码属于之前最邻近的一行非缩进代码，多层缩进代码根据缩进关系决定所属范围",
+            "c": "Python 语言的缩进可以采用 Tab 键实现",
+            "d": "判断、循环、函数等语法形式能够通过缩进包含一批 Python 代码，进而表达对应的语义"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于 Python 组合数据类型，以下选项中描述错误的是",
+        "options": {
+            "a": "Python 的 str、tuple 和 list 类型都属于序列类型",
+            "b": "Python 组合数据类型能够将多个同类型或不同类型的数据组织起来，通过单一的表示使数据操作更有序、更容易",
+            "c": "组合数据类型可以分为 3 类：序列类型、集合类型和映射类型",
+            "d": "序列类型是二维元素向量，元素之间存在先后关系，通过序号访问"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面代码的输出结果是\r\n\r\nd ={\"大海\":\"蓝色\", \"天空\":\"灰色\", \"大地\":\"黑色\"}\r\nprint(d[\"大地\"], d.get(\"大地\", \"黄色\"))",
+        "options": {
+            "a": "黑色 黄色",
+            "b": "黑色 黑色",
+            "c": "黑的 灰色",
+            "d": "黑色 蓝色"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于Python循环结构，以下选项中描述错误的是",
+        "options": {
+            "a": "每个continue语句只有能力跳出当前层次的循环",
+            "b": "break用来跳出最内层for或者while循环，脱离该循环后程序从循环代码后继续执行",
+            "c": "遍历循环中的遍历结构可以是字符串、文件、组合数据类型和range()函数等",
+            "d": "Python通过for、while等保留字提供遍历循环和无限循环结构"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于Python的lambda函数，以下选项中描述错误的是",
+        "options": {
+            "a": "lambda函数将函数名作为函数结果返回",
+            "b": "f = lambda x,y:x+y 执行后，f的类型为数字类型",
+            "c": "lambda用于定义简单的、能够在一行内表示的函数",
+            "d": "可以使用lambda函数定义列表的排序原则"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面代码实现的功能描述的是\r\n\r\ndef fact(n):\r\n    if n==0:\r\n        return 1\r\n    else:\r\n        return n*fact(n-1)\r\nnum =eval(input(\"请输入一个整数：\"))\r\nprint(fact(abs(int(num))))",
+        "options": {
+            "a": "接受用户输入的整数 n，输出 n 的阶乘值",
+            "b": "接受用户输入的整数 n，判断 n 是否是素数并输出结论",
+            "c": "接受用户输入的整数 n，判断 n 是否是水仙花数",
+            "d": "接受用户输入的整数 n，判断 n 是否是完数并输出结论"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于Python语言的浮点数类型，以下选项中描述错误的是",
+        "options": {
+            "a": "Python语言要求所有浮点数必须带有小数部分",
+            "b": "浮点数类型与数学中实数的概念一致",
+            "c": "小数部分不可以为0",
+            "d": "浮点数类型表示带有小数的类型"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "以下选项中，不是 Python 语言保留字的是",
+        "options": {
+            "a": "do",
+            "b": "pass",
+            "c": "except",
+            "d": "while"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面代码的输出结果是\r\nprint（0.1+0.2==0.3）",
+        "options": {
+            "a": "True",
+            "b": "False",
+            "c": "True",
+            "d": "False"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "给出如下代码,可以输出“python”的是 \r\n\r\ns = 'Python is beautiful!'",
+        "options": {
+            "a": "print(s[:–14])",
+            "b": "print(s[0:6].lower())",
+            "c": "print(s[0:6])",
+            "d": "print(s[–21: –14].lower)"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于Python注释，以下选项中描述错误的是",
+        "options": {
+            "a": "Python注释语句不被解释器过滤掉，也不被执行",
+            "b": "注释可以辅助程序调试",
+            "c": "注释可用于标明作者和版权信息",
+            "d": "注释用于解释代码原理或者用途"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于Python程序中与“缩进”有关的说法中，以下选项中正确的是",
+        "options": {
+            "a": "缩进统一为4个空格",
+            "b": "缩进是非强制性的，仅为了提高代码可读性",
+            "c": "缩进在程序中长度统一且强制使用",
+            "d": "缩进可以用在任何语句之后，表示语句间的包含关系"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于Python的数字类型，以下选项中描述错误的是",
+        "options": {
+            "a": "1.0是浮点数，不是整数",
+            "b": "复数类型虚部为0时，表示为1+0j",
+            "c": "整数类型的数值一定不会出现小数点",
+            "d": "浮点数也有十进制、二进制、八进制和十六进制等表示方式"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面代码的输出结果是\r\n\r\nz = 12.34 + 34j\r\nprint(z.imag)",
+        "options": {
+            "a": "12",
+            "b": "12.12",
+            "c": "34",
+            "d": "34.0 "
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面代码的输出结果\r\nx=10\r\ny=3\r\nprint(divmod(x,y))",
+        "options": {
+            "a": "1,3",
+            "b": "(1,3)",
+            "c": "3,1",
+            "d": "(3,1)"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面代码的执行结果是\r\na = 10.99\r\nprint(complex(a))",
+        "options": {
+            "a": "0.99",
+            "b": "(10.99+0j)",
+            "c": "10.99+0j",
+            "d": "10.99"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "给出如下代码，下述代码的输出结果是\r\ns = \"Alice\"\r\nprint(s[::–1]",
+        "options": {
+            "a": "ALICE",
+            "b": "ecilA",
+            "c": "Alic",
+            "d": "Alice"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面代码的输出结果是\r\ns = \"The python language is a cross platform language.\"\r\nprint(s.find('language',30)",
+        "options": {
+            "a": "11",
+            "b": "40",
+            "c": "10",
+            "d": "系统报错"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "random.uniform(a,b)的作用是",
+        "options": {
+            "a": "生成一个[a, b]之间的随机整数",
+            "b": "生成一个(a, b)之间的随机数",
+            "c": "生成一个[a, b]之间的随机小数",
+            "d": "生成一个均值为a，方差为b的正态分布"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "以下选项中描述正确的是",
+        "options": {
+            "a": "条件24<=28<25是不合法的",
+            "b": "条件24<=28<25是合法的，且输出为True",
+            "c": "条件35<=45<75是合法的，且输出为False",
+            "d": "条件24<=28<25是合法的，且输出为False"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "random库中用于生成随机小数的函数是",
+        "options": {
+            "a": "random()",
+            "b": "randint()",
+            "c": "getrandbits()",
+            "d": "randrange()"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于递归函数基例的说明，以下选项中错误的是",
+        "options": {
+            "a": "递归函数的基例决定递归的深度",
+            "b": "每个递归函数都只能有一个基例",
+            "c": "递归函数必须有基例",
+            "d": "递归函数的基例不再进行递归"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "在Python中，关于全局变量和局部变量，以下选项中描述不正确的是",
+        "options": {
+            "a": "一个程序中的变量包含两类：全局变量和局部变量",
+            "b": "全局变量不能和局部变量重名",
+            "c": "全局变量一般没有缩进",
+            "d": "全局变量在程序执行的全过程有效"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于lambda函数，以下选项中描述错误的是",
+        "options": {
+            "a": "lambda不是Python的保留字",
+            "b": "lambda函数也称为匿名函数",
+            "c": "lambda函数将函数名作为函数结果返回",
+            "d": "定义了一种特殊的函数"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "以下选项中，对于函数的定义错误的是",
+        "options": {
+            "a": "def vfunc(*a,b):",
+            "b": "def vfunc(a,b):",
+            "c": "def vfunc(a,*b):",
+            "d": "def vfunc(a,b=2):"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于Python的元组类型，以下选项中描述错误的是",
+        "options": {
+            "a": "一个元组可以作为另一个元组的元素，可以采用多级索引获取信息",
+            "b": "元组一旦创建就不能被修改",
+            "c": "Python中元组采用逗号和圆括号（可选）来表示",
+            "d": "元组中元素不可以是不同类型"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "以下选项中不能生成一个空字典的是",
+        "options": {
+            "a": "{}",
+            "b": "dict([])",
+            "c": "{[]}",
+            "d": "dict()"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": {
+            "a": "返回一个列表类型，包括字典d中所有键",
+            "b": "返回一个集合类型，包括字典d中所有键",
+            "c": "返回一种dict_keys类型，包括字典d中所有键",
+            "d": "返回一个元组类型，包括字典d中所有键"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "给定字典d，以下选项中对d.values()的描述正确的是",
+        "options": {
+            "a": "返回一种dict_values类型，包括字典d中所有值",
+            "b": "返回一个集合类型，包括字典d中所有值",
+            "c": "返回一个元组类型，包括字典d中所有值",
+            "d": "返回一个列表类型，包括字典d中所有值"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "给定字典d，以下选项中对d.items()的描述正确的是",
+        "options": {
+            "a": "返回一种dict_items类型，包括字典d中所有键值对",
+            "b": "返回一个元组类型，每个元素是一个二元元组，包括字典d中所有键值对",
+            "c": "返回一个列表类型，每个元素是一个二元元组，包括字典d中所有键值对",
+            "d": "返回一个集合类型，每个元素是一个二元元组，包括字典d中所有键值对"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "给定字典d，以下选项中对x in d的描述正确的是",
+        "options": {
+            "a": "x是一个二元元组，判断x是否是字典d中的键值对",
+            "b": "判断x是否是字典d中的键",
+            "c": "判断x是否是在字典d中以键或值方式存在",
+            "d": "判断x是否是字典d中的值"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于CSV文件的描述，以下选项中错误的是",
+        "options": {
+            "a": "*CSV文件格式是一种通用的、相对简单的文件格式，应用于程序之间转移表格数据",
+            "b": "*CSV文件通过多种编码表示字符",
+            "c": "整个CSV文件是一个二维数据",
+            "d": "*CSV文件的每一行是一维数据，可以使用Python中的列表类型表示"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于函数的可变参数，可变参数*args传入函数时存储的类型是",
+        "options": {
+            "a": "dict",
+            "b": "tuple",
+            "c": "list",
+            "d": "set"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "python不支持的数据类型有",
+        "options": {
+            "a": "char",
+            "b": "int",
+            "c": "float",
+            "d": "list"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "输出是什么\r\nx =\"foo\"\r\ny = 2\r\nprint(x+y)",
+        "options": {
+            "a": "foo",
+            "b": "foofoo",
+            "c": "foo2",
+            "d": "TypeError"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于字符串下列说法错误的是",
+        "options": {
+            "a": "字符串应该视为长度为1的字符串",
+            "b": "字符串可以转化成数字",
+            "c": "既可以用单引号，也可以用双引号创建字符串",
+            "d": "在三引号字符串中可以包含换行回车等特殊字符"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面的语句哪个会无限循环下去",
+        "options": {
+            "a": "for a in range(10):\n    time.sleep(10)",
+            "b": "while 1<10:\n    time.sleep(10)",
+            "c": "while True:\n    break",
+            "d": "a = [3,-1,",
+            "e": "]\nfor i in a[:]:\n       if not a: break"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "以下关于循环结构的描述，错误的是",
+        "options": {
+            "a": "遍历循环使用for <循环变量> in <循环结构>语句，其中循环结构不能是文件",
+            "b": "使用range()函数可以指定for循环的次数",
+            "c": " for i in range(5)表示循环5次，i的值是从0到4",
+            "d": "用字符串做循环结构的时候，循环的次数是字符串的长度"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "关于 Python 的分支结构，以下选项中描述错误的是",
+        "options": {
+            "a": "分支结构使用 if 保留字",
+            "b": "Python 中 if-else 语句用来形成二分支结构",
+            "c": "Python 中 if-elif-else 语句描述多分支结构",
+            "d": "分支结构可以向已经执行过的语句部分跳转"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面代码的输出结果是\r\nx = 12.34\r\nprint(type(x))",
+        "options": {
+            "a": "<class ‘int’>",
+            "b": "<class ‘float’>",
+            "c": "<class ‘bool’>",
+            "d": " <class ‘complex’>"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面代码的执行结果\r\na = 10.99\r\nprint(complex(a))",
+        "options": {
+            "a": "10.99+j",
+            "b": "10.99",
+            "c": "0.99",
+            "d": "(10.99+0j)"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面代码的输出结果是\r\nl = [“F”,“f”]\r\ndef fun(a):\r\n    l.append(a)\r\nreturn\r\nfun(“C”)\r\nprint(l)",
+        "options": {
+            "a": "[‘F’, ‘f’]",
+            "b": "[‘C’]",
+            "c": "出错",
+            "d": "[‘F’, ‘f’, ‘C’]"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "以下语句执行后a、b、c的值是\r\na = “watermelon”\r\nb = “strawberry”\r\nc = “cherry”\r\nif a > b:\r\n    c = a\r\n    a = b\r\n    b = c",
+        "options": {
+            "a": "watermelon strawberry cherry",
+            "b": "watermelon cherry strawberry",
+            "c": "strawberry cherry watermelon",
+            "d": "strawberry watermelon watermelon"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下列Python语句正确的是",
+        "options": {
+            "a": "min = x if x < y else y",
+            "b": "max = x > y ? x : y",
+            "c": "if(x>y) print(x)",
+            "d": "while True:pass"
+        },
+        "answer": "A,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面的代码，哪些是输出1,2,3三个数字(多选,选错不得分)",
+        "options": {
+            "a": "for i in range(3): \n\n   print(i)\n\n   print(i+1)",
+            "b": "aList = [0,1,2]\n\nfor i in aList:\n\n   print(i+1)",
+            "c": "i = 1\n\nwhile i < 3:\n\n   print(i)\n\n   i+=1",
+            "d": "for i in range(3):\n\n   print(i+1)"
+        },
+        "answer": "B,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "定义类如下：\r\n\r\nclass hello():\r\n    def showInfo(sef):\r\n        print(self.x)\r\n下面描述正确的是",
+        "options": {
+            "a": "该类不可以实例化",
+            "b": "该类可以实例化",
+            "c": "在pycharm 工具中会出现语法错误，说self没有定义",
+            "d": "该类可以实例化，并且能正常通过对象调用showInfo()"
+        },
+        "answer": "A,C",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "下面哪些是 有效的类构造函数？",
+        "options": {
+            "a": "def_Init_(self):",
+            "b": "def_init_(self,var=0):",
+            "c": "def_init_():",
+            "d": "def_init_(self,a,b,c):"
+        },
+        "answer": "A,B,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "Python基础",
+        "content": "Python中列表切片操作非常方便,若 m = range(100)以下哪种形式是正确的?",
+        "options": {
+            "a": " m[-3]",
+            "b": "m[-2:13]",
+            "c": "m[::3]",
+            "d": "m[2-3]"
+        },
+        "answer": "A,B,C,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "关于 Logit 回归和 SVM 不正确的是",
+        "options": {
+            "a": "Logit回归目标函数是最小化后验概率",
+            "b": "Logit回归可以用于预测事件发生概率的大小",
+            "c": "SVM目标是结构风险最小化",
+            "d": "SVM可以有效避免模型过拟合"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "关于支持向量机SVM,下列说法错误的是",
+        "options": {
+            "a": "L2正则项，作用是最大化分类间隔，使得分类器拥有更强的泛化能力",
+            "b": "Hinge 损失函数，作用是最小化经验分类错误",
+            "c": "分类间隔为，||w||代表向量的模",
+            "d": "当参数C越小时，分类间隔越大，分类错误越多，趋于欠学习"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "决策树的父节点和子节点的熵的大小关系是什么？",
+        "options": {
+            "a": "决策树的父节点更大",
+            "b": "子节点的熵更大",
+            "c": "两者相等",
+            "d": "根据具体情况而定"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下哪种方法属于判别式模型(discriminative model)",
+        "options": {
+            "a": "隐马模型(HMM)",
+            "b": "朴素贝叶斯",
+            "c": "LDA",
+            "d": "支持向量机"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面关于ID3算法中说法错误的是",
+        "options": {
+            "a": "ID3算法要求特征必须离散化",
+            "b": "信息增益可以用熵，而不是GINI系数来计算",
+            "c": "选取信息增益最大的特征，作为树的根节点",
+            "d": "ID3算法是一个二叉树模型"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下属于欧式距离特性的有",
+        "options": {
+            "a": "旋转不变性",
+            "b": "尺度缩放不变性",
+            "c": "不受量纲影响的特性"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "如果以特征向量的相关系数作为模式相似性测度，则影响聚类算法结果的主要因素有",
+        "options": {
+            "a": "已知类别样本质量",
+            "b": "分类准则",
+            "c": "量纲"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "一监狱人脸识别准入系统用来识别待进入人员的身份，此系统一共包括识别4种不同的人员：狱警，小偷，送餐员，其他。下面哪种学习方法最适合此种应用需求：",
+        "options": {
+            "a": "二分类问题",
+            "b": "多分类问题",
+            "c": "层次聚类问题",
+            "d": "k-中心点聚类问题",
+            "e": "回归问题",
+            "f": "结构分析问题"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下说法中错误的是",
+        "options": {
+            "a": "SVM对噪声（如来自其他分部的噪声样本）具备鲁棒性",
+            "b": "在adaboost算法中，所有被分错样本的权重更新比例不相同",
+            "c": "boosting和bagging都是组合多个分类器投票的方法，二者都是根据单个分类器的正确率确定其权重",
+            "d": "给定n个数据点，如果其中一半用于训练，一半用户测试，则训练误差和测试误差之间的差别会随着n的增加而减少的"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "位势函数法的积累势函数K(x)的作用相当于Bayes判决中的",
+        "options": {
+            "a": "后验概率",
+            "b": "先验概率",
+            "c": "类概率密度",
+            "d": "类概率密度与先验概率的和"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪些不特别适合用来对高维数据进行降维",
+        "options": {
+            "a": "LASSO",
+            "b": "主成分分析法",
+            "c": "聚类分析",
+            "d": "小波分析法",
+            "e": "线性判别法",
+            "f": "拉普拉斯特征映射"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "对数几率回归（logistics regression）和一般回归分析有什么区别？",
+        "options": {
+            "a": "对数几率回归是设计用来预测事件可能性的",
+            "b": "对数几率回归可以用来度量模型拟合程度",
+            "c": "对数几率回归可以用来估计回归系数",
+            "d": "以上所有"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在一个n维的空间中， 最好的检测outlier(离群点)的方法是",
+        "options": {
+            "a": "作正态分布概率图",
+            "b": "作盒形图",
+            "c": "马氏距离",
+            "d": "作散点图"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "一般，k-NN最近邻方法在（ ）的情况下效果较好",
+        "options": {
+            "a": "样本较多但典型性不好",
+            "b": "样本较少但典型性好",
+            "c": "样本呈团状分布",
+            "d": "样本呈链状分布"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "我们想在大数据集上训练决策树, 为了使用较少时间, 我们可以",
+        "options": {
+            "a": "增加树的深度",
+            "b": "增加学习率 (learning rate)",
+            "c": "减少树的深度",
+            "d": "减少树的数量"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "符号集 a 、 b 、 c 、 d ，它们相互独立，相应概率为 1/2 、 1/4 、 1/8/ 、 1/16 ，其中包含信息量最小的符号是",
+        "options": {
+            "a": "a",
+            "b": "b",
+            "c": "c",
+            "d": "d"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在数据清理中，下面哪个不是处理缺失值的方法?",
+        "options": {
+            "a": "估算",
+            "b": "整例删除",
+            "c": "变量删除",
+            "d": "成对删除"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "逻辑回归与多元回归分析有哪些不同？",
+        "options": {
+            "a": "逻辑回归预测某事件发生的概率",
+            "b": "逻辑回归有较高的拟合效果",
+            "c": "逻辑回归回归系数的评估",
+            "d": "以上全选"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "SVM的效率依赖于",
+        "options": {
+            "a": "核函数的选择",
+            "b": "核参数",
+            "c": "软间隔参数",
+            "d": "以上所有"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "训练SVM的最小时间复杂度为O(n2)，那么一下哪种数据集不适合用SVM?",
+        "options": {
+            "a": "大数据集",
+            "b": "小数据集",
+            "c": "中等大小数据集",
+            "d": "和数据集大小无关"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "关于SVM泛化误差描述正确的是",
+        "options": {
+            "a": "超平面与支持向量之间距离",
+            "b": "SVM对未知数据的预测能力",
+            "c": "SVM的误差阈值"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "如果我使用数据集的全部特征并且能够达到100%的准确率，但在测试集上仅能达到70%左右，这说明",
+        "options": {
+            "a": "欠拟合",
+            "b": "模型很棒",
+            "c": "过拟合"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "SVM中的代价参数表示",
+        "options": {
+            "a": "交叉验证的次数",
+            "b": "使用的核",
+            "c": "误分类与模型复杂性之间的平衡",
+            "d": "以上均不是"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "SVM中使用高斯核函数之前通常会进行特征归一化，以下关于特征归一化描述不正确的是？",
+        "options": {
+            "a": "经过特征正则化得到的新特征优于旧特征",
+            "b": "特征归一化无法处理类别变量",
+            "c": "SVM中使用高斯核函数时，特征归一化总是有用的"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设你训练SVM后，得到一个线性决策边界，你认为该模型欠拟合。假如你想修改SVM的参数，同样达到模型不会欠拟合的效果，应该怎么做？",
+        "options": {
+            "a": "增大参数C",
+            "b": "减小参数C",
+            "c": "改变C并不起作用",
+            "d": "以上均不正确"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设你训练SVM后，得到一个线性决策边界，你认为该模型欠拟合。在下次迭代训练模型时，应该考虑",
+        "options": {
+            "a": "增加训练数据",
+            "b": "减少训练数据",
+            "c": "计算更多变量",
+            "d": "减少特征"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面哪个属于SVM应用",
+        "options": {
+            "a": "文本和超文本分类",
+            "b": "图像分类",
+            "c": "新文章聚类",
+            "d": "以上均是"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设现在只有两个类，这种情况下SVM需要训练几次？",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下哪种算法不能用于降低数据的维数？",
+        "options": {
+            "a": "t-SNE",
+            "b": "PCA",
+            "c": "LDA",
+            "d": "都不是"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下哪种技术对于减少数据集的维度会更好？",
+        "options": {
+            "a": "删除缺少值太多的列",
+            "b": "删除数据差异较大的列",
+            "c": "删除不同数据趋势的列",
+            "d": "都不是"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设正在处理10类分类问题，并且想知道LDA最多可以产生几个判别向量。以下哪个是正确答案？",
+        "options": {
+            "a": "20",
+            "b": "9",
+            "c": "21",
+            "d": "11"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "分析逻辑回归表现的一个良好的方法是AIC，它与线性回归中的R平方相似。有关AIC，以下哪项是正确的？",
+        "options": {
+            "a": "具有最小AIC值的模型更好",
+            "b": "具有最大AIC值的模型更好",
+            "c": "视情况而定",
+            "d": "以上都不是"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在逻辑回归输出与目标对比的情况下，以下评估指标中哪一项不适用？",
+        "options": {
+            "a": "AUC-ROC",
+            "b": "准确度",
+            "c": "Logloss",
+            "d": "均方误差"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "使用以下哪种算法进行变量选择？",
+        "options": {
+            "a": "LASSO",
+            "b": "Ridge",
+            "c": "两者",
+            "d": "都不是"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下哪些选项为真？",
+        "options": {
+            "a": "线性回归误差值必须正态分布，但是在Logistic回归的情况下，情况并非如此",
+            "b": "逻辑回归误差值必须正态分布，但是在线性回归的情况下，情况并非如此",
+            "c": "线性回归和逻辑回归误差值都必须正态分布",
+            "d": "线性回归和逻辑回归误差值都不能正态分布"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "所谓几率，是指发生概率和不发生概率的比值。所以，抛掷一枚正常硬币，正面朝上的几率（odds）为多少？",
+        "options": {
+            "a": "0.5",
+            "b": "1",
+            "c": "都不是"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "如果以特征向量的相关系数作为模式相似性测度，则影响聚类算法结果的主要因素有",
+        "options": {
+            "a": "已知类别样本质量",
+            "b": "分类准则",
+            "c": "量纲"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设，下图是逻辑回归的代价函数，现在，图中有多少个局部最小值？",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在统计模式分类问题中，当先验概率未知时，可以使用",
+        "options": {
+            "a": "最小损失准则",
+            "b": "最小最大损失准则",
+            "c": "最小误判概率准则"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "影响基本K-均值算法的主要因素有",
+        "options": {
+            "a": "Boosting",
+            "b": "Bagging",
+            "c": "Stacking",
+            "d": "Mapping"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下不属于影响聚类算法结果的主要因素有",
+        "options": {
+            "a": "已知类别的样本质量",
+            "b": "分类准则",
+            "c": "特征选取",
+            "d": "模式相似性测度"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "对于任意值“x”，考虑到（） \r\nLogistic（x）：是任意值“x”的逻辑（Logistic）函数\r\nLogit（x）：是任意值“x”的logit函数\r\nLogit_inv（x）：是任意值“x”的逆逻辑函数\r\n以下哪一项是正确的？",
+        "options": {
+            "a": "Logistic（x）= Logit（x）",
+            "b": "Logistic（x）= Logit_inv（x）",
+            "c": "Logit_inv（x）= Logit（x）",
+            "d": "都不是"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面哪个选项中哪一项属于确定性算法？",
+        "options": {
+            "a": "PCA",
+            "b": "K-Means",
+            "c": "以上都不是"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "选择Logistic回归中的One-Vs-All方法中的哪个选项是真实的",
+        "options": {
+            "a": "我们需要在n类分类问题中适合n个模型",
+            "b": "我们需要适合n-1个模型来分类为n个类",
+            "c": "我们需要只适合1个模型来分类为n个类",
+            "d": "这些都没有"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面哪个/些超参数的增加可能会造成随机森林数据过拟合？（）\r\n1 树的数量\r\n2 树的深度\r\n3 学习速率",
+        "options": {
+            "a": "只有 1",
+            "b": "只有 2",
+            "c": "只有 3",
+            "d": "都正确"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面哪一项对梯度下降（GD）和随机梯度下降（SGD）的描述是正确的？ （）\r\n1 在 GD 和 SGD 中，每一次迭代中都是更新一组参数以最小化损失函数。\r\n2 在 SGD 中，每一次迭代都需要遍历训练集中的所有样本以更新一次参数。\r\n3 在 GD 中，每一次迭代需要使用整个训练集或子训练集的数据更新一个参数。",
+        "options": {
+            "a": "只有 1",
+            "b": "只有 2",
+            "c": "只有 3",
+            "d": "都正确"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面哪个/些对「类型 1（Type-1）」和「类型 2（Type-2）」错误的描述是正确的？（）\r\n类型 1 通常称之为假正类，类型 2 通常称之为假负类。\r\n类型 2 通常称之为假正类，类型 1 通常称之为假负类。\r\n类型 1 错误通常在其是正确的情况下拒绝假设而出现。",
+        "options": {
+            "a": "只有 1",
+            "b": "只有 2",
+            "c": "只有 3",
+            "d": "1和3"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假定你在神经网络中的隐藏层中使用激活函数假定你在神经网络中的隐藏层中使用激活函数 X。在特定神经元给定任意输入，你会得到输出「-0.0001」。X 可能是以下哪一个激活函数？",
+        "options": {
+            "a": "ReLU",
+            "b": "tanh",
+            "c": "SIGMOID",
+            "d": "以上都是"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假定你正在处理类属特征，并且没有查看分类变量在测试集中的分布。现在你想将 one hot encoding（OHE）应用到类属特征中。\r\n那么在训练集中将 OHE 应用到分类变量可能要面临的困难是什么？",
+        "options": {
+            "a": "分类变量所有的类别没有全部出现在测试集中",
+            "b": "类别的频率分布在训练集和测试集是不同的",
+            "c": "训练集和测试集通常会有一样的分布",
+            "d": "A 和 B 都正确"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在线性回归问题中，我们用“R方”来衡量拟合的好坏。在线性回归模型中增加特征值并再训练同一模型。下列哪一项是正确的？",
+        "options": {
+            "a": "如果R方上升，则该变量是显著的",
+            "b": "如果R方下降，则该变量不显著",
+            "c": "单单R方不能反映变量重要性，不能就此得出正确结论",
+            "d": "都不正确"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设线性回归模型完美拟合训练数据（即训练误差为零），则下列哪项是正确的？",
+        "options": {
+            "a": "测试误差一定为零",
+            "b": "测试误差一定不为零",
+            "c": "以上都不对"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "导出线性回归的参数时，我们做出下列哪种假定？（）\r\n1.因变量y和自变量x的真实关系是线性的\r\n2.模型误差是统计独立的\r\n3.误差通常服从一个平均值为零，标准差恒定的分布\r\n4.自变量x是非随机的，无错的",
+        "options": {
+            "a": "1,2和3",
+            "b": "1,3和4",
+            "c": "1和3",
+            "d": "以上都对"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪一项说明了X，Y之间的较强关系",
+        "options": {
+            "a": "相关系数为0.9",
+            "b": "Beta系数为0的空假设的p-value是0.0001",
+            "c": "Beta系数为0的空假设的t统计量是30",
+            "d": "都不对"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列关于异方差性哪项是正确的？",
+        "options": {
+            "a": "线性回归有变化的误差项",
+            "b": "线性回归有恒定的误差项",
+            "c": "线性回归有零误差项",
+            "d": "以上都不对"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "我们可以通过一种叫“正规方程”的分析方法来计算线性回归的相关系数，下列关于“正规方程”哪一项是正确的？( )\r\n1.我们不必选择学习比率\r\n2.当特征值数量很大时会很慢\r\n3.不需要迭代",
+        "options": {
+            "a": "1和2",
+            "b": "1和3",
+            "c": "2和3",
+            "d": "1,2和3"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪项可以评价回归模型？（ ）\r\n1.R方\r\n2.调整R方\r\n3.F统计量\r\n4.RMSE/MSE/MAE",
+        "options": {
+            "a": "2和4",
+            "b": "1和2",
+            "c": "2,3和4",
+            "d": "以上所有"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "关于Ridge和Lasso回归在特征值选择上的方法，一下哪项正确？",
+        "options": {
+            "a": "Ridge回归使用特征值的子集选择",
+            "b": "Lasso回归使用特征值的子集选择",
+            "c": "二者都使用特征值的子集选择",
+            "d": "以上都不正确"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "X轴是自变量，Y 轴是因变量\r\n下列对A，B各自残差和的陈述哪项正确？",
+        "options": {
+            "a": "A比B高",
+            "b": "A比B低",
+            "c": "两者相同",
+            "d": "以上都不对"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "为了评价一个简单线性回归模型（单自变量），需要多少个参数？",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "不确定"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "关于回归和相关，下列哪项是正确的？(  )\r\n提示：y是因变量，x是自变量",
+        "options": {
+            "a": "在两者中，x、y关系都是对称的",
+            "b": "在两者中，x、y关系都是不对称的",
+            "c": "x、y在相关情况下不对称，在回归中对称",
+            "d": "x、y在相关情况下对称，在回归中不对称"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设用一个复杂回归模型拟合一个数据集，使用带固定参数lambda的Ridge回归来减小它的复杂度，\r\n下列哪项描述了偏差和方差与lambda的关系？",
+        "options": {
+            "a": "对于非常大的lambda，偏差很小，方差很小",
+            "b": "对于非常大的lambda，偏差很小，方差很大",
+            "c": "对于非常大的lambda，偏差很大，方差很小",
+            "d": "对于非常大的lambda，偏差很大，方差很大"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪一种回归方法的相关系数没有闭式解？",
+        "options": {
+            "a": "Ridge回归",
+            "b": "Lasso回归",
+            "c": "Ridge回归 and Lasso回归",
+            "d": "两者都不是"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪一个项对欠拟合和过拟合的权衡影响最大？",
+        "options": {
+            "a": "多项式次数",
+            "b": "是否通过矩阵倒置或梯度下降来学习权重",
+            "c": "使用常数项"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设使用逻辑回归模型处理n元分类问题，可以用到One-vs-rest方法，则下列哪一项是正确的？",
+        "options": {
+            "a": "在n元分类问题中，需要拟合n个模型",
+            "b": "为了分类为n类，需要拟合n-1个模型",
+            "c": "为了分类为n类，只需要拟合1个模型",
+            "d": "都不正确"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "考虑线性回归和逻辑回归中的重量/相关系数，关于cost函数的偏导，下列哪一项是正确的？",
+        "options": {
+            "a": "都不一样",
+            "b": "都一样",
+            "c": "无法确定",
+            "d": "以上都不对"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "逻辑回归是输出结果落在[0,1]区间内，下列哪个函数用于转换概率，使其落入[0,1]？",
+        "options": {
+            "a": "Sigmoid",
+            "b": "Mode",
+            "c": "Square",
+            "d": "Probit"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列关于回归分析中的残差表述正确的是",
+        "options": {
+            "a": "残差的平均值总为零",
+            "b": "残差的平均值总小于零",
+            "c": "残差的平均值总大于零",
+            "d": "残差没有此类规律"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在线性回归问题中，我们用R方“R-squared”来衡量拟合的好坏。在线性回归模型中增加特征值并再训练同一模型。下列哪一项是正确的？",
+        "options": {
+            "a": "如果R方上升，则该变量是显著的",
+            "b": "如果R方下降，则该变量不显著",
+            "c": "单单R方不能反映变量重要性，不能就此得出正确结论",
+            "d": "都不正确"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设线性回归模型完美拟合训练数据（即训练误差为零），则下列哪项是正确的？",
+        "options": {
+            "a": "测试误差一定为零",
+            "b": "测试误差一定不为零",
+            "c": "以上都不对"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "一个人年龄和健康之间的相关系数是-1.09，据此可以得出",
+        "options": {
+            "a": "年龄是健康预测的好的参考量",
+            "b": "年龄是健康预测的不好的参考量",
+            "c": "都不对"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪种方法被用于预测因变量？( )\r\n1.线性回归\r\n2.逻辑回归",
+        "options": {
+            "a": "1和2",
+            "b": "1",
+            "c": "2",
+            "d": "都不是"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "为了检验连续变量x，y之间的线性关系，下列哪种图最合适？",
+        "options": {
+            "a": "散点图",
+            "b": "条形图",
+            "c": "直方图",
+            "d": "都不对"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在导出线性回归的参数时，我们做出下列哪种假定？( )\r\n1.因变量y和自变量x的真实关系是线性的\r\n2.模型误差是统计独立的\r\n3.误差通常服从一个平均值为零，标准差恒定的分布\r\n4.自变量x是非随机的，无错的",
+        "options": {
+            "a": "1,2 and 3",
+            "b": "1,3 and 4",
+            "c": "1 and 3",
+            "d": "以上都对"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪一项说明了X，Y之间的较强关系？",
+        "options": {
+            "a": "相关系数为0.9",
+            "b": "Beta系数为0的空假设的p-value是0.0001",
+            "c": "Beta系数为0的空假设的t统计量是30",
+            "d": "都不对"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪项可以评价回归模型？( )\r\n1.R方R Squared\r\n2.调整R方\r\n3.F统计量\r\n4.RMSE/MSE/MAE",
+        "options": {
+            "a": "2和4",
+            "b": "1和2",
+            "c": "2,3和4",
+            "d": "以上所有"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设你在训练一个线性回归模型，以下哪项是正确的？( )\r\n1.数据越少越易过拟合\r\n2.假设区间小则易过拟合",
+        "options": {
+            "a": "都是错的",
+            "b": "1错2对",
+            "c": "1对2错",
+            "d": "都是对的"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "为了评价一个简单线性回归模型（单自变量），需要多少个参数？",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "不确定"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "将原始数据进行集成、变换、维度规约、数值规约是在以下哪个步骤的任务？",
+        "options": {
+            "a": "频繁模式挖掘",
+            "b": "分类和预测",
+            "c": "数据预处理",
+            "d": "数据流挖掘"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面哪种不属于数据预处理的方法？",
+        "options": {
+            "a": "变量代换",
+            "b": "离散化",
+            "c": "聚集",
+            "d": "估计遗漏值"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "什么是KDD？",
+        "options": {
+            "a": "数据挖掘与知识发现",
+            "b": "领域知识发现",
+            "c": "文档知识发现",
+            "d": "动态知识发现"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "建立一个模型，通过这个模型根据已知的变量值来预测其他某个变量值属于数据挖掘的哪一类任务？",
+        "options": {
+            "a": "根据内容检索",
+            "b": "建模描述",
+            "c": "预测建模",
+            "d": "寻找模式和规则"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下哪种方法不属于特征选择的标准方法？",
+        "options": {
+            "a": "嵌入",
+            "b": "过滤",
+            "c": "包装",
+            "d": "抽样"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列属于无监督学习的是",
+        "options": {
+            "a": "k-means",
+            "b": "SVM",
+            "c": "最大熵",
+            "d": "CRF"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列不是SVM核函数的是：",
+        "options": {
+            "a": "多项式核函数",
+            "b": "Logistic核函数",
+            "c": "径向基核函数",
+            "d": "Sigmoid核函数"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "bootstrap数据是什么意思？（提示：考“bootstrap”和“boosting”区别）",
+        "options": {
+            "a": "有放回地从总共M个特征中抽样m个特征",
+            "b": "无放回地从总共M个特征中抽样m个特征",
+            "c": "有放回地从总共N个样本中抽样n个样本",
+            "d": "无放回地从总共N个样本中抽样n个样本"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "解决隐马模型中预测问题的算法是?",
+        "options": {
+            "a": "前向算法",
+            "b": "后向算法",
+            "c": "Baum-Welch算法",
+            "d": "维特比算法"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": ". 以下哪些算法, 可以用神经网络去构造: （ ） \r\n1.KNN \r\n2.线性回归 \r\n3.对数几率回归",
+        "options": {
+            "a": "1和 2",
+            "b": "2 和 3",
+            "c": "1, 2 和 3",
+            "d": "以上都不是"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "请选择下面可以应用隐马尔科夫(HMM)模型的选项",
+        "options": {
+            "a": "基因序列数据集",
+            "b": "电影浏览数据集",
+            "c": "股票市场数据集",
+            "d": "所有以上"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "数据科学家可能会同时使用多个算法（模型）进行预测， 并且最后把这些算法的结果集成起来进行最后的预测（集成学习），以下对集成学习说法正确的是",
+        "options": {
+            "a": "单个模型之间有高相关性",
+            "b": "单个模型之间有低相关性",
+            "c": "在集成学习中使用“平均权重”而不是“投票”会比较好",
+            "d": "单个模型都是用的一个算法"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下哪个图是KNN算法的训练边界?",
+        "options": {
+            "a": "B",
+            "b": "A",
+            "c": "D",
+            "d": "C"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "对于线性回归，我们应该有以下哪些假设？（） \r\n1.找到利群点很重要, 因为线性回归对利群点很敏感 \r\n2.线性回归要求所有变量必须符合正态分布 \r\n3.线性回归假设数据没有多重线性相关性",
+        "options": {
+            "a": "1 和 2",
+            "b": "2 和 3",
+            "c": "1,2 和 3",
+            "d": "以上都不是"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "我们注意变量间的相关性。在相关矩阵中搜索相关系数时, 如果我们发现3对变量的相关系数是(Var1 和Var2, Var2和Var3, Var3和Var1)是-0.98, 0.45, 1.23 . 我们可以得出什么结论？（ ） \r\n1.Var1和Var2是非常相关的 \r\n2.因为Var和Var2是非常相关的, 我们可以去除其中一个 \r\n3.Var3和Var1的1.23相关系数是不可能的",
+        "options": {
+            "a": "1 and 3",
+            "b": "1 and 2",
+            "c": "1,2 and 3",
+            "d": "1"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面对集成学习模型中的弱学习者描述错误的是？",
+        "options": {
+            "a": "他们经常不会过拟合",
+            "b": "他们通常带有高偏差，所以其并不能解决复杂学习问题",
+            "c": "他们通常会过拟合"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "最出名的降维算法是 PAC 和 t-SNE。将这两个算法分别应用到数据「X」上，并得到数据集「X_projected_PCA」，「X_projected_tSNE」。下面哪一项对「X_projected_PCA」和「X_projected_tSNE」的描述是正确的？",
+        "options": {
+            "a": "X_projected_PCA 在最近邻空间能得到解释",
+            "b": "X_projected_tSNE 在最近邻空间能得到解释",
+            "c": "两个都在最近邻空间能得到解释",
+            "d": "两个都不能在最近邻空间得到解释"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在 k-均值算法中，以下哪个选项可用于获得全局最小？",
+        "options": {
+            "a": "尝试为不同的质心（centroid）初始化运行算法",
+            "b": "调整迭代的次数",
+            "c": "找到集群的最佳数量",
+            "d": "以上所有"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "你正在使用带有 L1 正则化的 logistic 回归做二分类，其中 C 是正则化参数，w1 和 w2 是 x1 和 x2 的系数。当你把 C 值从 0 增加至非常大的值时，下面哪个选项是正确的？",
+        "options": {
+            "a": "第一个 w2 成了 0，接着 w1 也成了 0",
+            "b": "第一个 w1 成了 0，接着 w2 也成了 0",
+            "c": "w1 和 w2 同时成了 0",
+            "d": "即使在 C 成为大值之后，w1 和 w2 都不能成 0"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "即使在 C 成为大值之后，w1 和 w2 都不能成 0",
+        "options": {
+            "a": "PCA",
+            "b": "K-Means",
+            "c": "以上都不是"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面哪个/些超参数的增加可能会造成随机森林数据过拟合？",
+        "options": {
+            "a": "树的数量",
+            "b": "树的深度",
+            "c": "学习速率"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪个不属于常用的文本分类的特征选择算法？",
+        "options": {
+            "a": "卡方检验值",
+            "b": "互信息",
+            "c": "信息增益",
+            "d": "主成分分析"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "机器学习中做特征选择时，可能用到的方法有？",
+        "options": {
+            "a": "卡方",
+            "b": "信息增益",
+            "c": "平均互信息",
+            "d": "期望交叉熵",
+            "e": "以上都有"
+        },
+        "answer": "E",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "一般，K-NN最近邻方法在（  ）的情况下效果较好",
+        "options": {
+            "a": "样本较多但典型性不好",
+            "b": "样本呈团状分布",
+            "c": "样本较少但典型性好",
+            "d": "样本呈链状分布"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下描述错误的是",
+        "options": {
+            "a": "SVM是这样一个分类器，它寻找具有最小边缘的超平面，因此它也经常被称为最小边缘分类器",
+            "b": "在聚类分析当中，簇内的相似性越大，簇间的差别越大，聚类的效果就越差",
+            "c": "在决策树中，随着树中结点输变得太大，即使模型的训练误差还在继续降低，但是检验误差开始增大，这是出现了模型拟合不足的原因",
+            "d": "聚类分析可以看作是一种非监督的分类"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "关于正态分布,下列说法错误的是",
+        "options": {
+            "a": "正态分布具有集中性和对称性",
+            "b": "正态分布的均值和方差能够决定正态分布的位置和形态",
+            "c": "正态分布的偏度为0，峰度为1",
+            "d": "标准正态分布的均值为0，方差为1"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在以下不同的场景中,使用的分析方法不正确的有",
+        "options": {
+            "a": "根据商家最近一年的经营及服务数据,用聚类算法判断出天猫商家在各自主营类目下所属的商家层级",
+            "b": "根据商家近几年的成交数据,用聚类算法拟合出用户未来一个月可能的消费金额公式",
+            "c": "用关联规则算法分析出购买了汽车坐垫的买家,是否适合推荐汽车脚垫",
+            "d": "根据用户最近购买的商品信息,用决策树算法识别出淘宝买家可能是男还是女"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列表述中，在k-fold交叉验证中关于选择K说法正确的是",
+        "options": {
+            "a": "较大的K并不总是好的，选择较大的K可能需要较长的时间来评估你的结果",
+            "b": "相对于期望误差来说，选择较大的K会导致低偏差（因为训练folds会变得与整个数据集相似）",
+            "c": "在交叉验证中通过最小化方差法来选择K值",
+            "d": "以上都正确"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在决策树中，用作分裂节点的information gain说法不正确的是",
+        "options": {
+            "a": "较小不纯度的节点需要更多的信息来区分总体",
+            "b": "信息增益可以使用熵得到",
+            "c": "信息增益更加倾向于选择有较多取值的属性"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下哪一种方法最适合在n（n>1）维空间中做异常点检测",
+        "options": {
+            "a": "正态分布图",
+            "b": "盒图",
+            "c": "马氏距离",
+            "d": "散点图"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "logistic回归与多元回归分析有哪些不同？",
+        "options": {
+            "a": "logistic回归预测某事件发生的概率",
+            "b": "logistic回归有较高的拟合效果",
+            "c": "logistic回归回归系数的评估",
+            "d": "以上全选"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "bootstrap 数据的含义是",
+        "options": {
+            "a": "有放回的从整体M中抽样m个特征",
+            "b": "无放回的从整体M中抽样m个特征",
+            "c": "有放回的从整体N中抽样n个样本",
+            "d": "无放回的从整体N中抽样n个样本"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面哪个决策边界是神经网络生成的？",
+        "options": {
+            "a": "A",
+            "b": "D",
+            "c": "C",
+            "d": "B",
+            "e": "以上都有"
+        },
+        "answer": "E",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "关于Logit 回归和SVM 不正确的是",
+        "options": {
+            "a": "Logit回归本质上是一种根据样本对权值进行极大似然估计的方法，而后验概率正比于先验概率和似然函数的乘积。logit仅仅是最大化似然函数，并没有最大化后验概率，更谈不上最小化后验概率",
+            "b": "Logit回归的输出就是样本属于正类别的几率，可以计算出概率",
+            "c": "SVM的目标是找到使得训练数据尽可能分开且分类间隔最大的超平面，应该属于结构风险最小化",
+            "d": "SVM可以通过正则化系数控制模型的复杂度，避免过拟合"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": " Fisher线性判别函数的求解过程是将M维特征矢量投影在（ ）中进行求解。\r\nA、M-1维空间",
+        "options": {
+            "a": "M-1维空间",
+            "b": "一维空间",
+            "c": "三维空间",
+            "d": "二维空间"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在其它条件不变的前提下，以下哪种做法容易引起机器学习中的过拟合问题",
+        "options": {
+            "a": "增加训练集数量",
+            "b": "减少神经网络隐藏层节点数",
+            "c": "删除稀疏的特征",
+            "d": "SVM算法中使用高斯核/RBF核代替"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "如果线性回归模型中的随机误差存在异方差性，那么参数的OLS估计量是",
+        "options": {
+            "a": "无偏的，有效的",
+            "b": "无偏的，非有效的",
+            "c": "有偏的，有效的",
+            "d": "有偏的，非有效的"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪个不属于CRF模型对于HMM和MEMM模型的优势",
+        "options": {
+            "a": "特征灵活",
+            "b": "速度快",
+            "c": "可容纳较多上下文信息",
+            "d": "全局最优"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "已知一组数据的协方差矩阵P,下面关于主分量说法错误的是",
+        "options": {
+            "a": "主分量分析的最佳准则是对一组数据进行按一组正交基分解, 在只取相同数量分量的条件下,以均方误差计算截尾误差最小",
+            "b": "在经主分量分解后,协方差矩阵成为对角矩阵",
+            "c": "主分量分析就是K-L变换",
+            "d": "主分量是通过求协方差矩阵的特征值得到"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下哪些方法不可以直接来对文本分类？",
+        "options": {
+            "a": "Kmeans",
+            "b": "决策树",
+            "c": "支持向量机",
+            "d": "KNN"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下(  )不属于线性分类器最佳准则？",
+        "options": {
+            "a": "感知准则函数",
+            "b": "贝叶斯分类",
+            "c": "支持向量机",
+            "d": "Fisher准则"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在统计模式分类问题中，当先验概率未知时，可以使用",
+        "options": {
+            "a": "最小损失准则",
+            "b": "最小最大损失准则",
+            "c": "最小误判概率准则"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "有两个样本点，第一个点为正样本,它的特征向量是(0,-1);第二个点为负样本,它的特征向量是(2,3),从这两个样本点组成的训练集构建一个线性SVM分类器的分类面方程是",
+        "options": {
+            "a": "2x+y=4",
+            "b": "x+2y=5",
+            "c": "x+2y=3",
+            "d": "2x-y=0"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在Logistic Regression 中,如果同时加入L1和L2范数,不会产生什么效果",
+        "options": {
+            "a": "以做特征选择,并在一定程度上防止过拟合",
+            "b": "能解决维度灾难问题",
+            "c": "能加快计算速度",
+            "d": "可以获得更准确的结果"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在其他条件不变的前提下，以下哪种做法容易引起机器学习中的过拟合问题？",
+        "options": {
+            "a": "增加训练集量",
+            "b": "减少神经网络隐藏层节点数",
+            "c": "删除稀疏的特征",
+            "d": "SVM算法中使用高斯核/RBF核代替线性核"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "隐马尔可夫模型三个基本问题以及相应的算法说法错误的是",
+        "options": {
+            "a": "评估—前向后向算法",
+            "b": "解码—维特比算法",
+            "c": "学习—Baum-Welch算法",
+            "d": "学习—前向后向算法"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设在训练中我们突然遇到了一个问题，在几次循环之后，误差瞬间降低。你认为数据有问题，于是你画出了数据并且发现也许是数据的偏度过大造成了这个问题，你打算怎么做来处理这个问题？",
+        "options": {
+            "a": "对数据作归一化",
+            "b": "对数据取对数变化",
+            "c": "都不对 ",
+            "d": "对数据作主成分分析(PCA)和归一化"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "使用k=1的KNN算法, 下图二类分类问题, “+” 和 “o” 分别代表两个类, 那么, 用仅拿出一个测试样本的交叉验证方法, 交叉验证的错误率是多少",
+        "options": {
+            "a": "0%",
+            "b": "100%",
+            "c": "0%-100%",
+            "d": "以上都不是"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "有两个样本点，第一个点为正样本,它的特征向量是(0,-1);第二个点为负样本,它的特征向量是(2,3),从这两个样本点组成的训练集构建一个线性SVM分类器的分类面方程是",
+        "options": {
+            "a": "2x+y=4",
+            "b": "x+2y=5",
+            "c": "x+2y=3",
+            "d": "2x-y=0"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以P(w)表示词条w的概率，假设已知P（南京）=0.8，P（市长）=0.6，P（江大桥）=0.4：P（南京市）=0.3，P（长江大桥）=0.5：如果假设前后两个词的出现是独立的，那么分词结果就是",
+        "options": {
+            "a": "南京市*长江*大桥",
+            "b": "南京*市长*江大桥",
+            "c": "南京市长*江大桥",
+            "d": "南京市*长江大桥"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "一个二进制源X发出符号集为{-1,1}，经过离散无记忆信道传输，由于信道中噪音的存在，接收端Y收到符号集为{-1,1,0}。已知P(x=-1)=1/4，P(x=1)=3/4，P(y=-1|x=-1)=4/5，P(y=0|x=-1)=1/5，P(y=1|x=1)=3/4，P(y=0|x=1)=1/4，求条件熵H(Y|X)",
+        "options": {
+            "a": "0.237",
+            "b": "0.328",
+            "c": "0.527",
+            "d": "0.537"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "Nave Bayes是一种特殊的Bayes分类器,特征变量是X,类别标签是C,它的一个假定是",
+        "options": {
+            "a": "各类别的先验概率P(C)是相等的",
+            "b": "以0为均值，sqr(2)/2为标准差的正态分布",
+            "c": "特征变量X的各个维度是类别条件独立随机变量",
+            "d": "P(X|C)是高斯分布"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假定你使用SVM学习数据X，数据X里面有些点存在错误。现在如果你使用一个二次核函数，多项式阶数为2，使用松弛变量C作为超参之一。如果使用较小的C（C趋于0），则",
+        "options": {
+            "a": "误分类",
+            "b": "正确分类",
+            "c": "不确定",
+            "d": "以上均不正确"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "对于投影数据为(( √2)，(0)，(√2))。现在如果在二维空间中重建，并将它们视为原始数据点的重建，那么重建误差是多少？",
+        "options": {
+            "a": "0%",
+            "b": "10%",
+            "c": "30%",
+            "d": "40%"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "Xi和Xj是较高维度表示中的两个不同点，其中Yi和Yj是较低维度中的Xi和Xj的表示\r\n1.数据点Xi与数据点Xj的相似度是条件概率p（j | i）\r\n2.数据点Yi与数据点Yj的相似度是条件概率q（j | i）\r\n对于在较低维度空间中的Xi和Xj的完美表示，以下哪一项必须是正确的？",
+        "options": {
+            "a": "p（j | i）= 0，q（j | i）= 1",
+            "b": "p（j | i）",
+            "c": "p（j | i）= q（j | i）",
+            "d": "P（j | i）> q（j | i）"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "如下逻辑回归图显示了3种不同学习速率值的代价函数和迭代次数之间的关系（不同的颜色在不同的学习速率下显示不同的曲线）\r\n为了参考而保存图表后，忘记其中不同学习速率的值。现在需要曲线的倾斜率值之间的关系。\r\n以下哪一个是正确的？\r\n1.蓝色的学习率是L1\r\n2.红色的学习率是L2\r\n3.绿色学习率为lL3",
+        "options": {
+            "a": "L1> L2> L3",
+            "b": "L1 = L2 = L3",
+            "c": "L1",
+            "d": "都不是"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下是两种不同的对数模型，分别为β0和β1\r\n对于两种对数模型（绿色，黑色）的β0和β1值，下列哪一项是正确的？ B \r\n注： Y =β0+β1* X。其中β0是截距，β1是系数",
+        "options": {
+            "a": "绿色的β1大于黑色",
+            "b": "绿色的β1小于黑色",
+            "c": "两种颜色的β1相同"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面是三个散点图（A，B，C，从左到右）和和手绘的逻辑回归决策边界,根据可视化后的结果，能得出什么结论？\r\n1.与第二和第三图相比，第一幅图中的训练误差最大。\r\n2.该回归问题的最佳模型是最后（第三个）图，因为它具有最小的训练误差（零）。\r\n3.第二个模型比第一个和第三个更强，它在不可见数据中表现最好。\r\n4.与第一种和第二种相比，第三种模型过度拟合了。\r\n5.所有的模型执行起来都一样，因为没有看到测试数据。",
+        "options": {
+            "a": "1和3",
+            "b": "2和3",
+            "c": "1,3和4",
+            "d": "5"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "使用 high(infinite) regularisation时偏差会如何变化？\r\n有散点图“a”和“b”两类（蓝色为正，红色为负）。在散点图“a”中，使用了逻辑回归（黑线是决策边界）对所有数据点进行了正确分类",
+        "options": {
+            "a": "偏差很大",
+            "b": "偏差很小",
+            "c": "不确定",
+            "d": "都不是"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假定你想将高维数据映射到低维数据中，那么最出名的降维算法是 PCA 和 t-SNE。现在你将这两个算法分别应用到数据「X」上，并得到数据集「X_projected_PCA」，「X_projected_tSNE」下面哪一项对「X_projected_PCA」和「X_projected_tSNE」的描述是正确的？",
+        "options": {
+            "a": "X_projected_PCA 在最近邻空间能得到解释",
+            "b": "X_projected_tSNE 在最近邻空间能得到解释",
+            "c": "两个都在最近邻空间能得到解释",
+            "d": "两个都不能在最近邻空间得到解释"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "为了得到和 SVD 一样的投射（projection），你需要在 PCA 中怎样做？",
+        "options": {
+            "a": "将数据转换成零均值",
+            "b": "将数据转换成零中位数",
+            "c": "无法做到",
+            "d": "以上方法不行"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设我们有一个数据集，在一个深度为 6 的决策树的帮助下，它可以使用 100% 的精确度被训练。现在考虑一下两点，并基于这两点选择正确的选项。 \r\n注意：所有其他超参数是相同的，所有其他因子不受影响。\r\n1、深度为 4 时将有高偏差和低方差\r\n2、深度为 4 时将有低偏差和低方差",
+        "options": {
+            "a": "只有1",
+            "b": "只有2",
+            "c": "1和2",
+            "d": "都没有"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设你被给到以下数据，你想要在给定的两个类别中使用 logistic 回归模型对它进行分类，你正在使用带有 L1 正则化的 logistic 回归，其中 C 是正则化参数，w1 和 w2 是 x1 和 x2 的系数。当你把 C 值从 0 增加至非常大的值时，下面哪个选项是正确的？",
+        "options": {
+            "a": "第一个 w2 成了 0，接着 w1 也成了 0",
+            "b": "第一个 w1 成了 0，接着 w2 也成了 0",
+            "c": "w1 和 w2 同时成了 0",
+            "d": "即使在 C 成为大值之后，w1 和 w2 都不能成 0"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设存在一个黑箱算法，其输入为有多个观察（t1, t2, t3,…….. tn）的训练数据和一个新的观察（q1）。该黑箱算法输出 q1 的最近邻 ti 及其对应的类别标签 ci。你可以将这个黑箱算法看作是一个 1-NN（1-最近邻）\r\n我们不使用 1-NN 黑箱，而是使用 j-NN(j>1) 算法作为黑箱。为了使用 j-NN 寻找 k-NN，下面哪个选项是正确的？",
+        "options": {
+            "a": " j 必须是 k 的一个合适的因子",
+            "b": "j > k",
+            "c": "不能办到"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设你正在做一个项目，它是一个二元分类问题。你在数据集上训练一个模型，并在验证数据集上得到混淆矩阵。基于上述混淆矩阵，下面哪个选项会给你正确的预测。\r\n1、精确度是~0.91\r\n2 、错误分类率是~0.91\r\n3 、假正率（False correct classification）是~0.95\r\n4 、真正率（True positive rate）是~0.95",
+        "options": {
+            "a": "1和3",
+            "b": "2和4",
+            "c": "1和4",
+            "d": "2和3"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": " Y的预期值是关于变量X(X1,X2….Xn)的线性函数，回归线定义为Y = β0 + β1 X1 + β2 X2……+ βn Xn，下列陈述哪项正确？(D)\r\n1.如果Xi的变化量为 Xi，其它为常量，则Y的变化量为βi Xi，常量βi可以为正数或负数\r\n2. βi 的值都是一样的，除非是其它X的βi\r\n3.X对Y预期值的总影响为每个分影响之和\r\n提示：特征值间相互独立，互不干扰",
+        "options": {
+            "a": "1和2",
+            "b": "1和3",
+            "c": "2和3",
+            "d": "1，2和3"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": " Nave Bayes是一种特殊的Bayes分类器,特征变量是X,类别标签是C,它的一个假定是",
+        "options": {
+            "a": "各类别的先验概率P(C)是相等的",
+            "b": "以0为均值，sqr(2)/2为标准差的正态分布",
+            "c": "特征变量X的各个维度是类别条件独立随机变量",
+            "d": "P(X|C)是高斯分布"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "我们想在大数据集上训练决策树, 为了使用较少时间, 我们可以 ",
+        "options": {
+            "a": "增加树的深度",
+            "b": "增加学习率 (learning rate)",
+            "c": "减少树的深度",
+            "d": "减少树的数量"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在一个n维的空间中， 最好的检测outlier(离群点)的方法是",
+        "options": {
+            "a": "作正态分布概率图",
+            "b": "作盒形图",
+            "c": "马氏距离",
+            "d": "作散点图"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "已知一组数据的协方差矩阵P,下面关于主分量说法错误的是",
+        "options": {
+            "a": "主分量分析的最佳准则是对一组数据进行按一组正交基分解, 在只取相同数量分量的条件下,以均方误差计算截尾误差最小",
+            "b": "在经主分量分解后,协方差矩阵成为对角矩阵",
+            "c": "主分量分析就是K-L变换",
+            "d": "主分量是通过求协方差矩阵的特征值得到"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "回归模型中存在多重共线性, 你如何解决这个问题？\r\n1.去除这两个共线性变量 \r\n2.我们可以先去除一个共线性变量 \r\n3.计算VIF(方差膨胀因子), 采取相应措施 \r\n4.为了避免损失信息, 我们可以使用一些正则化方法, 比如, 岭回归和lasso回归. \r\n哪些是对的？",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "2和3",
+            "d": "2，3和4"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "模型的高bias是什么意思, 我们如何降低它 ?",
+        "options": {
+            "a": "在特征空间中减少特征",
+            "b": "在特征空间中增加特征",
+            "c": "增加数据点",
+            "d": "B和C"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "对于信息增益, 决策树分裂节点, 下面说法正确的是\r\n1.纯度高的节点需要更多的信息去区分 \r\n2.信息增益可以用”1比特-熵”获得 \r\n3.如果选择一个属性具有许多归类值, 那么这个信息增益是有偏差的",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "2和3",
+            "d": "所有"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设我们要解决一个二类分类问题, 我们已经建立好了模型, 输出是0或1, 初始时设阈值为0.5, 超过0.5概率估计, 就判别为1, 否则就判别为0 ; 如果我们现在用另一个大于0.5的阈值, 那么现在关于模型说法, 正确的是\r\n1模型分类的召回率会降低或不变 \r\n2.模型分类的召回率会升高 \r\n3.模型分类准确率会升高或不变 \r\n4.模型分类准确率会降低",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "1和3",
+            "d": "2和4"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "“点击率问题”是这样一个预测问题, 99%的人是不会点击的, 而1%的人是会点击进去的, 所以这是一个非常不平衡的数据集. 假设, 现在我们已经建了一个模型来分类, 而且有了99%的预测准确率, 我们可以下的结论是 ",
+        "options": {
+            "a": "模型预测准确率已经很高了, 我们不需要做什么了",
+            "b": "模型预测准确率不高, 我们需要做点什么改进模型",
+            "c": "无法下结论",
+            "d": "以上都不对"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假如我们使用非线性可分的SVM目标函数作为最优化对象, 我们怎么保证模型线性可分？",
+        "options": {
+            "a": "设C=1",
+            "b": "设C=0",
+            "c": "设C=无穷大",
+            "d": "都不对"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "我们想要减少数据集中的特征数, 即降维. 选择以下适合的方案\r\n1.使用前向特征选择方法 \r\n2.使用后向特征排除方法 \r\n3.我们先把所有特征都使用, 去训练一个模型, 得到测试集上的表现. 然后我们去掉一个特征, 再去训练, 用交叉验证看看测试集上的表现. 如果表现比原来还要好, 我们可以去除这个特征 \r\n4.查看相关性表, 去除相关性最高的一些特征",
+        "options": {
+            "a": "1 和 2",
+            "b": "2, 3和4",
+            "c": "1, 2和4",
+            "d": "all"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "对于下图, 最好的主成分选择是多少 ?",
+        "options": {
+            "a": "7",
+            "b": "30",
+            "c": "35",
+            "d": "不确定"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "对应GradientBoosting tree算法， 以下说法正确的是\r\n1.当增加最小样本分裂个数，我们可以抵制过拟合 \r\n2.当增加最小样本分裂个数，会导致过拟合 \r\n3.当我们减少训练单个学习器的样本个数，我们可以降低variance \r\n4.当我们减少训练单个学习器的样本个数，我们可以降低bias",
+        "options": {
+            "a": "2和4",
+            "b": "2和3",
+            "c": "1和3",
+            "d": "1和4"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面的交叉验证方法 : \r\ni. 有放回的Bootstrap方法 \r\nii. 留一个测试样本的交叉验证 \r\niii. 5折交叉验证 \r\niv. 重复两次的5折交叉验证 \r\n当样本是1000时，下面执行时间的顺序，正确的是",
+        "options": {
+            "a": "i > ii > iii > iv",
+            "b": "ii > iv > iii > i",
+            "c": "iv > i > ii > iii",
+            "d": " ii > iii > iv > i"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "变量选择是用来选择最好的判别器子集， 如果要考虑模型效率，我们应该做哪些变量选择的考虑？\r\n1.多个变量其实有相同的用处 \r\n2.变量对于模型的解释有多大作用 \r\n3.特征携带的信息 \r\n4.交叉验证",
+        "options": {
+            "a": "1 和 4",
+            "b": "1，2和3",
+            "c": "1，3和4",
+            "d": "以上都有"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "为了得到和 SVD 一样的投射（projection），你需要在 PCA 中怎样做？",
+        "options": {
+            "a": "将数据转换成零均值",
+            "b": "将数据转换成零中位数",
+            "c": "无法做到"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设你使用 log-loss 函数作为评估标准。下面这些选项，哪些是对作为评估标准的 log-loss 的正确解释",
+        "options": {
+            "a": "如果一个分类器对不正确的分类很自信，log-loss 会严重的批评它",
+            "b": "对一个特别的观察而言，分类器为正确的类别分配非常小的概率，然后对 log-loss 的相应分布会非常大",
+            "c": "log-loss 越低，模型越好",
+            "d": "以上都是"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "影推荐系统是以下哪些的应用实例\r\n1 分类\r\n2 聚类\r\n3 强化学习\r\n4 回归",
+        "options": {
+            "a": "只有2",
+            "b": "1和2",
+            "c": "1和3",
+            "d": "2和3",
+            "e": "1 2 3",
+            "f": "1 2 3 4"
+        },
+        "answer": "E",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "对于一个图像识别问题(在一张照片里找出一只猫)，下面哪种神经网络可以更好地解决这个问题？",
+        "options": {
+            "a": "循环神经网络",
+            "b": "感知机",
+            "c": "多层感知机",
+            "d": "卷积神经网络"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "当在卷积神经网络中加入池化层(pooling layer)时，变换的不变性会被保留，是吗？",
+        "options": {
+            "a": "不知道",
+            "b": "看情况",
+            "c": "是",
+            "d": "否"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "如果我们用了一个过大的学习速率会发生什么？",
+        "options": {
+            "a": "神经网络会收敛",
+            "b": "不好说",
+            "c": "都不对 ",
+            "d": "神经网络不会收敛"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在一个神经网络中，下面哪种方法可以用来处理过拟合？",
+        "options": {
+            "a": "Dropout",
+            "b": "分批归一化(Batch Normalization)",
+            "c": "正则化(regularization)",
+            "d": "都可以"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "批规范化(Batch Normalization)的好处都有啥？",
+        "options": {
+            "a": "在将所有的输入传递到下一层之前对其进行归一化（更改）",
+            "b": "它将权重的归一化平均值和标准差",
+            "c": "它是一种非常有效的反向传播(BP)方法",
+            "d": "这些均不是"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪个神经网络结构会发生权重共享？",
+        "options": {
+            "a": "卷积神经网络",
+            "b": "循环神经网络",
+            "c": "全连接神经网络",
+            "d": "A和B"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "构建一个神经网络，将前一层的输出和它自身作为输入。下列哪一种架构有反馈连接？",
+        "options": {
+            "a": "循环神经网络",
+            "b": "卷积神经网络",
+            "c": "限制玻尔兹曼机",
+            "d": "都不是"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪项关于模型能力（model capacity）的描述是正确的？（指神经网络模型能拟合复杂函数的能力）",
+        "options": {
+            "a": "隐藏层层数增加，模型能力增加",
+            "b": "Dropout的比例增加，模型能力增加",
+            "c": "学习率增加，模型能力增加",
+            "d": "都不正确"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在训练神经网络时，损失函数(loss)在最初的几个epochs时没有下降，可能的原因是？",
+        "options": {
+            "a": "学习率(learning rate)太低",
+            "b": "正则参数太高",
+            "c": "陷入局部最小值",
+            "d": "以上都有可能"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪一项在神经网络中引入了非线性？",
+        "options": {
+            "a": "随机梯度下降",
+            "b": "修正线性单元（ReLU）",
+            "c": "卷积函数",
+            "d": "以上都不正确"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面哪项操作能实现跟神经网络中Dropout的类似效果？",
+        "options": {
+            "a": "Boosting ",
+            "b": "Bagging",
+            "c": "Stacking",
+            "d": "Mapping"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "已知： \r\n- 大脑是有很多个叫做神经元的东西构成，神经网络是对大脑的简单的数学表达。 \r\n- 每一个神经元都有输入、处理函数和输出。 \r\n- 神经元组合起来形成了网络，可以拟合任何函数。 \r\n- 为了得到最佳的神经网络，我们用梯度下降方法不断更新模型 \r\n给定上述关于神经网络的描述，什么情况下神经网络模型被称为深度学习模型？",
+        "options": {
+            "a": "加入更多层，使神经网络的深度增加",
+            "b": "有维度更高的数据",
+            "c": "当这是一个图形识别的问题时",
+            "d": "以上都不正确"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "一监狱人脸识别准入系统用来识别待进入人员的身份，此系统一共包括识别4种不同的人员：狱警，小偷，送餐员，其他。下面哪种学习方法最适合此种应用需求",
+        "options": {
+            "a": "二分类问题 ",
+            "b": "多分类问题",
+            "c": "层次聚类问题",
+            "d": " k-中心点聚类问题",
+            "e": "回归问题",
+            "f": "结构分析问题"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "梯度下降算法的正确步骤是什么\r\n1.计算预测值和真实值之间的误差 \r\n2.重复迭代，直至得到网络权重的最佳值 \r\n3.把输入传入网络，得到输出值 \r\n4.用随机值初始化权重和偏差 \r\n5.对每一个产生误差的神经元，调整相应的（权重）值以减小误差",
+        "options": {
+            "a": "1, 2, 3, 4, 5",
+            "b": "5, 4, 3, 2, 1",
+            "c": "3, 2, 1, 5, 4",
+            "d": "4, 3, 1, 5, 2"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列方法中，不可以用于特征降维的方法包括",
+        "options": {
+            "a": "主成分分析PCA",
+            "b": "线性判别分析LDA",
+            "c": "深度学习SparseAutoEncoder",
+            "d": "矩阵奇异值分解SVD"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "神经网络模型（Neural Network）因受人类大脑的启发而得名。神经网络由许多神经元（Neuron）组成，每个神经元接受一个输入，对输入进行处理后给出一个输出。请问下列关于神经元的描述中，哪一项是正确的？",
+        "options": {
+            "a": "每个神经元只有一个输入和一个输出",
+            "b": "每个神经元有多个输入和一个输出",
+            "c": "每个神经元有一个输入和多个输出",
+            "d": "每个神经元有多个输入和多个输出",
+            "e": "上述都正确"
+        },
+        "answer": "E",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "深度学习是当前很热门的机器学习算法，在深度学习中，涉及到大量的矩阵相乘，现在需要计算三个稠密矩阵A,B,C的乘积ABC,假90设三个矩阵的尺寸分别为m∗n，n∗p，p∗q，且m <n <p <q，以下计算顺序效率最高的是",
+        "options": {
+            "a": "(AB)C ",
+            "b": "AC(B)",
+            "c": "A(BC)",
+            "d": "所以效率都相同"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "基于统计的分词方法为",
+        "options": {
+            "a": "正向量最大匹配法",
+            "b": "逆向量最大匹配法",
+            "c": "最少切分",
+            "d": "条件随机场"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下几种模型方法属于判别式模型(Discriminative Model)的有\r\n1)混合高斯模型\r\n2)条件随机场模型\r\n3)区分度训练\r\n4)隐马尔科夫模型",
+        "options": {
+            "a": "2、3",
+            "b": "3、4",
+            "c": "1、4",
+            "d": "1、2"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面有关分类算法的准确率，召回率，F1 值的描述，错误的是？",
+        "options": {
+            "a": "准确率是检索出相关文档数与检索出的文档总数的比率，衡量的是检索系统的查准率",
+            "b": "召回率是指检索出的相关文档数和文档库中所有的相关文档数的比率，衡量的是检索系统的查全率",
+            "c": "正确率、召回率和 F 值取值都在0和1之间，数值越接近0，查准率或查全率就越高",
+            "d": "为了解决准确率和召回率冲突问题，引入了F1分数"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "基于统计的分词方法为",
+        "options": {
+            "a": "正向最大匹配法",
+            "b": "逆向最大匹配法",
+            "c": "最少切分",
+            "d": "条件随机场"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在大规模的语料中，挖掘词的相关性是一个重要的问题。以下哪一个信息不能用于确定两个词的相关性",
+        "options": {
+            "a": "互信息",
+            "b": "最大熵",
+            "c": "卡方检验",
+            "d": "最大似然比"
+        },
+        "answer": "B",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪个不属于常用的文本分类的特征选择算法？",
+        "options": {
+            "a": "卡方检验值",
+            "b": "互信息",
+            "c": "信息增益",
+            "d": "主成分分析"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "中文同义词替换时，常用到Word2Vec，以下说法错误的是",
+        "options": {
+            "a": "Word2Vec基于概率统计",
+            "b": "Word2Vec结果符合当前预料环境",
+            "c": "Word2Vec得到的都是语义上的同义词",
+            "d": "Word2Vec受限于训练语料的数量和质量"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "想象一下，你有一个 28x28 的图片，并使用输入深度为 3 和输出深度为 8 在上面运行一个 3x3 的卷积神经网络。注意，步幅padding是1，你正在使用相同的填充（padding）\r\n当使用给定的参数时，输出特征图的尺寸是多少",
+        "options": {
+            "a": "28 宽、28 高、8 深",
+            "b": "13 宽、13 高、8 深",
+            "c": "28 宽、13 高、8 深",
+            "d": "13 宽、28 高、8 深"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "输入图片大小为200×200，依次经过一层卷积（kernel size 5×5，padding 1，stride 2），pooling（kernel size 3×3，padding 0，stride 1），又一层卷积（kernel size 3×3，padding 1，stride 1）之后，输出特征图大小为",
+        "options": {
+            "a": "95",
+            "b": "96",
+            "c": "97",
+            "d": "98"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在选择神经网络的深度时，下面那些参数需要考虑？\r\n1 神经网络的类型(如MLP,CNN) \r\n2 输入数据 \r\n3 计算能力(硬件和软件能力决定) \r\n4 学习速率 \r\n5 映射的输出函数",
+        "options": {
+            "a": "1 2 4 5",
+            "b": "2 3 4 5",
+            "c": "都需要考虑",
+            "d": "1 3 4 5"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "当数据过大以至于无法在RAM中同时处理时，哪种梯度下降方法更加有效？",
+        "options": {
+            "a": "随机梯度下降法(Stochastic Gradient Descent)",
+            "b": "不知道",
+            "c": "整批梯度下降法(Full Batch Gradient Descent)",
+            "d": "都不是"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设我们已经在ImageNet数据集(物体识别)上训练好了一个卷积神经网络。然后给这张卷积神经网络输入一张全白的图片。对于这个输入的输出结果为任何种类的物体的可能性都是一样的，对吗？",
+        "options": {
+            "a": "对",
+            "b": "不知道",
+            "c": "看情况",
+            "d": "不对"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假设你需要调整参数来最小化代价函数（cost function），可以使用下列哪项技术？",
+        "options": {
+            "a": "穷举搜索",
+            "b": "随机搜索",
+            "c": "Bayesian优化",
+            "d": "以上任意一种"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "对于神经网络的说法, 下面正确的是 \r\n1.增加神经网络层数, 可能会增加测试数据集的分类错误率 \r\n2.减少神经网络层数, 总是能减小测试数据集的分类错误率 \r\n3.增加神经网络层数, 总是能减小训练数据集的分类错误率",
+        "options": {
+            "a": "1",
+            "b": "1和3",
+            "c": "1和2",
+            "d": "2"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": " 想像正在处理文本数据，使用单词嵌入（Word2vec）表示使用的单词。在单词嵌入中，最终会有1000维。现在想减小这个高维数据的维度，这样相似的词应该在最邻近的空间中具有相似的含义。在这种情况下，您最有可能选择以下哪种算法？",
+        "options": {
+            "a": " t-SNE",
+            "b": "PCA",
+            "c": "LDA",
+            "d": "都不是"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "隐马尔可夫模型（HMM），设其观察值\r\n空间为\r\n \r\n状态空间为\r\n \r\n如果用维特比算法(Viterbi algorithm)进行解码，时间复杂度为",
+        "options": {
+            "a": "O(NK)",
+            "b": "O(NK^2)",
+            "c": "O(N^2K)",
+            "d": "都不是"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "（假设precision=TP/(TP+FP),recall=TP/(TP+FN)。）在二分类问题中，当测试集的正例和负例数量不均衡时，以下评价方案哪个是相对不合理的",
+        "options": {
+            "a": "Accuracy:(TP+TN)/all",
+            "b": "F-value:2*recall*precision/(recall+precision)",
+            "c": "G-mean:sqrt(precision*recall)",
+            "d": "AUC:曲线下面积"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "语言模型的参数估计经常使用MLE（最大似然估计）。面临的一个问题是没有出现的项概率为0，这样会导致语言模型的效果不好。为了解决这个问题，需要使用",
+        "options": {
+            "a": "平滑",
+            "b": "去噪",
+            "c": "随机插值",
+            "d": "增加白噪音"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下图显示了三个逻辑回归模型的AUC-ROC曲线。不同的颜色表示不同超参数值的曲线。以下哪个AUC-ROC会给出最佳结果？",
+        "options": {
+            "a": "黄色",
+            "b": "粉色",
+            "c": "紫色",
+            "d": "都相同"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假定你现在解决一个有着非常不平衡类别的分类问题，即主要类别占据了训练数据的 99%。现在你的模型在测试集上表现为 99% 的准确度。那么下面哪一项表述是正确的？ \r\n1 准确度并不适合于衡量不平衡类别问题\r\n2 准确度适合于衡量不平衡类别问题\r\n3 精确率和召回率适合于衡量不平衡类别问题\r\n3 精确率和召回率不适合于衡量不平衡类别问题",
+        "options": {
+            "a": "1和3",
+            "b": "1和4",
+            "c": "2和3",
+            "d": "2和4"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "考虑某个具体问题时，你可能只有少量数据来解决这个问题。不过幸运的是你有一个类似问题已经预先训练好的神经网络。可以用下面哪种方法来利用这个预先训练好的网络？",
+        "options": {
+            "a": "把除了最后一层外所有的层都冻住，重新训练最后一层",
+            "b": "对新数据重新训练整个模型",
+            "c": "只对最后几层进行调参(fine tune)",
+            "d": "对每一层模型进行评估，选择其中的少数来用"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下图显示，当开始训练时，误差一直很高，这是因为神经网络在往全局最小值前进之前一直被卡在局部最小值里。为了避免这种情况，我们可以采取下面哪种策略？",
+        "options": {
+            "a": "改变学习速率，比如一开始的几个训练周期不断更改学习速率",
+            "b": "一开始将学习速率减小10倍，然后用动量项(momentum)",
+            "c": "增加参数数目，这样神经网络就不会卡在局部最优处",
+            "d": "其他都不对"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下图是一个利用sigmoid函数作为激活函数的含四个隐藏层的神经网络训练的梯度下降图。这个神经网络遇到了梯度消失的问题。下面哪个叙述是正确的？",
+        "options": {
+            "a": "第一隐藏层对应D，第二隐藏层对应C，第三隐藏层对应B，第四隐藏层对应A",
+            "b": "第一隐藏层对应D，第二隐藏层对应C，第三隐藏层对应B，第四隐藏层对应A",
+            "c": "第一隐藏层对应A，第二隐藏层对应B，第三隐藏层对应C，第四隐藏层对应D",
+            "d": "第一隐藏层对应B，第二隐藏层对应D，第三隐藏层对应C，第四隐藏层对应A"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下图显示了训练过的3层卷积神经网络准确度，与参数数量(特征核的数量)的关系。\r\n从图中趋势可见，如果增加神经网络的宽度，精确度会增加到一个特定阈值后，便开始降低。造成这一现象的可能原因是什么？",
+        "options": {
+            "a": "即使增加卷积核的数量，只有少部分的核会被用作预测",
+            "b": "当卷积核数量增加时，神经网络的预测能力（Power）会降低",
+            "c": "当卷积核数量增加时，它们之间的相关性增加(correlate)，导致过拟合",
+            "d": "以上都不正确"
+        },
+        "answer": "C",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "想像正在处理文本数据，使用单词嵌入（Word2vec）表示使用的单词。在单词嵌入中，最终会有1000维。现在想减小这个高维数据的维度，这样相似的词应该在最邻近的空间中具有相似的含义。在这种情况下，您最有可能选择以下哪种算法？",
+        "options": {
+            "a": "t-SNE",
+            "b": "PCA",
+            "c": "LDA",
+            "d": "都不是"
+        },
+        "answer": "A",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "你可以使用不同的标准评估二元分类问题的表现，例如准确率、log-loss、F-Score。让我们假设你使用 log-loss 函数作为评估标准。 D \r\n下面这些选项，哪个／些是对作为评估标准的 log-loss 的正确解释。\r\n1 如果一个分类器对不正确的分类很自信，log-loss 会严重的批评它。\r\n2 对一个特别的观察而言，分类器为正确的类别分配非常小的概率，然后对 log-loss 的相应分布会非常大。\r\n3 log-loss 越低，模型越好。",
+        "options": {
+            "a": "1和3",
+            "b": "2和3",
+            "c": "1和2",
+            "d": "1 2 3"
+        },
+        "answer": "D",
+        "explanation": "解释信息",
+        "type": "单选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "影响聚类算法效果的主要原因有",
+        "options": {
+            "a": "特征选取",
+            "b": "模式相似性测度",
+            "c": "分类准则",
+            "d": "已知类别的样本质量"
+        },
+        "answer": "A,B,C",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在统计模式分类问题中，当先验概率未知时，可以使用",
+        "options": {
+            "a": "最小损失准则",
+            "b": "最小最大损失准则",
+            "c": "最小误判概率准则",
+            "d": "N-P判决"
+        },
+        "answer": "B,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列哪些方法可以用来对高维数据进行降维",
+        "options": {
+            "a": "LASSO",
+            "b": "主成分分析法",
+            "c": "聚类分析",
+            "d": "小波分析法",
+            "e": "线性判别法",
+            "f": "拉普拉斯特征映射"
+        },
+        "answer": "A,B,C,D,E,F",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "处理类别型特征时，事先不知道分类变量在测试集中的分布。要将 one-hot encoding（独热码）应用到类别型特征中。那么在训练集中将独热码应用到分类变量可能要面临的困难是什么？",
+        "options": {
+            "a": "分类变量所有的类别没有全部出现在测试集中",
+            "b": "类别的频率分布在训练集和测试集是不同的",
+            "c": "训练集和测试集通常会有一样的分布"
+        },
+        "answer": "A,B",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "如果以特征向量的相关系数作为模式相似性测度，则影响聚类算法结果的主要因素有",
+        "options": {
+            "a": "已知类别样本质量",
+            "b": "分类准则",
+            "c": "特征选取",
+            "d": "量纲"
+        },
+        "answer": "B,C",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "影响基本K-均值算法的主要因素有",
+        "options": {
+            "a": "样本输入顺序",
+            "b": "模式相似性测度",
+            "c": "聚类准则",
+            "d": "初始类中心的选取"
+        },
+        "answer": "A,B,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下哪个属于线性分类器最佳准则?",
+        "options": {
+            "a": "感知准则函数",
+            "b": "贝叶斯分类",
+            "c": "支持向量机",
+            "d": "Fisher准则"
+        },
+        "answer": "A,C,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "以下说法中正确的是",
+        "options": {
+            "a": "SVM对噪声(如来自其他分布的噪声样本)鲁棒",
+            "b": "在AdaBoost算法中,所有被分错的样本的权重更新比例相同",
+            "c": "Boosting和Bagging都是组合多个分类器投票的方法,二者都是根据单个分类器的正确率决定其权重",
+            "d": "给定n个数据点,如果其中一半用于训练,一般用于测试,则训练误差和测试误差之间的差别会随着n的增加而减少"
+        },
+        "answer": "B,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "机器学习中L1正则化和L2正则化的区别是？",
+        "options": {
+            "a": "使用L1可以得到稀疏的权值",
+            "b": "使用L1可以得到平滑的权值",
+            "c": "使用L2可以得到稀疏的权值",
+            "d": "使用L2可以得到平滑的权值"
+        },
+        "answer": "A,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "位势函数法的积累势函数K(x)的作用相当于Bayes判决中的",
+        "options": {
+            "a": "后验概率",
+            "b": "先验概率",
+            "c": "类概率密度",
+            "d": "类概率密度与先验概率的乘积"
+        },
+        "answer": "A,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下列方法中，可以用于特征降维的方法包括",
+        "options": {
+            "a": "主成分分析PCA",
+            "b": "线性判别分析LDA",
+            "c": "深度学习SparseAutoEncoder",
+            "d": "矩阵奇异值分解SVD",
+            "e": "最小二乘法LeastSquares"
+        },
+        "answer": "A,B,C,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "数据清理中，处理缺失值的方法是?",
+        "options": {
+            "a": "估算",
+            "b": "整例删除 ",
+            "c": "变量删除",
+            "d": "成对删除"
+        },
+        "answer": "A,B,C,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面哪些是基于核的机器学习算法?",
+        "options": {
+            "a": "Expectation Maximization（EM）（最大期望算法）",
+            "b": "Radial Basis Function（RBF）（径向基核函数）",
+            "c": "Linear Discrimimate Analysis（LDA）（主成分分析法）",
+            "d": "Support Vector Machine（SVM）（支持向量机）"
+        },
+        "answer": "B,C,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在统计模式识分类问题中，当先验概率未知时，可以使用",
+        "options": {
+            "a": "最小损失准则",
+            "b": "N-P判决",
+            "c": "最小最大损失准则",
+            "d": "最小误判概率准则"
+        },
+        "answer": "B,C",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "在分类问题中,我们经常会遇到正负样本数据量不等的情况,比如正样本为10w条数据,负样本只有1w条数据,以下最合适的处理方法是",
+        "options": {
+            "a": "将负样本重复10次,生成10w样本量,打乱顺序参与分类",
+            "b": "直接进行分类,可以最大限度利用数据",
+            "c": "从10w正样本中随机抽取1w参与分类",
+            "d": "将负样本每个权重设置为10,正样本权重为1,参与训练过程"
+        },
+        "answer": "A,C,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "关于线性回归的描述,以下正确的有:",
+        "options": {
+            "a": "基本假设包括随机干扰项是均值为0,方差为1的标准正态分布",
+            "b": "基本假设包括随机干扰下是均值为0的同方差正态分布",
+            "c": "在违背基本假设时,普通最小二乘法估计量不再是最佳线性无偏估计量",
+            "d": "在违背基本假设时,模型不再可以估计",
+            "e": "可以用DW检验残差是否存在序列相关性",
+            "f": "多重共线性会使得参数估计值方差减小"
+        },
+        "answer": "A,C,E,F",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "基于二次准则函数的H-K算法较之于感知器算法的优点是",
+        "options": {
+            "a": "计算量小 ",
+            "b": "可以判别问题是否线性可分 ",
+            "c": "其解完全适用于非线性可分的情况",
+            "d": "其解的适应性更好"
+        },
+        "answer": "B,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假定目标变量的类别非常不平衡，即主要类别占据了训练数据的 99%。现在你的模型在测试集上表现为 99% 的准确度。那么下面哪一项表述是正确的？",
+        "options": {
+            "a": "准确度并不适合于衡量不平衡类别问题",
+            "b": "准确度适合于衡量不平衡类别问题",
+            "c": "精确率和召回率适合于衡量不平衡类别问题",
+            "d": " 精确率和召回率不适合于衡量不平衡类别问题"
+        },
+        "answer": "A,C",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "鉴别了多元共线特征。那么下一步可能的操作是什么？",
+        "options": {
+            "a": "移除两个共线变量",
+            "b": "不移除两个变量，而是移除一个",
+            "c": "移除相关变量可能会导致信息损失，可以使用带罚项的回归模型（如 ridge 或 lasso regression）"
+        },
+        "answer": "B,C",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "下面哪些对「类型 1（Type-1）」和「类型 2（Type-2）」错误的描述是正确的？",
+        "options": {
+            "a": "类型 1 通常称之为假正类，类型 2 通常称之为假负类",
+            "b": "类型 2 通常称之为假正类，类型 1 通常称之为假负类",
+            "c": "类型 1 错误通常在其是正确的情况下拒绝假设而出现"
+        },
+        "answer": "A,C",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "模式识别中，马式距离较之于欧式距离的优点是",
+        "options": {
+            "a": "平移不变性",
+            "b": "旋转不变性",
+            "c": "尺度不变性",
+            "d": "考虑了模式的分布"
+        },
+        "answer": "C,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "影响聚类算法结果的主要因素有",
+        "options": {
+            "a": "已知类别的样本质量",
+            "b": "分类准则",
+            "c": "特征选取",
+            "d": "模式相似性测度"
+        },
+        "answer": "B,C,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "假定某同学使用Naive Bayesian（NB）分类模型时，不小心将训练数据的两个维度搞重复了，那么关于NB的说法中正确的是",
+        "options": {
+            "a": "这个被重复的特征在模型中的决定作用会被加强",
+            "b": "模型效果相比无重复特征的情况下精确度会降低",
+            "c": "如果所有特征都被重复一遍，得到的模型预测结果相对于不重复的情况下的模型预测结果一样",
+            "d": "当两列特征高度相关时，无法用两列特征相同时所得到的结论来分析问题",
+            "e": "NB可以用来做最小二乘回归",
+            "f": "以上说法都不正确"
+        },
+        "answer": "B,D",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
+        "title": "机器学习与深度学习",
+        "content": "隐马尔可夫模型三个基本问题以及相应的算法说法正确的是",
+        "options": {
+            "a": "评估—前向后向算法",
+            "b": "解码—维特比算法",
+            "c": "学习—Baum-Welch算法",
+            "d": "学习—前向后向算法"
+        },
+        "answer": "A,B,C",
+        "explanation": "解释信息",
+        "type": "多选题"
+    },
+    {
         "title": "变量名",
         "content": "Python 在处理标识符时区分大小写吗？",
         "options": {
@@ -309,7 +4254,7 @@
     },
     {
         "title": "核心数据类型",
-        "content": "help(id) 的返回类型是什么？",
+        "content": "help(id 的返回类型是什么？",
         "options": {
             "a": "int",
             "b": "float",
