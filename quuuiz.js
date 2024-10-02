@@ -61,7 +61,7 @@ function generateQuestions(questions) {
            const optionLabel = document.createElement('label');
            optionLabel.classList.add('option');
 
-           const inputType = question.type === '单选题' ? 'radio' : 'checkbox';
+           const inputType = question.type === '单选' ? 'radio' : 'checkbox';
            const input = document.createElement('input');
            input.type = inputType;
            input.name = `question${index}`; 
@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     return String.fromCharCode(65 + optionIndex); // 将索引转换为字母（A=65）
                 }); // 获取用户选择的答案
 
-            const questionType = inputs[0].type === 'radio' ? '单选题' : '多选题';
+            const questionType = inputs[0].type === 'radio' ? '单选' : '多选';
             const questionText = document.querySelector(`#question-${i + 1} .question-text`).textContent;
 
             userAnswers.push({

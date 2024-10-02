@@ -35,7 +35,7 @@ $('.modal-login form').addEventListener('submit', async function(e) {
   const username = $('.modal-login input[name=username]').value;
   const password = $('.modal-login input[name=password]').value;
   
-  if (!/^\w{3,11}$/.test(username)) {
+  if (!/^\w{3,12}$/.test(username)) {
     $('.modal-login .errormsg').innerText = '用户名需输入3-11个字符，包括字母数字下划线';
     return false;
 }

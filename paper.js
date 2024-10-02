@@ -123,12 +123,12 @@ submissionData.userAnswers.forEach((question, index) => {
     // 处理正确答案为数组格式（适应多选题）
     const correctAnswers = question.correctAnswer.split(','); // 将 "B,C" 转换为 ["B", "C"]
 
-    if (question.questionType === '单选题') {
+    if (question.questionType === '单选') {
         // 单选题：如果用户选择了正确答案，则加1分
         if (question.userSelection[0] === correctAnswers[0]) {
             totalScore += 1;
         }
-    } else if (question.questionType === '多选题') {
+    } else if (question.questionType === '多选') {
         // 多选题：用户选择完全正确才加1分
         const isAllCorrect = correctAnswers.every(answer => question.userSelection.includes(answer));
         const isUserSelectionCorrect = question.userSelection.length === correctAnswers.length;
@@ -144,7 +144,7 @@ question.options.forEach((option, optionIndex) => {
 
 
     // 创建单选框或多选框
-    const inputType = question.questionType === '单选题' ? 'radio' : 'checkbox';
+    const inputType = question.questionType === '单选' ? 'radio' : 'checkbox';
     const input = document.createElement('input');
     input.type = inputType;
     input.name = `question${index + 1}`; // 根据题号设置 name 属性

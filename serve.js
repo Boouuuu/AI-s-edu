@@ -65,7 +65,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 */
 
-// 定义 paper数据模型
+// 定义 Submission后数据模型
 const QuestionDataSchema = new mongoose.Schema({
     questionNumber: { type: Number, required: true },
     questionType: { type: String, required: true },
@@ -102,7 +102,7 @@ app.post('/submit', async (req, res) => {
     }
 });
 
-// 获取所有提交记录的路由
+// 获取提交记录的路由
 app.get('/submissions', async (req, res) => {
     try {
         const { submitTime } = req.query;
@@ -129,7 +129,7 @@ app.get('/submission-times', async (req, res) => {
         const username = req.query.username; // 从查询参数获取用户名
         
         console.log(username);
-        
+
         if (!username) {
             return res.status(400).send('用户名未提供');
         }
