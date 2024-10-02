@@ -1,14 +1,15 @@
 async function loadQuestions() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch('dataa.json');
         const questions = await response.json();
+        console.log('加载的问题:', questions); // 输出加载的问题
         generateQuestions(questions);
     } catch (error) {
-        console.error('Error loading questions:', error);
+        console.error('加载问题时出错:', error);
     }
 }
 
-const num=10;
+const num = 10;
 
 let answers = Array(num).fill(null); // 初始化答案数组
 let correctAnswers = []; // 存储正确答案
@@ -17,6 +18,7 @@ let correctAnswers = []; // 存储正确答案
 function generateQuestions(questions) {
     const container = document.getElementById('container');
     const limitedQuestions = getRandomQuestions(questions, num);
+    console.log('选中的问题:', limitedQuestions); // 输出选中的问题
 
     limitedQuestions.forEach((question, index) => {
         const questionBox = document.createElement('div');
@@ -33,7 +35,7 @@ function generateQuestions(questions) {
 
         const questionType = document.createElement('span');
         questionType.classList.add('purple-box');
-        questionType.textContent = question.类型;
+        questionType.textContent = question.type;
 
         header.appendChild(questionNumber);
         header.appendChild(questionType);
@@ -42,33 +44,33 @@ function generateQuestions(questions) {
         // 第二层
         const questionText = document.createElement('div');
         questionText.classList.add('question-text');
-        questionText.textContent = question.题目;
+        questionText.textContent = question.content;
+        console.log(`题目 ${index + 1}:`, question.content); // 输出题目内容
         questionBox.appendChild(questionText);
 
-        // 第三层
-        const optionsContainer = document.createElement('div');
-        optionsContainer.classList.add('options');
+       // 第三层
+       const optionsContainer = document.createElement('div');
+       optionsContainer.classList.add('options');
 
-        const options = JSON.parse(question.选项.replace(/'/g, '"'));
-        correctAnswers.push(question.答案); // 保存正确答案
+       // 将选项对象转换为数组
+       const options = Object.values(question.options);
+       console.log(`题目 ${index + 1} 的选项:`, options); // 输出选项内容
+       correctAnswers.push(question.answer); // 保存正确答案
 
+       options.forEach((option) => {
+           const optionLabel = document.createElement('label');
+           optionLabel.classList.add('option');
 
-        options.forEach((option) => {
-            const optionLabel = document.createElement('label');
-            optionLabel.classList.add('option');
+           const inputType = question.type === '单选题' ? 'radio' : 'checkbox';
+           const input = document.createElement('input');
+           input.type = inputType;
+           input.name = `question${index}`; 
 
-            const inputType = question.类型 === '单选题' ? 'radio' : 'checkbox';
-            const input = document.createElement('input');
-            input.type = inputType;
-            input.name = `question${index}`; 
-
-
-             // 添加事件监听器
-            input.addEventListener('change', () => {
-                // 调用更新状态的方法
-                updateQuestionStatus(index);
-            });
-
+           // 添加事件监听器
+           input.addEventListener('change', () => {
+               console.log(`题目 ${index + 1} 的选项被选中:`, option); // 输出被选中的选项
+               updateQuestionStatus(index);
+           });
 
             const optionText = document.createTextNode(option);
             optionLabel.appendChild(input);
@@ -80,6 +82,7 @@ function generateQuestions(questions) {
         container.appendChild(questionBox);
     });
 }
+
 
 // 初始化加载题目
 loadQuestions();
@@ -260,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             if (response.ok) {
-                console.log('数据已成功提交');
+                console.log('数据成功提交');
             } else {
                 console.error('数据提交失败:', response.statusText);
             }

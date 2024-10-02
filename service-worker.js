@@ -74,3 +74,26 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     return true;
   }
 });
+
+
+// summary
+if (request.message === 'getCodeSnippets') {
+    console.log("service总结收到!")
+    // 请求内容脚本获取代码片段
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        chrome.tabs.sendMessage(tabs[0].id, { message: 'getCodeSnippets' }, sendResponse);
+    });
+    return true; // 保持响应通道开放
+  }
+  
+  
+    // 词云
+    if (request.message === 'getcode') {
+      console.log("service词云收到!")
+      // 请求内容脚本获取代码片段
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      
+      chrome.tabs.sendMessage(tabs[0].id, { message: 'getcode' }, sendResponse);
+    });
+    return true; // 保持响应通道开放
+  }

@@ -1,5 +1,4 @@
 // 获取提交记录，支持根据 submitTime 查询
-// 获取提交记录，支持根据 submitTime 查询
 async function fetchSubmissionsByTime(submitTime) {
     try {
         // 打印当前提交时间
@@ -33,7 +32,6 @@ async function fetchSubmissionsByTime(submitTime) {
         return []; // 返回空数组
     }
 
-    
 }
 
 async function loadData() {

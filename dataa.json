@@ -1,0 +1,2514 @@
+[
+    {
+        "title": "变量名",
+        "content": "Python 在处理标识符时区分大小写吗？",
+        "options": {
+            "a": "是",
+            "b": "否",
+            "c": "取决于机器",
+            "d": "以上都不是"
+        },
+        "answer": "a",
+        "explanation": "在 Python 中处理标识符时，大小写总是很重要。",
+        "type": "单选"
+    },
+    {
+        "title": "变量名",
+        "content": "标识符的最大可能长度是多少？",
+        "options": {
+            "a": "31 个字符",
+            "b": "63 个字符",
+            "c": "79 个字符",
+            "d": "以上都不是"
+        },
+        "answer": "d",
+        "explanation": "标识符可以是任意长度。",
+        "type": "单选"
+    },
+    {
+        "title": "变量名",
+        "content": "以下哪项无效？",
+        "options": {
+            "a": "_a = 1",
+            "b": "__a = 1",
+            "c": "__str__ = 1",
+            "d": "以上都不是"
+        },
+        "answer": "d",
+        "explanation": "所有语句都将成功执行，但可读性会降低。",
+        "type": "单选"
+    },
+    {
+        "title": "变量名",
+        "content": "以下哪个是无效变量？",
+        "options": {
+            "a": "my_string_1",
+            "b": "1st_string",
+            "c": "foo",
+            "d": "_"
+        },
+        "answer": "b",
+        "explanation": "变量名不应该以数字开头。",
+        "type": "单选"
+    },
+    {
+        "title": "变量名",
+        "content": "为什么不鼓励使用以下划线开头的局部变量名？",
+        "options": {
+            "a": "它们用于指示类的私有变量",
+            "b": "它们使解释器感到困惑",
+            "c": "它们用于指示全局变量",
+            "d": "它们会减慢执行速度"
+        },
+        "answer": "a",
+        "explanation": "由于 Python 没有私有变量的概念，因此使用前导下划线来表示不能从类外部访问的变量。",
+        "type": "单选"
+    },
+    {
+        "title": "变量名",
+        "content": "以下哪个不是关键字？",
+        "options": {
+            "a": "eval",
+            "b": "assert",
+            "c": "nonlocal",
+            "d": "pass"
+        },
+        "answer": "a",
+        "explanation": "eval 可以用作变量。",
+        "type": "单选"
+    },
+    {
+        "title": "变量名",
+        "content": "Python 中的所有关键字都是 _________",
+        "options": {
+            "a": "小写",
+            "b": "大写",
+            "c": "大写",
+            "d": "以上都不是"
+        },
+        "answer": "d",
+        "explanation": "True、False 和 None 大写，其他字母小写。",
+        "type": "单选"
+    },
+    {
+        "title": "变量名",
+        "content": "以下哪项关于 Python 中变量名的说法是正确的？",
+        "options": {
+            "a": "长度不受限制",
+            "b": "所有私有成员都必须有前导和尾随下划线",
+            "c": "下划线和与号是仅有的两个允许使用的特殊字符",
+            "d": "以上都不是"
+        },
+        "answer": "a",
+        "explanation": "变量名可以是任意长度。",
+        "type": "单选"
+    },
+    {
+        "title": "变量名",
+        "content": "以下哪个语句是无效的？",
+        "options": {
+            "a": "abc = 1,000,000",
+            "b": "abc = 1000 2000 3000",
+            "c": "a,b,c = 1000, 2000, 3000",
+            "d": "a_b_c = 1,000,000"
+        },
+        "answer": "b",
+        "explanation": "变量名中不允许有空格。",
+        "type": "单选"
+    },
+    {
+        "title": "变量名",
+        "content": "以下哪个不能是变量？",
+        "options": {
+            "a": "__init__",
+            "b": "in",
+            "c": "it",
+            "d": "on"
+        },
+        "answer": "b",
+        "explanation": "in 是一个关键字。",
+        "type": "单选"
+    },
+    {
+        "title": "运算符",
+        "content": "哪一个是 power(x y )的正确运算符？",
+        "options": {
+            "a": "x^y",
+            "b": "x**y",
+            "c": "x^^y",
+            "d": "以上都不是"
+        },
+        "answer": "b",
+        "explanation": "在 python 中，幂运算符是 x**y，即 2**3=8。",
+        "type": "单选"
+    },
+    {
+        "title": "运算符",
+        "content": "以下哪一个是向下取整除法？",
+        "options": {
+            "a": "/",
+            "b": "//",
+            "c": "%",
+            "d": "以上都不是"
+        },
+        "answer": "b",
+        "explanation": "当两个操作数都是整数时，python 会去掉小数部分并给出舍入值，要得到准确的答案，请使用向下取整除法。这是向下取整除法。例如，5/2 = 2.5，但两个操作数都是整数，因此 python 中这个表达式的答案是 2。",
+        "type": "单选"
+    },
+    {
+        "title": "运算符",
+        "content": "Python 中的优先顺序是什么？  i) 括号 ii) 指数 iii) 乘法 iv) 除法 v) 加法 vi) 减法 ",
+        "options": {
+            "a": "i,ii,iii,iv,v,vi",
+            "b": "ii,i,iii,iv,v,vi",
+            "c": "ii,i,iv,iii,v,vi",
+            "d": "i,ii,iii,v,vi,iv"
+        },
+        "answer": "a",
+        "explanation": "对于优先顺序，只需记住这个 PEMDAS(类似于 BODMAS)。",
+        "type": "单选"
+    },
+    {
+        "title": "运算符",
+        "content": "这个表达式 22%3 的答案是什么？",
+        "options": {
+            "a": "7",
+            "b": "1",
+            "c": "0",
+            "d": "5"
+        },
+        "answer": "b",
+        "explanation": "模数运算符给出余数。因此,22%3 给出余数，即 1。",
+        "type": "单选"
+    },
+    {
+        "title": "运算符",
+        "content": "可以对字符串执行数学运算。",
+        "options": {
+            "a": "对",
+            "b": "错"
+        },
+        "answer": "b",
+        "explanation": "即使字符串的格式为“1234...”，也不能对字符串执行数学运算。",
+        "type": "单选"
+    },
+    {
+        "title": "运算符",
+        "content": "优先级相同的运算符以哪种方式求值？",
+        "options": {
+            "a": "从左到右",
+            "b": "从右到左",
+            "c": "无法确定",
+            "d": "以上都不是"
+        },
+        "answer": "a",
+        "explanation": "无。",
+        "type": "单选"
+    },
+    {
+        "title": "运算符",
+        "content": "这个表达式 3*1**3 的输出是什么？",
+        "options": {
+            "a": "27",
+            "b": "9",
+            "c": "3",
+            "d": "1"
+        },
+        "answer": "c",
+        "explanation": "首先，此表达式将求解 1**3,因为指数的优先级高于乘法，所以 1**3 = 1 且 3*1 = 3。最终答案是 3。",
+        "type": "单选"
+    },
+    {
+        "title": "运算符",
+        "content": "下列哪一项具有相同的优先级？",
+        "options": {
+            "a": "加法和减法",
+            "b": "乘法、除法和加法",
+            "c": "乘法、除法、加法和减法",
+            "d": "加法和乘法"
+        },
+        "answer": "a",
+        "explanation": "“加法和减法”具有相同的优先级。同样，“乘法和除法”也具有相同的优先级。但是，乘法和除法运算符的优先级高于加法和减法运算符。",
+        "type": "单选"
+    },
+    {
+        "title": "运算符",
+        "content": "表达式 int(x) 表示变量 x 转换为整数。",
+        "options": {
+            "a": "真",
+            "b": "假"
+        },
+        "answer": "a",
+        "explanation": "int(x) 将变量的数据类型转换为整数，是显式数据转换的示例。",
+        "type": "单选"
+    },
+    {
+        "title": "运算符",
+        "content": "下列哪一个在表达式中具有最高优先级？",
+        "options": {
+            "a": "指数",
+            "b": "加法",
+            "c": "乘法",
+            "d": "括号"
+        },
+        "answer": "d",
+        "explanation": "只要记住:PEMDAS,即括号、指数、除法、乘法、加法、减法。注意，除法和乘法的优先顺序相同。同样，加法和减法的顺序也相同。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "以下哪个不是核心数据类型？",
+        "options": {
+            "a": "列表",
+            "b": "字典",
+            "c": "元组",
+            "d": "类"
+        },
+        "answer": "d",
+        "explanation": "类是用户定义的数据类型。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "给定一个不返回任何值的函数，在 shell 中执行时默认抛出什么值。",
+        "options": {
+            "a": "int",
+            "b": "bool",
+            "c": "void",
+            "d": "None"
+        },
+        "answer": "d",
+        "explanation": "Python shell 返回一个 NoneType 对象。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "以下 Python 代码的输出是什么？\n\n>>> str = \"hello\" \n>>> str[:2]",
+        "options": {
+            "a": "he",
+            "b": "lo",
+            "c": "olleh",
+            "d": "hello"
+        },
+        "answer": "a",
+        "explanation": "我们只打印字符串的前两个字节，因此答案是“he”。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "以下哪项运行时不会出错？",
+        "options": {
+            "a": "round(45.8)",
+            "b": "round(6352.898,2,5)",
+            "c": "round()",
+            "d": "round(7463.123,2,1)"
+        },
+        "answer": "a",
+        "explanation": "在 shell 中执行 help(round) 以获取传递给 round 函数的参数的详细信息。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "函数 id 的返回类型是什么？",
+        "options": {
+            "a": "int",
+            "b": "float",
+            "c": "bool",
+            "d": "dict"
+        },
+        "answer": "a",
+        "explanation": "执行 help(id) 以在 python shell 中查找详细信息。id 返回一个唯一的整数值。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "在 python 中我们不指定类型，它直接由编译器解释，所以考虑执行以下操作：\n\n>>> x = 13 ? 2\n目标是确保 x 具有整数值，请选择所有适用项 (python 3.xx)",
+        "options": {
+            "a": "x = 13 // 2",
+            "b": "x = int(13 / 2)",
+            "c": "x = 13 % 2",
+            "d": "上述所有"
+        },
+        "answer": "d",
+        "explanation": "// 在 python 3.0 中是整数运算，而 int(..) 是类型转换运算符。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "执行以下 Python 代码片段时会出现什么错误？\n\napple = mango",
+        "options": {
+            "a": "语法错误",
+            "b": "名称错误",
+            "c": "值错误",
+            "d": "类型错误"
+        },
+        "answer": "b",
+        "explanation": "Mango 未定义因此名称错误。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "以下 Python 代码片段的输出是什么？\n\n>>> def example(a):\n>>> a = a + '2'\n>>> a = a * 2\n>>> return a\n>>> example('hello')",
+        "options": {
+            "a": "缩进错误",
+            "b": "无法对字符串执行数学运算",
+            "c": "hello2",
+            "d": "hello2hello2"
+        },
+        "answer": "a",
+        "explanation": "Python 代码必须正确缩进。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "下面的对象是什么数据类型？\n\nL = [1, 23,'hello', 1]",
+        "options": {
+            "a": "列表",
+            "b": "字典",
+            "c": "数组",
+            "d": "元组"
+        },
+        "answer": "a",
+        "explanation": "列表数据类型可以在其中存储任何值。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "为了按键和值来存储值，我们使用什么核心数据类型。",
+        "options": {
+            "a": "列表",
+            "b": "元组",
+            "c": "类",
+            "d": "字典"
+        },
+        "answer": "d",
+        "explanation": "字典根据键和值存储值。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "以下是打印函数调用显示的内容。选择所有导致此输出的函数调用。\n\ntom\ndick\nharry",
+        "options": {
+            "a": "print('tom\n\\ndick\n\\nharry')",
+            "b": "print('tomdickharry')",
+            "c": "print('tom\\ndick\\nharry')",
+            "d": "print('tom\ndick\nharry')"
+        },
+        "answer": "c",
+        "explanation": "\n 添加新行",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "以下 Python 代码片段的平均值是多少？\n\n>>> grade1 = 80\n>>> grade2 = 90\n>>> average = (grade1 + grade2) / 2",
+        "options": {
+            "a": "85.0",
+            "b": "85.1",
+            "c": "95.0",
+            "d": "95.1"
+        },
+        "answer": "a",
+        "explanation": "使十进制值 0 作为输出出现。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "选择可行的打印选项: hello-how-are-you",
+        "options": {
+            "a": "print('hello', 'how', 'are', 'you')",
+            "b": "print('hello', 'how', 'are', 'you' + '-' * 4)",
+            "c": "print('hello-' + 'how-are-you')",
+            "d": "print('hello' +'-' + 'how' + '-' + 'are' + 'you')"
+        },
+        "answer": "c",
+        "explanation": "在shell中执行。",
+        "type": "单选"
+    },
+    {
+        "title": "核心数据类型",
+        "content": "trunc() 的返回值是什么？",
+        "options": {
+            "a": "int",
+            "b": "bool",
+            "c": "float",
+            "d": "None"
+        },
+        "answer": "a",
+        "explanation": "执行 help(math.trunc) 获取详细信息。",
+        "type": "单选"
+    },
+    {
+        "title": "数字类型",
+        "content": "打印 0.1 + 0.2 == 0.3 的输出是什么？",
+        "options": {
+            "a": "正确",
+            "b": "错误",
+            "c": "取决于机器",
+            "d": "错误"
+        },
+        "answer": "b",
+        "explanation": "0.1、0.2 和 0.3 都无法用二进制准确表示。0.1 和 0.2 的舍入误差会累积，因此 (0.1 + 0.2) 和 0.3 之间存在 5.5511e-17 的差值。",
+        "type": "单选"
+    },
+    {
+        "title": "数字类型",
+        "content": "下列哪个不是复数？",
+        "options": {
+            "a": "k = 2 + 3j",
+            "b": "k = complex(2, 3)",
+            "c": "k = 2 + 3l",
+            "d": "k = 2 + 3J"
+        },
+        "answer": "c",
+        "explanation": "l（或 L）代表长，不能用作复数的虚部。",
+        "type": "单选"
+    },
+    {
+        "title": "数字类型",
+        "content": "inf 的类型是什么？",
+        "options": {
+            "a": "布尔值",
+            "b": "整数",
+            "c": "浮点数",
+            "d": "复数"
+        },
+        "answer": "c",
+        "explanation": "无穷大是浮点数的一个特例，可以通过 float('inf') 获得。",
+        "type": "单选"
+    },
+    {
+        "title": "数字类型",
+        "content": "~4 的计算结果是什么？",
+        "options": {
+            "a": "-5",
+            "b": "-4",
+            "c": "-3",
+            "d": "+3"
+        },
+        "answer": "a",
+        "explanation": "~x 等同于 -(x + 1)，因此 ~4 = -5。",
+        "type": "单选"
+    },
+    {
+        "title": "数字类型",
+        "content": "~~~~~~5 的结果是什么？",
+        "options": {
+            "a": "+5",
+            "b": "-11",
+            "c": "+11",
+            "d": "-5"
+        },
+        "answer": "a",
+        "explanation": "对同一个数进行偶数次取反运算将返回原数，因此 ~~~~~~5 = 5。",
+        "type": "单选"
+    },
+    {
+        "title": "数字类型",
+        "content": "以下哪项不正确？",
+        "options": {
+            "a": "x = 30963",
+            "b": "x = 0x4f5",
+            "c": "x = 19023",
+            "d": "x = 03964"
+        },
+        "answer": "d",
+        "explanation": "以 0 开头的数字被视为八进制数，八进制数中不允许出现 9。",
+        "type": "单选"
+    },
+    {
+        "title": "数字类型",
+        "content": "cmp(3, 1) 的结果是什么？",
+        "options": {
+            "a": "1",
+            "b": "0",
+            "c": "True",
+            "d": "False"
+        },
+        "answer": "a",
+        "explanation": "如果 x > y，则 cmp(x, y) 返回 1；如果 x == y，则返回 0；如果 x < y，则返回 -1。",
+        "type": "单选"
+    },
+    {
+        "title": "数字类型",
+        "content": "以下哪项是不正确的？",
+        "options": {
+            "a": "float('inf')",
+            "b": "float('nan')",
+            "c": "float('56' + '78')",
+            "d": "float('12 + 34')"
+        },
+        "answer": "d",
+        "explanation": "'+' 不能直接转换为浮点数，必须先计算出结果。",
+        "type": "单选"
+    },
+    {
+        "title": "数字类型",
+        "content": "round(0.5) – round(-0.5) 的结果是什么？",
+        "options": {
+            "a": "1.0",
+            "b": "2.0",
+            "c": "0.0",
+            "d": "值取决于 Python 版本"
+        },
+        "answer": "d",
+        "explanation": "在 Python 2 和 Python 3 中，round() 函数的行为不同，导致结果不同。",
+        "type": "单选"
+    },
+    {
+        "title": "数字类型",
+        "content": "3^4 等于多少？",
+        "options": {
+            "a": "81",
+            "b": "12",
+            "c": "0.75",
+            "d": "7"
+        },
+        "answer": "d",
+        "explanation": "^ 是二进制异或运算符，因此 3^4 的结果为 7。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "表达式 4/(3*(2-1)) 和 4/3*(2-1) 的值相同。",
+        "options": {
+            "a": "正确",
+            "b": "错误"
+        },
+        "answer": "a",
+        "explanation": "虽然括号的存在确实会影响优先顺序，但在上述情况下，它并没有产生任何影响。这两个表达式的结果都是 1.333333333。因此该语句是正确的。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "以下 Python 表达式的值是多少？ 4 + 3 % 5",
+        "options": {
+            "a": "4",
+            "b": "7",
+            "c": "2",
+            "d": "0"
+        },
+        "answer": "b",
+        "explanation": "优先顺序为：%，+。因此，上述表达式简化后的结果为 4 + 3 = 7。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "如果 A = 16 且 B = 15，则计算下面给出的表达式。 A%B // A",
+        "options": {
+            "a": "0.0",
+            "b": "0",
+            "c": "1.0",
+            "d": "1"
+        },
+        "answer": "b",
+        "explanation": "上述表达式的计算结果为 16%15//16，等于 1//16，结果为 0。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "下列哪个运算符的结合性是从右到左的？",
+        "options": {
+            "a": "+",
+            "b": "//",
+            "c": "%",
+            "d": "**"
+        },
+        "answer": "d",
+        "explanation": "上面显示的所有运算符都具有从左到右的结合性，但幂运算符 (**) 除外，它的结合性是从右到左的。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "以下 Python 表达式中 x 的值是多少？ x = int(43.55 + 2/2)",
+        "options": {
+            "a": "43",
+            "b": "44",
+            "c": "22",
+            "d": "23"
+        },
+        "answer": "b",
+        "explanation": "上面显示的表达式是显式转换的一个示例。它的计算结果为 int(43.55+1) = int(44.55) = 44。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "下列表达式的值是多少？ 2 + 4.00 ,  2 ** 4.0",
+        "options": {
+            "a": "(6.0, 16.0)",
+            "b": "(6.00, 16.00)",
+            "c": "(6, 16)",
+            "d": "(6.00, 16.0)"
+        },
+        "answer": "a",
+        "explanation": "上面显示的表达式的结果是 (6.0, 16.0)。这是因为结果自动四舍五入到小数点后一位。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "下列哪个是截断除法运算符？",
+        "options": {
+            "a": "/",
+            "b": "%",
+            "c": "//",
+            "d": "|"
+        },
+        "answer": "c",
+        "explanation": "// 是截断除法运算符。之所以这样称呼，是因为它只返回商的整数部分，截断小数部分。例如：20//3 = 6。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "下列 Python 表达式的值是什么？ 2 ** ( 3 ** 2 ), ( 2 ** 3 ) ** 2 , 2 ** 3 ** 2",
+        "options": {
+            "a": "64、512、64",
+            "b": "64、64、64",
+            "c": "512、512、512",
+            "d": "512、64、512"
+        },
+        "answer": "d",
+        "explanation": "表达式 1 的计算结果为 2**9，等于 512。表达式 2 的计算结果为 8**2，等于 64。最后一个表达式的计算结果为 2**(3**2)。这是因为 ** 运算符的结合性是从右到左的。因此，第三个表达式的结果为 512。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "下列表达式的值是多少？ 8 / 4 / 2 ,  8 / ( 4 / 2 )",
+        "options": {
+            "a": "(1.0，4.0)",
+            "b": "(1.0，1.0)",
+            "c": "(4.0, 1.0)",
+            "d": "(4.0，4.0)"
+        },
+        "answer": "a",
+        "explanation": "上述表达式的计算结果为：2/2，8/2，等于 (1.0, 4.0)。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "下列表达式的值是多少？ float(22 // 3 + 3 / 3)",
+        "options": {
+            "a": "8",
+            "b": "8.0",
+            "c": "8.3",
+            "d": "8.33"
+        },
+        "answer": "b",
+        "explanation": "上面显示的表达式的计算结果为：float(7 + 1) = float(8) = 8.0。因此，该表达式的结果是 8.0。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "以下 Python 表达式的输出是什么？ 打印（4.00 /（2.0 + 2.0 ））",
+        "options": {
+            "a": "错误",
+            "b": "1.0",
+            "c": "1.00",
+            "d": "1"
+        },
+        "answer": "b",
+        "explanation": "上面显示表达式的结果为 1.0，因为打印对数字进行了四舍五入。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "以下 Python 表达式中 X 的值是多少？ X =  2 + 9 * ( ( 3 * 12 ) - 8 ) / 10",
+        "options": {
+            "a": "30.0",
+            "b": "30.8",
+            "c": "28.4",
+            "d": "27.2"
+        },
+        "answer": "d",
+        "explanation": "上面显示的表达式的计算结果为：2+9*(36-8)/10，简化为 2+9*(2.8)，等于 2+25.2 = 27.2。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "在 Python 中，下列哪个表达式涉及强制转换？",
+        "options": {
+            "a": "4.7 – 1.5",
+            "b": "7.9 * 6.3",
+            "c": "1.7 % 2",
+            "d": "3.4 + 4.6"
+        },
+        "answer": "c",
+        "explanation": "强制转换是将操作数隐式（自动）转换为通用类型。强制转换自动对混合类型表达式执行。表达式 1.7 % 2 的计算结果为 1.7 % 2.0（即自动将 int 转换为 float）。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "以下 Python 表达式的输出是什么？ 24 // 6 % 3 ,  24 // 4 // 2",
+        "options": {
+            "a": "(1, 3)",
+            "b": "(0, 3)",
+            "c": "(1, 0)",
+            "d": "(3, 1)"
+        },
+        "answer": "a",
+        "explanation": "表达式的计算结果分别为：4%3 和 6//2。结果为 (1, 3)。这是因为上面两个表达式的结合性都是从左到右的。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "下列运算符列表中哪一个具有最高优先级？ + 、 - 、 ** 、 % 、 / 、 <<、 >>、 |",
+        "options": {
+            "a": "<<, >>",
+            "b": "**",
+            "c": "|",
+            "d": "%"
+        },
+        "answer": "b",
+        "explanation": "优先级最高的是指数运算符，即 **。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "以下 Python 表达式的值是多少？ 浮点数（4 +整数（2.39 ） % 2 ）",
+        "options": {
+            "a": "5.0",
+            "b": "5",
+            "c": "4.0",
+            "d": "4"
+        },
+        "answer": "c",
+        "explanation": "上面的表达式是显式转换的一个示例。它的计算方式为：float(4 + int(2.39) % 2) = float(4 + 0) = 4.0。因此，该表达式的结果为 4.0。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "下列哪个表达式是类型转换的示例？",
+        "options": {
+            "a": "4.0 + float(3)",
+            "b": "5.3 + 6.3",
+            "c": "5.0 + 3",
+            "d": "3 + 7"
+        },
+        "answer": "a",
+        "explanation": "类型转换只不过是将操作数显式转换为特定类型。选项 5.3 + 6.3 和 5.0 + 3 是隐式转换的示例，而选项 4.0 + float(3) 是显式转换或类型转换的示例。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "下列哪个表达式会导致错误？",
+        "options": {
+            "a": "float('10')",
+            "b": "int('10')",
+            "c": "float('10.8')",
+            "d": "int('10.8')"
+        },
+        "answer": "d",
+        "explanation": "以上所有示例都显示了显式转换。但是表达式 int('10.8') 会导致错误。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "以下 Python 表达式的值是多少？ 4 + 2 ** 5 // 10",
+        "options": {
+            "a": "3",
+            "b": "7",
+            "c": "77",
+            "d": "0"
+        },
+        "answer": "b",
+        "explanation": "优先顺序为：**、//、+。表达式 4 + 2 ** 5 // 10 的计算结果为 4 + 32 // 10，等于 4 + 3 = 7。因此，上述表达式的结果为 7。",
+        "type": "单选"
+    },
+    {
+        "title": "优先级和结合性",
+        "content": "表达式 2**2**3 的计算结果为：(2**2)**3。",
+        "options": {
+            "a": "真",
+            "b": "假"
+        },
+        "answer": "b",
+        "explanation": "表达式 (2**2)**3 = 4**3 = 64 的值。在 python 中对表达式 2**2**3 进行求值时，我们得到的结果为 256，因为该表达式被求值为 2**(2**3)。这是因为指数运算符 (**) 的结合性是从右到左，而不是从左到右。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "如果 x=1，以下 Python 代码片段的输出是什么？ x << 2",
+        "options": {
+            "a": "8",
+            "b": "1",
+            "c": "2",
+            "d": "4"
+        },
+        "answer": "d",
+        "explanation": "1 的二进制形式是 0001。表达式 x << 2 表示我们对 x 执行按位左移。此移位产生的值是：0100，这是数字 4 的二进制形式。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "以下 Python 表达式的输出是什么？ bin(29)",
+        "options": {
+            "a": "'0b10111'",
+            "b": "'0b11101'",
+            "c": "'0b11111'",
+            "d": "'0b11011'"
+        },
+        "answer": "b",
+        "explanation": "数字 29 的二进制形式是 11101。因此，该表达式的输出为“0b11101”。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "如果以下 Python 表达式的结果为 2，那么 x 的值是多少？ x >> 2",
+        "options": {
+            "a": "8",
+            "b": "4",
+            "c": "2",
+            "d": "1"
+        },
+        "answer": "a",
+        "explanation": "当 x 的值等于 8（1000）时，则 x >> 2（按位右移）得出值 0010，等于 2。因此 x 的值为 8。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "以下 Python 表达式的输出是什么？ int(1011)",
+        "options": {
+            "a": "1011",
+            "b": "11",
+            "c": "13",
+            "d": "1101"
+        },
+        "answer": "a",
+        "explanation": "显示的表达式的结果将为 1011。这是因为我们没有在此表达式中指定基数。因此它自动将基数设为 10。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "要找到 1111 的十进制值，即 15，我们可以使用以下函数：",
+        "options": {
+            "a": "int(1111,10)",
+            "b": "int('1111',10)",
+            "c": "int(1111,2)",
+            "d": "int('1111',2)"
+        },
+        "answer": "d",
+        "explanation": "表达式 int('1111',2) 得出结果 15。表达式 int('1111', 10) 将得出结果 1111。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "如果 x=15 且 y=12，则以下 Python 表达式的输出是什么？ x & y",
+        "options": {
+            "a": "b1101",
+            "b": "0b1101",
+            "c": "12",
+            "d": "1101"
+        },
+        "answer": "c",
+        "explanation": "符号 '&' 表示按位与。如果两位都等于 1，则结果为 1，否则结果为 0。15 的二进制形式为 1111，12 的二进制形式为 1100。因此，执行按位与运算后，我们得到 1100，等于 12。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "下列哪个表达式会导致错误？",
+        "options": {
+            "a": "int(1011)",
+            "b": "int('1011',23)",
+            "c": "int(1011,2)",
+            "d": "int('1011')"
+        },
+        "answer": "c",
+        "explanation": "表达式 int(1011,2) 导致错误。如果我们将此表达式写为 int('1011',2)，则不会出现错误。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "下列哪个代表按位异或运算符？",
+        "options": {
+            "a": "&",
+            "b": "^",
+            "c": "|",
+            "d": "!"
+        },
+        "answer": "b",
+        "explanation": " ^ 运算符表示按位异或运算。&：按位与，|：按位或，! 表示按位非。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "以下 Python 表达式的值是多少？ bin(0x8)",
+        "options": {
+            "a": "'0bx1000'",
+            "b": "8",
+            "c": "1000",
+            "d": "'0b1000'"
+        },
+        "answer": "d",
+        "explanation": "前缀 0x 指定该值本质上是十六进制的。当我们将这个十六进制值转换为二进制形式时，我们得到的结果是：“0b1000”。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "以下 Python 表达式的输出是什么？ 0x35 | 0x75",
+        "options": {
+            "a": "115",
+            "b": "116",
+            "c": "117",
+            "d": "118"
+        },
+        "answer": "c",
+        "explanation": "0x35 的二进制值为 110101，0x75 的二进制值为 1110101。对这两个值进行“或”运算后，我们得到的输出为：1110101，等于 117。因此，上述表达式的结果为 117。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "无论如何，二进制补码的值不可能等于原始值。",
+        "options": {
+            "a": "对",
+            "b": "错"
+        },
+        "answer": "b",
+        "explanation": "在大多数情况下，二进制补码的值与原始值不同。但是，在某些情况下，二进制补码的值可能等于原始值。例如，10000000 的二进制补码也等于 10000000。因此该语句为假。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "110010101 的补码是：",
+        "options": {
+            "a": "001101010",
+            "b": "110010101",
+            "c": "001101011",
+            "d": "110010100"
+        },
+        "answer": "a",
+        "explanation": "一个值的补码只需将所有 1 改为 0，将所有 0 改为 1 即可获得。因此，110010101 的补码为 001101010。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "按位 _________ 如果其中一位为 1，则结果为 1；如果两位均为 1，则结果为 0。",
+        "options": {
+            "a": "或",
+            "b": "与",
+            "c": "异或",
+            "d": "非"
+        },
+        "answer": "c",
+        "explanation": "如果其中一位为 1，则按位异或结果为 1；如果两位均为 1，则按位异或结果为 0。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "以下 Python 表达式的输出是什么？ 4 ^ 12",
+        "options": {
+            "a": "2",
+            "b": "4",
+            "c": "8",
+            "d": "12"
+        },
+        "answer": "c",
+        "explanation": "^ 为异或运算符，4 的二进制形式为 0100，12 的二进制形式为 1100，因此 0100^1100 为 1000，等于 8。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "任何奇数与 ________ 进行“与”运算的结果总是 1。提示：任何偶数与该值进行“与”运算的结果总是 0。",
+        "options": {
+            "a": "10",
+            "b": "2",
+            "c": "1",
+            "d": "0"
+        },
+        "answer": "c",
+        "explanation": "任何奇数与 1 进行“与”运算始终得出 1。任何偶数与该值进行“与”运算始终得出 0。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "以下 Python 表达式的值是多少？ bin(10 - 2) + bin(12 ^ 4)",
+        "options": {
+            "a": "0b10000",
+            "b": "0b10001000",
+            "c": "0b1000b1000",
+            "d": "0b10000b1000"
+        },
+        "answer": "d",
+        "explanation": "bin(10-2) = 0b1000 的输出和 bin(12^4) 的输出为 0b1000。因此，上述表达式的输出为：0b10000b1000。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "下列哪个表达式可用于将给定数字“a”乘以 4？",
+        "options": {
+            "a": "a<<2",
+            "b": "a<<4",
+            "c": "a>>2",
+            "d": "a>>4"
+        },
+        "answer": "a",
+        "explanation": "让我们考虑一个 a=2 的例子。2 的二进制形式是 0010。当我们将该值左移 2 时，我们得到 1000，其值为 8。因此，如果我们想将给定数字“a”乘以 4，我们可以使用表达式：a<<2。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "如果 a=10 且 b=20，以下 Python 代码的输出是什么？\n\na = 10 \nb = 20 \na = a^b \nb = a^b \na = a^b \nprint(a, b)",
+        "options": {
+            "a": "10 20",
+            "b": "10 10",
+            "c": "20 10",
+            "d": "20 20"
+        },
+        "answer": "c",
+        "explanation": "上面显示的代码用于使用按位 XOR 运算符交换两个内存位置的内容。因此，上面显示的代码的输出为：20 10。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "-44 的二进制补码是多少？",
+        "options": {
+            "a": "1011011",
+            "b": "11010100",
+            "c": "11101011",
+            "d": "10110011"
+        },
+        "answer": "b",
+        "explanation": "-44 的二进制形式是 00101100。该值的补数是 11010011。加一后得到：11010100（二进制补数）。",
+        "type": "单选"
+    },
+    {
+        "title": "按位",
+        "content": "以下 Python 表达式的输出是什么？ ~100？",
+        "options": {
+            "a": "101",
+            "b": "-101",
+            "c": "100",
+            "d": "-100"
+        },
+        "answer": "b",
+        "explanation": "假设我们有一个表达式 ~A。其计算结果为：-A – 1。因此，表达式 ~100 的计算结果为 -100 – 1，等于 -101。",
+        "type": "单选"
+    },
+    {
+        "title": "布尔值",
+        "content": "以下 Python 代码片段的输出是什么？\nbool('假')\nbool()",
+        "options": {
+            "a": "真\n真",
+            "b": "假\n真",
+            "c": "假\n假",
+            "d": "真假"
+        },
+        "answer": "d",
+        "type": "单选",
+        "explanation": "如果传递给 bool 函数的参数不为零，则布尔函数返回 true。在第一个示例中，字符串“False”被传递给函数 bool。这不为零，因此输出为 true。在第二个函数中，将一个空列表传递给函数 bool。因此输出为 false。"
+    },
+    {
+        "title": "布尔值",
+        "content": "以下 Python 代码片段的输出是什么？\n[ '你好' ,  '早上好' ] [ bool ( '' ) ]",
+        "options": {
+            "a": "错误",
+            "b": "无输出",
+            "c": "你好",
+            "d": "早上好"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "上面显示的代码行可以简化为，如果传递给布尔函数的参数为​​零，则应该打印“hello”，否则将打印“morning”。"
+    },
+    {
+        "title": "布尔值",
+        "content": "以下 Python 代码片段的输出是什么？\nnot(3 > 4)\nnot(1 & 1)",
+        "options": {
+            "a": "真\n真",
+            "b": "真假",
+            "c": "假\n真",
+            "d": "假\n假"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "如果参数等于 false，则函数 not 返回 true；如果参数等于 true，则函数 not 返回 false。因此，第一个函数返回 false，第二个函数返回 false。"
+    },
+    {
+        "title": "布尔值",
+        "content": "以下 Python 代码的输出是什么？\n[ 'f' ,  't' ] [ bool ( '垃圾邮件' ) ]",
+        "options": {
+            "a": "t",
+            "b": "f",
+            "c": "无输出",
+            "d": "错误"
+        },
+        "answer": "a",
+        "type": "单选",
+        "explanation": "这行代码可以解释为，如果传递给布尔函数的参数为​​零，则打印“f”。否则打印“t”。在上述情况下，传递给布尔函数的参数是“spam”，其不为零。因此输出为 t。"
+    },
+    {
+        "title": "布尔值",
+        "content": "以下 Python 代码的输出是什么？\nl = [ 1 ,  0 ,  2 ,  0 ,  'hello' ,  '' ,  [ ] ]\nlist(filter(bool, l))",
+        "options": {
+            "a": "错误",
+            "b": "[1，0，2，0，'hello'，”，[]]",
+            "c": "[1，0，2，'hello'，”，[]]",
+            "d": "[1，2，'hello']"
+        },
+        "answer": "d",
+        "type": "单选",
+        "explanation": "上面的代码返回一个新列表，该列表仅包含列表 l 中不为零的元素。因此输出为：[1, 2, 'hello']。"
+    },
+    {
+        "title": "布尔值",
+        "content": "如果系统日期是 2017 年 6 月 21 日（星期三），以下 Python 代码将输出什么？\n[ ] 或 { }\n{ } 或 [ ]",
+        "options": {
+            "a": "[]\n{}",
+            "b": "[]\n[]",
+            "c": "{}\n[]",
+            "d": "{}\n{}"
+        },
+        "answer": "a",
+        "type": "单选",
+        "explanation": "在 Python 中，空列表和空字典都被视为 False，因此此代码行将返回空列表和空字典。"
+    },
+    {
+        "title": "布尔值",
+        "content": "以下 Python 代码的输出是什么？\nclass Truth:\n\tpass\nx = Truth()\nbool(x)",
+        "options": {
+            "a": "通过",
+            "b": "正确",
+            "c": "错误",
+            "d": "错误"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "如果没有定义真值方法，则该对象被视为真。因此，上面代码的输出为真。"
+    },
+    {
+        "title": "布尔值",
+        "content": "以下 Python 代码的输出是什么？\nif (9 < 0) and (0 < -9):\n    print(\"hello\")\nelif (9 > 0) or False:\n    print(\"good\")\nelse:\n    print(\"bad\")",
+        "options": {
+            "a": "错误",
+            "b": "你好",
+            "c": "好",
+            "d": "坏"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "上面的代码根据给定的条件打印适当的选项。匹配的条件是 (9>0)，因此输出为：good。"
+    },
+    {
+        "title": "布尔值",
+        "content": "下列哪个布尔表达式在逻辑上与其他三个不等价？",
+        "options": {
+            "a": "not(-6<0 or -6>10)",
+            "b": "-6>=0 and -6<=10",
+            "c": "not(-6<10 or -6==10)",
+            "d": "not(-6>10 or -6==10)"
+        },
+        "answer": "d",
+        "type": "单选",
+        "explanation": "表达式 not(-6<0 or -6>10) 返回输出 False。表达式 -6>=0 and -6<=10 返回输出 False。表达式 not(-6<10 or -6==10) 返回输出 False。表达式 not(-6>10 or -6==10) 返回输出 True。"
+    },
+    {
+        "title": "布尔值",
+        "content": "以下 Python 代码片段的输出是什么？\nnot(10 < 20) and not(10 > 30)",
+        "options": {
+            "a": "正确",
+            "b": "错误",
+            "c": "错误",
+            "d": "无输出"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "表达式 not(10<20) 返回 false。表达式 not(10>30) 返回 true。false 与 true 之间的 and 运算返回 false。因此输出为 false。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = ['ab', 'cd']\nfor i in x:\n    i.upper()\nprint(x)",
+        "options": {
+            "a": "['ab', 'cd']",
+            "b": "['AB', 'CD']",
+            "c": "[None, None]",
+            "d": "以上皆非"
+        },
+        "answer": "a",
+        "type": "单选",
+        "explanation": "函数 upper() 不会就地修改字符串，而是返回一个未存储在任何地方的新字符串。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = ['ab', 'cd']\nfor i in x:\n    x.append(i.upper())\nprint(x)",
+        "options": {
+            "a": "['AB', 'CD']",
+            "b": "['ab', 'cd', 'AB', 'CD']",
+            "c": "['ab', 'cd']",
+            "d": "以上皆非"
+        },
+        "answer": "d",
+        "type": "单选",
+        "explanation": "循环不会终止，因为每次迭代中都会将新元素添加到列表中。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\ni = 1\nwhile True:\n    if i % 3 == 0:\n        break\n    print(i)\n    i + = 1",
+        "options": {
+            "a": "1 2",
+            "b": "1 2 3",
+            "c": "错误",
+            "d": "以上皆非"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "语法错误，+= 中的 + 和 = 之间不应该有空格。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\ni = 1\nwhile True:\n    if i % 0O7 == 0:\n        break\n    print(i)\n    i += 1",
+        "options": {
+            "a": "1 2 3 4 5 6",
+            "b": "1 2 3 4 5 6 7",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "a",
+        "type": "单选",
+        "explanation": "当 i 变为 7 时，控制退出循环。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\ni = 5\nwhile True:\n    if i % 0O11 == 0:\n        break\n    print(i)\n    i += 1",
+        "options": {
+            "a": "5 6 7 8 9 10",
+            "b": "5 6 7 8",
+            "c": "5 6",
+            "d": "错误"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "0O11 是一个八进制数。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\ni = 5\nwhile True:\n    if i % 0O9 == 0:\n        break\n    print(i)\n    i += 1",
+        "options": {
+            "a": "5 6 7 8",
+            "b": "5 6 7 8 9",
+            "c": "5 6 7 8 9 10 11 12 13 14 15 …. ",
+            "d": "错误"
+        },
+        "answer": "d",
+        "type": "单选",
+        "explanation": "八进制数中不允许有 9。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\ni = 1\nwhile True:\n    if i % 2 == 0:\n        break\n    print(i)\n    i += 2",
+        "options": {
+            "a": "1",
+            "b": "1 2",
+            "c": "1 2 3 4 5 6…",
+            "d": "1 3 5 7 9 11…"
+        },
+        "answer": "d",
+        "type": "单选",
+        "explanation": "由于 i 从来都不是偶数，因此循环不会终止。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\ni = 2\nwhile True:\n    if i % 3 == 0:\n        break\n    print(i)\n    i += 2",
+        "options": {
+            "a": "2 4 6 8 10 …",
+            "b": "2 4",
+            "c": "2 3",
+            "d": "错误"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "打印数字 2 和 4。i 的下一个值是 6，可被 3 整除，因此控制退出循环。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\ni = 1\nwhile False:\n    if i % 2 == 0:\n        break\n    print(i)\n    i += 2",
+        "options": {
+            "a": "1",
+            "b": "1 3 5 7 …",
+            "c": "1 2 3 4 …",
+            "d": "以上皆非"
+        },
+        "answer": "d",
+        "type": "单选",
+        "explanation": "由于 False，控制不会进入循环。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nTrue = False\nwhile True:\n    print(True)\n    break",
+        "options": {
+            "a": "True",
+            "b": "False",
+            "c": "None",
+            "d": "以上皆非"
+        },
+        "answer": "d",
+        "type": "单选",
+        "explanation": "True 是一个关键字，其值不能改变。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\ni = 0\nwhile i < 5:\n    print(i)\n    i += 1\n    if i == 3:\n        break\nelse:\n    print(0)",
+        "options": {
+            "a": "0 1 2 0",
+            "b": "0 1 2",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "如果控制跳出循环，则不会执行 else 部分。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\ni = 0\nwhile i < 3:\n    print(i)\n    i += 1\nelse:\n    print(0)",
+        "options": {
+            "a": "0 1 2 3 0",
+            "b": "0 1 2 0",
+            "c": "0 1 2",
+            "d": "错误"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "当 while 语句中的条件为假时，执行 else 部分。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\nwhile i in x:\n    print(i, end=' ')",
+        "options": {
+            "a": "abcdef",
+            "b": "abcdef",
+            "c": "iiiiii …",
+            "d": "错误"
+        },
+        "answer": "d",
+        "type": "单选",
+        "explanation": "NameError，i 未定义。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\ni = 'i'\nwhile i in x:\n    print(i, end=' ')",
+        "options": {
+            "a": "无输出",
+            "b": "iiiiii …",
+            "c": "abcdef",
+            "d": "abcdef"
+        },
+        "answer": "a",
+        "type": "单选",
+        "explanation": "‘i’不在‘abcdef’中。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\ni = 'a'\nwhile i in x:\n    print(i, end=' ')",
+        "options": {
+            "a": "无输出",
+            "b": "iiiiii …",
+            "c": "aaaaaaaa …",
+            "d": "abcdef"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "由于 i 或 x 的值没有改变，因此条件总是计算为 True。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\ni = 'a'\nwhile i in x:\n    print('i', end=' ')",
+        "options": {
+            "a": "无输出",
+            "b": "iiiiii …",
+            "c": "aaaaaaaa …",
+            "d": "abcdef"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "这里 i 被视为字符串，而不是变量，因此打印 'i'。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\ni = 'a'\nwhile i in x:\n    x = x[:-1]\n    print(i, end='')",
+        "options": {
+            "a": "iiiiii",
+            "b": "aaaaaaaa",
+            "c": "aaaaa",
+            "d": "以上都不是"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "字符串 x 在每次迭代中都会缩短一个字符。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\ni = 'a'\nwhile i in x[:-1]:\n    print(i, end='')",
+        "options": {
+            "a": "aaaaa",
+            "b": "aaaaaa",
+            "c": "aaaaaa …",
+            "d": "a"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "字符串 x 未被改变并且 i 在 x[:-1] 中。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\ni = 'a'\nwhile i in x:\n    x = x[1:]\n    print(i, end='')",
+        "options": {
+            "a": "aaaaaa",
+            "b": "a",
+            "c": "无输出",
+            "d": "错误"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "字符串 x 在每次迭代中都会缩短一个字符。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\ni = 'a'\nwhile i in x[1:]:\n    print(i, end=' ')",
+        "options": {
+            "a": "aaaaaa",
+            "b": "a",
+            "c": "无输出",
+            "d": "错误"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "i 不在 x[1:] 中。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = ' abcd'\nfor i in x:\n    print(i)\n    x.upper()",
+        "options": {
+            "a": "a BCD",
+            "b": "abcd",
+            "c": "ABCD",
+            "d": "错误"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "更改不会就地发生，而是返回字符串的新实例。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = '  abcd '\nfor i in x:\n    print(i.upper())",
+        "options": {
+            "a": "abcd",
+            "b": "ABCD",
+            "c": "a BCD",
+            "d": "错误"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "正在打印 upper() 返回的字符串实例。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcd'\nfor i in range(x):\n    print(i)",
+        "options": {
+            "a": "abcd",
+            "b": "0 1 2 3",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "不允许 range(str)。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcd'\nfor i in range(len(x)):\n    print(i)",
+        "options": {
+            "a": "abcd",
+            "b": "0 1 2 3",
+            "c": "错误",
+            "d": "1 2 3 4"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "i 的值为 0、1、2 和 3。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = ' abcd'\nfor i in range(len(x)):\n    print(i.upper())",
+        "options": {
+            "a": "abcd",
+            "b": "0 1 2 3",
+            "c": "错误",
+            "d": "1 2 3 4"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "int 类型的对象没有属性 upper()。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcd'\nfor i in range(len(x)):\n    i.upper()\n    print(x)",
+        "options": {
+            "a": "abcd",
+            "b": "0 1 2 3",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "int 类型的对象没有属性 upper()。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcd'\nfor i in range(len(x)):\n    x[i].upper()\n    print(x)",
+        "options": {
+            "a": "abcd",
+            "b": "ABCD",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "a",
+        "type": "单选",
+        "explanation": "更改不会就地发生，而是返回字符串的新实例。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcd'\nfor i in range(len(x)):\n    i[x].upper()\n    print(x)",
+        "options": {
+            "a": "abcd",
+            "b": "ABCD",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "int 类型的对象不可下标。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcd'\nfor i in range(len(x)):\n    x = 'a'\n    print(x)",
+        "options": {
+            "a": "a",
+            "b": "abcd abcd abcd",
+            "c": "aaaa",
+            "d": "以上都不是"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "range() 仅在进入循环时计算。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 'abcd'\nfor i in range(len(x)):\n    print(x)\n    x = 'a'",
+        "options": {
+            "a": "a",
+            "b": "abcd abcd abcd abcd",
+            "c": "aaaa",
+            "d": "以上都不是"
+        },
+        "answer": "d",
+        "type": "单选",
+        "explanation": "abcd aaa 是输出，因为只有在打印一次“abcd”后 x 才会被修改。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = 123\nfor i in x:\n    print(i)",
+        "options": {
+            "a": "1 2 3",
+            "b": "123",
+            "c": "错误",
+            "d": "以上都非"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "int 类型的对象不可迭代。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor i in d:\n    print(i)",
+        "options": {
+            "a": "0 1 2",
+            "b": "abc",
+            "c": "0 a 1 b 2 c",
+            "d": "以上都不是"
+        },
+        "answer": "a",
+        "type": "单选",
+        "explanation": "循环遍历字典的键。"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x, y in d:\n    print(x, y)",
+        "options": {
+            "a": "0 1 2",
+            "b": "abc",
+            "c": "0 a 1 b 2 c",
+            "d": "以上都不是"
+        },
+        "answer": "d",
+        "explanation": "错误，int 类型的对象不可迭代。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x, y in d.items():\n    print(x, y)",
+        "options": {
+            "a": "0 1 2",
+            "b": "abc",
+            "c": "0 a 1 b 2 c",
+            "d": "以上都不是"
+        },
+        "answer": "c",
+        "explanation": "循环遍历键值对。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x in d.keys():\n    print(d[x])",
+        "options": {
+            "a": "0 1 2",
+            "b": "abc",
+            "c": "0 a 1 b 2 c",
+            "d": "以上都不是"
+        },
+        "answer": "b",
+        "explanation": "循环遍历键并打印值。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x in d.values():\n    print(x)",
+        "options": {
+            "a": "0 1 2",
+            "b": "abc",
+            "c": "0 a 1 b 2 c",
+            "d": "以上都不是"
+        },
+        "answer": "b",
+        "explanation": "循环遍历值。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x in d.values():\n    print(d[x])",
+        "options": {
+            "a": "0 1 2",
+            "b": "abc",
+            "c": "0 a 1 b 2 c",
+            "d": "以上都不是"
+        },
+        "answer": "d",
+        "explanation": "导致 KeyError。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nd = {0, 1, 2}\nfor x in d.values():\n    print(x)",
+        "options": {
+            "a": "0 1 2",
+            "b": "无 无 无",
+            "c": "错误",
+            "d": "以上皆非"
+        },
+        "answer": "c",
+        "explanation": "集合类型的对象没有属性值。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nd = {0, 1, 2}\nfor x in d:\n    print(x)",
+        "options": {
+            "a": "0 1 2",
+            "b": "{0, 1, 2} {0, 1, 2} {0, 1, 2}",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "a",
+        "explanation": "循环遍历集合的元素并打印它们。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nd = {0, 1, 2}\nfor x in d:\n    print(d.add(x))",
+        "options": {
+            "a": "0 1 2",
+            "b": "0 1 2 0 1 2 0 1 2 …",
+            "c": "无 无 无",
+            "d": "以上皆非"
+        },
+        "answer": "c",
+        "explanation": "变量 x 的取值 0、1 和 2。set.add() 返回打印的 None。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nfor i in range(0):\n    print(i)",
+        "options": {
+            "a": "0",
+            "b": "无输出",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "b",
+        "explanation": "range(0) 为空。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nfor i in range(2.0):\n    print(i)",
+        "options": {
+            "a": "0.0 1.0",
+            "b": "0 1",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "c",
+        "explanation": "float 类型的对象不能解释为整数。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nfor i in range(int(2.0)):\n    print(i)",
+        "options": {
+            "a": "0.0 1.0",
+            "b": "0 1",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "b",
+        "explanation": "range(int(2.0)) 与 range(2) 相同。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nfor i in range(float('inf')):\n    print(i)",
+        "options": {
+            "a": "0.0 0.1 0.2 0.3 …",
+            "b": "0 1 2 3 …",
+            "c": "0.0 1.0 2.0 3.0 …",
+            "d": "以上皆非"
+        },
+        "answer": "d",
+        "explanation": "错误，浮点类型的对象不能解释为整数。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nfor i in range(int(float('inf'))):\n    print(i)",
+        "options": {
+            "a": "0.0 0.1 0.2 0.3 …",
+            "b": "0 1 2 3 …",
+            "c": "0.0 1.0 2.0 3.0 …",
+            "d": "以上皆非"
+        },
+        "answer": "d",
+        "explanation": "OverflowError，无法将浮点无穷大转换为整数。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码片段的输出是什么？\n\nfor i in [1, 2, 3, 4][::-1]:\n    print(i, end=' ')",
+        "options": {
+            "a": "1 2 3 4",
+            "b": "4 3 2 1",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "b",
+        "explanation": "[::-1] 反转列表。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码片段的输出是什么？\n\nfor i in ''.join(reversed(list('abcd'))):\n    print(i)",
+        "options": {
+            "a": "abcd",
+            "b": "dcba",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "b",
+        "explanation": "' '.join(reversed(list('abcd'))) 反转字符串。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码片段的输出是什么？\n\nfor i in 'abcd'[::-1]:\n    print(i)",
+        "options": {
+            "a": "abcd",
+            "b": "dcba",
+            "c": "错误",
+            "d": "以上都不是"
+        },
+        "answer": "b",
+        "explanation": "[::-1] 反转字符串。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码片段的输出是什么？\n\nfor i in '':\n    print(i)",
+        "options": {
+            "a": "无",
+            "b": "（未打印任何内容）",
+            "c": "错误",
+            "d": "以上均非"
+        },
+        "answer": "b",
+        "explanation": "该字符串没有任何可循环的字符。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码片段的输出是什么？\n\nfor i in range(x): x = 2:\n    x += 1\n    print(x)",
+        "options": {
+            "a": "0 1 2 3 4 …",
+            "b": "0 1",
+            "c": "3 4",
+            "d": "0 1 2 3"
+        },
+        "answer": "c",
+        "explanation": "变量 x 递增并打印两次。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码片段的输出是什么？\n\nfor i in range(x): x = 2:\n    x -= 2\n    print(x)",
+        "options": {
+            "a": "0 1 2 3 4 …",
+            "b": "0 -2",
+            "c": "0",
+            "d": "错误"
+        },
+        "answer": "b",
+        "explanation": "进入循环两次。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nfor i in range(10):\n    if i == 5:\n        break\n    else:\n        print(i)\n    print('这里')",
+        "options": {
+            "a": "0 1 2 3 4 这里",
+            "b": "0 1 2 3 4 5 这里",
+            "c": "0 1 2 3 4",
+            "d": "1 2 3 4 5"
+        },
+        "answer": "c",
+        "explanation": "如果控制没有跳出循环，则执行 else 部分。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nfor i in range(5):\n    if i == 5:\n        break\n    else:\n        print(i)\n    print('这里')",
+        "options": {
+            "a": "0 1 2 3 4 这里",
+            "b": "0 1 2 3 4 5 这里",
+            "c": "0 1 2 3 4",
+            "d": "1 2 3 4 5"
+        },
+        "answer": "a",
+        "explanation": "如果控制没有跳出循环，则执行 else 部分。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = (i for i in range(3))\nfor i in x:\n    print(i)",
+        "options": {
+            "a": "0 1 2",
+            "b": "错误",
+            "c": "0 1 2 0 1 2",
+            "d": "以上都不是"
+        },
+        "answer": "a",
+        "explanation": "第一个语句创建一个生成器对象。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nx = (i for i in range(3))\nfor i in x:\n    print(i)\nfor i in x:\n    print(i)",
+        "options": {
+            "a": "0 1 2",
+            "b": "错误",
+            "c": "0 1 2 0 1 2",
+            "d": "以上都不是"
+        },
+        "answer": "a",
+        "explanation": "我们只能循环生成器对象一次。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nstring = 'my name is x'\nfor i in string:\n    print(i, end=', ')",
+        "options": {
+            "a": "m, y, , n, a, m, e, , i, s, , x,",
+            "b": "m, y, , n, a, m, e, , i, s, , x",
+            "c": "my, name, is, x,",
+            "d": "错误"
+        },
+        "answer": "a",
+        "explanation": "变量 i 每次取一个字符的值。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码的输出是什么？\n\nstring = 'my name is x'\nfor i in string.split():\n    print(i, end=', ')",
+        "options": {
+            "a": "m, y, , n, a, m, e, , i, s, , x,",
+            "b": "m, y, , n, a, m, e, , i, s, , x",
+            "c": "my, name, is, x,",
+            "d": "错误"
+        },
+        "answer": "c",
+        "explanation": "变量 i 每次取一个单词的值。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码片段的输出是什么？\n\na = [0, 1, 2, 3]\nfor a[-1] in a:\n    print(a[-1])",
+        "options": {
+            "a": "0 1 2 3",
+            "b": "0 1 2 2",
+            "c": "3 3 3 3",
+            "d": "错误"
+        },
+        "answer": "b",
+        "explanation": "a[-1] 的值在每次迭代中都会发生变化。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码片段的输出是什么？\n\na = [0, 1, 2, 3]\nfor a[0] in a:\n    print(a[0])",
+        "options": {
+            "a": "0 1 2 3",
+            "b": "0 1 2 2",
+            "c": "3 3 3 3",
+            "d": "错误"
+        },
+        "answer": "a",
+        "explanation": "a[0] 的值在每次迭代中都会发生变化。由于它所取的第一个值是其本身，因此当前示例中没有明显的错误。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码片段的输出是什么？\n\na = [0, 1, 2, 3]\ni = -2\nfor i not in a:\n    print(i)\n    i += 1",
+        "options": {
+            "a": "-2 -1",
+            "b": "0",
+            "c": "错误",
+            "d": "以上皆非"
+        },
+        "answer": "c",
+        "explanation": "语法错误，for 循环中不允许使用 not in。",
+        "type": "单选"
+    },
+    {
+        "title": "While 和 For 循环",
+        "content": "以下 Python 代码片段的输出是什么？\n\nstring = 'my name is x'\nfor i in ' '.join(string.split()):\n    print(i, end=', ')",
+        "options": {
+            "a": "m, y, , n, a, m, e, , i, s, , x,",
+            "b": "m, y, , n, a, m, e, , i, s, , x",
+            "c": "my, name, is, x,",
+            "d": "错误"
+        },
+        "answer": "a",
+        "explanation": "变量 i 每次取一个字符的值。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 语句的输出是什么？\n\n>>> 'a' + 'bc'",
+        "options": {
+            "a": "a",
+            "b": "bc",
+            "c": "bca",
+            "d": "abc"
+        },
+        "answer": "d",
+        "explanation": "+ 运算符是连接运算符。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 语句的输出是什么？\n\n>>> 'abcd'[2:]",
+        "options": {
+            "a": "a",
+            "b": "ab",
+            "c": "cd",
+            "d": "dc"
+        },
+        "answer": "c",
+        "explanation": "对字符串执行切片操作。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "执行 string.ascii_letters 的输出也可以通过以下方式实现：",
+        "options": {
+            "a": "string.ascii_lowercase + string.digits",
+            "b": "string.ascii_lowercase + string.ascii_uppercase",
+            "c": "string.letters",
+            "d": "string.lowercase + string.uppercase"
+        },
+        "answer": "b",
+        "explanation": "在 shell 中执行并检查。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\n>>> str1 = 'hello' \n>>> str2 = '，' \n>>> str3 = 'world' \n>>> str1[-1:]",
+        "options": {
+            "a": "olleh",
+            "b": "hello",
+            "c": "h",
+            "d": "o"
+        },
+        "answer": "d",
+        "explanation": "-1 对应最后一个索引。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "哪些算术运算符不能与字符串一起使用？",
+        "options": {
+            "a": "+",
+            "b": "*",
+            "c": "-",
+            "d": "以上全部"
+        },
+        "answer": "c",
+        "explanation": "+ 用于连接字符串，* 用于乘以字符串。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\n>>> print(r\"\\n hello\")",
+        "options": {
+            "a": "换行符和 hello",
+            "b": "\\nhello",
+            "c": "字母 r 和 hello",
+            "d": "错误"
+        },
+        "answer": "b",
+        "explanation": "当以字母“r”或“R”作为前缀时，字符串文字将成为原始字符串，并且转义序列（例如 \\n）不会被转换。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 语句的输出是什么？\n\n>>> print('换' '行')",
+        "options": {
+            "a": "错误",
+            "b": "输出相当于 print '换\\n行'",
+            "c": "换行",
+            "d": "换 行"
+        },
+        "answer": "c",
+        "explanation": "允许使用空格分隔的字符串文字。它们被连接起来。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 语句的输出是什么？\n\n>>> print('x\\97\\x98')",
+        "options": {
+            "a": "错误",
+            "b": "97\n98",
+            "c": "x\\97",
+            "d": "\\x97\\x98"
+        },
+        "answer": "c",
+        "explanation": "\\x 是一个转义序列，表示接下来的 2 位数字是编码字符的十六进制数。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\n>>> str1 = 'helloworld' \n>>> str1[::-1]",
+        "options": {
+            "a": "dlrowolleh",
+            "b": "hello",
+            "c": "world",
+            "d": "helloworld"
+        },
+        "answer": "a",
+        "explanation": "在 shell 中执行验证。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\n>>> print(0xA + 0xB + 0xC)",
+        "options": {
+            "a": "0xA0xB0xC",
+            "b": "错误",
+            "c": "0x22",
+            "d": "33"
+        },
+        "answer": "d",
+        "explanation": "0xA、0xB 和 0xC 分别是十六进制整数文字，代表十进制值 10、11 和 12。它们的和为 33。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\nclass Father:\n    def __init__(self, param):\n        self.o1 = param\n\nclass Child(Father):\n    def __init__(self, param):\n        self.o2 = param\n\n>>> obj = Child(22)\n>>> print('%d %d' % (obj.o1, obj.o2))",
+        "options": {
+            "a": "None None",
+            "b": "None 22",
+            "c": "22 None",
+            "d": "抛出错误"
+        },
+        "answer": "d",
+        "explanation": "self.o1 从未被创建。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\nclass Tester:\n    def __init__(self, id):\n        self.id = str(id)  id = '224'\n\n>>> temp = Tester(12)\n>>> print(temp.id)",
+        "options": {
+            "a": "224",
+            "b": "错误",
+            "c": "12",
+            "d": "None"
+        },
+        "answer": "c",
+        "explanation": "在这种情况下，id 将是类的属性。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\n>>> example = 'snow world'\n>>> print('%s' % example[4:7])",
+        "options": {
+            "a": "wo",
+            "b": "world",
+            "c": "sn",
+            "d": "rl"
+        },
+        "answer": "a",
+        "explanation": "在 shell 中执行，并验证。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\n>>> example = 'snow world'\n>>> example[3] = 's'\n>>> print(example)",
+        "options": {
+            "a": "snow",
+            "b": "snow world",
+            "c": "错误",
+            "d": "snos world"
+        },
+        "answer": "c",
+        "explanation": "字符串不能被修改。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\n>>> max('你是什么')",
+        "options": {
+            "a": "错误",
+            "b": "u",
+            "c": "t",
+            "d": "y"
+        },
+        "answer": "d",
+        "explanation": "Max 返回具有最高 ASCII 值的字符。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "给定一个字符串 example='hello'，example.count('l') 的输出是什么？",
+        "options": {
+            "a": "2",
+            "b": "1",
+            "c": "None",
+            "d": "0"
+        },
+        "answer": "a",
+        "explanation": "'l' 在 'hello' 中出现了两次。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\n>>> example = 'helle'\n>>> example.find('e')",
+        "options": {
+            "a": "错误",
+            "b": "-1",
+            "c": "1",
+            "d": "0"
+        },
+        "answer": "c",
+        "explanation": "返回最低索引。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\n>>> example = 'helle'\n>>> example.rfind('e')",
+        "options": {
+            "a": "-1",
+            "b": "4",
+            "c": "3",
+            "d": "1"
+        },
+        "answer": "b",
+        "explanation": "返回最高索引。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\n>>> example = 'helloworld'\n>>> example[::-1].startswith('d')",
+        "options": {
+            "a": "dlrowolleh",
+            "b": "True",
+            "c": "-1",
+            "d": "None"
+        },
+        "answer": "b",
+        "explanation": "检查给定的字符串是否以传递的参数开头。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "要将两个字符串连接到第三个字符串，可以使用哪些语句？",
+        "options": {
+            "a": "s3 = s1 + s2",
+            "b": "s3 = s1.add(s2)",
+            "c": "s3 = s1.__add__(s2)",
+            "d": "s3 = s1 * s2"
+        },
+        "answer": "c",
+        "explanation": "__add__ 是另一种可用于连接的方法。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 语句的输出是什么？\n\n>>> chr ( ord ( 'A' ) )",
+        "options": {
+            "a": "A",
+            "b": "B",
+            "c": "a",
+            "d": "错误"
+        },
+        "answer": "a",
+        "explanation": "在shell中执行验证。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 语句的输出是什么？\n\n>>> 打印（chr （ord （'b' ） + 1 ））",
+        "options": {
+            "a": "a",
+            "b": "b",
+            "c": "c",
+            "d": "A"
+        },
+        "answer": "c",
+        "explanation": "在shell中执行验证。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下哪个语句会打印 hello\\example\\test.txt？",
+        "options": {
+            "a": "print(“hello\\example\\test.txt”)",
+            "b": "print(“hello\\\\example\\\\test.txt”)",
+            "c": "print(“hello\\”example\\”test.txt”)",
+            "d": "print(“hello”\\example”\\test.txt”)"
+        },
+        "answer": "b",
+        "explanation": "\\用于表示下一个\\不是转义序列。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "假设 s 为“\\t\\tWorld\\n”，s.strip() 是什么？",
+        "options": {
+            "a": "\\t\\tWorld\\n",
+            "b": "\\t\\tWorld\\n",
+            "c": "\\t\\tWORLD\\n",
+            "d": "World"
+        },
+        "answer": "d",
+        "explanation": "执行 help(string.strip) 来查看详细信息。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "格式化函数应用于字符串时返回 ___________",
+        "options": {
+            "a": "错误",
+            "b": "int",
+            "c": "bool",
+            "d": "str"
+        },
+        "answer": "d",
+        "explanation": "Format 函数返回一个字符串。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "“hello” +1+2+3 的输出是什么？",
+        "options": {
+            "a": "hello123",
+            "b": "hello",
+            "c": "Error",
+            "d": "hello6"
+        },
+        "answer": "c",
+        "explanation": "不能连接 str 和 int 对象。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\n>>> print( \"D\" , end =  ' ' ) \n>>> print( \"C\" , end =  ' ' ) \n>>> print( \"B\" , end =  ' ' ) \n>>> print( \"A\" , end =  ' ' )",
+        "options": {
+            "a": "DCBA",
+            "b": "A, B, C, D",
+            "c": "DCBA",
+            "d": "D, C, B, A 将显示在四行上"
+        },
+        "answer": "c",
+        "explanation": "在shell中执行。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 语句的输出是什么？(python 3.xx)\n\n>>> print(format(\"Welcome\" , \"10s\" , end = '#'))\n>>> print(format(111 ,\"4d\" ,end = '#' ))\n>>> print(format(924.656 ,\"3.2f\" , end = '#' ))",
+        "options": {
+            "a": "Welcom#111#924.66",
+            "b": "Welcom#111#924.66",
+            "c": "Welcom#111#.66",
+            "d": "Welcom # 111#924.66"
+        },
+        "answer": "d",
+        "explanation": "在shell中执行验证。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "print(ord('b') – ord('a')) 会显示什么？",
+        "options": {
+            "a": "0",
+            "b": "1",
+            "c": "-1",
+            "d": "2"
+        },
+        "answer": "b",
+        "explanation": "b 的 ASCII 值比 a 大一。因此，此代码的输出为 98-97，等于 1。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "假设 s=\"hello\"，其返回值类型是什么？",
+        "options": {
+            "a": "int",
+            "b": "bool",
+            "c": "str",
+            "d": "String"
+        },
+        "answer": "c",
+        "explanation": "在 python 中用 str 表示字符串。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "“Hello”.replace(“l”, “e”) 是什么？",
+        "options": {
+            "a": "Heeeo",
+            "b": "Heelo",
+            "c": "Heleo",
+            "d": "None"
+        },
+        "answer": "a",
+        "explanation": "在shell中执行验证。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "要从字符串 s=“Hello” 中检索索引 3 处的字符，我们要执行什么命令（允许多个答案）？",
+        "options": {
+            "a": "s[]",
+            "b": "s.getitem(3)",
+            "c": "s.__getitem__(3)",
+            "d": "s.getItem(3)"
+        },
+        "answer": "c",
+        "explanation": "__getitem(..) 可用于获取作为参数指定的索引处的字符。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "要返回字符串 s 的长度，我们要执行什么命令？",
+        "options": {
+            "a": "len(s) 或 s.__len__()",
+            "b": "仅 len(s)",
+            "c": "size(s)",
+            "d": "s.size()"
+        },
+        "answer": "a",
+        "explanation": "len(s) 是 Python 中用于获取字符串 s 长度的内置函数，而 s.__len__() 调用字符串对象 s 的 __len__ 方法。它不太常见，但功能上等同于 len(s)。因此，我们可以使用其中任何一个。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "如果一个类定义了__str__(self)方法，对于该类的对象obj，可以使用which命令来调用__str__方法。",
+        "options": {
+            "a": "obj.__str__()",
+            "b": "str(obj)",
+            "c": "print obj",
+            "d": "以上所有"
+        },
+        "answer": "d",
+        "explanation": "在shell中执行验证。",
+        "type": "单选"
+    },
+    {
+        "title": "字符串",
+        "content": "要检查字符串 s1 是否包含另一个字符串 s2，请使用 ________",
+        "options": {
+            "a": "s1.__contains__(s2)",
+            "b": "s2 in s1",
+            "c": "s1.contains(s2)",
+            "d": "si.in(s2)"
+        },
+        "answer": "a",
+        "type": "单选",
+        "explanation": "s1 中的 s2 的工作方式与调用特殊函数 __contains__ 相同。"
+    },
+    {
+        "title": "字符串",
+        "content": "假设 i 为 5 且 j 为 4，i + j 与 ________ 相同",
+        "options": {
+            "a": "i.__add(j)",
+            "b": "i.__add__(j)",
+            "c": "i.__Add(j)",
+            "d": "i.__ADD(j)"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "在shell中执行验证。"
+    },
+    {
+        "title": "字符串",
+        "content": "以下 Python 代码的输出是什么？\n\n类Count:\n def  __init__ ( self , count =  0 ) :\n self .__count = count\n \nc1 =计数（2 ） \nc2 =计数（2 ）\n打印（id （ c1 ） ==  id （ c2 ），结束=  “” ）\n\ns1 =  \"好\" \ns2 =  \"好\"\n打印（id （ s1 ） ==  id （ s2 ））",
+        "options": {
+            "a": "正确 错误",
+            "b": "正确 正确",
+            "c": "错误 正确",
+            "d": "错误 错误"
+        },
+        "answer": "c",
+        "type": "单选",
+        "explanation": "在 shell 中执行的对象不能具有相同的 id，但是在字符串的情况下则不同。"
+    },
+    {
+        "title": "字符串",
+        "content": "你使用什么函数来读取字符串？",
+        "options": {
+            "a": "input(“输入一个字符串”)",
+            "b": "eval(input(“输入一个字符串”))",
+            "c": "enter(“输入一个字符串”)",
+            "d": "eval(enter(“输入一个字符串”))"
+        },
+        "answer": "a",
+        "type": "单选",
+        "explanation": "在shell中执行验证。"
+    },
+    {
+        "title": "字符串",
+        "content": "假设 x 为 345.3546，格式（x, “10.3f”）是什么（_ 表示空格）。",
+        "options": {
+            "a": "__345.355",
+            "b": "___345.355",
+            "c": "____345.355",
+            "d": "_____345.354"
+        },
+        "answer": "b",
+        "type": "单选",
+        "explanation": "在shell中执行验证。"
+    }
+]
