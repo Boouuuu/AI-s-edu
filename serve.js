@@ -68,6 +68,9 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 // 定义 Submission后数据模型
 const QuestionDataSchema = new mongoose.Schema({
     questionNumber: { type: Number, required: true },
+    iid:{ type: Number, required: true},
+    isCorrect:{type:Boolean, requied: true},
+    questionTitle:{type: String, requied: true},
     questionType: { type: String, required: true },
     questionText: { type: String, required: true },
     options: { type: [String], required: true, default: [] }, // 默认空数组
@@ -147,6 +150,62 @@ app.get('/submission-times', async (req, res) => {
         res.status(500).send('获取提交时间时出错: ' + error.message);
     }
 });
+
+
+
+import fs from 'fs';
+import path from 'path';
+
+// 获取所有提交时间的路由
+app.get('/submission-all', async (req, res) => {
+    try {
+        const username = req.query.username; // 从查询参数获取用户名
+        
+        console.log(username);
+
+        if (!username) {
+            return res.status(400).send('用户名未提供');
+        }
+
+        // 根据用户名查找对应的提交记录
+        const submissions = await Submission.find({ username });
+
+        // 如果没有找到提交记录
+        if (submissions.length === 0) {
+            return res.status(404).send('未找到对应的提交记录');
+        }
+
+        // 直接返回提交记录
+        return res.status(200).json(submissions);
+    } catch (error) {
+        res.status(500).send('获取提交时间时出错: ' + error.message);
+    }
+});
+
+
+
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// 获取所有提交时间的路由
+app.post('/save-data', (req, res) => {
+    console.log('接收到的请求体:', req.body);
+
+    const data = req.body;
+    const filePath = path.join(__dirname, 'dataaa.json'); // 使用 __dirname
+
+    fs.writeFile(filePath, JSON.stringify(data, null, 4), 'utf-8', (err) => {
+        if (err) {
+            console.error('保存文件时出错:', err.message);
+            return res.status(500).send('保存文件时出错: ' + err.message);
+        }
+        res.status(200).send('文件保存成功！');
+    });
+});
+
+
 
 
 // 启动服务器

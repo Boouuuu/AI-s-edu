@@ -13,7 +13,8 @@ const num = 10;
 
 let answers = Array(num).fill(null); // 初始化答案数组
 let correctAnswers = []; // 存储正确答案
-
+let titles = []; // 存储每道题的 title
+let iid = [];
 // 生成题目内容
 function generateQuestions(questions) {
     const container = document.getElementById('container');
@@ -48,6 +49,12 @@ function generateQuestions(questions) {
         console.log(`题目 ${index + 1}:`, question.content); // 输出题目内容
         questionBox.appendChild(questionText);
 
+        // 将题目的 title 添加到 titles 数组中
+        titles.push(question.title); // 假设每个 question 对象都有 title 属性
+
+        // 将题目的 iid添加到 iids 数组中
+        iid.push(question.iid); // 
+
        // 第三层
        const optionsContainer = document.createElement('div');
        optionsContainer.classList.add('options');
@@ -61,7 +68,7 @@ function generateQuestions(questions) {
            const optionLabel = document.createElement('label');
            optionLabel.classList.add('option');
 
-           const inputType = question.type === '单选' ? 'radio' : 'checkbox';
+           const inputType = question.type === '单选题' ? 'radio' : 'checkbox';
            const input = document.createElement('input');
            input.type = inputType;
            input.name = `question${index}`; 
@@ -216,32 +223,61 @@ document.addEventListener("DOMContentLoaded", () => {
         stopTimer(); // 点击提交按钮时停止计时
         displayResults(); // 显示结果
 
-        const userAnswers = []; // 存储用户答案
+       
+    const userAnswers = []; // 存储用户答案
 
+    for (let i = 0; i < num; i++) {
+        const inputs = document.querySelectorAll(`#question-${i + 1} input`);
+        const userSelection = Array.from(inputs)
+            .filter(input => input.checked)
+            .map(input => {
+                const optionIndex = Array.from(inputs).indexOf(input); // 获取当前选项的索引
+                return String.fromCharCode(65 + optionIndex); // 将索引转换为字母（A=65）
+            }); // 获取用户选择的答案
 
+        const questionType = inputs[0].type === 'radio' ? '单选题' : '多选题';
+        const questionText = document.querySelector(`#question-${i + 1} .question-text`).textContent;
         
 
-        for (let i = 0; i < num; i++) {
-            const inputs = document.querySelectorAll(`#question-${i + 1} input`);
-            const userSelection = Array.from(inputs)
-                .filter(input => input.checked)
-                .map(input => {
-                    const optionIndex = Array.from(inputs).indexOf(input); // 获取当前选项的索引
-                    return String.fromCharCode(65 + optionIndex); // 将索引转换为字母（A=65）
-                }); // 获取用户选择的答案
 
-            const questionType = inputs[0].type === 'radio' ? '单选' : '多选';
-            const questionText = document.querySelector(`#question-${i + 1} .question-text`).textContent;
+        // 判断用户选择和正确答案是否一致
+        let isCorrect = false; // 每道题的正误
+        if (questionType === '单选题') {
+            // 对于单选题，比较用户选择和正确答案
+            if (userSelection[0] === correctAnswers[i]) {
+                isCorrect = true; // 如果用户选择正确
+            }
+        } else if (questionType === '多选题') {
+            // 对于多选题，比较用户选择和正确答案
+            const correctAnswerSet = new Set(correctAnswers[i]); // 使用集合来判断
+            const userSelectionSet = new Set(userSelection);
 
-            userAnswers.push({
-                questionNumber: i + 1,
-                questionType: questionType,
-                questionText: questionText,
-                options: Array.from(inputs).map(input => input.nextSibling.textContent), // 获取所有选项
-                userSelection: userSelection, // 用户的选择（以字母形式）
-                correctAnswer: correctAnswers[i] // 正确答案
-            });
+            // 检查用户选择的答案是否与正确答案完全一致
+            if (userSelectionSet.size === correctAnswerSet.size && 
+                [...userSelectionSet].every(answer => correctAnswerSet.has(answer))) {
+                isCorrect = true; // 如果用户选择完全正确
+            }
+            console.log(isCorrect);
         }
+
+        // 将每道题的详细信息和正误存入 userAnswers
+        userAnswers.push({
+            questionNumber: i + 1,
+            questionType: questionType,
+            questionText: questionText,
+            options: Array.from(inputs).map(input => input.nextSibling.textContent), // 获取所有选项
+            userSelection: userSelection, // 用户的选择（以字母形式）
+            correctAnswer: correctAnswers[i], // 正确答案
+            isCorrect: isCorrect, // 每道题的正误
+            questionTitle:titles[i],
+            iid:iid[i]
+        });
+    }
+    console.log(userAnswers);
+
+    
+        
+        
 
         const username = localStorage.getItem('username'); // 从 localStorage 获取用户名
         console.log(username);
@@ -271,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (response.ok) {
                 console.log('数据成功提交');
 
-                window.location.href = `paper.html?submitTime=${encodeURIComponent(submitTime)}`;
+                //window.location.href = `paper.html?submitTime=${encodeURIComponent(submitTime)}`;
             } else {
                 console.error('数据提交失败:', response.statusText);
             }
