@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+.challenge{
+    text-align: center;
+    padding: 50px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.challenge-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4CAF50; /* 按钮背景颜色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 去掉边框 */
+    border-radius: 5px; /* 按钮圆角 */
+    padding: 15px 30px; /* 按钮内边距 */
+    font-size: 18px; /* 按钮字体大小 */
+    cursor: pointer; /* 鼠标悬停时显示为可点击 */
+    transition: background-color 0.3s; /* 悬停效果过渡 */
+}
+
+.challenge-button:hover {
+    background-color: #45a049; /* 悬停时按钮颜色 */
+}
+
+.sword-icon {
+    margin-right: 10px; /* 图标和文字之间的间距 */
+    margin-left: 10px;
+    font-size: 24px; /* 图标大小 */
+}

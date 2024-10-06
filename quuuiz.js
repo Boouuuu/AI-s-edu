@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (response.ok) {
                 console.log('数据成功提交');
 
-                //window.location.href = `paper.html?submitTime=${encodeURIComponent(submitTime)}`;
+                window.location.href = `paper.html?submitTime=${encodeURIComponent(submitTime)}`;
             } else {
                 console.error('数据提交失败:', response.statusText);
             }

@@ -82,7 +82,8 @@ body {
 
 
 .custom-navbar {
-    height: 25px; /* 调整导航栏高度 */
+
+    height: 30px; /* 调整导航栏高度 */
     font-family: Helvetica,Arial,"Microsoft YaHei",sans-serif;
 }
 
@@ -103,7 +104,7 @@ body {
   width: 700px;
 }
 .navbar.bg-body-tertiary {
-  margin-top: 0; /* 确保没有额外的顶部外边距 */
+  margin-top: 15px; /* 确保没有额外的顶部外边距 */
   margin-bottom: 0; /* 确保没有额外的底部外边距 */;
 }
 .Generate{

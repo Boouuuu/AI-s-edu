@@ -280,20 +280,30 @@ document.addEventListener('DOMContentLoaded', function() {
   input.addEventListener('input', toggleButton); // 监听输入框内容变化
 });
 
-$(function () {
-  var $window = $(window);
-  var $nav = $('#loading-container');
-  var navTop = $nav.offset().top;
-  var $div2 = $('#div2');
 
-  $window.scroll(function () {
+$(function () {
+  var $nav = $('#loading-container');
+
+  // 这个函数可以在滚动时调用，以改变导航栏样式（可选）
+  $(window).scroll(function () {
     var scrollTop = $(document).scrollTop();
-    if (scrollTop >= navTop) {
-      $nav.addClass('fixed');
-      $div2.addClass('fixed');
+    if (scrollTop > 0) {
+      $nav.addClass('scrolled'); // 这里可以添加样式
     } else {
-      $nav.removeClass('fixed');
-      $div2.removeClass('fixed');
-    };
+      $nav.removeClass('scrolled');
+    }
   });
 });
+
+
+  //   // 动态加载导航栏
+  //   document.addEventListener('DOMContentLoaded', function () {
+  //     fetch('guideline.html')
+  //         .then(response => response.text())
+  //         .then(data => {
+  //             document.body.insertAdjacentHTML('afterbegin', data);
+  //             var navHeight = document.getElementById('loading-container').offsetHeight;
+  //             document.getElementById('div2').style.marginTop = navHeight + 'px'; // 设置内容的上边距
+  //         })
+  //         .catch(error => console.error('Error loading navbar:', error));
+  // });

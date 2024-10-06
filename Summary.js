@@ -31,6 +31,13 @@ $(document).ready(function() {
 function extractSummary(codeSnippets) {
     const functions = new Set(); // 使用 Set 存储唯一的函数
     const libraries = new Set();
+    const keywords = new Set([
+        "False", "None", "True", "and", "as", "assert", "async", "await",
+        "break", "class", "continue", "def", "del", "elif", "else", "except",
+        "finally", "for", "from", "global", "if", "import", "in", "is",
+        "lambda", "nonlocal", "not", "or", "pass", "raise", "return",
+        "try", "while", "with", "yield"
+    ]);
 
     codeSnippets.forEach(code => {
         // 匹配导入的库
@@ -46,13 +53,22 @@ function extractSummary(codeSnippets) {
         while ((funcMatch = funcRegex.exec(code)) !== null) {
             functions.add(funcMatch[1]); // 使用 Set 添加函数
         }
+
+        // 匹配 Python 关键字
+        const keywordRegex = new RegExp(`\\b(${Array.from(keywords).join('|')})\\b`, 'g');
+        let keywordMatch;
+        while ((keywordMatch = keywordRegex.exec(code)) !== null) {
+            keywords.add(keywordMatch[0]); // 添加匹配到的关键字
+        }
     });
 
     return {
         functions: Array.from(functions).sort(), // 转换为数组并排序
-        libraries: Array.from(libraries).sort()  // 转换为数组并排序
+        libraries: Array.from(libraries).sort(),  // 转换为数组并排序
+        keywords: Array.from(keywords).sort()      // 转换为数组并排序
     };
 }
+
 
 
 
@@ -119,3 +135,10 @@ function highlightTerms(term) {
         firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 }
+
+// 导航栏
+fetch('navbar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
+  });
