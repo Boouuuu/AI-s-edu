@@ -11,6 +11,32 @@ async function loadQuestions() {
 
 const num = 10;
 
+let doneCount = 0;
+let notDoneCount = num; // 根据 num 初始化未做的题目数量
+let markedCount = 0;
+
+// 创建题目序号按钮
+const questionsContainer = document.querySelector('.questions-number');
+
+// 动态生成题目序号按钮
+for (let i = 1; i <= num; i++) {
+    const questionCircle = document.createElement('div');
+    questionCircle.classList.add('question-circle');
+    questionCircle.textContent = i;
+
+    // 点击按钮时，滑动到对应题号
+    questionCircle.addEventListener('click', () => {
+        const questionBox = document.querySelector(`#question-${i}`);
+        if (questionBox) {
+            questionBox.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
+    questionsContainer.appendChild(questionCircle);
+}
+
+
+
 let answers = Array(num).fill(null); // 初始化答案数组
 let correctAnswers = []; // 存储正确答案
 let titles = []; // 存储每道题的 title
@@ -93,16 +119,30 @@ function generateQuestions(questions) {
 
 // 初始化加载题目
 loadQuestions();
-// 随机选择指定数量的题目
+
+
+
 function getRandomQuestions(questions, num) {
+    // 获取查询字符串
+    const queryString = window.location.search;
+
+    // 使用 URLSearchParams 解析查询字符串
+    const urlParams = new URLSearchParams(queryString);
+
+    // 获取 recommendedIds 参数
+    const recommendedIds = urlParams.get('recommendedIds');
+
+    // 将推荐的题号解析成列表
+    const recommendedIdsList = recommendedIds ? recommendedIds.split(',').map(Number) : [];
+
+
     const selectedQuestions = [];
     const usedIndices = new Set();
-
-    while (selectedQuestions.length < num && selectedQuestions.length < questions.length) {
-        const randomIndex = Math.floor(Math.random() * questions.length);
-        if (!usedIndices.has(randomIndex)) {
-            selectedQuestions.push(questions[randomIndex]);
-            usedIndices.add(randomIndex);
+    for (let i = 0; i < recommendedIdsList.length; i++) {
+        const index = recommendedIdsList[i] - 1; // 减 1 以匹配数组索引
+        if (index >= 0 && index < questions.length) {
+            selectedQuestions.push(questions[index]);
+            usedIndices.add(index);
         }
     }
 
@@ -115,29 +155,7 @@ function getRandomQuestions(questions, num) {
 
 
 
-let doneCount = 0;
-let notDoneCount = num; // 根据 num 初始化未做的题目数量
-let markedCount = 0;
 
-// 创建题目序号按钮
-const questionsContainer = document.querySelector('.questions-number');
-
-// 动态生成题目序号按钮
-for (let i = 1; i <= num; i++) {
-    const questionCircle = document.createElement('div');
-    questionCircle.classList.add('question-circle');
-    questionCircle.textContent = i;
-
-    // 点击按钮时，滑动到对应题号
-    questionCircle.addEventListener('click', () => {
-        const questionBox = document.querySelector(`#question-${i}`);
-        if (questionBox) {
-            questionBox.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-
-    questionsContainer.appendChild(questionCircle);
-}
 // 更新题目状态
 function updateQuestionStatus(questionIndex) {
     const circle = document.querySelector(`.questions-number .question-circle:nth-child(${questionIndex + 1})`);

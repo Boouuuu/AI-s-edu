@@ -10,35 +10,18 @@
     <link rel="stylesheet" href="libs/bootstrap.min.css">
     <link rel="stylesheet" href="libs/bootstrap.min_5.1.0.css">
     <link rel="stylesheet" href="libs/css2.css">
+    <script src="./libs/jquery.min.js"></script>
 <script src="./libs/jquery-3.7.1.min.js"></script>
-<script src="./libs/jquery.min.js"></script>
+<script src="./libs/jquery-1.7.1.min.js"></script>
+<script src="./libs/jquery-ui.min.js"></script>
 <script src="./libs/vue@2.js"></script> 
 <script src="./libs/marked.min.js"></script>
-
-<link rel="stylesheet" href="worcloud_style.css">
 <link rel="stylesheet" href="./libs/font-awesome/css/all.min.css">
 
 </head>
 <body>
 
   <div id="navbar"></div>
-    
-    <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="Summary.html">总结</a>
-          <a class="navbar-brand" href="wordcloud.html">词云图</a>
-          <a class="navbar-brand" href="Mindmap.html">思维导图</a>
-        </div>
-      </nav>
-      <!-- <div class="titleContent">
-        <div class="title title8" data-text="知识总结">知识总结</div>
-      </div> -->
-
-      
-
-
-
 
       <div class="Generate">
         <button id="generateSummary">
@@ -66,12 +49,9 @@
       <div id="summary-container" style="text-align: left; margin-top: 20px;">
         <div id="summary"></div>
     </div>
-
     
-    <ul class="pager">
-        <li class="next" id="nextpage"><a href="#">下一步 &rarr;</a></li>
-      </ul>
-    <script src="Summary.js"></script>
     <script src="content.js"></script>
+    <script src="Summary.js"></script>
+
 </body>
 </html>

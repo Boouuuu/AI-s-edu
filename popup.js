@@ -296,14 +296,9 @@ $(function () {
 });
 
 
-  //   // 动态加载导航栏
-  //   document.addEventListener('DOMContentLoaded', function () {
-  //     fetch('guideline.html')
-  //         .then(response => response.text())
-  //         .then(data => {
-  //             document.body.insertAdjacentHTML('afterbegin', data);
-  //             var navHeight = document.getElementById('loading-container').offsetHeight;
-  //             document.getElementById('div2').style.marginTop = navHeight + 'px'; // 设置内容的上边距
-  //         })
-  //         .catch(error => console.error('Error loading navbar:', error));
-  // });
+ // 导航栏
+fetch('navbar.html')
+.then(response => response.text())
+.then(data => {
+  document.getElementById('navbar').innerHTML = data;
+});

@@ -3,27 +3,20 @@ $(document).ready(function() {
   });
   
   
-  $('#nextpage').on('click', function(e) {
-    e.preventDefault(); // 防止默认的立即跳转
-    $('body').fadeOut('slow', function() {
-        // 淡出完成后进行页面跳转
-        window.location.href = "wordcloud.html";
-    });
-  });
 
   
 //实现提取函数和库
   document.getElementById('generateSummary').addEventListener('click', () => {
-    console.log('Button clicked!');
+    console.log('总结Button clicked!');
 
     chrome.runtime.sendMessage({ message: 'getCodeSnippets' }, (response) => {
-        console.log('sendMessage!');
+        console.log('总结sendMessage!');
         if (response && response.codeSnippets) { // 确保 response 存在
-            console.log('catch win!');
+            console.log('总结catch win!');
             const summary = extractSummary(response.codeSnippets);
             displaySummary(summary);
         } else {
-            console.log('catch lose!');
+            console.log('总结catch lose!');
         }
     });
 });

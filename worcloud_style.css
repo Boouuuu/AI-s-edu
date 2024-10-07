@@ -3,7 +3,11 @@ body {
     font-family: 'Microsoft Yahei', 'Tahoma', Arial, sans-serif;
     margin: 0;
     padding: 5px;
-    
+    /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #333;
   }
   
   h1 {
@@ -15,7 +19,6 @@ body {
     padding: 10px;
     margin-bottom: 20px;
     cursor: pointer;
-    
   }
   
   #main {
@@ -25,95 +28,13 @@ body {
   }
 
 
-.titleContent > div {
-  margin: 20px;
-}
-
-.title {
-  height: 32px;
-  font-weight: 600;
-  line-height: 32px;
-  margin-left: 5px;
-  padding-left: 5px;
-  position: relative;
-  color: #000;
-  z-index: 0;
-}
-
-.title1 {
-  padding-left: 10px;
-}
-
-.title1:after {
-  content: " ";
-  width: 4px;
-  height: 20px;
-  background: #12a3f5;
-  position: absolute;
-  left: 0;
-  top: 6px;
-  border-radius: 2px;
-}
-.title8 {
-  border-radius: 16px;
-  border: 1px solid #e8e9fb;
-  box-shadow: 0 0 10px #e8e9fb;
-  text-align: center;
-  width: 80px;
-  color: #12a3f5;
-
-  &:before {
-      content: "";
-      width: 300%;
-      height: 2px;
-      background: #e8e9fb;
-      position: absolute;
-      top: 15px;
-      left: 100%;
-      background: linear-gradient(to right, #e8e9fb, rgba(182, 181, 181, 0));
-  }
-}
-
-.navbarjustify-content{
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-} 
-
-
-.custom-navbar {
-
-    height: 30px; /* 调整导航栏高度 */
-    font-family: Helvetica,Arial,"Microsoft YaHei",sans-serif;
-}
-
-.navbar-brand {
-    font-size: 16px; /* 调整字体大小 */
-    color: #333; /* 字体颜色 */
-    transition: all 0.3s ease;
-}
-
-.navbar-brand:hover {
-    color: #f9fbfc; /* 浅蓝色 */
-    background-color:#009282; /* 背景色变浅 */
-    transform: translateY(-3px); /* 轻微上浮效果 */
-    padding: 5px; /* 增加一些间距使效果更柔和 */
-    border-radius: 3px; /* 圆角 */
-}
-.form-control me-2{
-  width: 700px;
-}
-.navbar.bg-body-tertiary {
-  margin-top: 15px; /* 确保没有额外的顶部外边距 */
-  margin-bottom: 0; /* 确保没有额外的底部外边距 */;
-}
 .Generate{
+  margin-top: 15px; /* 确保没有额外的顶部外边距 */
   height: 80px;
   display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; /* 垂直排列 */
-    background-color: #f0f0f0; /* 浅灰色背景 */
     position: relative; /* 为了分割线的位置 */
 }
 .Generate::after {
@@ -123,47 +44,8 @@ body {
   height: 2px; /* 分割线的高度 */
   background-color:  #00c9b7; /* 分割线的颜色 */
   position: absolute;
-  bottom: -2px; /* 分割线与按钮之间的距离 */
+  top: 9px; /* 分割线与按钮之间的距离 */
   left: 0;
-}
-.pager{
-  bottom: 0px;
-  height: 30px;
-  display: flex;
-  justify-content: flex-end; /* 右对齐 */
-    align-items: center;
-    background-color: #f0f0f0; /* 浅灰色背景 */
-    position: relative; /* 为了分割线的位置 */
-    padding: 10px 40px; /* 去掉内边距 */
-}
-.pager li {
-  margin-left: 100px; /* 可选：列表项之间的间距 */
-}
-.pager2{
-  bottom: 0px;
-  height: 30px;
-  display: flex;
-  justify-content: space-between; /* 使两个 li 分开 */
-    align-items: center;
-    background-color: #f0f0f0; /* 浅灰色背景 */
-    position: relative; /* 为了分割线的位置 */
-    padding: 10px 40px; 
-}
-.pager2 li {
-  list-style: none; /* 去掉默认列表样式 */
-}
-.pager3{
-  bottom: 0px;
-  height: 30px;
-  display: flex;
-  justify-content: flex-start; /* 左对齐 */
-    align-items: center;
-    background-color: #f0f0f0; /* 浅灰色背景 */
-    position: relative; /* 为了分割线的位置 */
-    padding: 10px 40px; /* 去掉内边距 */
-}
-.pager3 li {
-  margin-left: 100px; /* 可选：列表项之间的间距 */
 }
 
 #generateSummary{
@@ -264,7 +146,7 @@ body {
   text-align: left; /* 左对齐 */
   margin: 20px auto; /* 上下各留20px的空间 */
   max-width: 800px; /* 最大宽度，确保内容不超出 */
-  min-height:300px;
+  min-height:430px;
   line-height: 1.6; /* 行高，增加可读性 */
   padding: 10px; /* 内边距，增加可读性 */
   border: 1px solid #ccc; /* 可选：边框 */

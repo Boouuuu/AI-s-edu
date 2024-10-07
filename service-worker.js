@@ -82,19 +82,14 @@ if (request.message === 'getCodeSnippets') {
     // 请求内容脚本获取代码片段
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.tabs.sendMessage(tabs[0].id, { message: 'getCodeSnippets' }, sendResponse);
+        if (chrome.runtime.lastError) {
+          console.error("发送消息失败:", chrome.runtime.lastError);
+      } else {
+          console.log("收到的代码片段:", response.codeSnippets);
+      }
     });
     return true; // 保持响应通道开放
   }
   
   
-    // 词云
-    if (request.message === 'getcode') {
-      console.log("service词云收到!")
-      // 请求内容脚本获取代码片段
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      
-      chrome.tabs.sendMessage(tabs[0].id, { message: 'getcode' }, sendResponse);
-    });
-    return true; // 保持响应通道开放
-  }
 });

@@ -4,6 +4,17 @@
   "name": "Chatgpt3.6 Extension",
   "version": "1.0.0",
   "description": "Integrates Chatgpt with Google search.",
+  "content_scripts": [
+    {
+        "matches": [
+          "*://*/*",
+           "<all_urls>"
+        ],
+        "js": [ "libs/jquery-3.7.1.min.js", "libs/jquery-ui.min.js", "libs/jquery-1.7.1.min.js",
+        "libs/jquery.min.js","content.js","summary.js","aftertest.js"]
+      }
+    ],
+
   "background": {
     "service_worker": "service-worker.js"
   },
@@ -30,14 +41,6 @@
             "32": "./image/robot.png",
             "48": "./image/robot.png",
             "128": "./image/robot.png"
-  },
-  "content_scripts": [
-	{
-      "matches": [
-        "*://*/*",
-         "<all_urls>"
-      ],
-      "js": ["content.js","Summary.js","wordcloudmaking.js"]
-		}
-	]
+  }
+
 }
