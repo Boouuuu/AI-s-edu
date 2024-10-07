@@ -1,373 +1,104 @@
 [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
+  
     {
-        "isCorrect": false
-    },
-    {
-        "isCorrect": false
-    },
-    {
-        "isCorrect": true
-    },
-    {
-        "isCorrect": false
-    },
-    {
-        "isCorrect": false
-    },
-    {
-        "isCorrect": false
-    },
-    {
-        "isCorrect": false
-    },
-    {
-        "isCorrect": false
-    },
-    {
-        "isCorrect": false
-    },
-    {
-        "isCorrect": false
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {
-        "isCorrect": false,
-        "questionTitle": null
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "serialNumber": 56
     },
     {
         "isCorrect": false,
-        "questionTitle": null
+        "questionTitle": "字符串",
+        "serialNumber": 493
     },
     {
         "isCorrect": false,
-        "questionTitle": null
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 414
     },
     {
         "isCorrect": false,
-        "questionTitle": null
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 287
     },
     {
         "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": null
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 240
     },
     {
         "isCorrect": true,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": true,
-        "questionTitle": null
+        "questionTitle": "Python基础",
+        "serialNumber": 34
     },
     {
         "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": null
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "变量名"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "While 和 For 循环"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "Python基础"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "字符串"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "字符串"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "核心数据类型"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "While 和 For 循环"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "优先级和结合性"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "布尔值"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "While 和 For 循环"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "Python基础"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "Python基础"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "Python基础"
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习"
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 97
     },
     {
         "isCorrect": false,
         "questionTitle": "Python基础",
-        "serialNumber": 60
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "核心数据类型",
-        "serialNumber": 325
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 290
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 238
+        "serialNumber": 42
     },
     {
         "isCorrect": true,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 124
+        "questionTitle": "数字类型",
+        "serialNumber": 343
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "运算符",
+        "serialNumber": 323
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "serialNumber": 56
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "serialNumber": 493
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 414
     },
     {
         "isCorrect": false,
         "questionTitle": "机器学习与深度学习",
-        "serialNumber": 281
+        "serialNumber": 287
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 240
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "serialNumber": 34
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 97
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "serialNumber": 42
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "数字类型",
+        "serialNumber": 343
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "运算符",
+        "serialNumber": 323
     },
     {
         "isCorrect": false,
@@ -376,67 +107,447 @@
     },
     {
         "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 277
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 263
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 155
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 457
     },
     {
         "isCorrect": true,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 96
+        "questionTitle": "数字类型",
+        "serialNumber": 340
     },
     {
         "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 225
+    },
+    {
+        "isCorrect": true,
         "questionTitle": "While 和 For 循环",
-        "serialNumber": 430
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 145
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 297
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 157
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 123
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "Python基础",
-        "serialNumber": 72
+        "serialNumber": 420
     },
     {
         "isCorrect": false,
         "questionTitle": "字符串",
-        "serialNumber": 489
+        "serialNumber": 463
     },
     {
         "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 207
+        "questionTitle": "Python基础",
+        "serialNumber": 46
     },
     {
         "isCorrect": false,
         "questionTitle": "While 和 For 循环",
-        "serialNumber": 435
+        "serialNumber": 401
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "按位",
+        "serialNumber": 373
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "serialNumber": 493
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "布尔值",
+        "serialNumber": 397
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "按位",
+        "serialNumber": 375
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 403
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 456
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 436
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "serialNumber": 23
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "核心数据类型",
+        "serialNumber": 327
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "serialNumber": 13
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "serialNumber": 29
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 143
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "serialNumber": 35
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 154
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 148
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 185
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 171
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 405
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 153
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 252
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 298
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "优先级和结合性",
+        "serialNumber": 363
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 239
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 116
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "serialNumber": 1
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 183
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 238
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 161
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 167
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "serialNumber": 468
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "serialNumber": 479
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 281
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 454
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 121
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 449
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "serialNumber": 56
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "核心数据类型",
+        "serialNumber": 329
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 439
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "serialNumber": 494
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "serialNumber": 348
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "字符串",
+        "serialNumber": 464
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 189
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 205
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "serialNumber": 9
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 161
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "serialNumber": 20
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "serialNumber": 74
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 248
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 90
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 280
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "优先级和结合性",
+        "serialNumber": 350
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 286
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 127
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "按位",
+        "serialNumber": 375
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "serialNumber": 35
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 251
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 426
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "运算符",
+        "serialNumber": 324
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 209
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "布尔值",
+        "serialNumber": 395
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 175
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 139
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 274
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 402
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 218
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 438
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "核心数据类型",
+        "serialNumber": 335
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 213
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 215
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "serialNumber": 1
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 418
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 405
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "按位",
+        "serialNumber": 380
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 249
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 151
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 189
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 143
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 223
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "字符串",
+        "serialNumber": 460
+    },
+    {
+        "isCorrect": true,
+        "questionTitle": "运算符",
+        "serialNumber": 321
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 77
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "serialNumber": 234
     }
 ]
