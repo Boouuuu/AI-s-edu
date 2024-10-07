@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学习挑战</title>
     <link rel="stylesheet" href="aftertest.css">
-    
+    <script src="libs/jquery-1.7.1.min.js"></script>
+    <script src="./libs/jquery.min.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap.min_3.4.1.css">
+    <script src="./libs/marked.min.js"></script>
+    <link href="libs/css2.css" rel="stylesheet">
+    <link href="libs\font-awesome\css\all.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -15,13 +21,13 @@
         <h1>学了这节课，相信你一定收获满满！快来挑战10道课后习题，检验一下你的学习成果吧！</h1>
     </div>
         <div class="challenge">
-        <button class="challenge-button">
+        <button class="challenge-button" id="generate-button">
             <span class="sword-icon">⚔️</span> 点击生成个性化习题<span class="sword-icon">⚔️</span>
         </button>
-        <div id="output"></div>
+        <div id="result"></div>
     </div>
-
-    <!-- <script src="aftertest.js"></script> -->
     <script src="content.js"></script>
+    <script src="aftertest.js"></script>
+
 </body>
 </html>

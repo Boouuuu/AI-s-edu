@@ -1,9 +1,3 @@
-// 导航栏
-fetch('navbar.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('navbar').innerHTML = data;
-  });
 
 
 document.addEventListener("mouseup", function () {
@@ -38,36 +32,40 @@ function extractFunctionNamesAndLibraries(code) {
     libraries: Array.from(libraries),
   };
 }
-
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  console.log("content-respond!")
-  if (request.message === 'getcode') {
-    const codeText = getCodeSnippets();
-      const { functions, libraries } = extractFunctionNamesAndLibraries(codeText);
-      allFunctions = allFunctions.concat(functions);
-      libraries.forEach(lib => allLibraries.add(lib));
-
-    const result = {
-      functions: allFunctions,
-      libraries: Array.from(allLibraries),
-    };
-
-    sendResponse(result); // 发送包含函数名和库名的响应
-    console.log("content已经提取库名！")
-  }
-
-
-  if (request.message === 'getCodeSnippets') {
-    
-    const snippets = getCodeSnippets();
-    sendResponse({ codeSnippets: snippets });
-  }
-
-
-});
-
-
 // summary
+
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    console.log("content-respond!")
+    if (request.message === 'getcode') {
+      const codeText = getCodeSnippets();
+        const { functions, libraries } = extractFunctionNamesAndLibraries(codeText);
+        allFunctions = allFunctions.concat(functions);
+        libraries.forEach(lib => allLibraries.add(lib));
+  
+      const result = {
+        functions: allFunctions,
+        libraries: Array.from(allLibraries),
+      };
+  
+      sendResponse(result); // 发送包含函数名和库名的响应
+      console.log("content已经提取库名！")
+    }
+  
+  
+    if (request.message === 'getCodeSnippets') {
+      
+      const snippets = getCodeSnippets();
+      console.log("content已经提取代码！",snippets)
+      sendResponse({ codeSnippets: snippets });
+      //return true;
+    }
+      
+  }); 
+
+
+  
+
+
 
 function getCodeSnippets() {
   const codeCells = document.querySelectorAll('.cell .input_area .CodeMirror-code');
@@ -75,6 +73,7 @@ function getCodeSnippets() {
 
   codeCells.forEach((code, index) => {
     const codeText = code.innerText || code.textContent; // 使用 innerText 或 textContent
+    console.log("已经得到单元格代码！")
     console.log(`Code in cell ${index + 1}:`, codeText); // 打印提取的代码内容
     if (codeText) {
         codeSnippets.push(codeText); // 如果找到代码，添加到结果数组中
