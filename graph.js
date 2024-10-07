@@ -1,3 +1,22 @@
+// 在页面加载后加载 navbar.html
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('navbar.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('网络错误');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('加载导航栏失败:', error);
+        });
+});
+
+
+
 const nodes = [  
     { id: "Python", important: true },  
     { id: "基础语法", important: false },  
@@ -76,6 +95,8 @@ const links = [
 const width = window.innerWidth; // 获取当前窗口宽度
 const height = window.innerHeight; // 获取当前窗口高度
 
+console.log(width);
+
 const svg = d3.select("#graph-svg")
     .attr("viewBox", `0 0 ${width} ${height}`)
     .call(d3.zoom().on("zoom", (event) => {
@@ -99,8 +120,8 @@ nodes.forEach(node => {
 
 
 const simulation = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink().id(d => d.id).distance(110))
-    .force("charge", d3.forceManyBody().strength(-800))
+    .force("link", d3.forceLink().id(d => d.id).distance(80))
+    .force("charge", d3.forceManyBody().strength(-400))
     .force("center", d3.forceCenter(initialCenter.x, initialCenter.y));
 
 // 连接线
@@ -178,6 +199,17 @@ node.on("click", function(event, d) {
     // 让其他节点随着点击的节点移动
     simulation.force("center", d3.forceCenter(targetX, targetY));
 
+    console.log(width);
+    // 计算视口中心
+    const offsetX = width / 2 - targetX;
+    const offsetY = height / 2 - targetY;
+
+    // 移动 SVG
+    svg.transition()
+        .duration(500)
+        .call(d3.zoom().transform, d3.zoomIdentity.translate(offsetX, offsetY));
+
+
     // 过渡效果
     d3.select(this).select("circle").transition()
         .duration(500)
@@ -193,7 +225,6 @@ node.on("click", function(event, d) {
      node.select("circle").filter(n => n !== d)
          .attr("fill", n => n.important ? "#b8e9f8" : "#b8e9f8");
 });
-
 // 更新节点和链接的位置
 simulation
     .nodes(nodes)
@@ -208,51 +239,63 @@ simulation
 
 simulation.force("link").links(links);
 
-// 搜索功能
-const searchInput = d3.select("#search-input");
-const searchButton = d3.select("#search-button");
+/// 搜索功能
+const searchButton = document.getElementById("search-button");
+const searchInput = document.getElementById("search-input");
 
-// 搜索功能
-searchButton.on("click", () => {
-    const searchTerm = searchInput.property("value").toLowerCase();
+searchButton.addEventListener("mouseover", () => {
+    searchInput.style.display = "inline"; // 鼠标悬停时显示输入框
+    setTimeout(() => {
+        searchInput.classList.add("active");
+        searchInput.focus();
+    }, 10);
+});
 
-     // 如果搜索框为空，直接返回
-     if (!searchTerm) {
+searchButton.addEventListener("mouseout", () => {
+    if (!searchInput.value) {
+        searchInput.classList.remove("active");
+        setTimeout(() => {
+            searchInput.style.display = "none";
+        }, 300);
+    }
+});
+
+// 点击搜索按钮的事件
+searchButton.addEventListener("click", () => {
+    const searchTerm = searchInput.value.trim().toLowerCase();
+
+    // 如果搜索框为空，直接返回
+    if (!searchTerm) {
         return; // 不进行任何操作
     }
 
     // 清除之前的高亮
-    node.select("circle")
-        .attr("fill", d => d.important ? "#b8e9f8" : "#b8e9f8");
-
-    node.select("text")
-        .attr("fill", "#000000");
+    node.select("circle").attr("fill", d => d.important ? "#b8e9f8" : "#b8e9f8");
+    node.select("text").attr("fill", "#000000");
 
     // 重置所有节点的固定位置
     nodes.forEach(n => {
-        n.fx = null; // 清除上一个中心节点的fx
-        n.fy = null; // 清除上一个中心节点的fy
+        n.fx = null;
+        n.fy = null;
     });
 
     // 根据搜索内容高亮显示节点并移动视图
-    let found = false; // 标记是否找到匹配的节点
+    let found = false;
     node.each(function(d) {
         if (d.id.toLowerCase().includes(searchTerm)) {
-            found = true; // 找到匹配的节点
+            found = true;
 
-            d3.select(this).select("circle")
-                .attr("fill", "#ff9999"); // 浅红色
+            d3.select(this).select("circle").attr("fill", "#ff9999"); // 浅红色
 
             // 将匹配节点的固定位置设置为中心
-            d.fx = initialCenter.x; // 页面中心X坐标
-            d.fy = initialCenter.y; // 页面中心Y坐标
-            
+            d.fx = initialCenter.x;
+            d.fy = initialCenter.y;
+
             // 添加过渡效果
             d3.select(this).transition()
                 .duration(500)
                 .attr("transform", `translate(${initialCenter.x}, ${initialCenter.y})`);
         }
-        
     });
 
     // 如果找到了匹配节点，更新仿真
@@ -261,11 +304,22 @@ searchButton.on("click", () => {
     }
 });
 
-
 // 清空搜索框时恢复节点颜色
-searchInput.on("input", () => {
-    if (searchInput.property("value") === "") {
-        node.select("circle")
-            .attr("fill", d => d.important ? "#b8e9f8" : "#b8e9f8");
+searchInput.addEventListener("input", () => {
+    if (searchInput.value === "") {
+        node.select("circle").attr("fill", d => d.important ? "#b8e9f8" : "#b8e9f8");
+        // 这里可以恢复其他状态，比如隐藏搜索框
+        searchInput.classList.remove("active");
+        setTimeout(() => {
+            searchInput.style.display = "none";
+        }, 300);
     }
+});
+
+// 处理点击事件，收缩搜索框
+searchButton.addEventListener("click", () => {
+    searchInput.classList.remove("active"); // 点击后收缩搜索框
+    setTimeout(() => {
+        searchInput.style.display = "none"; // 确保在过渡结束后隐藏
+    }, 300);
 });

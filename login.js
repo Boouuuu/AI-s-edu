@@ -62,7 +62,7 @@ $('.modal-login form').addEventListener('submit', async function(e) {
 
       alert(data.message);
         // 在这里可以处理登录成功后的逻辑，比如跳转到首页
-        window.location.href = 'quuuiz.html'; // 替换为你的首页地址
+        window.location.href = 'graph.html'; // 替换为你的首页地址
     } else {
         const errorMessage = await response.text();
         document.querySelector('.modal-login .errormsg').innerText = errorMessage; // 显示错误信息
