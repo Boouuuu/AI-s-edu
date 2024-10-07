@@ -1,0 +1,145 @@
+/* styles.css */
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #333;
+    
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.greeting {
+    font-size: 2.4em;
+    margin: 0;
+    color: #00796b;
+}
+
+.description {
+    font-size: 1.1em;
+    margin-top: 20px;
+    color: #004d40;
+}
+
+#bubble-container {
+    position: absolute; /* 改为绝对定位 */
+    bottom: 0; /* 从底部开始显示 */
+    right: 0; /* 使容器向右对齐 */
+    width: auto; /* 根据内容自适应宽度 */
+    max-height: 70vh; /* 设置容器最大高度为60vh */
+    overflow-y: auto; /* 允许垂直滚动 */
+    padding: 10px; /* 添加一些内边距 */
+    box-sizing: border-box; /* 包含内边距在高度计算中 */
+}
+
+.bubble {
+    margin-right: auto; /* 使元素向右对齐 */
+    box-shadow: inset 0 0 25px rgba(255,255,255,0.25);
+    border-radius: 15%;
+    width: 80%;
+    position: relative; /* 改为相对定位 */
+    margin-bottom: 15px; /* 添加气泡之间的间距 */  
+    color: rgb(19, 18, 18); 
+    font-style: inherit;
+    padding: 10px 20px;
+    font-size: 15px;
+    opacity: 0; /* 初始透明度为0 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 添加过渡效果 */
+}
+.bubble.show:before
+{
+    content:' ';
+    position: relative;
+    margin-top: 5px;
+    margin-left: 5px;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#fff;
+    z-index:10;
+    filter:blur(2px);
+}
+.bubble.show:after
+{
+    content:' ';
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#fff;
+    z-index:10;
+    filter:blur(2px);
+}
+
+.bubble.show span
+{
+    position:absolute;
+    border-radius:50%;
+}
+.bubble.show span:nth-child(1)
+{
+    inset:10px;
+    border-left:15px solid #0fb4ff;
+    filter:blur(8px);
+}
+.bubble.show span:nth-child(2)
+{
+    inset:20px;
+    border-right:15px solid #ff4484;
+    filter:blur(8px);
+}
+.bubble.show span:nth-child(3)
+{
+    inset:20px;
+    border-top:15px solid #ffeb3b;
+    filter:blur(8px);
+}
+.bubble.show span:nth-child(4)
+{
+    inset:30px;
+    border-left:15px solid #ff4484;
+    filter: blur 12px;
+}
+.bubble.show span:nth-child(5)
+{
+    inset:10px;
+    border-bottom:10px solid #fff;
+    filter:blur(8px);
+    transform: rotate(330deg);
+}
+
+.bubble.show {
+    opacity: 1; /* 逐渐显示 */
+    margin-right: auto; /* 使元素向右对齐 */
+}
+
+
+::-webkit-scrollbar {
+  width: 8px; /* 滚动条的宽度 */
+  height: 8px; /* 横向滚动条的高度 */
+}
+
+
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px; /* 圆角效果 */
+  border: 4px solid #f1f1f1; /* 滑块外边框，增加视觉效果 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e4e7eb; /* 滚动条滑块的颜色 */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #a2a3a5; /* 滑块被点击时的颜色 */
+}

@@ -73,7 +73,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     // Must return true to indicate that the response is sent asynchronously
     return true;
   }
-});
+
 
 
 // summary
@@ -97,3 +97,4 @@ if (request.message === 'getCodeSnippets') {
     });
     return true; // 保持响应通道开放
   }
+});

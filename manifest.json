@@ -5,15 +5,13 @@
   "version": "1.0.0",
   "description": "Integrates Chatgpt with Google search.",
   "background": {
-    "service_worker": "service-worker.js",
-    "type": "module"
+    "service_worker": "service-worker.js"
   },
   "action": {
     "default_title": "AI's edu"
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self';"
-    
   },
   "permissions": ["storage","activeTab", "clipboardWrite","sidePanel", "tabs"],
   "options_page": "option.html",
@@ -39,7 +37,7 @@
         "*://*/*",
          "<all_urls>"
       ],
-      "js": ["content.js","Summary.js","wordcloudmaking.js","service-worker.js"]
+      "js": ["content.js","Summary.js","wordcloudmaking.js"]
 		}
 	]
 }

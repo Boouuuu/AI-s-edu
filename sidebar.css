@@ -1,6 +1,5 @@
 
 body {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: white;
@@ -122,22 +121,6 @@ body {
   opacity: 0.5; /* 完全不透明 */
 }
 
-.btn {
-  margin-left: 10px; /* 按钮左边距 */
-  background-color: #007bff; /* 按钮背景颜色 */
-  color: white; /* 按钮字体颜色 */
-  border: none; /* 去掉默认边框 */
-  border-radius: 50%; /* 圆形按钮 */
-  width: 40px; /* 固定宽度 */
-  height: 40px; /* 固定高度 */
-  display: flex; /* 使用 Flexbox 中心对齐图标 */
-  align-items: center; /* 垂直居中 */
-  justify-content: center; /* 水平居中 */
-}
-.btn:hover {
-  background-color: #0056b3; /* 悬停时的背景颜色 */
-  cursor: pointer; /* 鼠标悬停时显示手型光标 */
-}
 
 
 #bottomlogo {
@@ -215,6 +198,8 @@ body {
 ::-webkit-scrollbar-thumb:active {
   background-color: #a2a3a5; /* 滑块被点击时的颜色 */
 }
+
+
 
 /* 以上均已改 */
 
@@ -379,8 +364,6 @@ body {
 
 
 
-
-
 .check {
   color: rgb(145, 219, 164);
   text-align: center;
@@ -412,21 +395,32 @@ body {
 
 
 #div2.fixed{
-  margin-top: 50px;
+  position: fixed; /* 固定定位 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0; /* 距离顶部0 */
+  left: 0; /* 距离左侧0 */
+  right: 0; /* 距离右侧0 */
+  z-index: 1000;
+   /* 确保导航栏在最上层 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 可选的阴影效果 */
+
 }
 #loading-container {
   width: 100%;
   border-bottom: 3px solid #9dfee0;
-  height: 50px;
-  line-height: 50px;  
+  height: 30px;
+  line-height: 30px;  
   background-color: white;
 }
 
 #loading-container ul{
+  width: 100%;
   display: flex; /* 使用 Flexbox 布局 */
   justify-content: space-around; /* 自动调整间距以适应页面宽度 */
   align-items: center; /* 垂直居中 */
-  margin: 0 auto;
+  margin: 0 0px;
   height: 100%; /* 高度继承父元素 */
   list-style: none; /* 去掉默认的列表样式 */
   }
@@ -438,17 +432,18 @@ body {
 #loading-container ul li {
   list-style: none;
   float:left;
-  font-family: Microsoft YaHei;
-  font-size: 16px;
+  font-family: KaiTi;
+  font-size: 10px;
   font-weight: bold;
 
 }
 #loading-container ul li a{
   color: black;
-  
   text-decoration: none;
-  padding: 0 18px;
+  padding: 0px
 }
 #loading-container ul li a:hover{
  color: rgb(39, 153, 235);
 }
+
+
