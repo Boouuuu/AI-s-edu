@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>动态知识图谱</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <style>
-        svg {
-            width: 100%;
-            height: 600px;
-            border: 1px solid #cd2020;
-        }
-    </style>
+    <title>Python 知识图谱</title>
+    <link rel="stylesheet" href="graph.css">
 </head>
 <body>
-    <h1>动态知识图谱</h1>
-    <svg id="graph"></svg>
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="搜索节点...">
+        <button id="search-button">🔍</button>
+    </div>
+    <svg id="graph-svg"></svg> <!-- 添加这个 SVG 元素 -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="graph.js"></script>
 </body>
 </html>
