@@ -1,25 +1,28 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('body').fadeIn("slow");
-  });
-  
-  
-
-  
-//实现提取函数和库
-  document.getElementById('generateSummary').addEventListener('click', () => {
-    console.log('总结Button clicked!');
-
-    chrome.runtime.sendMessage({ message: 'getCodeSnippets' }, (response) => {
-        console.log('总结sendMessage!');
-        if (response && response.codeSnippets) { // 确保 response 存在
-            console.log('总结catch win!');
-            const summary = extractSummary(response.codeSnippets);
-            displaySummary(summary);
-        } else {
-            console.log('总结catch lose!');
-        }
-    });
 });
+
+
+
+
+//实现提取函数和库
+document.addEventListener('DOMContentLoaded', (event) => { 
+    document.getElementById('generateSummary').addEventListener('click', () => {
+        console.log('总结Button clicked!');
+    
+        chrome.runtime.sendMessage({ message: 'getCodeSnippets' }, (response) => {
+            console.log('总结sendMessage!');
+            if (response && response.codeSnippets) { // 确保 response 存在
+                console.log('总结catch win!');
+                const summary = extractSummary(response.codeSnippets);
+                displaySummary(summary);
+            } else {
+                console.log('总结catch lose!');
+            }
+        });
+    });
+ });
+
 
 function extractSummary(codeSnippets) {
     const functions = new Set(); // 使用 Set 存储唯一的函数
@@ -74,23 +77,40 @@ function displaySummary(summary) {
 
     summaryDiv.innerHTML = ''; // 清空内容
 
-    // 使用 Markdown 格式
-    const functionsMarkdown = summary.functions.length > 0 
-        ? `### Functions:\n- ${summary.functions.join('\n- ')}\n` 
-        : '### Functions:\n- None\n';
+    const functions = summary.functions.join(', ');
+    const libraries = summary.libraries.join(', ');
+    const keywords = summary.keywords.join(', ');
 
-    const librariesMarkdown = summary.libraries.length > 0 
-        ? `### Imported Libraries:\n- ${summary.libraries.join('\n- ')}\n` 
-        : '### Imported Libraries:\n- None\n';
-
-    // 将 Markdown 格式文本插入到 summaryDiv
-    summaryDiv.innerHTML += marked(functionsMarkdown); // 使用 marked.js 渲染
-    summaryDiv.innerHTML += marked(librariesMarkdown);
-    
-     // 动态调整高度
-     summaryDiv.style.height = 'auto'; // 先设置为自动，确保获取到内容的真实高度
-     const newHeight = summaryDiv.scrollHeight + 'px'; // 获取内容高度
-     summaryDiv.style.height = newHeight; // 设置新的高度
+    const userinput = `本节课目前学习到的内容有函数${functions}还有python库${libraries}以及关键字${keywords}，请帮我进行知识总结，谢谢！`
+    chrome.runtime.sendMessage({ message: 'generate_text', UserInput: userinput },
+        (response) => {
+            let htmlContent = marked(response.data);
+            let aiMessageElement = document.getElementById('summary');
+            aiMessageElement.classList.add('message', 'aiMessage');
+            aiMessageElement.innerHTML = htmlContent; // 设置HTML内容
+            messagesDiv.appendChild(aiMessageElement);
+            // 当浏览器扩展返回响应时，代码将响应文本分割成单个单词，并创建一个包含 "message" 和 "aiMessage" 类的段落元素。接着将该段落元素添加到 ID 为 "messages" 的 HTML 元素中。
+            let observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.type === 'childList' && mutation.addedNodes.length) {
+                        let addedNodes = Array.from(mutation.addedNodes);
+                        addedNodes.forEach((node) => {
+                            if (node.nodeType === Node.ELEMENT_NODE) {
+                                // 逐个显示每个新添加的块级元素
+                                let intervalId = setInterval(() => {
+                                    if (node.offsetWidth < node.scrollWidth) {
+                                        node.scrollLeft += 1;
+                                    } else {
+                                        clearInterval(intervalId);
+                                    }
+                                }, 80);
+                            }
+                        });
+                        observer.disconnect();
+                    }
+                });
+            });
+        });
 }
 
 
@@ -131,7 +151,7 @@ function highlightTerms(term) {
 
 // 导航栏
 fetch('navbar.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('navbar').innerHTML = data;
-  });
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });

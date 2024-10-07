@@ -33,9 +33,8 @@ function extractFunctionNamesAndLibraries(code) {
   };
 }
 // summary
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("content已经加载！");
-  chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
+
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log("content-respond!")
     if (request.message === 'getcode') {
       const codeText = getCodeSnippets();
@@ -57,11 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
       
       const snippets = getCodeSnippets();
       console.log("content已经提取代码！",snippets)
-        sendResponse({ codeSnippets: snippets });
+      sendResponse({ codeSnippets: snippets });
+      //return true;
     }
+      
+  }); 
 
-  });
-});
 
   
 

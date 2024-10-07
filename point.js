@@ -12,7 +12,13 @@ function showBubble() {
     bubble.className = 'bubble';
 
     // 显示什么内容改这！！！
-    bubble.textContent = '加油！你一定可以的！';
+    chrome.runtime.sendMessage({message:'Real_time_monitoring'},(response)=>{
+        if (response && response.Data) {  
+            bubble.textContent = response.Data;  
+        } else {  
+            console.error('响应不存在或格式不正确', response);  
+        }
+    })
 
     // 将气泡添加到容器中
     bubbleContainer.appendChild(bubble);
@@ -26,7 +32,7 @@ function showBubble() {
         for (let i = 0; i < 4; i++) {
             const span = document.createElement('span');
             // 设置 span 的内容或样式，如果需要的话
-            bubble.show.appendChild(span);
+            bubble.appendChild(span);
         }
     }, 10); // 确保 DOM 已更新后再进行显示
 
@@ -48,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     showBubble(); // 在页面加载后立即显示气泡
     // 每 5 秒显示一次气泡（5000 毫秒）
-    setInterval(showBubble, 5000);
+    setInterval(showBubble, 35000);
 });
 
 // 导航栏

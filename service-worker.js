@@ -77,19 +77,66 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 
 // summary
+// if (request.message === 'getCodeSnippets') {
+//     console.log("service总结收到!")
+//     // 请求内容脚本获取代码片段
+//     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+//     chrome.tabs.sendMessage(tabs[0].id, { message: 'getCodeSnippets' }, (response)=>{
+//       if (chrome.runtime.lastError) {
+//         console.error("发送消息失败:", chrome.runtime.lastError.message);
+//     } else {
+//         console.log("收到的代码片段:", response.codeSnippets);
+//     }
+//     sendResponse({codeSnippets:response.codeSnippets});
+//     });
+        
+//     });
+//     return true; // 保持响应通道开放
+//   }
+
+  // if (request.message === 'getCodeSnippets') {
+  //     console.log("service总结收到!");
+  //     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  //         chrome.tabs.sendMessage(tabs[0].id, { message: 'getCodeSnippets' }, (response) => {
+  //             if (chrome.runtime.lastError) {
+  //                 console.error("发送消息失败:", chrome.runtime.lastError.message);
+  //             } else {
+  //                 console.log("收到的代码片段:", response.codeSnippets);
+  //                 sendResponse({codeSnippets: response.codeSnippets});
+  //             }
+  //         });
+  //     });
+  //     return true; // 保持响应通道开放，直到异步操作完成
+  // }
+
 if (request.message === 'getCodeSnippets') {
-    console.log("service总结收到!")
-    // 请求内容脚本获取代码片段
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.tabs.sendMessage(tabs[0].id, { message: 'getCodeSnippets' }, sendResponse);
-        if (chrome.runtime.lastError) {
-          console.error("发送消息失败:", chrome.runtime.lastError);
-      } else {
-          console.log("收到的代码片段:", response.codeSnippets);
-      }
-    });
-    return true; // 保持响应通道开放
+    console.log("service总结收到！")
+    // 请求内容脚本获取代码片段
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+          if (tabs.length > 0) {  
+      const tabId = tabs[0].id;  
+      chrome.tabs.sendMessage(tabId, { message: 'getCodeSnippets' },sendResponse);
+      console.log(tabId);  
+    } else {  
+      console.error('没有找到活动的标签页');  
+    }
+    });
+    return true; // 保持响应通道开放
   }
-  
-  
+   // 实时检测  
+if (request.message === 'Real_time_monitoring') {  
+  console.log("Real_time_monitoring收到!")  
+  // 请求内容脚本获取代码片段  
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {  
+    if (tabs.length > 0) {  
+      const tabId = tabs[0].id;  
+      chrome.tabs.sendMessage(tabId, { message: 'Real_time_monitoring' },sendResponse);
+      console.log(tabId);  
+    } else {  
+      console.error('没有找到活动的标签页');  
+    }  
+  }
+);  
+  return true; // 保持响应通道开放  
+}
 });
