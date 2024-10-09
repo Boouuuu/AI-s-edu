@@ -106,13 +106,13 @@ const svg = d3.select("#graph-svg")
 
 
 // 设置默认中心坐标
-const initialCenter = { x: width / 2, y: height / 2 };
+const initCenter = { x: width / 2, y: height / 2 };
 
 // 在创建仿真之前，设置 "Python" 的固定位置和颜色
 nodes.forEach(node => {
     if (node.id === "Python") {
-        node.fx = initialCenter.x; // 固定位置为中心
-        node.fy = initialCenter.y; // 固定位置为中心
+        node.fx = initCenter.x; // 固定位置为中心
+        node.fy = initCenter.y; // 固定位置为中心
     }
 });
 
@@ -122,7 +122,7 @@ nodes.forEach(node => {
 const simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink().id(d => d.id).distance(80))
     .force("charge", d3.forceManyBody().strength(-400))
-    .force("center", d3.forceCenter(initialCenter.x, initialCenter.y));
+    .force("center", d3.forceCenter(initCenter.x, initCenter.y));
 
 // 连接线
 const link = svg.append("g")
@@ -186,8 +186,8 @@ node.on("click", function(event, d) {
     });
 
 
-    const targetX = initialCenter.x; // 页面中心X坐标
-    const targetY = initialCenter.y; // 页面中心Y坐标
+    const targetX = initCenter.x; // 页面中心X坐标
+    const targetY = initCenter.y; // 页面中心Y坐标
 
     // 设置点击节点的新位置
     d.fx = targetX;

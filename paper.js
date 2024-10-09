@@ -1,3 +1,5 @@
+
+
 // 获取提交记录，支持根据 submitTime 查询
 async function fetchSubmissionsByTime(submitTime) {
     try {
@@ -77,6 +79,9 @@ document.getElementById('notDoneCount').textContent = submissionData.notDoneCoun
 document.getElementById('markedCount').textContent = submissionData.markedCount;
 
 document.getElementById('ttime').textContent =submissionData.ttime;
+
+
+
 
 const container = document.getElementById('container');
 
@@ -181,6 +186,31 @@ question.options.forEach((option, optionIndex) => {
         optionLabel.style.backgroundColor = 'rgba(0, 255, 0, 0.5)'; // 正确答案高亮为绿色
     }
     });
+
+
+    // 第四层——解释:获取iid，从dataa.json中获取对应的解释
+    const iid = question.iid;
+    console.log(iid);
+    // 读取 dataa.json 文件
+    fetch('dataa.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log('读取的数据:', data);
+            
+            // 查找对应的 explanation
+            const questionExplanation = data.find(item => item.iid === iid)?.explanation;
+            console.log(questionExplanation);
+            // 创建并插入解释的元素
+            const questionExplanationDiv = document.createElement('div');
+            questionExplanationDiv.classList.add('explanation'); // 添加合适的类名
+            questionExplanationDiv.textContent =  `答案：${questionExplanation || '没有解释可用'}`; // 如果没有解释，则显示默认消息
+            // 添加样式以增加间隙
+            questionExplanationDiv.style.marginTop = '15px'; // 根据需要调整间隙大小
+            questionBox.appendChild(questionExplanationDiv);
+        })
+        .catch(error => {
+            console.error('获取数据时出错:', error);
+        });
 
    
 

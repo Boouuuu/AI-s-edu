@@ -1,0 +1,4239 @@
+[
+  {
+    "_id": "66fe1eb4e7dbe183673df81b",
+    "username": "Booo",
+    "submitTime": "2024-10-03T04:33:56.113Z",
+    "ttime": "3:21",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 277,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下图是一个利用sigmoid函数作为激活函数的含四个隐藏层的神经网络训练的梯度下降图。这个神经网络遇到了梯度消失的问题。下面哪个叙述是正确的？",
+        "options": [
+          "第一隐藏层对应D，第二隐藏层对应C，第三隐藏层对应B，第四隐藏层对应A",
+          "第一隐藏层对应D，第二隐藏层对应C，第三隐藏层对应B，第四隐藏层对应A",
+          "第一隐藏层对应A，第二隐藏层对应B，第三隐藏层对应C，第四隐藏层对应D",
+          "第一隐藏层对应B，第二隐藏层对应D，第三隐藏层对应C，第四隐藏层对应A"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe1eb4e7dbe183673df81c"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 165,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "数据科学家可能会同时使用多个算法（模型）进行预测， 并且最后把这些算法的结果集成起来进行最后的预测（集成学习），以下对集成学习说法正确的是",
+        "options": [
+          "单个模型之间有高相关性",
+          "单个模型之间有低相关性",
+          "在集成学习中使用“平均权重”而不是“投票”会比较好",
+          "单个模型都是用的一个算法"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe1eb4e7dbe183673df81d"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 288,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "多选题",
+        "questionText": "以下说法中正确的是",
+        "options": [
+          "SVM对噪声(如来自其他分布的噪声样本)鲁棒",
+          "在AdaBoost算法中,所有被分错的样本的权重更新比例相同",
+          "Boosting和Bagging都是组合多个分类器投票的方法,二者都是根据单个分类器的正确率决定其权重",
+          "给定n个数据点,如果其中一半用于训练,一般用于测试,则训练误差和测试误差之间的差别会随着n的增加而减少"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "B,D",
+        "_id": "66fe1eb4e7dbe183673df81e"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 41,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "关于Python的数字类型，以下选项中描述错误的是",
+        "options": [
+          "1.0是浮点数，不是整数",
+          "复数类型虚部为0时，表示为1+0j",
+          "整数类型的数值一定不会出现小数点",
+          "浮点数也有十进制、二进制、八进制和十六进制等表示方式"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe1eb4e7dbe183673df81f"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 388,
+        "isCorrect": false,
+        "questionTitle": "按位",
+        "questionType": "单选题",
+        "questionText": "以下 Python 表达式的输出是什么？ ~100？",
+        "options": [
+          "101",
+          "-101",
+          "100",
+          "-100"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe1eb4e7dbe183673df820"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 77,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "关于 Logit 回归和 SVM 不正确的是",
+        "options": [
+          "Logit回归目标函数是最小化后验概率",
+          "Logit回归可以用于预测事件发生概率的大小",
+          "SVM目标是结构风险最小化",
+          "SVM可以有效避免模型过拟合"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe1eb4e7dbe183673df821"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 23,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "关于python类 说法错误的是",
+        "options": [
+          "类的实例方法必须创建对象后才可以调用",
+          "类的实例方法必须创建对象前才可以调用",
+          "类的类方法可以用对象和类名来调用",
+          "类的静态属性可以用类名和对象来调用"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe1eb4e7dbe183673df822"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 481,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 语句的输出是什么？\n\n>>> 打印（chr （ord （'b' ） + 1 ））",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "A"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe1eb4e7dbe183673df823"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 355,
+        "isCorrect": true,
+        "questionTitle": "优先级和结合性",
+        "questionType": "单选题",
+        "questionText": "下列哪个是截断除法运算符？",
+        "options": [
+          "/",
+          "%",
+          "//",
+          "|"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe1eb4e7dbe183673df824"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 15,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下会出现错误的是",
+        "options": [
+          "‘北京’.encode()",
+          "‘北京’.decode()",
+          "‘北京’.encode().decode()",
+          "以上都不会错误"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe1eb4e7dbe183673df825"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe1f99e7dbe183673df851",
+    "username": "Booo",
+    "submitTime": "2024-10-03T04:37:45.761Z",
+    "ttime": "3:07",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 170,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "最出名的降维算法是 PAC 和 t-SNE。将这两个算法分别应用到数据「X」上，并得到数据集「X_projected_PCA」，「X_projected_tSNE」。下面哪一项对「X_projected_PCA」和「X_projected_tSNE」的描述是正确的？",
+        "options": [
+          "X_projected_PCA 在最近邻空间能得到解释",
+          "X_projected_tSNE 在最近邻空间能得到解释",
+          "两个都在最近邻空间能得到解释",
+          "两个都不能在最近邻空间得到解释"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe1f99e7dbe183673df852"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 16,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "如下：\r\n\r\n str1 = \"Runoob example....wow!!!\"\r\n\r\nstr2 = \"exam\";\r\n\r\nPrint(str1.find(str2, 5)) 打印的结果是",
+        "options": [
+          "6",
+          "7",
+          "8",
+          "-1"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe1f99e7dbe183673df853"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 265,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "当数据过大以至于无法在RAM中同时处理时，哪种梯度下降方法更加有效？",
+        "options": [
+          "随机梯度下降法(Stochastic Gradient Descent)",
+          "不知道",
+          "整批梯度下降法(Full Batch Gradient Descent)",
+          "都不是"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe1f99e7dbe183673df854"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 284,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "多选题",
+        "questionText": "处理类别型特征时，事先不知道分类变量在测试集中的分布。要将 one-hot encoding（独热码）应用到类别型特征中。那么在训练集中将独热码应用到分类变量可能要面临的困难是什么？",
+        "options": [
+          "分类变量所有的类别没有全部出现在测试集中",
+          "类别的频率分布在训练集和测试集是不同的",
+          "训练集和测试集通常会有一样的分布"
+        ],
+        "userSelection": [
+          "A",
+          "B",
+          "C"
+        ],
+        "correctAnswer": "A,B",
+        "_id": "66fe1f99e7dbe183673df855"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 79,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "决策树的父节点和子节点的熵的大小关系是什么？",
+        "options": [
+          "决策树的父节点更大",
+          "子节点的熵更大",
+          "两者相等",
+          "根据具体情况而定"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe1f99e7dbe183673df856"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 412,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\ni = 'i'\nwhile i in x:\n    print(i, end=' ')",
+        "options": [
+          "无输出",
+          "iiiiii …",
+          "abcdef",
+          "abcdef"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe1f99e7dbe183673df857"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 269,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": " 想像正在处理文本数据，使用单词嵌入（Word2vec）表示使用的单词。在单词嵌入中，最终会有1000维。现在想减小这个高维数据的维度，这样相似的词应该在最邻近的空间中具有相似的含义。在这种情况下，您最有可能选择以下哪种算法？",
+        "options": [
+          " t-SNE",
+          "PCA",
+          "LDA",
+          "都不是"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe1f99e7dbe183673df858"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 325,
+        "isCorrect": true,
+        "questionTitle": "核心数据类型",
+        "questionType": "单选题",
+        "questionText": "以下哪个不是核心数据类型？",
+        "options": [
+          "列表",
+          "字典",
+          "元组",
+          "类"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe1f99e7dbe183673df859"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 226,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "对于信息增益, 决策树分裂节点, 下面说法正确的是\r\n1.纯度高的节点需要更多的信息去区分 \r\n2.信息增益可以用”1比特-熵”获得 \r\n3.如果选择一个属性具有许多归类值, 那么这个信息增益是有偏差的",
+        "options": [
+          "1",
+          "2",
+          "2和3",
+          "所有"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe1f99e7dbe183673df85a"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 277,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下图是一个利用sigmoid函数作为激活函数的含四个隐藏层的神经网络训练的梯度下降图。这个神经网络遇到了梯度消失的问题。下面哪个叙述是正确的？",
+        "options": [
+          "第一隐藏层对应D，第二隐藏层对应C，第三隐藏层对应B，第四隐藏层对应A",
+          "第一隐藏层对应D，第二隐藏层对应C，第三隐藏层对应B，第四隐藏层对应A",
+          "第一隐藏层对应A，第二隐藏层对应B，第三隐藏层对应C，第四隐藏层对应D",
+          "第一隐藏层对应B，第二隐藏层对应D，第三隐藏层对应C，第四隐藏层对应A"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe1f99e7dbe183673df85b"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe20dee7dbe183673df891",
+    "username": "Booo",
+    "submitTime": "2024-10-03T04:43:10.212Z",
+    "ttime": "5:15",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 270,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "隐马尔可夫模型（HMM），设其观察值\r\n空间为\r\n \r\n状态空间为\r\n \r\n如果用维特比算法(Viterbi algorithm)进行解码，时间复杂度为",
+        "options": [
+          "O(NK)",
+          "O(NK^2)",
+          "O(N^2K)",
+          "都不是"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe20dee7dbe183673df892"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 276,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下图显示，当开始训练时，误差一直很高，这是因为神经网络在往全局最小值前进之前一直被卡在局部最小值里。为了避免这种情况，我们可以采取下面哪种策略？",
+        "options": [
+          "改变学习速率，比如一开始的几个训练周期不断更改学习速率",
+          "一开始将学习速率减小10倍，然后用动量项(momentum)",
+          "增加参数数目，这样神经网络就不会卡在局部最优处",
+          "其他都不对"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe20dee7dbe183673df893"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 277,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下图是一个利用sigmoid函数作为激活函数的含四个隐藏层的神经网络训练的梯度下降图。这个神经网络遇到了梯度消失的问题。下面哪个叙述是正确的？",
+        "options": [
+          "第一隐藏层对应D，第二隐藏层对应C，第三隐藏层对应B，第四隐藏层对应A",
+          "第一隐藏层对应D，第二隐藏层对应C，第三隐藏层对应B，第四隐藏层对应A",
+          "第一隐藏层对应A，第二隐藏层对应B，第三隐藏层对应C，第四隐藏层对应D",
+          "第一隐藏层对应B，第二隐藏层对应D，第三隐藏层对应C，第四隐藏层对应A"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe20dee7dbe183673df894"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 26,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "对以下程序描述错误的是\r\n\r\ntry:\r\n\r\n    #语句块1\r\n\r\nexcept  IndexError as i:\r\n\r\n    # 语句块2",
+        "options": [
+          "改程序对异常处理了，因此一定不会终止程序",
+          "改程序对异常处理了，不一定不会因异常引发终止",
+          "语句块1，如果抛出IndexError 异常，不会因为异常终止程序",
+          "语句块2 不一定会执行"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe20dee7dbe183673df895"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 460,
+        "isCorrect": true,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 语句的输出是什么？\n\n>>> 'a' + 'bc'",
+        "options": [
+          "a",
+          "bc",
+          "bca",
+          "abc"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe20dee7dbe183673df896"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 16,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "如下：\r\n\r\n str1 = \"Runoob example....wow!!!\"\r\n\r\nstr2 = \"exam\";\r\n\r\nPrint(str1.find(str2, 5)) 打印的结果是",
+        "options": [
+          "6",
+          "7",
+          "8",
+          "-1"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe20dee7dbe183673df897"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 340,
+        "isCorrect": true,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "下列哪个不是复数？",
+        "options": [
+          "k = 2 + 3j",
+          "k = complex(2, 3)",
+          "k = 2 + 3l",
+          "k = 2 + 3J"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe20dee7dbe183673df898"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 414,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\ni = 'a'\nwhile i in x:\n    print('i', end=' ')",
+        "options": [
+          "无输出",
+          "iiiiii …",
+          "aaaaaaaa …",
+          "abcdef"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe20dee7dbe183673df899"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 134,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "X轴是自变量，Y 轴是因变量\r\n下列对A，B各自残差和的陈述哪项正确？",
+        "options": [
+          "A比B高",
+          "A比B低",
+          "两者相同",
+          "以上都不对"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe20dee7dbe183673df89a"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 43,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果\r\nx=10\r\ny=3\r\nprint(divmod(x,y))",
+        "options": [
+          "1,3",
+          "(1,3)",
+          "3,1",
+          "(3,1)"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe20dee7dbe183673df89b"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe21a6e7dbe183673df90e",
+    "username": "Booo",
+    "submitTime": "2024-10-03T04:46:30.837Z",
+    "ttime": "3:12",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 443,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nfor i in range(int(float('inf'))):\n    print(i)",
+        "options": [
+          "0.0 0.1 0.2 0.3 …",
+          "0 1 2 3 …",
+          "0.0 1.0 2.0 3.0 …",
+          "以上皆非"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe21a6e7dbe183673df90f"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 28,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下关于模块说法错误的是",
+        "options": [
+          "一个xx.py就是一个模块",
+          "任何一个普通的xx.py文件可以作为模块导入",
+          "模块文件的扩展名不一定是 .py",
+          "运行时会从制定的目录搜索导入的模块，如果没有，会报错异常"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe21a6e7dbe183673df910"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 132,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下列哪项可以评价回归模型？（ ）\r\n1.R方\r\n2.调整R方\r\n3.F统计量\r\n4.RMSE/MSE/MAE",
+        "options": [
+          "2和4",
+          "1和2",
+          "2,3和4",
+          "以上所有"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe21a6e7dbe183673df911"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 271,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "（假设precision=TP/(TP+FP),recall=TP/(TP+FN)。）在二分类问题中，当测试集的正例和负例数量不均衡时，以下评价方案哪个是相对不合理的",
+        "options": [
+          "Accuracy:(TP+TN)/all",
+          "F-value:2*recall*precision/(recall+precision)",
+          "G-mean:sqrt(precision*recall)",
+          "AUC:曲线下面积"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe21a6e7dbe183673df912"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 296,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "多选题",
+        "questionText": "关于线性回归的描述,以下正确的有:",
+        "options": [
+          "基本假设包括随机干扰项是均值为0,方差为1的标准正态分布",
+          "基本假设包括随机干扰下是均值为0的同方差正态分布",
+          "在违背基本假设时,普通最小二乘法估计量不再是最佳线性无偏估计量",
+          "在违背基本假设时,模型不再可以估计",
+          "可以用DW检验残差是否存在序列相关性",
+          "多重共线性会使得参数估计值方差减小"
+        ],
+        "userSelection": [
+          "A",
+          "C"
+        ],
+        "correctAnswer": "A,C,E,F",
+        "_id": "66fe21a6e7dbe183673df913"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 10,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "计算机中信息处理和信息储存用",
+        "options": [
+          "二进制代码",
+          "十进制代码",
+          "十六进制代码",
+          "ASCII代码"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe21a6e7dbe183673df914"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 470,
+        "isCorrect": true,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nclass Father:\n    def __init__(self, param):\n        self.o1 = param\n\nclass Child(Father):\n    def __init__(self, param):\n        self.o2 = param\n\n>>> obj = Child(22)\n>>> print('%d %d' % (obj.o1, obj.o2))",
+        "options": [
+          "None None",
+          "None 22",
+          "22 None",
+          "抛出错误"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe21a6e7dbe183673df915"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 419,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nx = ' abcd'\nfor i in x:\n    print(i)\n    x.upper()",
+        "options": [
+          "a BCD",
+          "abcd",
+          "ABCD",
+          "错误"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe21a6e7dbe183673df916"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 20,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "调用以下函数返回的值\r\ndef myfun():\r\n    pass",
+        "options": [
+          "0",
+          "出错不能运行",
+          "空字符串",
+          "None"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe21a6e7dbe183673df917"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 355,
+        "isCorrect": true,
+        "questionTitle": "优先级和结合性",
+        "questionType": "单选题",
+        "questionText": "下列哪个是截断除法运算符？",
+        "options": [
+          "/",
+          "%",
+          "//",
+          "|"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe21a6e7dbe183673df918"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe2275e7dbe183673df99f",
+    "username": "Booo",
+    "submitTime": "2024-10-03T04:49:57.919Z",
+    "ttime": "3:16",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 240,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "如果我们用了一个过大的学习速率会发生什么？",
+        "options": [
+          "神经网络会收敛",
+          "不好说",
+          "都不对 ",
+          "神经网络不会收敛"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe2275e7dbe183673df9a0"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 63,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "输出是什么\r\nx =\"foo\"\r\ny = 2\r\nprint(x+y)",
+        "options": [
+          "foo",
+          "foofoo",
+          "foo2",
+          "TypeError"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe2275e7dbe183673df9a1"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 9,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下列Python语句正确的是",
+        "options": [
+          "min = x  if  x < y  else  y",
+          "max = x > y ? x : y",
+          "if (x > y) print x",
+          "while True : pass"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe2275e7dbe183673df9a2"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 329,
+        "isCorrect": false,
+        "questionTitle": "核心数据类型",
+        "questionType": "单选题",
+        "questionText": "help(id 的返回类型是什么？",
+        "options": [
+          "int",
+          "float",
+          "bool",
+          "dict"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe2275e7dbe183673df9a3"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 390,
+        "isCorrect": false,
+        "questionTitle": "布尔值",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码片段的输出是什么？\n[ '你好' ,  '早上好' ] [ bool ( '' ) ]",
+        "options": [
+          "错误",
+          "无输出",
+          "你好",
+          "早上好"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe2275e7dbe183673df9a4"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 235,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "为了得到和 SVD 一样的投射（projection），你需要在 PCA 中怎样做？",
+        "options": [
+          "将数据转换成零均值",
+          "将数据转换成零中位数",
+          "无法做到"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe2275e7dbe183673df9a5"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 198,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "在其他条件不变的前提下，以下哪种做法容易引起机器学习中的过拟合问题？",
+        "options": [
+          "增加训练集量",
+          "减少神经网络隐藏层节点数",
+          "删除稀疏的特征",
+          "SVM算法中使用高斯核/RBF核代替线性核"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe2275e7dbe183673df9a6"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 1,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下列哪个语句在Python中是非法的？",
+        "options": [
+          "x = y = z = 1",
+          "x = (y = z + 1)",
+          "x, y = y, x",
+          "x  +=  y"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe2275e7dbe183673df9a7"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 206,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "假定你使用SVM学习数据X，数据X里面有些点存在错误。现在如果你使用一个二次核函数，多项式阶数为2，使用松弛变量C作为超参之一。如果使用较小的C（C趋于0），则",
+        "options": [
+          "误分类",
+          "正确分类",
+          "不确定",
+          "以上均不正确"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe2275e7dbe183673df9a8"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 345,
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "cmp(3, 1) 的结果是什么？",
+        "options": [
+          "1",
+          "0",
+          "True",
+          "False"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe2275e7dbe183673df9a9"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe238ae7dbe183673dfa44",
+    "username": "Booo",
+    "submitTime": "2024-10-03T04:54:34.369Z",
+    "ttime": "4:05",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 431,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x, y in d:\n    print(x, y)",
+        "options": [
+          "0 1 2",
+          "abc",
+          "0 a 1 b 2 c",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe238ae7dbe183673dfa45"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 53,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下选项中，对于函数的定义错误的是",
+        "options": [
+          "def vfunc(*a,b):",
+          "def vfunc(a,b):",
+          "def vfunc(a,*b):",
+          "def vfunc(a,b=2):"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe238ae7dbe183673dfa46"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 441,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nfor i in range(int(2.0)):\n    print(i)",
+        "options": [
+          "0.0 1.0",
+          "0 1",
+          "错误",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe238ae7dbe183673dfa47"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 135,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "为了评价一个简单线性回归模型（单自变量），需要多少个参数？",
+        "options": [
+          "1",
+          "2",
+          "不确定"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe238ae7dbe183673dfa48"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 150,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下列哪一项说明了X，Y之间的较强关系？",
+        "options": [
+          "相关系数为0.9",
+          "Beta系数为0的空假设的p-value是0.0001",
+          "Beta系数为0的空假设的t统计量是30",
+          "都不对"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe238ae7dbe183673dfa49"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 348,
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "3^4 等于多少？",
+        "options": [
+          "81",
+          "12",
+          "0.75",
+          "7"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe238ae7dbe183673dfa4a"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 11,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "python源程序执行的方式",
+        "options": [
+          "编译执行",
+          "解析执行",
+          "直接执行",
+          "边编译边执行"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe238ae7dbe183673dfa4b"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 384,
+        "isCorrect": false,
+        "questionTitle": "按位",
+        "questionType": "单选题",
+        "questionText": "以下 Python 表达式的值是多少？ bin(10 - 2) + bin(12 ^ 4)",
+        "options": [
+          "0b10000",
+          "0b10001000",
+          "0b1000b1000",
+          "0b10000b1000"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe238ae7dbe183673dfa4c"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 78,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "关于支持向量机SVM,下列说法错误的是",
+        "options": [
+          "L2正则项，作用是最大化分类间隔，使得分类器拥有更强的泛化能力",
+          "Hinge 损失函数，作用是最小化经验分类错误",
+          "分类间隔为，||w||代表向量的模",
+          "当参数C越小时，分类间隔越大，分类错误越多，趋于欠学习"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe238ae7dbe183673dfa4d"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 373,
+        "isCorrect": false,
+        "questionTitle": "按位",
+        "questionType": "单选题",
+        "questionText": "要找到 1111 的十进制值，即 15，我们可以使用以下函数：",
+        "options": [
+          "int(1111,10)",
+          "int('1111',10)",
+          "int(1111,2)",
+          "int('1111',2)"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe238ae7dbe183673dfa4e"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe24b3e7dbe183673dfafd",
+    "username": "Booo",
+    "submitTime": "2024-10-03T04:59:31.828Z",
+    "ttime": "4:53",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 434,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x in d.values():\n    print(x)",
+        "options": [
+          "0 1 2",
+          "abc",
+          "0 a 1 b 2 c",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe24b3e7dbe183673dfafe"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 210,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "以下是两种不同的对数模型，分别为β0和β1\r\n对于两种对数模型（绿色，黑色）的β0和β1值，下列哪一项是正确的？ B \r\n注： Y =β0+β1* X。其中β0是截距，β1是系数",
+        "options": [
+          "绿色的β1大于黑色",
+          "绿色的β1小于黑色",
+          "两种颜色的β1相同"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe24b3e7dbe183673dfaff"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 312,
+        "isCorrect": true,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "以下哪项关于 Python 中变量名的说法是正确的？",
+        "options": [
+          "长度不受限制",
+          "所有私有成员都必须有前导和尾随下划线",
+          "下划线和与号是仅有的两个允许使用的特殊字符",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe24b3e7dbe183673dfb00"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 109,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "在逻辑回归输出与目标对比的情况下，以下评估指标中哪一项不适用？",
+        "options": [
+          "AUC-ROC",
+          "准确度",
+          "Logloss",
+          "均方误差"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe24b3e7dbe183673dfb01"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 236,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "假设你使用 log-loss 函数作为评估标准。下面这些选项，哪些是对作为评估标准的 log-loss 的正确解释",
+        "options": [
+          "如果一个分类器对不正确的分类很自信，log-loss 会严重的批评它",
+          "对一个特别的观察而言，分类器为正确的类别分配非常小的概率，然后对 log-loss 的相应分布会非常大",
+          "log-loss 越低，模型越好",
+          "以上都是"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe24b3e7dbe183673dfb02"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 160,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下列不是SVM核函数的是：",
+        "options": [
+          "多项式核函数",
+          "Logistic核函数",
+          "径向基核函数",
+          "Sigmoid核函数"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe24b3e7dbe183673dfb03"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 386,
+        "isCorrect": true,
+        "questionTitle": "按位",
+        "questionType": "单选题",
+        "questionText": "如果 a=10 且 b=20，以下 Python 代码的输出是什么？\n\na = 10 \nb = 20 \na = a^b \nb = a^b \na = a^b \nprint(a, b)",
+        "options": [
+          "10 20",
+          "10 10",
+          "20 10",
+          "20 20"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe24b3e7dbe183673dfb04"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 3,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面哪个不是Python合法的标识符",
+        "options": [
+          "int32",
+          "40XL",
+          "self",
+          "__name__"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe24b3e7dbe183673dfb05"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 18,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "有下面的程序段\r\n\r\nif k<=10 and k > 0:\r\n    if k >5:\r\n        if k>8:\r\n            x=0\r\n        else:\r\n            x=1\r\n    else:\r\n        if k>2:\r\n            x=3\r\n        else:\r\n    x=4\r\n\r\n其中k取那组值时  x =3",
+        "options": [
+          "3,4,5",
+          "3,4",
+          "5,6,7",
+          "4,5"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe24b3e7dbe183673dfb06"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 460,
+        "isCorrect": true,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 语句的输出是什么？\n\n>>> 'a' + 'bc'",
+        "options": [
+          "a",
+          "bc",
+          "bca",
+          "abc"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe24b3e7dbe183673dfb07"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe25b7e7dbe183673dfcfc",
+    "username": "Booo",
+    "submitTime": "2024-10-03T05:03:51.674Z",
+    "ttime": "4:17",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 231,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "对于下图, 最好的主成分选择是多少 ?",
+        "options": [
+          "7",
+          "30",
+          "35",
+          "不确定"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe25b7e7dbe183673dfcfd"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 306,
+        "isCorrect": true,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "标识符的最大可能长度是多少？",
+        "options": [
+          "31 个字符",
+          "63 个字符",
+          "79 个字符",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe25b7e7dbe183673dfcfe"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 189,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "在其它条件不变的前提下，以下哪种做法容易引起机器学习中的过拟合问题",
+        "options": [
+          "增加训练集数量",
+          "减少神经网络隐藏层节点数",
+          "删除稀疏的特征",
+          "SVM算法中使用高斯核/RBF核代替"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe25b7e7dbe183673dfcff"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 274,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "假定你现在解决一个有着非常不平衡类别的分类问题，即主要类别占据了训练数据的 99%。现在你的模型在测试集上表现为 99% 的准确度。那么下面哪一项表述是正确的？ \r\n1 准确度并不适合于衡量不平衡类别问题\r\n2 准确度适合于衡量不平衡类别问题\r\n3 精确率和召回率适合于衡量不平衡类别问题\r\n3 精确率和召回率不适合于衡量不平衡类别问题",
+        "options": [
+          "1和3",
+          "1和4",
+          "2和3",
+          "2和4"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe25b7e7dbe183673dfd00"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 354,
+        "isCorrect": true,
+        "questionTitle": "优先级和结合性",
+        "questionType": "单选题",
+        "questionText": "下列表达式的值是多少？ 2 + 4.00 ,  2 ** 4.0",
+        "options": [
+          "(6.0, 16.0)",
+          "(6.00, 16.00)",
+          "(6, 16)",
+          "(6.00, 16.0)"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe25b7e7dbe183673dfd01"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 403,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\ni = 5\nwhile True:\n    if i % 0O11 == 0:\n        break\n    print(i)\n    i += 1",
+        "options": [
+          "5 6 7 8 9 10",
+          "5 6 7 8",
+          "5 6",
+          "错误"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe25b7e7dbe183673dfd02"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 7,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "关于字符串下列说法错误的是",
+        "options": [
+          "字符应该视为长度为1的字符串",
+          "字符串以\\0标志字符串的结束",
+          "既可以用单引号，也可以用双引号创建字符串",
+          "在三引号字符串中可以包含换行回车等特殊字符"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe25b7e7dbe183673dfd03"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 338,
+        "isCorrect": false,
+        "questionTitle": "核心数据类型",
+        "questionType": "单选题",
+        "questionText": "trunc() 的返回值是什么？",
+        "options": [
+          "int",
+          "bool",
+          "float",
+          "None"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe25b7e7dbe183673dfd04"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 380,
+        "isCorrect": false,
+        "questionTitle": "按位",
+        "questionType": "单选题",
+        "questionText": "110010101 的补码是：",
+        "options": [
+          "001101010",
+          "110010101",
+          "001101011",
+          "110010100"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe25b7e7dbe183673dfd05"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 408,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nTrue = False\nwhile True:\n    print(True)\n    break",
+        "options": [
+          "True",
+          "False",
+          "None",
+          "以上皆非"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe25b7e7dbe183673dfd06"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe266fe7dbe183673e00ed",
+    "username": "Booo",
+    "submitTime": "2024-10-03T05:06:55.192Z",
+    "ttime": "2:59",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 199,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "隐马尔可夫模型三个基本问题以及相应的算法说法错误的是",
+        "options": [
+          "评估—前向后向算法",
+          "解码—维特比算法",
+          "学习—Baum-Welch算法",
+          "学习—前向后向算法"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe266fe7dbe183673e00ee"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 380,
+        "isCorrect": true,
+        "questionTitle": "按位",
+        "questionType": "单选题",
+        "questionText": "110010101 的补码是：",
+        "options": [
+          "001101010",
+          "110010101",
+          "001101011",
+          "110010100"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe266fe7dbe183673e00ef"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 440,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nfor i in range(2.0):\n    print(i)",
+        "options": [
+          "0.0 1.0",
+          "0 1",
+          "错误",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe266fe7dbe183673e00f0"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 155,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下面哪种不属于数据预处理的方法？",
+        "options": [
+          "变量代换",
+          "离散化",
+          "聚集",
+          "估计遗漏值"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe266fe7dbe183673e00f1"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 346,
+        "isCorrect": true,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "以下哪项是不正确的？",
+        "options": [
+          "float('inf')",
+          "float('nan')",
+          "float('56' + '78')",
+          "float('12 + 34')"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe266fe7dbe183673e00f2"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 190,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "如果线性回归模型中的随机误差存在异方差性，那么参数的OLS估计量是",
+        "options": [
+          "无偏的，有效的",
+          "无偏的，非有效的",
+          "有偏的，有效的",
+          "有偏的，非有效的"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe266fe7dbe183673e00f3"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 11,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "python源程序执行的方式",
+        "options": [
+          "编译执行",
+          "解析执行",
+          "直接执行",
+          "边编译边执行"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe266fe7dbe183673e00f4"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 4,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下列哪种说法是错误的",
+        "options": [
+          "除字典类型外，所有标准对象均可以用于布尔测试",
+          "空字符串的布尔值是False",
+          "空列表对象的布尔值是False",
+          "值为0的任何数字对象的布尔值是False"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe266fe7dbe183673e00f5"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 425,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nx = 'abcd'\nfor i in range(len(x)):\n    x[i].upper()\n    print(x)",
+        "options": [
+          "abcd",
+          "ABCD",
+          "错误",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe266fe7dbe183673e00f6"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 150,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下列哪一项说明了X，Y之间的较强关系？",
+        "options": [
+          "相关系数为0.9",
+          "Beta系数为0的空假设的p-value是0.0001",
+          "Beta系数为0的空假设的t统计量是30",
+          "都不对"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe266fe7dbe183673e00f7"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe2725e7dbe183673e0173",
+    "username": "Booo",
+    "submitTime": "2024-10-03T05:09:57.888Z",
+    "ttime": "2:57",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 257,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下面有关分类算法的准确率，召回率，F1 值的描述，错误的是？",
+        "options": [
+          "准确率是检索出相关文档数与检索出的文档总数的比率，衡量的是检索系统的查准率",
+          "召回率是指检索出的相关文档数和文档库中所有的相关文档数的比率，衡量的是检索系统的查全率",
+          "正确率、召回率和 F 值取值都在0和1之间，数值越接近0，查准率或查全率就越高",
+          "为了解决准确率和召回率冲突问题，引入了F1分数"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe2725e7dbe183673e0174"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 181,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下列表述中，在k-fold交叉验证中关于选择K说法正确的是",
+        "options": [
+          "较大的K并不总是好的，选择较大的K可能需要较长的时间来评估你的结果",
+          "相对于期望误差来说，选择较大的K会导致低偏差（因为训练folds会变得与整个数据集相似）",
+          "在交叉验证中通过最小化方差法来选择K值",
+          "以上都正确"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe2725e7dbe183673e0175"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 148,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "为了检验连续变量x，y之间的线性关系，下列哪种图最合适？",
+        "options": [
+          "散点图",
+          "条形图",
+          "直方图",
+          "都不对"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe2725e7dbe183673e0176"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 113,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "如果以特征向量的相关系数作为模式相似性测度，则影响聚类算法结果的主要因素有",
+        "options": [
+          "已知类别样本质量",
+          "分类准则",
+          "量纲"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe2725e7dbe183673e0177"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 58,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.items()的描述正确的是",
+        "options": [
+          "返回一种dict_items类型，包括字典d中所有键值对",
+          "返回一个元组类型，每个元素是一个二元元组，包括字典d中所有键值对",
+          "返回一个列表类型，每个元素是一个二元元组，包括字典d中所有键值对",
+          "返回一个集合类型，每个元素是一个二元元组，包括字典d中所有键值对"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe2725e7dbe183673e0178"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 1,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下列哪个语句在Python中是非法的？",
+        "options": [
+          "x = y = z = 1",
+          "x = (y = z + 1)",
+          "x, y = y, x",
+          "x  +=  y"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe2725e7dbe183673e0179"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 495,
+        "isCorrect": true,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "假设 i 为 5 且 j 为 4，i + j 与 ________ 相同",
+        "options": [
+          "i.__add(j)",
+          "i.__add__(j)",
+          "i.__Add(j)",
+          "i.__ADD(j)"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe2725e7dbe183673e017a"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 445,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码片段的输出是什么？\n\nfor i in ''.join(reversed(list('abcd'))):\n    print(i)",
+        "options": [
+          "abcd",
+          "dcba",
+          "错误",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe2725e7dbe183673e017b"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 141,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "考虑线性回归和逻辑回归中的重量/相关系数，关于cost函数的偏导，下列哪一项是正确的？",
+        "options": [
+          "都不一样",
+          "都一样",
+          "无法确定",
+          "以上都不对"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe2725e7dbe183673e017c"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 419,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nx = ' abcd'\nfor i in x:\n    print(i)\n    x.upper()",
+        "options": [
+          "a BCD",
+          "abcd",
+          "ABCD",
+          "错误"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe2725e7dbe183673e017d"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe31946eab15ab0b110af7",
+    "username": "Booo",
+    "submitTime": "2024-10-03T05:54:28.162Z",
+    "ttime": "3:31",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 56,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": [
+          "返回一个列表类型，包括字典d中所有键",
+          "返回一个集合类型，包括字典d中所有键",
+          "返回一种dict_keys类型，包括字典d中所有键",
+          "返回一个元组类型，包括字典d中所有键"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe31946eab15ab0b110af8"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 493,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "如果一个类定义了__str__(self)方法，对于该类的对象obj，可以使用which命令来调用__str__方法。",
+        "options": [
+          "obj.__str__()",
+          "str(obj)",
+          "print obj",
+          "以上所有"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe31946eab15ab0b110af9"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 414,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\ni = 'a'\nwhile i in x:\n    print('i', end=' ')",
+        "options": [
+          "无输出",
+          "iiiiii …",
+          "aaaaaaaa …",
+          "abcdef"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe31946eab15ab0b110afa"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 287,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "多选题",
+        "questionText": "以下哪个属于线性分类器最佳准则?",
+        "options": [
+          "感知准则函数",
+          "贝叶斯分类",
+          "支持向量机",
+          "Fisher准则"
+        ],
+        "userSelection": [
+          "B",
+          "C"
+        ],
+        "correctAnswer": "A,C,D",
+        "_id": "66fe31946eab15ab0b110afb"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 240,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "如果我们用了一个过大的学习速率会发生什么？",
+        "options": [
+          "神经网络会收敛",
+          "不好说",
+          "都不对 ",
+          "神经网络不会收敛"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe31946eab15ab0b110afc"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 34,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码实现的功能描述的是\r\n\r\ndef fact(n):\r\n    if n==0:\r\n        return 1\r\n    else:\r\n        return n*fact(n-1)\r\nnum =eval(input(\"请输入一个整数：\"))\r\nprint(fact(abs(int(num))))",
+        "options": [
+          "接受用户输入的整数 n，输出 n 的阶乘值",
+          "接受用户输入的整数 n，判断 n 是否是素数并输出结论",
+          "接受用户输入的整数 n，判断 n 是否是水仙花数",
+          "接受用户输入的整数 n，判断 n 是否是完数并输出结论"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe31946eab15ab0b110afd"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 97,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "关于SVM泛化误差描述正确的是",
+        "options": [
+          "超平面与支持向量之间距离",
+          "SVM对未知数据的预测能力",
+          "SVM的误差阈值"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe31946eab15ab0b110afe"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 42,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果是\r\n\r\nz = 12.34 + 34j\r\nprint(z.imag)",
+        "options": [
+          "12",
+          "12.12",
+          "34",
+          "34.0 "
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe31946eab15ab0b110aff"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 343,
+        "isCorrect": true,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "~~~~~~5 的结果是什么？",
+        "options": [
+          "+5",
+          "-11",
+          "+11",
+          "-5"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe31946eab15ab0b110b00"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 323,
+        "isCorrect": true,
+        "questionTitle": "运算符",
+        "questionType": "单选题",
+        "questionText": "表达式 int(x) 表示变量 x 转换为整数。",
+        "options": [
+          "真",
+          "假"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe31946eab15ab0b110b01"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe319a6eab15ab0b110b03",
+    "username": "Booo",
+    "submitTime": "2024-10-03T05:54:34.588Z",
+    "ttime": "3:31",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 56,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": [
+          "返回一个列表类型，包括字典d中所有键",
+          "返回一个集合类型，包括字典d中所有键",
+          "返回一种dict_keys类型，包括字典d中所有键",
+          "返回一个元组类型，包括字典d中所有键"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe319a6eab15ab0b110b04"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 493,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "如果一个类定义了__str__(self)方法，对于该类的对象obj，可以使用which命令来调用__str__方法。",
+        "options": [
+          "obj.__str__()",
+          "str(obj)",
+          "print obj",
+          "以上所有"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe319a6eab15ab0b110b05"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 414,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\ni = 'a'\nwhile i in x:\n    print('i', end=' ')",
+        "options": [
+          "无输出",
+          "iiiiii …",
+          "aaaaaaaa …",
+          "abcdef"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe319a6eab15ab0b110b06"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 287,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "多选题",
+        "questionText": "以下哪个属于线性分类器最佳准则?",
+        "options": [
+          "感知准则函数",
+          "贝叶斯分类",
+          "支持向量机",
+          "Fisher准则"
+        ],
+        "userSelection": [
+          "B",
+          "C"
+        ],
+        "correctAnswer": "A,C,D",
+        "_id": "66fe319a6eab15ab0b110b07"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 240,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "如果我们用了一个过大的学习速率会发生什么？",
+        "options": [
+          "神经网络会收敛",
+          "不好说",
+          "都不对 ",
+          "神经网络不会收敛"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe319a6eab15ab0b110b08"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 34,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码实现的功能描述的是\r\n\r\ndef fact(n):\r\n    if n==0:\r\n        return 1\r\n    else:\r\n        return n*fact(n-1)\r\nnum =eval(input(\"请输入一个整数：\"))\r\nprint(fact(abs(int(num))))",
+        "options": [
+          "接受用户输入的整数 n，输出 n 的阶乘值",
+          "接受用户输入的整数 n，判断 n 是否是素数并输出结论",
+          "接受用户输入的整数 n，判断 n 是否是水仙花数",
+          "接受用户输入的整数 n，判断 n 是否是完数并输出结论"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe319a6eab15ab0b110b09"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 97,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "关于SVM泛化误差描述正确的是",
+        "options": [
+          "超平面与支持向量之间距离",
+          "SVM对未知数据的预测能力",
+          "SVM的误差阈值"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe319a6eab15ab0b110b0a"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 42,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果是\r\n\r\nz = 12.34 + 34j\r\nprint(z.imag)",
+        "options": [
+          "12",
+          "12.12",
+          "34",
+          "34.0 "
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe319a6eab15ab0b110b0b"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 343,
+        "isCorrect": true,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "~~~~~~5 的结果是什么？",
+        "options": [
+          "+5",
+          "-11",
+          "+11",
+          "-5"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe319a6eab15ab0b110b0c"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 323,
+        "isCorrect": true,
+        "questionTitle": "运算符",
+        "questionType": "单选题",
+        "questionText": "表达式 int(x) 表示变量 x 转换为整数。",
+        "options": [
+          "真",
+          "假"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe319a6eab15ab0b110b0d"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe32c76eab15ab0b110b0f",
+    "username": "Booo",
+    "submitTime": "2024-10-03T05:59:35.444Z",
+    "ttime": "3:10",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 188,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": " Fisher线性判别函数的求解过程是将M维特征矢量投影在（ ）中进行求解。\r\nA、M-1维空间",
+        "options": [
+          "M-1维空间",
+          "一维空间",
+          "三维空间",
+          "二维空间"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe32c76eab15ab0b110b10"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 457,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码片段的输出是什么？\n\na = [0, 1, 2, 3]\nfor a[0] in a:\n    print(a[0])",
+        "options": [
+          "0 1 2 3",
+          "0 1 2 2",
+          "3 3 3 3",
+          "错误"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe32c76eab15ab0b110b11"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 340,
+        "isCorrect": true,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "下列哪个不是复数？",
+        "options": [
+          "k = 2 + 3j",
+          "k = complex(2, 3)",
+          "k = 2 + 3l",
+          "k = 2 + 3J"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe32c76eab15ab0b110b12"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 225,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "模型的高bias是什么意思, 我们如何降低它 ?",
+        "options": [
+          "在特征空间中减少特征",
+          "在特征空间中增加特征",
+          "增加数据点",
+          "B和C"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe32c76eab15ab0b110b13"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 420,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nx = '  abcd '\nfor i in x:\n    print(i.upper())",
+        "options": [
+          "abcd",
+          "ABCD",
+          "a BCD",
+          "错误"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe32c76eab15ab0b110b14"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 463,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> str1 = 'hello' \n>>> str2 = '，' \n>>> str3 = 'world' \n>>> str1[-1:]",
+        "options": [
+          "olleh",
+          "hello",
+          "h",
+          "o"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe32c76eab15ab0b110b15"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 46,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果是\r\ns = \"The python language is a cross platform language.\"\r\nprint(s.find('language',30)",
+        "options": [
+          "11",
+          "40",
+          "10",
+          "系统报错"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe32c76eab15ab0b110b16"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 401,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\ni = 1\nwhile True:\n    if i % 3 == 0:\n        break\n    print(i)\n    i + = 1",
+        "options": [
+          "1 2",
+          "1 2 3",
+          "错误",
+          "以上皆非"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe32c76eab15ab0b110b17"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 373,
+        "isCorrect": false,
+        "questionTitle": "按位",
+        "questionType": "单选题",
+        "questionText": "要找到 1111 的十进制值，即 15，我们可以使用以下函数：",
+        "options": [
+          "int(1111,10)",
+          "int('1111',10)",
+          "int(1111,2)",
+          "int('1111',2)"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe32c76eab15ab0b110b18"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 493,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "如果一个类定义了__str__(self)方法，对于该类的对象obj，可以使用which命令来调用__str__方法。",
+        "options": [
+          "obj.__str__()",
+          "str(obj)",
+          "print obj",
+          "以上所有"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe32c76eab15ab0b110b19"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe356c6eab15ab0b110b1b",
+    "username": "Booo",
+    "submitTime": "2024-10-03T06:10:52.346Z",
+    "ttime": "6:34",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 397,
+        "isCorrect": true,
+        "questionTitle": "布尔值",
+        "questionType": "单选题",
+        "questionText": "下列哪个布尔表达式在逻辑上与其他三个不等价？",
+        "options": [
+          "not(-6<0 or -6>10)",
+          "-6>=0 and -6<=10",
+          "not(-6<10 or -6==10)",
+          "not(-6>10 or -6==10)"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe356c6eab15ab0b110b1c"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 375,
+        "isCorrect": false,
+        "questionTitle": "按位",
+        "questionType": "单选题",
+        "questionText": "下列哪个表达式会导致错误？",
+        "options": [
+          "int(1011)",
+          "int('1011',23)",
+          "int(1011,2)",
+          "int('1011')"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe356c6eab15ab0b110b1d"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 403,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\ni = 5\nwhile True:\n    if i % 0O11 == 0:\n        break\n    print(i)\n    i += 1",
+        "options": [
+          "5 6 7 8 9 10",
+          "5 6 7 8",
+          "5 6",
+          "错误"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe356c6eab15ab0b110b1e"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 456,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码片段的输出是什么？\n\na = [0, 1, 2, 3]\nfor a[-1] in a:\n    print(a[-1])",
+        "options": [
+          "0 1 2 3",
+          "0 1 2 2",
+          "3 3 3 3",
+          "错误"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe356c6eab15ab0b110b1f"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 436,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0, 1, 2}\nfor x in d.values():\n    print(x)",
+        "options": [
+          "0 1 2",
+          "无 无 无",
+          "错误",
+          "以上皆非"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe356c6eab15ab0b110b20"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 23,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "关于python类 说法错误的是",
+        "options": [
+          "类的实例方法必须创建对象后才可以调用",
+          "类的实例方法必须创建对象前才可以调用",
+          "类的类方法可以用对象和类名来调用",
+          "类的静态属性可以用类名和对象来调用"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe356c6eab15ab0b110b21"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 327,
+        "isCorrect": true,
+        "questionTitle": "核心数据类型",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> str = \"hello\" \n>>> str[:2]",
+        "options": [
+          "he",
+          "lo",
+          "olleh",
+          "hello"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe356c6eab15ab0b110b22"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 13,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下是字符转换成字节的方法是",
+        "options": [
+          "decode()",
+          "encode()",
+          "upper()",
+          "rstrip()"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe356c6eab15ab0b110b23"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 29,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "关于 Python 程序格式框架的描述，以下选项中错误的是",
+        "options": [
+          "Python 语言不采用严格的“缩进”来表明程序的格式框架",
+          "Python 单层缩进代码属于之前最邻近的一行非缩进代码，多层缩进代码根据缩进关系决定所属范围",
+          "Python 语言的缩进可以采用 Tab 键实现",
+          "判断、循环、函数等语法形式能够通过缩进包含一批 Python 代码，进而表达对应的语义"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe356c6eab15ab0b110b24"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 143,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下列关于回归分析中的残差表述正确的是",
+        "options": [
+          "残差的平均值总为零",
+          "残差的平均值总小于零",
+          "残差的平均值总大于零",
+          "残差没有此类规律"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe356c6eab15ab0b110b25"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe36096eab15ab0b110b27",
+    "username": "Booo",
+    "submitTime": "2024-10-03T06:13:29.741Z",
+    "ttime": "1:50",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 35,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "关于Python语言的浮点数类型，以下选项中描述错误的是",
+        "options": [
+          "Python语言要求所有浮点数必须带有小数部分",
+          "浮点数类型与数学中实数的概念一致",
+          "小数部分不可以为0",
+          "浮点数类型表示带有小数的类型"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe36096eab15ab0b110b28"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 154,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "将原始数据进行集成、变换、维度规约、数值规约是在以下哪个步骤的任务？",
+        "options": [
+          "频繁模式挖掘",
+          "分类和预测",
+          "数据预处理",
+          "数据流挖掘"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe36096eab15ab0b110b29"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 148,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "为了检验连续变量x，y之间的线性关系，下列哪种图最合适？",
+        "options": [
+          "散点图",
+          "条形图",
+          "直方图",
+          "都不对"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe36096eab15ab0b110b2a"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 185,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "bootstrap 数据的含义是",
+        "options": [
+          "有放回的从整体M中抽样m个特征",
+          "无放回的从整体M中抽样m个特征",
+          "有放回的从整体N中抽样n个样本",
+          "无放回的从整体N中抽样n个样本"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe36096eab15ab0b110b2b"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 171,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "在 k-均值算法中，以下哪个选项可用于获得全局最小？",
+        "options": [
+          "尝试为不同的质心（centroid）初始化运行算法",
+          "调整迭代的次数",
+          "找到集群的最佳数量",
+          "以上所有"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe36096eab15ab0b110b2c"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 405,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\ni = 1\nwhile True:\n    if i % 2 == 0:\n        break\n    print(i)\n    i += 2",
+        "options": [
+          "1",
+          "1 2",
+          "1 2 3 4 5 6…",
+          "1 3 5 7 9 11…"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe36096eab15ab0b110b2d"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 153,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "为了评价一个简单线性回归模型（单自变量），需要多少个参数？",
+        "options": [
+          "1",
+          "2",
+          "不确定"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe36096eab15ab0b110b2e"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 252,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下列方法中，不可以用于特征降维的方法包括",
+        "options": [
+          "主成分分析PCA",
+          "线性判别分析LDA",
+          "深度学习SparseAutoEncoder",
+          "矩阵奇异值分解SVD"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe36096eab15ab0b110b2f"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 298,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "多选题",
+        "questionText": "假定目标变量的类别非常不平衡，即主要类别占据了训练数据的 99%。现在你的模型在测试集上表现为 99% 的准确度。那么下面哪一项表述是正确的？",
+        "options": [
+          "准确度并不适合于衡量不平衡类别问题",
+          "准确度适合于衡量不平衡类别问题",
+          "精确率和召回率适合于衡量不平衡类别问题",
+          " 精确率和召回率不适合于衡量不平衡类别问题"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "A,C",
+        "_id": "66fe36096eab15ab0b110b30"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 363,
+        "isCorrect": true,
+        "questionTitle": "优先级和结合性",
+        "questionType": "单选题",
+        "questionText": "下列运算符列表中哪一个具有最高优先级？ + 、 - 、 ** 、 % 、 / 、 <<、 >>、 |",
+        "options": [
+          "<<, >>",
+          "**",
+          "|",
+          "%"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe36096eab15ab0b110b31"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe36996e57e5c4482310d6",
+    "username": "Booo",
+    "submitTime": "2024-10-03T06:15:53.670Z",
+    "ttime": "2:46",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 239,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "当在卷积神经网络中加入池化层(pooling layer)时，变换的不变性会被保留，是吗？",
+        "options": [
+          "不知道",
+          "看情况",
+          "是",
+          "否"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe36996e57e5c4482310d7"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 116,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "影响基本K-均值算法的主要因素有",
+        "options": [
+          "Boosting",
+          "Bagging",
+          "Stacking",
+          "Mapping"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe36996e57e5c4482310d8"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 1,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下列哪个语句在Python中是非法的？",
+        "options": [
+          "x = y = z = 1",
+          "x = (y = z + 1)",
+          "x, y = y, x",
+          "x  +=  y"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe36996e57e5c4482310d9"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 183,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "以下哪一种方法最适合在n（n>1）维空间中做异常点检测",
+        "options": [
+          "正态分布图",
+          "盒图",
+          "马氏距离",
+          "散点图"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe36996e57e5c4482310da"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 238,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "对于一个图像识别问题(在一张照片里找出一只猫)，下面哪种神经网络可以更好地解决这个问题？",
+        "options": [
+          "循环神经网络",
+          "感知机",
+          "多层感知机",
+          "卷积神经网络"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe36996e57e5c4482310db"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 161,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "bootstrap数据是什么意思？（提示：考“bootstrap”和“boosting”区别）",
+        "options": [
+          "有放回地从总共M个特征中抽样m个特征",
+          "无放回地从总共M个特征中抽样m个特征",
+          "有放回地从总共N个样本中抽样n个样本",
+          "无放回地从总共N个样本中抽样n个样本"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe36996e57e5c4482310dc"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 167,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "对于线性回归，我们应该有以下哪些假设？（） \r\n1.找到利群点很重要, 因为线性回归对利群点很敏感 \r\n2.线性回归要求所有变量必须符合正态分布 \r\n3.线性回归假设数据没有多重线性相关性",
+        "options": [
+          "1 和 2",
+          "2 和 3",
+          "1,2 和 3",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe36996e57e5c4482310dd"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 468,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> str1 = 'helloworld' \n>>> str1[::-1]",
+        "options": [
+          "dlrowolleh",
+          "hello",
+          "world",
+          "helloworld"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe36996e57e5c4482310de"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 479,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "要将两个字符串连接到第三个字符串，可以使用哪些语句？",
+        "options": [
+          "s3 = s1 + s2",
+          "s3 = s1.add(s2)",
+          "s3 = s1.__add__(s2)",
+          "s3 = s1 * s2"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe36996e57e5c4482310df"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 281,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "多选题",
+        "questionText": "影响聚类算法效果的主要原因有",
+        "options": [
+          "特征选取",
+          "模式相似性测度",
+          "分类准则",
+          "已知类别的样本质量"
+        ],
+        "userSelection": [
+          "A",
+          "C"
+        ],
+        "correctAnswer": "A,B,C",
+        "_id": "66fe36996e57e5c4482310e0"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe36fa6eab15ab0b110e73",
+    "username": "Booo",
+    "submitTime": "2024-10-03T06:17:30.767Z",
+    "ttime": "2:55",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 454,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nstring = 'my name is x'\nfor i in string:\n    print(i, end=', ')",
+        "options": [
+          "m, y, , n, a, m, e, , i, s, , x,",
+          "m, y, , n, a, m, e, , i, s, , x",
+          "my, name, is, x,",
+          "错误"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe36fa6eab15ab0b110e74"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 121,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下面哪个/些超参数的增加可能会造成随机森林数据过拟合？（）\r\n1 树的数量\r\n2 树的深度\r\n3 学习速率",
+        "options": [
+          "只有 1",
+          "只有 2",
+          "只有 3",
+          "都正确"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe36fa6eab15ab0b110e75"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 449,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码片段的输出是什么？\n\nfor i in range(x): x = 2:\n    x -= 2\n    print(x)",
+        "options": [
+          "0 1 2 3 4 …",
+          "0 -2",
+          "0",
+          "错误"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe36fa6eab15ab0b110e76"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 56,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": [
+          "返回一个列表类型，包括字典d中所有键",
+          "返回一个集合类型，包括字典d中所有键",
+          "返回一种dict_keys类型，包括字典d中所有键",
+          "返回一个元组类型，包括字典d中所有键"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe36fa6eab15ab0b110e77"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 329,
+        "isCorrect": true,
+        "questionTitle": "核心数据类型",
+        "questionType": "单选题",
+        "questionText": "help(id 的返回类型是什么？",
+        "options": [
+          "int",
+          "float",
+          "bool",
+          "dict"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe36fa6eab15ab0b110e78"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 439,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nfor i in range(0):\n    print(i)",
+        "options": [
+          "0",
+          "无输出",
+          "错误",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe36fa6eab15ab0b110e79"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 494,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "要检查字符串 s1 是否包含另一个字符串 s2，请使用 ________",
+        "options": [
+          "s1.__contains__(s2)",
+          "s2 in s1",
+          "s1.contains(s2)",
+          "si.in(s2)"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe36fa6eab15ab0b110e7a"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 348,
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "3^4 等于多少？",
+        "options": [
+          "81",
+          "12",
+          "0.75",
+          "7"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe36fa6eab15ab0b110e7b"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 464,
+        "isCorrect": true,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "哪些算术运算符不能与字符串一起使用？",
+        "options": [
+          "+",
+          "*",
+          "-",
+          "以上全部"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe36fa6eab15ab0b110e7c"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 189,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "在其它条件不变的前提下，以下哪种做法容易引起机器学习中的过拟合问题",
+        "options": [
+          "增加训练集数量",
+          "减少神经网络隐藏层节点数",
+          "删除稀疏的特征",
+          "SVM算法中使用高斯核/RBF核代替"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe36fa6eab15ab0b110e7d"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe38316e57e5c44823122f",
+    "username": "Booo",
+    "submitTime": "2024-10-03T06:22:41.754Z",
+    "ttime": "6:04",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 205,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "Nave Bayes是一种特殊的Bayes分类器,特征变量是X,类别标签是C,它的一个假定是",
+        "options": [
+          "各类别的先验概率P(C)是相等的",
+          "以0为均值，sqr(2)/2为标准差的正态分布",
+          "特征变量X的各个维度是类别条件独立随机变量",
+          "P(X|C)是高斯分布"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe38316e57e5c448231230"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 9,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下列Python语句正确的是",
+        "options": [
+          "min = x  if  x < y  else  y",
+          "max = x > y ? x : y",
+          "if (x > y) print x",
+          "while True : pass"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe38316e57e5c448231231"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 161,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "bootstrap数据是什么意思？（提示：考“bootstrap”和“boosting”区别）",
+        "options": [
+          "有放回地从总共M个特征中抽样m个特征",
+          "无放回地从总共M个特征中抽样m个特征",
+          "有放回地从总共N个样本中抽样n个样本",
+          "无放回地从总共N个样本中抽样n个样本"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe38316e57e5c448231232"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 20,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "调用以下函数返回的值\r\ndef myfun():\r\n    pass",
+        "options": [
+          "0",
+          "出错不能运行",
+          "空字符串",
+          "None"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe38316e57e5c448231233"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 74,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "多选题",
+        "questionText": "定义类如下：\r\n\r\nclass hello():\r\n    def showInfo(sef):\r\n        print(self.x)\r\n下面描述正确的是",
+        "options": [
+          "该类不可以实例化",
+          "该类可以实例化",
+          "在pycharm 工具中会出现语法错误，说self没有定义",
+          "该类可以实例化，并且能正常通过对象调用showInfo()"
+        ],
+        "userSelection": [
+          "B",
+          "D"
+        ],
+        "correctAnswer": "A,C",
+        "_id": "66fe38316e57e5c448231234"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 248,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下面哪项操作能实现跟神经网络中Dropout的类似效果？",
+        "options": [
+          "Boosting ",
+          "Bagging",
+          "Stacking",
+          "Mapping"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe38316e57e5c448231235"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 90,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "一般，k-NN最近邻方法在（ ）的情况下效果较好",
+        "options": [
+          "样本较多但典型性不好",
+          "样本较少但典型性好",
+          "样本呈团状分布",
+          "样本呈链状分布"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe38316e57e5c448231236"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 280,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "你可以使用不同的标准评估二元分类问题的表现，例如准确率、log-loss、F-Score。让我们假设你使用 log-loss 函数作为评估标准。 D \r\n下面这些选项，哪个／些是对作为评估标准的 log-loss 的正确解释。\r\n1 如果一个分类器对不正确的分类很自信，log-loss 会严重的批评它。\r\n2 对一个特别的观察而言，分类器为正确的类别分配非常小的概率，然后对 log-loss 的相应分布会非常大。\r\n3 log-loss 越低，模型越好。",
+        "options": [
+          "1和3",
+          "2和3",
+          "1和2",
+          "1 2 3"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe38316e57e5c448231237"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 350,
+        "isCorrect": true,
+        "questionTitle": "优先级和结合性",
+        "questionType": "单选题",
+        "questionText": "以下 Python 表达式的值是多少？ 4 + 3 % 5",
+        "options": [
+          "4",
+          "7",
+          "2",
+          "0"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe38316e57e5c448231238"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 286,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "多选题",
+        "questionText": "影响基本K-均值算法的主要因素有",
+        "options": [
+          "样本输入顺序",
+          "模式相似性测度",
+          "聚类准则",
+          "初始类中心的选取"
+        ],
+        "userSelection": [
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A,B,D",
+        "_id": "66fe38316e57e5c448231239"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe38b46eab15ab0b110e95",
+    "username": "Booo",
+    "submitTime": "2024-10-03T06:24:52.668Z",
+    "ttime": "2:31",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 127,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "假设线性回归模型完美拟合训练数据（即训练误差为零），则下列哪项是正确的？",
+        "options": [
+          "测试误差一定为零",
+          "测试误差一定不为零",
+          "以上都不对"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe38b46eab15ab0b110e96"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 375,
+        "isCorrect": false,
+        "questionTitle": "按位",
+        "questionType": "单选题",
+        "questionText": "下列哪个表达式会导致错误？",
+        "options": [
+          "int(1011)",
+          "int('1011',23)",
+          "int(1011,2)",
+          "int('1011')"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe38b46eab15ab0b110e97"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 35,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "关于Python语言的浮点数类型，以下选项中描述错误的是",
+        "options": [
+          "Python语言要求所有浮点数必须带有小数部分",
+          "浮点数类型与数学中实数的概念一致",
+          "小数部分不可以为0",
+          "浮点数类型表示带有小数的类型"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe38b46eab15ab0b110e98"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 251,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "梯度下降算法的正确步骤是什么\r\n1.计算预测值和真实值之间的误差 \r\n2.重复迭代，直至得到网络权重的最佳值 \r\n3.把输入传入网络，得到输出值 \r\n4.用随机值初始化权重和偏差 \r\n5.对每一个产生误差的神经元，调整相应的（权重）值以减小误差",
+        "options": [
+          "1, 2, 3, 4, 5",
+          "5, 4, 3, 2, 1",
+          "3, 2, 1, 5, 4",
+          "4, 3, 1, 5, 2"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe38b46eab15ab0b110e99"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 426,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nx = 'abcd'\nfor i in range(len(x)):\n    i[x].upper()\n    print(x)",
+        "options": [
+          "abcd",
+          "ABCD",
+          "错误",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe38b46eab15ab0b110e9a"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 324,
+        "isCorrect": true,
+        "questionTitle": "运算符",
+        "questionType": "单选题",
+        "questionText": "下列哪一个在表达式中具有最高优先级？",
+        "options": [
+          "指数",
+          "加法",
+          "乘法",
+          "括号"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe38b46eab15ab0b110e9b"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 209,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "如下逻辑回归图显示了3种不同学习速率值的代价函数和迭代次数之间的关系（不同的颜色在不同的学习速率下显示不同的曲线）\r\n为了参考而保存图表后，忘记其中不同学习速率的值。现在需要曲线的倾斜率值之间的关系。\r\n以下哪一个是正确的？\r\n1.蓝色的学习率是L1\r\n2.红色的学习率是L2\r\n3.绿色学习率为lL3",
+        "options": [
+          "L1> L2> L3",
+          "L1 = L2 = L3",
+          "L1",
+          "都不是"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe38b46eab15ab0b110e9c"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 395,
+        "isCorrect": true,
+        "questionTitle": "布尔值",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\nclass Truth:\n\tpass\nx = Truth()\nbool(x)",
+        "options": [
+          "通过",
+          "正确",
+          "错误",
+          "错误"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe38b46eab15ab0b110e9d"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 175,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下列哪个不属于常用的文本分类的特征选择算法？",
+        "options": [
+          "卡方检验值",
+          "互信息",
+          "信息增益",
+          "主成分分析"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe38b46eab15ab0b110e9e"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 139,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下列哪一个项对欠拟合和过拟合的权衡影响最大？",
+        "options": [
+          "多项式次数",
+          "是否通过矩阵倒置或梯度下降来学习权重",
+          "使用常数项"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe38b46eab15ab0b110e9f"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe39616e57e5c448231306",
+    "username": "Booo",
+    "submitTime": "2024-10-03T06:27:45.298Z",
+    "ttime": "4:52",
+    "doneCount": 9,
+    "notDoneCount": 1,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 274,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "假定你现在解决一个有着非常不平衡类别的分类问题，即主要类别占据了训练数据的 99%。现在你的模型在测试集上表现为 99% 的准确度。那么下面哪一项表述是正确的？ \r\n1 准确度并不适合于衡量不平衡类别问题\r\n2 准确度适合于衡量不平衡类别问题\r\n3 精确率和召回率适合于衡量不平衡类别问题\r\n3 精确率和召回率不适合于衡量不平衡类别问题",
+        "options": [
+          "1和3",
+          "1和4",
+          "2和3",
+          "2和4"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe39616e57e5c448231307"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 402,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\ni = 1\nwhile True:\n    if i % 0O7 == 0:\n        break\n    print(i)\n    i += 1",
+        "options": [
+          "1 2 3 4 5 6",
+          "1 2 3 4 5 6 7",
+          "错误",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe39616e57e5c448231308"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 218,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "假设你正在做一个项目，它是一个二元分类问题。你在数据集上训练一个模型，并在验证数据集上得到混淆矩阵。基于上述混淆矩阵，下面哪个选项会给你正确的预测。\r\n1、精确度是~0.91\r\n2 、错误分类率是~0.91\r\n3 、假正率（False correct classification）是~0.95\r\n4 、真正率（True positive rate）是~0.95",
+        "options": [
+          "1和3",
+          "2和4",
+          "1和4",
+          "2和3"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "66fe39616e57e5c448231309"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 438,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0, 1, 2}\nfor x in d:\n    print(d.add(x))",
+        "options": [
+          "0 1 2",
+          "0 1 2 0 1 2 0 1 2 …",
+          "无 无 无",
+          "以上皆非"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe39616e57e5c44823130a"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 335,
+        "isCorrect": false,
+        "questionTitle": "核心数据类型",
+        "questionType": "单选题",
+        "questionText": "以下是打印函数调用显示的内容。选择所有导致此输出的函数调用。\n\ntom\ndick\nharry",
+        "options": [
+          "print('tom\n\\ndick\n\\nharry')",
+          "print('tomdickharry')",
+          "print('tom\\ndick\\nharry')",
+          "print('tom\ndick\nharry')"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe39616e57e5c44823130b"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 213,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "假定你想将高维数据映射到低维数据中，那么最出名的降维算法是 PCA 和 t-SNE。现在你将这两个算法分别应用到数据「X」上，并得到数据集「X_projected_PCA」，「X_projected_tSNE」下面哪一项对「X_projected_PCA」和「X_projected_tSNE」的描述是正确的？",
+        "options": [
+          "X_projected_PCA 在最近邻空间能得到解释",
+          "X_projected_tSNE 在最近邻空间能得到解释",
+          "两个都在最近邻空间能得到解释",
+          "两个都不能在最近邻空间得到解释"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe39616e57e5c44823130c"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 215,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "假设我们有一个数据集，在一个深度为 6 的决策树的帮助下，它可以使用 100% 的精确度被训练。现在考虑一下两点，并基于这两点选择正确的选项。 \r\n注意：所有其他超参数是相同的，所有其他因子不受影响。\r\n1、深度为 4 时将有高偏差和低方差\r\n2、深度为 4 时将有低偏差和低方差",
+        "options": [
+          "只有1",
+          "只有2",
+          "1和2",
+          "都没有"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe39616e57e5c44823130d"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 1,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下列哪个语句在Python中是非法的？",
+        "options": [
+          "x = y = z = 1",
+          "x = (y = z + 1)",
+          "x, y = y, x",
+          "x  +=  y"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "66fe39616e57e5c44823130e"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 418,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nx = 'abcdef'\ni = 'a'\nwhile i in x[1:]:\n    print(i, end=' ')",
+        "options": [
+          "aaaaaa",
+          "a",
+          "无输出",
+          "错误"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe39616e57e5c44823130f"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 405,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\ni = 1\nwhile True:\n    if i % 2 == 0:\n        break\n    print(i)\n    i += 2",
+        "options": [
+          "1",
+          "1 2",
+          "1 2 3 4 5 6…",
+          "1 3 5 7 9 11…"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe39616e57e5c448231310"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66fe39776eab15ab0b110f6b",
+    "username": "Booo",
+    "submitTime": "2024-10-03T06:28:07.319Z",
+    "ttime": "2:39",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 380,
+        "isCorrect": false,
+        "questionTitle": "按位",
+        "questionType": "单选题",
+        "questionText": "110010101 的补码是：",
+        "options": [
+          "001101010",
+          "110010101",
+          "001101011",
+          "110010100"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe39776eab15ab0b110f6c"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 249,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "已知： \r\n- 大脑是有很多个叫做神经元的东西构成，神经网络是对大脑的简单的数学表达。 \r\n- 每一个神经元都有输入、处理函数和输出。 \r\n- 神经元组合起来形成了网络，可以拟合任何函数。 \r\n- 为了得到最佳的神经网络，我们用梯度下降方法不断更新模型 \r\n给定上述关于神经网络的描述，什么情况下神经网络模型被称为深度学习模型？",
+        "options": [
+          "加入更多层，使神经网络的深度增加",
+          "有维度更高的数据",
+          "当这是一个图形识别的问题时",
+          "以上都不正确"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe39776eab15ab0b110f6d"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 151,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下列哪项可以评价回归模型？( )\r\n1.R方R Squared\r\n2.调整R方\r\n3.F统计量\r\n4.RMSE/MSE/MAE",
+        "options": [
+          "2和4",
+          "1和2",
+          "2,3和4",
+          "以上所有"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe39776eab15ab0b110f6e"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 189,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "在其它条件不变的前提下，以下哪种做法容易引起机器学习中的过拟合问题",
+        "options": [
+          "增加训练集数量",
+          "减少神经网络隐藏层节点数",
+          "删除稀疏的特征",
+          "SVM算法中使用高斯核/RBF核代替"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe39776eab15ab0b110f6f"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 143,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下列关于回归分析中的残差表述正确的是",
+        "options": [
+          "残差的平均值总为零",
+          "残差的平均值总小于零",
+          "残差的平均值总大于零",
+          "残差没有此类规律"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe39776eab15ab0b110f70"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 223,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "已知一组数据的协方差矩阵P,下面关于主分量说法错误的是",
+        "options": [
+          "主分量分析的最佳准则是对一组数据进行按一组正交基分解, 在只取相同数量分量的条件下,以均方误差计算截尾误差最小",
+          "在经主分量分解后,协方差矩阵成为对角矩阵",
+          "主分量分析就是K-L变换",
+          "主分量是通过求协方差矩阵的特征值得到"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe39776eab15ab0b110f71"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 460,
+        "isCorrect": true,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 语句的输出是什么？\n\n>>> 'a' + 'bc'",
+        "options": [
+          "a",
+          "bc",
+          "bca",
+          "abc"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "66fe39776eab15ab0b110f72"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 321,
+        "isCorrect": true,
+        "questionTitle": "运算符",
+        "questionType": "单选题",
+        "questionText": "这个表达式 3*1**3 的输出是什么？",
+        "options": [
+          "27",
+          "9",
+          "3",
+          "1"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe39776eab15ab0b110f73"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 77,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "关于 Logit 回归和 SVM 不正确的是",
+        "options": [
+          "Logit回归目标函数是最小化后验概率",
+          "Logit回归可以用于预测事件发生概率的大小",
+          "SVM目标是结构风险最小化",
+          "SVM可以有效避免模型过拟合"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "A",
+        "_id": "66fe39776eab15ab0b110f74"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 234,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "变量选择是用来选择最好的判别器子集， 如果要考虑模型效率，我们应该做哪些变量选择的考虑？\r\n1.多个变量其实有相同的用处 \r\n2.变量对于模型的解释有多大作用 \r\n3.特征携带的信息 \r\n4.交叉验证",
+        "options": [
+          "1 和 4",
+          "1，2和3",
+          "1，3和4",
+          "以上都有"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "C",
+        "_id": "66fe39776eab15ab0b110f75"
+      }
+    ],
+    "__v": 0
+  }
+]

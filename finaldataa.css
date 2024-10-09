@@ -1,0 +1,81 @@
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #b6e7ed, #b6bcf8); /* 渐变浅蓝色 */
+    overflow-x: hidden; /* 不允许出现横向滚动条 */
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left, .middle, .right {
+    padding: 10px;
+}
+
+.left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.middle {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+   
+    margin: 5px 0;
+    padding: 10px;
+    flex: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 10px solid transparent; /* 设置透明边框以便边框图可见 */
+    border-image: url('../image/panel.png') 30 stretch; /* 边框图 */
+    position: relative; /* 确保子元素相对于父元素定位 */
+    z-index: 1; /* 确保此元素在其他元素之上 */
+}
+
+.timestamp {
+    flex: 0.25;
+    border-image: url('../image/panel.png') 30 stretch; /* 边框图 */
+}
+
+.chart1, .chart2 {
+    flex: 1;
+}
+
+.upper {
+    flex: 1; /* 默认为占据剩余空间 */
+}
+
+.lower {
+    flex: 2; /* 占据剩余高度的三分之二 */
+}
+
+.wordcloud {
+    flex: 2; /* 占据剩余高度的三分之二 */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 竖向排列 */
+    }
+    .left, .middle, .right {
+        width: 100%; /* 每个部分占满宽度 */
+    }
+    .box {
+        aspect-ratio: 16 / 9; /* 保持 16:9 比例 */
+        min-height: 100px; /* 设置一个最小高度以保持可视性 */
+    }
+}
+
+

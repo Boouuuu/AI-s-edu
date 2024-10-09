@@ -1,186 +1,186 @@
 [
-    {
+      {
         "title": "Python基础",
         "content": "下列哪个语句在Python中是非法的？",
         "options": {
-            "a": "x = y = z = 1",
-            "b": "x = (y = z + 1)",
-            "c": "x, y = y, x",
-            "d": "x  +=  y"
+          "a": "x = y = z = 1",
+          "b": "x = (y = z + 1)",
+          "c": "x, y = y, x",
+          "d": "x  +=  y"
         },
         "answer": "B",
-        "explanation": "解释信息",
+        "explanation": "选项B中的语句 'x = (y = z + 1)' 是非法的，因为在Python中不能将一个赋值表达式的结果赋值给另一个变量。",
         "type": "单选题",
         "iid": 1
-    },
-    {
+      },
+      {
         "title": "Python基础",
         "content": "关于Python内存管理，下列说法错误的是",
         "options": {
-            "a": "变量不必事先声明",
-            "b": "变量无须先创建和赋值而直接使用",
-            "c": "变量无须指定类型",
-            "d": "可以使用del释放资源"
+          "a": "变量不必事先声明",
+          "b": "变量无须先创建和赋值而直接使用",
+          "c": "变量无须指定类型",
+          "d": "可以使用del释放资源"
         },
         "answer": "B",
-        "explanation": "解释信息",
+        "explanation": "选项B是错误的，因为虽然Python是动态类型语言，变量在使用前不需要声明，但变量必须先赋值才能使用。",
         "type": "单选题",
         "iid": 2
-    },
-    {
+      },
+      {
         "title": "Python基础",
         "content": "下面哪个不是Python合法的标识符",
         "options": {
-            "a": "int32",
-            "b": "40XL",
-            "c": "self",
-            "d": "__name__"
+          "a": "int32",
+          "b": "40XL",
+          "c": "self",
+          "d": "__name__"
         },
-        "answer": "B",
-        "explanation": "解释信息",
+        "answer": "b",
+        "explanation": "选项B '40XL' 不是合法的标识符，因为标识符不能以数字开头。",
         "type": "单选题",
         "iid": 3
-    },
-    {
+      },
+      {
         "title": "Python基础",
         "content": "下列哪种说法是错误的",
         "options": {
-            "a": "除字典类型外，所有标准对象均可以用于布尔测试",
-            "b": "空字符串的布尔值是False",
-            "c": "空列表对象的布尔值是False",
-            "d": "值为0的任何数字对象的布尔值是False"
+          "a": "除字典类型外，所有标准对象均可以用于布尔测试",
+          "b": "空字符串的布尔值是False",
+          "c": "空列表对象的布尔值是False",
+          "d": "值为0的任何数字对象的布尔值是False"
         },
         "answer": "A",
-        "explanation": "解释信息",
+        "explanation": "选项A是错误的，因为字典类型也可以用于布尔测试，空字典的布尔值是False。",
         "type": "单选题",
         "iid": 4
-    },
-    {
+      },
+      {
         "title": "Python基础",
         "content": "Python不支持的数据类型有",
         "options": {
-            "a": "char",
-            "b": "int",
-            "c": "float",
-            "d": "list"
+          "a": "char",
+          "b": "int",
+          "c": "float",
+          "d": "list"
         },
-        "answer": "A",
-        "explanation": "解释信息",
+        "answer": "a",
+        "explanation": "Python中没有专门的char类型，通常使用单引号定义的字符串来表示字符。",
         "type": "单选题",
         "iid": 5
-    },
-    {
+      },
+      {
         "title": "Python基础",
         "content": "关于Python中的复数，下列说法错误的是",
         "options": {
-            "a": "表示复数的语法是real + image j",
-            "b": "实部和虚部都是浮点数",
-            "c": "虚部必须后缀j，且必须是小写",
-            "d": "方法conjugate返回复数的共轭复数"
+          "a": "表示复数的语法是real + image j",
+          "b": "实部和虚部都是浮点数",
+          "c": "虚部必须后缀j，且必须是小写",
+          "d": "方法conjugate返回复数的共轭复数"
         },
-        "answer": "C",
-        "explanation": "解释信息",
+        "answer": "c",
+        "explanation": "选项C是错误的，因为虚部可以使用大写或小写的'J'作为后缀。",
         "type": "单选题",
         "iid": 6
-    },
-    {
+      },
+      {
         "title": "Python基础",
         "content": "关于字符串下列说法错误的是",
         "options": {
-            "a": "字符应该视为长度为1的字符串",
-            "b": "字符串以\\0标志字符串的结束",
-            "c": "既可以用单引号，也可以用双引号创建字符串",
-            "d": "在三引号字符串中可以包含换行回车等特殊字符"
+          "a": "字符应该视为长度为1的字符串",
+          "b": "字符串以\\0标志字符串的结束",
+          "c": "既可以用单引号，也可以用双引号创建字符串",
+          "d": "在三引号字符串中可以包含换行回车等特殊字符"
         },
-        "answer": "B",
-        "explanation": "解释信息",
+        "answer": "b",
+        "explanation": "选项B是错误的，Python中的字符串不以null字符结束，null字符是C语言中字符串的终止符。",
         "type": "单选题",
         "iid": 7
-    },
-    {
+      },
+      {
         "title": "Python基础",
         "content": "以下不能创建一个字典的语句是",
         "options": {
-            "a": "dict1 = {}",
-            "b": "dict2 = { 3 : 5 }",
-            "c": "dict3 = {[1,2,3]: “uestc”}",
-            "d": "dict4 = {(1,2,3): “uestc”}"
+          "a": "dict1 = {}",
+          "b": "dict2 = { 3 : 5 }",
+          "c": "dict3 = {[1,2,3]: “uestc”}",
+          "d": "dict4 = {(1,2,3): “uestc”}"
         },
-        "answer": "C",
-        "explanation": "解释信息",
+        "answer": "c",
+        "explanation": "选项C是错误的，因为字典的键必须是不可变类型，而列表是可变类型，不能作为字典的键。",
         "type": "单选题",
         "iid": 8
-    },
-    {
+      },
+      {
         "title": "Python基础",
         "content": "下列Python语句正确的是",
         "options": {
-            "a": "min = x  if  x < y  else  y",
-            "b": "max = x > y ? x : y",
-            "c": "if (x > y) print x",
-            "d": "while True : pass"
+          "a": "min = x  if  x < y  else  y",
+          "b": "max = x > y ? x : y",
+          "c": "if (x > y) print x",
+          "d": "while True : pass"
         },
-        "answer": "D",
-        "explanation": "解释信息",
+        "answer": "d",
+        "explanation": "选项D是正确的，它是一个空操作的无限循环语句。选项A的语法不正确，Python中没有三元运算符的这种用法；选项B的语法也不正确，Python中没有这样的条件表达式用法；选项C的语法错误，if语句后面应该跟冒号。",
         "type": "单选题",
         "iid": 9
-    },
-    {
+      },
+      {
         "title": "Python基础",
         "content": "计算机中信息处理和信息储存用",
         "options": {
-            "a": "二进制代码",
-            "b": "十进制代码",
-            "c": "十六进制代码",
-            "d": "ASCII代码"
+          "a": "二进制代码",
+          "b": "十进制代码",
+          "c": "十六进制代码",
+          "d": "ASCII代码"
         },
-        "answer": "A",
-        "explanation": "解释信息",
+        "answer": "a",
+        "explanation": "计算机中的信息处理和存储都是使用二进制代码进行的。",
         "type": "单选题",
         "iid": 10
-    },
-    {
+      },
+      {
         "title": "Python基础",
         "content": "python源程序执行的方式",
         "options": {
-            "a": "编译执行",
-            "b": "解析执行",
-            "c": "直接执行",
-            "d": "边编译边执行"
+          "a": "编译执行",
+          "b": "解析执行",
+          "c": "直接执行",
+          "d": "边编译边执行"
         },
-        "answer": "B",
-        "explanation": "解释信息",
+        "answer": "d",
+        "explanation": "Python源程序执行的方式是边编译边执行，也称为解释执行。",
         "type": "单选题",
         "iid": 11
-    },
-    {
+      },
+      {
         "title": "Python基础",
         "content": "Python语言语句块的标记是",
         "options": {
-            "a": "分号",
-            "b": "逗号",
-            "c": "缩进",
-            "d": "/"
+          "a": "分号",
+          "b": "逗号",
+          "c": "缩进",
+          "d": "/"
         },
-        "answer": "C",
-        "explanation": "解释信息",
+        "answer": "c",
+        "explanation": "Python语言中语句块是通过缩进来标记的，缩进相同的代码块表示它们在同一个逻辑块中。",
         "type": "单选题",
         "iid": 12
-    },
-    {
+      },
+      {
         "title": "Python基础",
         "content": "以下是字符转换成字节的方法是",
         "options": {
-            "a": "decode()",
-            "b": "encode()",
-            "c": "upper()",
-            "d": "rstrip()"
+          "a": "decode()",
+          "b": "encode()",
+          "c": "upper()",
+          "d": "rstrip()"
         },
-        "answer": "B",
-        "explanation": "解释信息",
+        "answer": "b",
+        "explanation": "字符转换成字节的方法是使用encode()方法。",
         "type": "单选题",
         "iid": 13
-    },
+      },
     {
         "title": "Python基础",
         "content": "ab + \"c\" * 2 结果是",
@@ -191,163 +191,163 @@
             "d": "ababcc"
         },
         "answer": "C",
-        "explanation": "解释信息",
+        "explanation": "表达式 'ab' + 'c' * 2 的结果是'ab' + 'cc'，即 'abcc'。",
         "type": "单选题",
         "iid": 14
     },
     {
-        "title": "Python基础",
-        "content": "以下会出现错误的是",
-        "options": {
-            "a": "‘北京’.encode()",
-            "b": "‘北京’.decode()",
-            "c": "‘北京’.encode().decode()",
-            "d": "以上都不会错误"
-        },
-        "answer": "B",
-        "explanation": "解释信息",
-        "type": "单选题",
-        "iid": 15
+      "title": "Python基础",
+      "content": "以下会出现错误的是",
+      "options": {
+        "a": "‘北京’.encode()",
+        "b": "‘北京’.decode()",
+        "c": "‘北京’.encode().decode()",
+        "d": "以上都不会错误"
+      },
+      "answer": "b",
+      "explanation": "选项B是错误的，因为decode()方法用于将字节对象解码成字符串对象，而'北京'是一个字符串对象，应该先编码成字节对象才能进行解码。",
+      "type": "单选题",
+      "iid": 15
     },
     {
-        "title": "Python基础",
-        "content": "如下：\r\n\r\n str1 = \"Runoob example....wow!!!\"\r\n\r\nstr2 = \"exam\";\r\n\r\nPrint(str1.find(str2, 5)) 打印的结果是",
-        "options": {
-            "a": "6",
-            "b": "7",
-            "c": "8",
-            "d": "-1"
-        },
-        "answer": "B",
-        "explanation": "解释信息",
-        "type": "单选题",
-        "iid": 16
+      "title": "Python基础",
+      "content": "如下：\r\n\r\n str1 = \"Runoob example....wow!!!\"\r\n\r\nstr2 = \"exam\";\r\n\r\nPrint(str1.find(str2, 5)) 打印的结果是",
+      "options": {
+        "a": "6",
+        "b": "7",
+        "c": "8",
+        "d": "-1"
+      },
+      "answer": "b",
+      "explanation": "字符串str1中子串str2第一次出现的位置是从索引5开始计算的，所以正确的索引位置是7。",
+      "type": "单选题",
+      "iid": 16
     },
     {
-        "title": "Python基础",
-        "content": "下面对count（），index(), find()方法描述错误的是",
-        "options": {
-            "a": "count() 方法用于统计字符串里某个字符出现的次数",
-            "b": "find() 方法检测字符串中是否包含子字符串 str  如果包含子字符串返回开始的索引值，否则会报一个异常",
-            "c": "index() 方法检测字符串中是否包含子字符串 str， 如果str不在 返回-1",
-            "d": "以上都错误"
-        },
-        "answer": "B,C",
-        "explanation": "解释信息",
-        "type": "多选题",
-        "iid": 17
+      "title": "Python基础",
+      "content": "下面对count（），index(), find()方法描述错误的是",
+      "options": {
+        "a": "count() 方法用于统计字符串里某个字符出现的次数",
+        "b": "find() 方法检测字符串中是否包含子字符串 str  如果包含子字符串返回开始的索引值，否则会报一个异常",
+        "c": "index() 方法检测字符串中是否包含子字符串 str， 如果str不在 返回-1",
+        "d": "以上都错误"
+      },
+      "answer": "b,c",
+      "explanation": "选项B和C的描述是错误的。find()方法如果检测到子字符串会返回开始的索引值，否则返回-1，并不会抛出异常。index()方法的作用与find()方法类似，如果找不到子字符串也会返回-1，而不会抛出异常。",
+      "type": "多选题",
+      "iid": 17
     },
     {
-        "title": "Python基础",
-        "content": "有下面的程序段\r\n\r\nif k<=10 and k > 0:\r\n    if k >5:\r\n        if k>8:\r\n            x=0\r\n        else:\r\n            x=1\r\n    else:\r\n        if k>2:\r\n            x=3\r\n        else:\r\n    x=4\r\n\r\n其中k取那组值时  x =3",
-        "options": {
-            "a": "3,4,5",
-            "b": "3,4",
-            "c": "5,6,7",
-            "d": "4,5"
-        },
-        "answer": "A",
-        "explanation": "解释信息",
-        "type": "单选题",
-        "iid": 18
+      "title": "Python基础",
+      "content": "有下面的程序段\r\n\r\nif k<=10 and k > 0:\r\n    if k >5:\r\n        if k>8:\r\n            x=0\r\n        else:\r\n            x=1\r\n    else:\r\n        if k>2:\r\n            x=3\r\n        else:\r\n    x=4\r\n\r\n其中k取那组值时  x =3",
+      "options": {
+        "a": "3,4,5",
+        "b": "3,4",
+        "c": "5,6,7",
+        "d": "4,5"
+      },
+      "answer": "a",
+      "explanation": "根据程序段，当k的值在3到5之间时，x会被赋值为3。",
+      "type": "单选题",
+      "iid": 18
     },
     {
-        "title": "Python基础",
-        "content": "以下不是python中的关键字",
-        "options": {
-            "a": "raise",
-            "b": "with",
-            "c": "import",
-            "d": "final"
-        },
-        "answer": "D",
-        "explanation": "解释信息",
-        "type": "单选题",
-        "iid": 19
+      "title": "Python基础",
+      "content": "以下不是python中的关键字",
+      "options": {
+        "a": "raise",
+        "b": "with",
+        "c": "import",
+        "d": "final"
+      },
+      "answer": "d",
+      "explanation": "选项D 'final' 不是Python的关键字。",
+      "type": "单选题",
+      "iid": 19
     },
     {
-        "title": "Python基础",
-        "content": "调用以下函数返回的值\r\ndef myfun():\r\n    pass",
-        "options": {
-            "a": "0",
-            "b": "出错不能运行",
-            "c": "空字符串",
-            "d": "None"
-        },
-        "answer": "D",
-        "explanation": "解释信息",
-        "type": "单选题",
-        "iid": 20
+      "title": "Python基础",
+      "content": "调用以下函数返回的值\r\ndef myfun():\r\n    pass",
+      "options": {
+        "a": "0",
+        "b": "出错不能运行",
+        "c": "空字符串",
+        "d": "None"
+      },
+      "answer": "d",
+      "explanation": "在Python中，如果没有从函数返回明确的值，那么默认返回None。",
+      "type": "单选题",
+      "iid": 20
     },
     {
-        "title": "Python基础",
-        "content": "函数如下：\r\n\r\ndef showNnumber(numbers):\r\n    for n in numbers:\r\n    print(n)\r\n\r\n 下面那些在调用函数时会报错",
-        "options": {
-            "a": "showNumer([2,4,5])",
-            "b": "showNnumber(‘abcesf’)",
-            "c": "showNnumber(3.4)",
-            "d": "showNumber((12,4,5))"
-        },
-        "answer": "C",
-        "explanation": "解释信息",
-        "type": "单选题",
-        "iid": 21
+      "title": "Python基础",
+      "content": "函数如下：\r\n\r\ndef showNnumber(numbers):\r\n    for n in numbers:\r\n    print(n)\r\n\r\n 下面那些在调用函数时会报错",
+      "options": {
+        "a": "showNumer([2,4,5])",
+        "b": "showNnumber(‘abcesf’)",
+        "c": "showNnumber(3.4)",
+        "d": "showNumber((12,4,5))"
+      },
+      "answer": "c",
+      "explanation": "选项C会报错，因为函数定义中的参数名为showNnumber，而调用时使用了错误的参数名showNumer。",
+      "type": "单选题",
+      "iid": 21
     },
     {
-        "title": "Python基础",
-        "content": "函数如下\r\n\r\ndef chanageInt(number2):\r\n    number2 = number2 + 1\r\n    print(\"changeInt: number2= \",number2)\r\n\r\n#调用\r\n\r\nnumber1 = 2\r\nchanageInt(number1)\r\nprint(\"number:\",number1)\r\n\r\n打印结果哪项是正确的",
-        "options": {
-            "a": "changeInt: number2= 3 number: 3",
-            "b": "changeInt: number2= 3 number: 2",
-            "c": "number: 2 changeInt: number2= 2",
-            "d": "number: 2 changeInt: number2= 3"
-        },
-        "answer": "B",
-        "explanation": "解释信息",
-        "type": "单选题",
-        "iid": 22
+      "title": "Python基础",
+      "content": "函数如下\r\n\r\ndef chanageInt(number2):\r\n    number2 = number2 + 1\r\n    print(\"changeInt: number2= \",number2)\r\n\r\n#调用\r\n\r\nnumber1 = 2\r\nchanageInt(number1)\r\nprint(\"number:\",number1)\r\n\r\n打印结果哪项是正确的",
+      "options": {
+        "a": "changeInt: number2= 3 number: 3",
+        "b": "changeInt: number2= 3 number: 2",
+        "c": "number: 2 changeInt: number2= 2",
+        "d": "number: 2 changeInt: number2= 3"
+      },
+      "answer": "b",
+      "explanation": "函数chanageInt中的number2是number1的一个副本，修改number2不会影响number1。因此，打印结果将是'changeInt: number2= 3'和'number: 2'。",
+      "type": "单选题",
+      "iid": 22
     },
     {
-        "title": "Python基础",
-        "content": "关于python类 说法错误的是",
-        "options": {
-            "a": "类的实例方法必须创建对象后才可以调用",
-            "b": "类的实例方法必须创建对象前才可以调用",
-            "c": "类的类方法可以用对象和类名来调用",
-            "d": "类的静态属性可以用类名和对象来调用"
-        },
-        "answer": "B",
-        "explanation": "解释信息",
-        "type": "单选题",
-        "iid": 23
+      "title": "Python基础",
+      "content": "关于python类 说法错误的是",
+      "options": {
+        "a": "类的实例方法必须创建对象后才可以调用",
+        "b": "类的实例方法必须创建对象前才可以调用",
+        "c": "类的类方法可以用对象和类名来调用",
+        "d": "类的静态属性可以用类名和对象来调用"
+      },
+      "answer": "b",
+      "explanation": "选项B是错误的，类的实例方法必须在创建对象后才可以调用。",
+      "type": "单选题",
+      "iid": 23
     },
     {
-        "title": "Python基础",
-        "content": "以下哪项python能正常启动",
-        "options": {
-            "a": "拼写错误",
-            "b": "错误表达式",
-            "c": "缩进错误",
-            "d": "手动抛出异常"
-        },
-        "answer": "D",
-        "explanation": "解释信息",
-        "type": "单选题",
-        "iid": 24
+      "title": "Python基础",
+      "content": "以下哪项python能正常启动",
+      "options": {
+        "a": "拼写错误",
+        "b": "错误表达式",
+        "c": "缩进错误",
+        "d": "手动抛出异常"
+      },
+      "answer": "d",
+      "explanation": "选项D是正确的，手动抛出异常不会导致Python程序无法启动，程序可能会因为捕获不到异常而终止，但可以正常启动。",
+      "type": "单选题",
+      "iid": 24
     },
     {
-        "title": "Python基础",
-        "content": "有关异常说法正确的是",
-        "options": {
-            "a": "程序中抛出异常终止程序",
-            "b": "程序中抛出异常不一定终止程序",
-            "c": "拼写错误会导致程序终止",
-            "d": "缩进错误会导致程序终止"
-        },
-        "answer": "B",
-        "explanation": "解释信息",
-        "type": "单选题",
-        "iid": 25
+      "title": "Python基础",
+      "content": "有关异常说法正确的是",
+      "options": {
+        "a": "程序中抛出异常终止程序",
+        "b": "程序中抛出异常不一定终止程序",
+        "c": "拼写错误会导致程序终止",
+        "d": "缩进错误会导致程序终止"
+      },
+      "answer": "b",
+      "explanation": "选项B是正确的，程序中抛出异常不一定会导致程序终止，如果没有捕获到异常，程序会终止，如果捕获到了异常并进行了处理，则程序可以继续运行。",
+      "type": "单选题",
+      "iid": 25
     },
     {
         "title": "Python基础",
@@ -359,150 +359,150 @@
             "d": "语句块2 不一定会执行"
         },
         "answer": "A",
-        "explanation": "解释信息",
+       "explanation": "选项A的描述是错误的，因为如果try块中发生了IndexError异常，程序会转移到except块执行，但如果发生的不是IndexError异常，程序会因为未被捕获的异常而终止。",
         "type": "单选题",
         "iid": 26
-    },
-    {
+        },
+        {
         "title": "Python基础",
         "content": "导入模块的方式错误的是",
         "options": {
-            "a": "import mo",
-            "b": "from mo import *",
-            "c": "import mo as m",
-            "d": "import m from mo"
+        "a": "import mo",
+        "b": "from mo import ",
+        "c": "import mo as m",
+        "d": "import m from mo"
         },
-        "answer": "D",
-        "explanation": "解释信息",
+        "answer": "d",
+        "explanation": "选项D的导入方式是错误的，正确的导入方式应该是'from mo import m'。",
         "type": "单选题",
         "iid": 27
-    },
-    {
+        },
+        {
         "title": "Python基础",
         "content": "以下关于模块说法错误的是",
         "options": {
-            "a": "一个xx.py就是一个模块",
-            "b": "任何一个普通的xx.py文件可以作为模块导入",
-            "c": "模块文件的扩展名不一定是 .py",
-            "d": "运行时会从制定的目录搜索导入的模块，如果没有，会报错异常"
+        "a": "一个xx.py就是一个模块",
+        "b": "任何一个普通的xx.py文件可以作为模块导入",
+        "c": "模块文件的扩展名不一定是 .py",
+        "d": "运行时会从制定的目录搜索导入的模块，如果没有，会报错异常"
         },
-        "answer": "C",
-        "explanation": "解释信息",
+        "answer": "c",
+        "explanation": "选项C是错误的，因为Python模块文件的扩展名一定是.py。",
         "type": "单选题",
         "iid": 28
-    },
-    {
+        },
+        {
         "title": "Python基础",
         "content": "关于 Python 程序格式框架的描述，以下选项中错误的是",
         "options": {
-            "a": "Python 语言不采用严格的“缩进”来表明程序的格式框架",
-            "b": "Python 单层缩进代码属于之前最邻近的一行非缩进代码，多层缩进代码根据缩进关系决定所属范围",
-            "c": "Python 语言的缩进可以采用 Tab 键实现",
-            "d": "判断、循环、函数等语法形式能够通过缩进包含一批 Python 代码，进而表达对应的语义"
+        "a": "Python 语言不采用严格的“缩进”来表明程序的格式框架",
+        "b": "Python 单层缩进代码属于之前最邻近的一行非缩进代码，多层缩进代码根据缩进关系决定所属范围",
+        "c": "Python 语言的缩进可以采用 Tab 键实现",
+        "d": "判断、循环、函数等语法形式能够通过缩进包含一批 Python 代码，进而表达对应的语义"
         },
-        "answer": "A",
-        "explanation": "解释信息",
+        "answer": "a",
+        "explanation": "选项A的描述是错误的，Python语言采用严格的缩进来表明程序的格式框架。",
         "type": "单选题",
         "iid": 29
-    },
-    {
+        },
+        {
         "title": "Python基础",
         "content": "关于 Python 组合数据类型，以下选项中描述错误的是",
         "options": {
-            "a": "Python 的 str、tuple 和 list 类型都属于序列类型",
-            "b": "Python 组合数据类型能够将多个同类型或不同类型的数据组织起来，通过单一的表示使数据操作更有序、更容易",
-            "c": "组合数据类型可以分为 3 类：序列类型、集合类型和映射类型",
-            "d": "序列类型是二维元素向量，元素之间存在先后关系，通过序号访问"
+        "a": "Python 的 str、tuple 和 list 类型都属于序列类型",
+        "b": "Python 组合数据类型能够将多个同类型或不同类型的数据组织起来，通过单一的表示使数据操作更有序、更容易",
+        "c": "组合数据类型可以分为 3 类：序列类型、集合类型和映射类型",
+        "d": "序列类型是二维元素向量，元素之间存在先后关系，通过序号访问"
         },
-        "answer": "D",
-        "explanation": "解释信息",
+        "answer": "d",
+        "explanation": "选项D的描述是错误的，序列类型是一维的，而不是二维的。",
         "type": "单选题",
         "iid": 30
-    },
-    {
-        "title": "Python基础",
-        "content": "下面代码的输出结果是\r\n\r\nd ={\"大海\":\"蓝色\", \"天空\":\"灰色\", \"大地\":\"黑色\"}\r\nprint(d[\"大地\"], d.get(\"大地\", \"黄色\"))",
-        "options": {
-            "a": "黑色 黄色",
-            "b": "黑色 黑色",
-            "c": "黑的 灰色",
-            "d": "黑色 蓝色"
         },
-        "answer": "B",
-        "explanation": "解释信息",
+        {
+        "title": "Python基础",
+        "content": "下面代码的输出结果是\r\n\r\n d={'大海':'蓝色', '天空':'灰色', '大地':'黑色'}\r\nprint(d['大地'], d.get('大地', '黄色'))",
+        "options": {
+        "a": "黑色 黄色",
+        "b": "黑色 黑色",
+        "c": "黑的 灰色",
+        "d": "黑色 蓝色"
+        },
+        "answer": "b",
+        "explanation": "字典d中'大地'的值是'黑色'，所以d['大地']输出'黑色'。d.get('大地', '黄色')也会输出'黑色'，因为'大地'在字典d中存在，所以不会返回第二个参数'黄色'。",
         "type": "单选题",
         "iid": 31
-    },
-    {
+        },
+        {
         "title": "Python基础",
         "content": "关于Python循环结构，以下选项中描述错误的是",
         "options": {
-            "a": "每个continue语句只有能力跳出当前层次的循环",
-            "b": "break用来跳出最内层for或者while循环，脱离该循环后程序从循环代码后继续执行",
-            "c": "遍历循环中的遍历结构可以是字符串、文件、组合数据类型和range()函数等",
-            "d": "Python通过for、while等保留字提供遍历循环和无限循环结构"
+        "a": "每个continue语句只有能力跳出当前层次的循环",
+        "b": "break用来跳出最内层for或者while循环，脱离该循环后程序从循环代码后继续执行",
+        "c": "遍历循环中的遍历结构可以是字符串、文件、组合数据类型和range()函数等",
+        "d": "Python通过for、while等保留字提供遍历循环和无限循环结构"
         },
-        "answer": "A",
-        "explanation": "解释信息",
+        "answer": "a",
+        "explanation": "选项A的描述是错误的，continue语句用于跳过当前迭代中剩余的部分，直接进行下一次迭代，而不是跳出整个循环。",
         "type": "单选题",
         "iid": 32
-    },
-    {
+        },
+        {
         "title": "Python基础",
         "content": "关于Python的lambda函数，以下选项中描述错误的是",
         "options": {
-            "a": "lambda函数将函数名作为函数结果返回",
-            "b": "f = lambda x,y:x+y 执行后，f的类型为数字类型",
-            "c": "lambda用于定义简单的、能够在一行内表示的函数",
-            "d": "可以使用lambda函数定义列表的排序原则"
+        "a": "lambda函数将函数名作为函数结果返回",
+        "b": "f = lambda x,y:x+y 执行后，f的类型为数字类型",
+        "c": "lambda用于定义简单的、能够在一行内表示的函数",
+        "d": "可以使用lambda函数定义列表的排序原则"
         },
-        "answer": "B",
-        "explanation": "解释信息",
+        "answer": "a",
+        "explanation": "选项A的描述是错误的，lambda函数不会将函数名作为结果返回，lambda表达式返回的是函数对象。",
         "type": "单选题",
         "iid": 33
-    },
-    {
-        "title": "Python基础",
-        "content": "下面代码实现的功能描述的是\r\n\r\ndef fact(n):\r\n    if n==0:\r\n        return 1\r\n    else:\r\n        return n*fact(n-1)\r\nnum =eval(input(\"请输入一个整数：\"))\r\nprint(fact(abs(int(num))))",
-        "options": {
-            "a": "接受用户输入的整数 n，输出 n 的阶乘值",
-            "b": "接受用户输入的整数 n，判断 n 是否是素数并输出结论",
-            "c": "接受用户输入的整数 n，判断 n 是否是水仙花数",
-            "d": "接受用户输入的整数 n，判断 n 是否是完数并输出结论"
         },
-        "answer": "A",
-        "explanation": "解释信息",
+        {
+        "title": "Python基础",
+        "content": "下面代码实现的功能描述的是\r\n\r\ndef fact(n):\r\n    if n==0:\r\n        return 1\r\n    else:\r\n        return nfact(n-1)\r\nnum =eval(input('请输入一个整数：'))\r\nprint(fact(abs(int(num))))",
+        "options": {
+        "a": "接受用户输入的整数 n，输出 n 的阶乘值",
+        "b": "接受用户输入的整数 n，判断 n 是否是素数并输出结论",
+        "c": "接受用户输入的整数 n，判断 n 是否是水仙花数",
+        "d": "接受用户输入的整数 n，判断 n 是否是完数并输出结论"
+        },
+        "answer": "a",
+        "explanation": "这段代码定义了一个递归函数fact，用于计算输入整数n的阶乘。",
         "type": "单选题",
         "iid": 34
-    },
-    {
+        },
+        {
         "title": "Python基础",
         "content": "关于Python语言的浮点数类型，以下选项中描述错误的是",
         "options": {
-            "a": "Python语言要求所有浮点数必须带有小数部分",
-            "b": "浮点数类型与数学中实数的概念一致",
-            "c": "小数部分不可以为0",
-            "d": "浮点数类型表示带有小数的类型"
+        "a": "Python语言要求所有浮点数必须带有小数部分",
+        "b": "浮点数类型与数学中实数的概念一致",
+        "c": "小数部分不可以为0",
+        "d": "浮点数类型表示带有小数的类型"
         },
-        "answer": "C",
-        "explanation": "解释信息",
+        "answer": "c",
+        "explanation": "选项C的描述是错误的，浮点数的小数部分可以为0。",
         "type": "单选题",
         "iid": 35
-    },
-    {
+        },
+        {
         "title": "Python基础",
         "content": "以下选项中，不是 Python 语言保留字的是",
         "options": {
-            "a": "do",
-            "b": "pass",
-            "c": "except",
-            "d": "while"
+        "a": "do",
+        "b": "pass",
+        "c": "except",
+        "d": "while"
         },
-        "answer": "A",
-        "explanation": "解释信息",
+        "answer": "a",
+        "explanation": "选项A 'do' 不是Python的保留字。",
         "type": "单选题",
         "iid": 36
-    },
+        },
     {
         "title": "Python基础",
         "content": "下面代码的输出结果是\r\nprint（0.1+0.2==0.3）",

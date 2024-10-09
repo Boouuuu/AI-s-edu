@@ -151,7 +151,124 @@ app.get('/submission-times', async (req, res) => {
     }
 });
 
+import fs from 'fs';
+import path from 'path';
 
+// 获取所有提交时间的路由
+app.get('/submission-all', async (req, res) => {
+    try {
+        const username = req.query.username; // 从查询参数获取用户名
+        
+        console.log(username);
+
+        if (!username) {
+            return res.status(400).send('用户名未提供');
+        }
+
+        // 根据用户名查找对应的提交记录
+        const submissions = await Submission.find({ username });
+
+        // 如果没有找到提交记录
+        if (submissions.length === 0) {
+            return res.status(404).send('未找到对应的提交记录');
+        }
+
+        // 直接返回提交记录
+        return res.status(200).json(submissions);
+    } catch (error) {
+        res.status(500).send('获取提交时间时出错: ' + error.message);
+    }
+});
+
+
+
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// 获取所有提交时间的路由
+app.post('/save-data', (req, res) => {
+    console.log('接收到的请求体:', req.body);
+
+    const data = req.body;
+    const filePath = path.join(__dirname, 'dataaa.json'); // 使用 __dirname
+
+    fs.writeFile(filePath, JSON.stringify(data, null, 4), 'utf-8', (err) => {
+        if (err) {
+            console.error('保存文件时出错:', err.message);
+            return res.status(500).send('保存文件时出错: ' + err.message);
+        }
+        res.status(200).send('文件保存成功！');
+    });
+});
+
+
+
+// 获取所有提交时间的路由
+app.post('/summary-data', (req, res) => {
+    console.log('接收到的请求体:', req.body);
+
+    const data = req.body;
+    const filePath = path.join(__dirname, 'everysummary.json'); // 使用 __dirname
+
+    fs.writeFile(filePath, JSON.stringify(data, null, 4), 'utf-8', (err) => {
+        if (err) {
+            console.error('保存文件时出错:', err.message);
+            return res.status(500).send('保存文件时出错: ' + err.message);
+        }
+        res.status(200).send('文件保存成功！');
+    });
+});
+
+app.get('/ana', async (req, res) => {
+    try {
+        const { username, startTime, endTime } = req.query; // 从查询参数获取用户名、起始时间和结束时间
+        
+        console.log('请求参数:', { username, startTime, endTime });
+
+        if (!username) {
+            console.error('错误: 用户名未提供');
+            return res.status(400).send('用户名未提供');
+        }
+
+        // 根据用户名查找对应的提交记录
+        const submissions = await Submission.find({ username });
+        console.log('找到的提交记录数量:', submissions.length);
+
+        // 如果没有找到提交记录
+        if (submissions.length === 0) {
+            console.warn('警告: 未找到对应的提交记录');
+            return res.status(404).send('未找到对应的提交记录');
+        }
+
+        // 筛选提交时间在指定时间段内的记录
+        const filteredSubmissions = submissions.filter(submission => {
+            const submitTime = new Date(submission.submitTime);
+            const isInTimeRange = (!startTime || submitTime >= new Date(startTime)) && 
+                                  (!endTime || submitTime <= new Date(endTime));
+            return isInTimeRange;
+        });
+
+        console.log('筛选后符合条件的记录数量:', filteredSubmissions.length);
+
+        // 如果没有找到符合条件的提交记录
+        if (filteredSubmissions.length === 0) {
+            console.warn('警告: 未找到符合条件的提交记录');
+            return res.status(404).send('未找到符合条件的提交记录');
+        }
+
+        // 将符合条件的记录存储到 finaldata.json
+        fs.writeFileSync(path.join(__dirname, 'finaldata.json'), JSON.stringify(filteredSubmissions, null, 2));
+        console.log('符合条件的提交记录已存储到 finaldata.json');
+
+        // 返回符合条件的提交记录
+        return res.status(200).json(filteredSubmissions);
+    } catch (error) {
+        console.error('获取提交时间时出错:', error.message);
+        res.status(500).send('获取提交时间时出错: ' + error.message);
+    }
+});
 
 
 

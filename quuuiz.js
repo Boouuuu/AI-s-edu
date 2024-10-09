@@ -121,7 +121,7 @@ function generateQuestions(questions) {
 loadQuestions();
 
 
-
+/*
 function getRandomQuestions(questions, num) {
     // 获取查询字符串
     const queryString = window.location.search;
@@ -148,7 +148,23 @@ function getRandomQuestions(questions, num) {
 
     return selectedQuestions;
 }
+*/
 
+// 随机选择指定数量的题目
+function getRandomQuestions(questions, num) {
+    const selectedQuestions = [];
+    const usedIndices = new Set();
+
+    while (selectedQuestions.length < num && selectedQuestions.length < questions.length) {
+        const randomIndex = Math.floor(Math.random() * questions.length);
+        if (!usedIndices.has(randomIndex)) {
+            selectedQuestions.push(questions[randomIndex]);
+            usedIndices.add(randomIndex);
+        }
+    }
+
+    return selectedQuestions;
+}
 
 
 
@@ -324,8 +340,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (response.ok) {
                 console.log('数据成功提交');
+                // 创建一个自定义事件
+                const event = new CustomEvent('submitTimeEvent', { detail: { submitTime } });
+                // 派发事件
+                window.dispatchEvent(event);
+                console.log("事件派发")
 
-                window.location.href = `paper.html?submitTime=${encodeURIComponent(submitTime)}`;
+               // window.location.href = `paper.html?submitTime=${encodeURIComponent(submitTime)}`;
             } else {
                 console.error('数据提交失败:', response.statusText);
             }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提交记录</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            height: 100vh; /* 使用视口高度 */
+            margin: 0;
+            background-color: #f4f4f4; /* 背景色 */
+        }
+
+        #submissionForm {
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            align-items: center; /* 子元素水平居中 */
+            background-color: white; /* 表单背景 */
+            padding: 20px; /* 内边距 */
+            border-radius: 8px; /* 圆角 */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 阴影 */
+        }
+
+        label {
+            margin: 10px 0; /* 标签上下间距 */
+        }
+
+        input[type="date"] {
+            width: 200px; /* 设置日期输入框的宽度 */
+            height: 40px; /* 设置日期输入框的高度 */
+            font-size: 16px; /* 设置字体大小 */
+            margin-bottom: 10px; /* 输入框与标签间距 */
+            padding: 5px; /* 输入框内边距 */
+            border: 1px solid #ccc; /* 边框 */
+            border-radius: 4px; /* 圆角 */
+        }
+
+        button {
+            margin-top: 20px; /* 按钮与上方间距 */
+            padding: 10px 20px; /* 按钮内边距 */
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff; /* 按钮背景色 */
+            color: white; /* 字体颜色 */
+            cursor: pointer; /* 鼠标悬停变成指针 */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* 悬停状态背景色 */
+        }
+
+        .error {
+            color: red; /* 错误消息颜色 */
+            margin-top: 10px; /* 间距 */
+        }
+    </style>
+</head>
+<body>
+    <form id="submissionForm">
+        <label for="startTime">开始时间:</label>
+        <input type="date" id="startTime" name="startTime" required>
+        
+        <label for="endTime">结束时间:</label>
+        <input type="date" id="endTime" name="endTime" required>
+        
+        <button type="submit">生成提交记录</button>
+        <div class="error" id="error-message"></div> <!-- 用于显示错误消息 -->
+    </form>
+    
+    <div id="submission-time-container"></div>
+    
+    <script src="tofinaldata.js" defer></script>
+</body>
+</html>
