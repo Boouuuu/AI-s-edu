@@ -11,7 +11,7 @@
            "<all_urls>"
         ],
         "js": [ "libs/jquery-3.7.1.min.js", "libs/jquery-ui.min.js", "libs/jquery-1.7.1.min.js",
-        "libs/jquery.min.js","content.js","summary.js","aftertest.js","Real-time_monitoring.js","service-worker.js"]
+        "libs/jquery.min.js","content.js","summary.js","aftertest.js","Real-time_monitoring.js","service-worker.js","Error_summary.js"]
       }
     ],
 
