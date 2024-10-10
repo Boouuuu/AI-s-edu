@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const API_ENDPOINT = 'https://agentapi.baidu.com/assistant/getAnswer';  
+const API_ENDPOINT = 'https://agentapi.baidu.com/assistant/getAnswer';
 const APP_ID = 'pIbemxB5mjF1LZTCPdDXfCgLLydbhltb'; // 替换为实际appId  
 const SECRET_KEY = 'ngqDuVcVQtK9ScEldSdcueWMlTHJDOuH'; // 替换为实际secretKey  
 const JUYPTER_ORIGIN = 'https://8888/';
@@ -22,12 +22,12 @@ chrome.sidePanel
   .catch((error) => console.error(error));
 
 chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
-	if (!tab.url) return;
-	await chrome.sidePanel.setOptions({
-	  tabId,
-	  path: 'sidepanel.html',
-	  enabled: true
-	});
+  if (!tab.url) return;
+  await chrome.sidePanel.setOptions({
+    tabId,
+    path: 'sidepanel.html',
+    enabled: true
+  });
 });
 
 
@@ -46,16 +46,16 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          message: {  
-            content: {  
-              type: 'text',  
-              value: {  
-                showText: request.UserInput  
-              }  
-            }  
-          },  
+          message: {
+            content: {
+              type: 'text',
+              value: {
+                showText: request.UserInput
+              }
+            }
+          },
           source: APP_ID, // 使用实际的appId作为source  
-          from: 'openapi',  
+          from: 'openapi',
           openId: '123' // 替换为实际openId   // Replace with a unique identifier for your end-user
         }),
       })
@@ -76,23 +76,23 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 
 
-// summary
-// if (request.message === 'getCodeSnippets') {
-//     console.log("service总结收到!")
-//     // 请求内容脚本获取代码片段
-//     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-//     chrome.tabs.sendMessage(tabs[0].id, { message: 'getCodeSnippets' }, (response)=>{
-//       if (chrome.runtime.lastError) {
-//         console.error("发送消息失败:", chrome.runtime.lastError.message);
-//     } else {
-//         console.log("收到的代码片段:", response.codeSnippets);
-//     }
-//     sendResponse({codeSnippets:response.codeSnippets});
-//     });
-        
-//     });
-//     return true; // 保持响应通道开放
-//   }
+  // summary
+  // if (request.message === 'getCodeSnippets') {
+  //     console.log("service总结收到!")
+  //     // 请求内容脚本获取代码片段
+  //     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  //     chrome.tabs.sendMessage(tabs[0].id, { message: 'getCodeSnippets' }, (response)=>{
+  //       if (chrome.runtime.lastError) {
+  //         console.error("发送消息失败:", chrome.runtime.lastError.message);
+  //     } else {
+  //         console.log("收到的代码片段:", response.codeSnippets);
+  //     }
+  //     sendResponse({codeSnippets:response.codeSnippets});
+  //     });
+
+  //     });
+  //     return true; // 保持响应通道开放
+  //   }
 
   // if (request.message === 'getCodeSnippets') {
   //     console.log("service总结收到!");
@@ -109,34 +109,34 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   //     return true; // 保持响应通道开放，直到异步操作完成
   // }
 
-if (request.message === 'getCodeSnippets') {
-    console.log("service总结收到！")
-    // 请求内容脚本获取代码片段
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-          if (tabs.length > 0) {  
-      const tabId = tabs[0].id;  
-      chrome.tabs.sendMessage(tabId, { message: 'getCodeSnippets' },sendResponse);
-      console.log(tabId);  
-    } else {  
-      console.error('没有找到活动的标签页');  
+  if (request.message === 'getCodeSnippets') {
+    console.log("service总结收到！")
+    // 请求内容脚本获取代码片段
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      if (tabs.length > 0) {
+        const tabId = tabs[0].id;
+        chrome.tabs.sendMessage(tabId, { message: 'getCodeSnippets' }, sendResponse);
+        console.log(tabId);
+      } else {
+        console.error('没有找到活动的标签页');
+      }
+    });
+    return true; // 保持响应通道开放
+  }
+  // 实时检测  
+  if (request.message === 'Real_time_monitoring') {
+    console.log("Real_time_monitoring收到!")
+    // 请求内容脚本获取代码片段  
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      if (tabs.length > 0) {
+        const tabId = tabs[0].id;
+        chrome.tabs.sendMessage(tabId, { message: 'Real_time_monitoring' }, sendResponse);
+        console.log(tabId);
+      } else {
+        console.error('没有找到活动的标签页');
+      }
     }
-    });
-    return true; // 保持响应通道开放
+    );
+    return true; // 保持响应通道开放  
   }
-   // 实时检测  
-if (request.message === 'Real_time_monitoring') {  
-  console.log("Real_time_monitoring收到!")  
-  // 请求内容脚本获取代码片段  
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {  
-    if (tabs.length > 0) {  
-      const tabId = tabs[0].id;  
-      chrome.tabs.sendMessage(tabId, { message: 'Real_time_monitoring' },sendResponse);
-      console.log(tabId);  
-    } else {  
-      console.error('没有找到活动的标签页');  
-    }  
-  }
-);  
-  return true; // 保持响应通道开放  
-}
 });

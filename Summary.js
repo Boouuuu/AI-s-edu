@@ -9,6 +9,8 @@ $(document).ready(function () {
 document.addEventListener('DOMContentLoaded', (event) => { 
     document.getElementById('generateSummary').addEventListener('click', () => {
         console.log('总结Button clicked!');
+        const mainDiv = document.querySelector('.main');
+        mainDiv.style.display = 'block'; // 显示元素
     
         chrome.runtime.sendMessage({ message: 'getCodeSnippets' }, (response) => {
             console.log('总结sendMessage!');
@@ -88,7 +90,12 @@ function displaySummary(summary) {
             let aiMessageElement = document.getElementById('summary');
             aiMessageElement.classList.add('message', 'aiMessage');
             aiMessageElement.innerHTML = htmlContent; // 设置HTML内容
-            messagesDiv.appendChild(aiMessageElement);
+                                            
+            console.log("逐个显示每个新添加的块级元素")
+            const mainDiv = document.querySelector('.main'); 
+            mainDiv.style.display = 'none';
+            
+            messageDiv.appendChild(aiMessageElement);
             // 当浏览器扩展返回响应时，代码将响应文本分割成单个单词，并创建一个包含 "message" 和 "aiMessage" 类的段落元素。接着将该段落元素添加到 ID 为 "messages" 的 HTML 元素中。
             let observer = new MutationObserver((mutations) => {
                 mutations.forEach((mutation) => {
@@ -148,6 +155,48 @@ function highlightTerms(term) {
         firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 }
+
+// 保存为图片
+document.getElementById('savebutton').addEventListener('click', function () {
+    const summaryElement = document.getElementById('summary-container');
+
+    html2canvas(summaryElement).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+
+        const link = document.createElement('a');
+        link.href = imgData;
+        link.download = 'summary.png';
+        link.click();
+    }).catch(error => {
+        console.error('转换为图片时出错:', error);
+    });
+});
+
+// 保存成pdf
+// document.getElementById('savebutton').addEventListener('click', () => {
+//     const summaryDiv = document.getElementById('summary');
+//     if (!summaryDiv) {
+//         console.error('Summary div not found.');
+//         return;
+//     }
+
+//     // 获取 summary 的内容
+//     const summaryContent = summaryDiv.innerHTML;
+//     console.log("得到summaryContent！")
+//     console.log(summaryContent)
+//     // 创建 jsPDF 实例
+//     const { jsPDF } = window.jspdf;
+//     const pdf = new jsPDF();
+
+//     // 将 HTML 内容添加到 PDF 中
+//     pdf.html(summaryContent, {
+//         callback: function (doc) {
+//             doc.save('summary.pdf'); // 保存 PDF
+//         },
+//         x: 10,
+//         y: 10,
+//     });
+// });
 
 // 导航栏
 fetch('navbar.html')

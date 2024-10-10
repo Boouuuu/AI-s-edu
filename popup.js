@@ -30,9 +30,13 @@ function sendUserInput() {
   // Display the user's message immediately
   const messagesDiv = document.getElementById('messages');
   let select = document.getElementById('search-select');
+  // 遍历所有选项并打印索引和值
+for (let i = 0; i < select.options.length; i++) {
+  console.log(`Index: ${i}, Value: ${select.options[i].value}`);
+}
   let index = select.selectedIndex;
   let value = select.options[index].value.bold().fontcolor('red');
-  if (value !== '搜索') {
+  if (value !== '解答') {
     userInput += `<p>${value}</p>`;
   }
   // alert(`${value}`);
@@ -101,15 +105,23 @@ function sendUserInput() {
 
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
   var copyButton = document.getElementById("Copy");
-  copyButton.addEventListener("click", copySelectedText);
+  if (copyButton) {
+    copyButton.addEventListener("click", copySelectedText);
+  } else {
+    console.error("Copy button not found.");
+  }
 });
 
+// 刷新功能
+document.getElementById('retry').addEventListener('click', function() {
+  location.reload(); // 刷新页面
+});
+// 复制功能
 function copySelectedText() {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    chrome.tabs.executeScript({
+    chrome.scripting.executeScript({
       target: { tabId: tabs[0].id },
       function: getSelectedText,
     });
@@ -118,18 +130,27 @@ function copySelectedText() {
 
 function getSelectedText() {
   var selectedText = window.getSelection().toString();
-  chrome.tabs.executeScript({
-    function: copyToClipboard,
-    args: [selectedText],
-  });
+  copyToClipboard(selectedText);
 }
 
 function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).then(function () {
-    console.log("Text copied to clipboard:", text);
-    showMessage("Text copied successfully!");
-  });
+  navigator.clipboard.writeText(text)
+    .then(function () {
+      console.log("Text copied to clipboard:", text);
+      showMessage("文本已复制到剪切板！");
+    })
+    .catch(function (error) {
+      console.error("Error copying text: ", error);
+      showMessage("复制失败！");
+    });
 }
+
+function showMessage(message) {
+  // 实现显示消息的逻辑，例如在页面上显示提示框
+  alert(message);
+}
+
+
 
 function showMessage(message) {
   var messageDiv = document.getElementById("message");
@@ -170,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
       tooltip.style.display = 'block';
       tooltip.style.left = `${buttonRect.left}px`;
       tooltip.style.top = `${buttonRect.top-25}px`; // Adjust the position as needed
-      tooltip.innerHTML = '重新提问';
+      tooltip.innerHTML = '刷新页面';
   });
 
   button.addEventListener('mouseout', function() {
@@ -179,19 +200,35 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const button = document.getElementById('submit_picture');
-  const tooltip = document.getElementById('submit_picturetip');
+  const button = document.getElementById('getpicture');
+  const tooltip = document.getElementById('getpicturetip');
 
   button.addEventListener('mouseover', function() {
       const buttonRect = button.getBoundingClientRect();
       tooltip.style.display = 'block';
       tooltip.style.left = `${buttonRect.left-8}px`;
       tooltip.style.top = `${buttonRect.top -25 }px`; // Adjust the position as needed
-      tooltip.innerHTML = '更换背景图片';
+      tooltip.innerHTML = '将对话存为图片';
   });
 
   button.addEventListener('mouseout', function() {
       tooltip.style.display = 'none';
+  });
+});
+
+// 保存为图片
+document.getElementById('getpicture').addEventListener('click', function () {
+  const summaryElement = document.getElementById('chatbox');
+
+  html2canvas(summaryElement).then(canvas => {
+      const imgData = canvas.toDataURL('image/png');
+
+      const link = document.createElement('a');
+      link.href = imgData;
+      link.download = 'chatbox.png';
+      link.click();
+  }).catch(error => {
+      console.error('转换为图片时出错:', error);
   });
 });
 
@@ -230,25 +267,20 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const button = document.getElementById('changesize');
-  const tooltip = document.getElementById('changesizetip');
 
-  button.addEventListener('mouseover', function() {
-      const buttonRect = button.getBoundingClientRect();
-      tooltip.style.display = 'block';
-      tooltip.style.left = `${buttonRect.left}px`;
-      tooltip.style.top = `${buttonRect.top -25 }px`; // Adjust the position as needed
-      tooltip.innerHTML = '改变字体大小';
-  });
 
-  button.addEventListener('mouseout', function() {
-      tooltip.style.display = 'none';
-  });
+// 清空按钮
+document.addEventListener("DOMContentLoaded", function () {
+  var clearButton = document.getElementById("clear-button");
+  clearButton.addEventListener("click", clearMessage);
 });
 
+function clearMessage() {
+  var messageDiv = document.getElementById("chatbox");
+  messageDiv.innerHTML = ''; // 清空内容
+}
 
-
+// 淡入淡出
 $(document).ready(function() {
   $('body').fadeIn("slow");
 });

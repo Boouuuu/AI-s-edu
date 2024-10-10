@@ -9,9 +9,13 @@
   <link rel="stylesheet" type="text/css" href="sidebar.css">
   <script src="libs/jquery-1.7.1.min.js"></script>
   <script src="./libs/jquery.min.js"></script>
+  <script src="libs/jspdf.umd.min.js"></script>
+<script src="libs/html2canvas.min.js"></script>
+<script src="./libs/marked.min.js"></script>
+<script src="libs/purify.min.js"></script>
+<script src="./libs/marked.min.js"></script>
   <link rel="stylesheet" href="libs/bootstrap.min.css">
   <link rel="stylesheet" href="libs/bootstrap.min_3.4.1.css">
-  <script src="./libs/marked.min.js"></script>
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
     integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <link href="libs/css2.css" rel="stylesheet">
@@ -20,25 +24,27 @@
 
 <body>
 
-  <div id="chatbox">
+  <!-- <div id="navbar"></div> -->
+ 
     <div id="div2">
 
       <div id="loading-container">
         <ul>
-          <li><a href="login.html">知识概览</a></li>
-          <li><a href="point.html">课堂小助手</a></li>
-          <li><a href="Summary.html">知识回顾</a></li>
-          <li><a href="aftertest.html">课后小测</a></li>
-          <li><a href="sidepanel.html">课后答疑</a></li>
+          <li><a href="graph.html">知识星球</a></li>
+          <li><a href="point.html">课堂小精灵</a></li>
+          <li><a href="Summary.html">智慧总结</a></li>
+          <li><a href="aftertest.html">课后挑战</a></li>
+          <li><a href="sidepanel.html">答疑小助手</a></li>
+      </ul>
       </div>
-  
     </div>
+    
     <div id="logo">
       <img src="./image/robot.png" alt="GPT Logo">
       <h1><strong>智能Jupyter-Dog</strong></h1>
     </div>
 
-
+    <div id="chatbox">
 
     <div id="api-key-note" role="alert">
       <a href="option.html" class="alert-link" target="_blank"><strong style="font-weight:1000; font-size: small; color:
@@ -58,19 +64,19 @@
       <div id="tool">
         <div class="btn-toolbar" role="toolbar" aria-label="Tool">
           <div class="btn-group" role="group" aria-label="Tool">
-            <button id="information" class="btn btn-default"><span class="glyphicon glyphicon-duplicate"></span></button>
-            <button id="changesize" class="btn btn-default"><span class="glyphicon glyphicon-text-size"></span></button>
-            <button id="submit_picture" class="btn btn-default" btn-lg active type="picture"><span class="glyphicon glyphicon-picture"></span></button>
+            <!-- <button id="information" class="btn btn-default"><span class="glyphicon glyphicon-duplicate"></span></button> -->
+            <!-- <button id="changesize" class="btn btn-default"><span class="glyphicon glyphicon-text-size"></span></button> -->
+            <button id="getpicture" class="btn btn-default"><span class="glyphicon glyphicon-picture"></span></button>
             <button id="Copy" class="btn btn-default"><span class="glyphicon glyphicon-copy"></span></button>
             <button id="retry" type="button" class="btn btn-default"><span class="glyphicon glyphicon-repeat"></span></button>
             <button id="clear-button" type="button" class="btn btn-default"><span class="glyphicon glyphicon-refresh"></span></button>
             <select id="search-select" name="search-select" class="styled-select">
-              <option value="explain" id="explain">解释代码</option>
-              <option value="expand" id="expand">扩写代码</option>
-              <option value="translate" id="translate">中文翻译</option>
-              <option value="check" id="check">检查语法</option>
-              <option value="optimization" id="optimization">优化代码</option>
-              <option value="search" selected="selected">更多功能</option>
+              <option value="解释代码" id="explain">解释代码</option>
+              <option value="扩写代码" id="expand">扩写代码</option>
+              <option value="中文翻译" id="translate">中文翻译</option>
+              <option value="检查语法" id="check">检查语法</option>
+              <option value="优化代码" id="optimization">优化代码</option>
+              <option value="解答" selected="selected">更多功能</option>
             </select>
           </div>
         </div>
@@ -96,7 +102,7 @@
   <div id="informationtip"></div>
   <div id="changesizetip"></div>
   <div id="clear-buttontip"></div>
-  <div id="submit_picturetip"></div>
+  <div id="getpicturetip"></div>
 
 
   <div id="bottomlogo">

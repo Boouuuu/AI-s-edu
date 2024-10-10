@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     showBubble(); // 在页面加载后立即显示气泡
     // 每 5 秒显示一次气泡（5000 毫秒）
-    setInterval(showBubble, 35000);
+    setInterval(showBubble, 60000);
 });
 
 // 导航栏

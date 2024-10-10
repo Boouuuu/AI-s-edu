@@ -17,13 +17,16 @@ document.getElementById('generate-button').addEventListener('click', async () =>
             console.log('catch lose!');
         }
     });
-    const response = await fetch('http://localhost:5000/recommend', {
+    const response = await fetch('http://localhost:5001/recommend', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({ "example_key": "example_value" })
     });
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
     const data = await response.json();
     const recommendedIds = data.recommended_ids.join(', ');
     // 跳转到 quiz.html，并将推荐的题号作为查询参数传递

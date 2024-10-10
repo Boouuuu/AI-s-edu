@@ -4,8 +4,6 @@ from flask_cors import CORS
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
 import json
 import sys
 import torch
@@ -384,6 +382,7 @@ CORS(app)  # 启用CORS
     
 
 def recommend():
+    print(f"Request method: {request.method}")
     # 获取来自前端的 JSON 数据
     data = request.json
     text = data.get("example_key", "")  # 提取值，如果不存在则返回空字符串
@@ -533,10 +532,12 @@ def recommend():
 
 # 返回推荐的索引和相似度
 # 获取对应的相似度值
-    top_similarities = similarity_matrix[0][result]
-    
-    return jsonify(recommended_ids=result, similarities=top_similarities.tolist())
-    
+    # top_similarities = similarity_matrix[0][result]
+    try:
+        return jsonify(recommended_ids=result)
+    except Exception as e:
+        print(f"Error: {e}")  # 打印错误信息
+        return jsonify({"error": str(e)}), 500  # 返回错误信息和状态码
     
     
     # return jsonify(recommended_ids=top_indices)
@@ -544,4 +545,4 @@ def recommend():
 
 # 启动 Flask 应用
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5001)

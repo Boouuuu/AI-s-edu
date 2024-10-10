@@ -1,0 +1,374 @@
+body {
+    font-family: 'Microsoft Yahei', 'Tahoma', Arial, sans-serif;
+    margin: 0;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, #dfe9f3 0%, white 70%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #333;
+  }
+
+  
+.Generate{
+    margin-top: 15px; /* 确保没有额外的顶部外边距 */
+    height: 80px;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; /* 垂直排列 */
+      position: relative; /* 为了分割线的位置 */
+  }
+  .Generate::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; /* 分割线的高度 */
+    /* background-color:  #00c9b7; 分割线的颜色 */
+    position: absolute;
+    top: 9px; /* 分割线与按钮之间的距离 */
+    left: 0;
+  }
+  
+  #generateSummary{
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font: Microsoft YaHei;
+    vertical-align: baseline;
+    /* display: inline-block; */
+    border-radius: 50px;
+    background: #00c9b7;
+    width: 120px;
+    height: 50px;
+    position: relative;
+    color: #fff;
+    font-size: 1.2em;
+    letter-spacing: 0.094em;
+    cursor: pointer;
+    box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2);
+    text-align: center;
+    margin: 0 auto;
+    transition: all 0.5s;
+    text-transform: uppercase;
+  }
+  #generateSummary:hover {
+    transform: translateY(-1px); /* 轻微上浮效果 */
+    box-shadow: 0px 0px 0px 0px rgba(00,00,00,0.2);
+    padding: 5px; /* 增加一些间距使效果更柔和 */
+    border-radius: 50px;
+  }
+
+  .savephotoButton-container { /* 确保给按钮一个父容器 */
+    display: flex;
+    justify-content: flex-end; /* 使内容靠右对齐 */
+    margin: 0 10px; /* 可以选择性添加外边距 */
+  }
+  
+  #savebutton{
+    margin: 0 10px;
+    border: 1px solid rgb(25, 135, 84); /* 设置边框颜色和宽度 */
+    border-radius: 5px; /* 可选：圆角边框 */
+    /* padding: 10px; 可选：内边距 */
+    background-color: transparent; /* 可选：背景色 */
+    color: rgb(25, 135, 84); /* 可选：文本颜色 */
+    cursor: pointer; /* 可选：鼠标样式 */
+    transition: all 0.3s; /* 可选：过渡效果 */
+  }
+  #savebutton:hover {
+    background-color: rgba(25, 135, 84, 0.3); /* 可选：悬停时的背景色 */
+  }
+  #SearchInput{
+    width: 200px;
+  }
+  
+  #summary-container {
+    text-align: left; /* 左对齐 */
+    margin: 20px auto; /* 上下各留20px的空间 */
+    max-width: 800px; /* 最大宽度，确保内容不超出 */
+    min-height:430px;
+    line-height: 1.6; /* 行高，增加可读性 */
+    padding: 10px; /* 内边距，增加可读性 */
+    border: 1px solid #ccc; /* 可选：边框 */
+    border-radius: 5px; /* 可选：圆角 */
+    background-color: #f9f9f9; /* 可选：背景色 */
+    font-size: medium;
+  }
+    
+
+  /* 小恐龙 */
+.main {
+    position: absolute; /* 绝对定位 */
+    top: 60%; /* 垂直居中 */
+    left: 50%; /* 水平居中 */
+    transform: translate(-50%, -50%); /* 精确居中 */
+    display: none; /* 初始隐藏 */
+    z-index: 10; /* 确保在其他内容之上 */
+    display: none;
+}
+
+.dragon {
+    width: 200px;
+    height: 140px;
+    transform-origin: 50% 80%;
+    animation: zoomIn .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+
+.dragon .body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    height: 128px;
+    background: url(./image/body.png) no-repeat center center;
+    background-size: contain;
+    z-index: 10;
+}
+
+.dragon .horn-left {
+    position: absolute;
+    top: -17px;
+    left: 32px;
+    width: 31px;
+    height: 31px;
+    background: url(./image/horn-left.png) no-repeat;
+    background-size: contain;
+    z-index: 9;
+    transform-origin: 150% 200%;
+    transform: rotate(-5deg);
+    animation: swingRight .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+
+.dragon .horn-right {
+    position: absolute;
+    top: -16px;
+    left: 110px;
+    width: 34px;
+    height: 31px;
+    background: url(./image/horn-right.png) no-repeat;
+    background-size: contain;
+    z-index: 9;
+    transform-origin: -50% 200%;
+    transform: rotate(5deg);
+    animation: swingLeft .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+
+.dragon .eye {
+    position: absolute;
+    top: 39px;
+    width: 11px;
+    height: 11px;
+    background: url(./image/eye.png) no-repeat;
+    background-size: contain;
+    z-index: 12;
+}
+
+.dragon .eye.left {
+    left: 49px;
+}
+
+.dragon .eye.right {
+    left: 118px;
+    transform-origin: 50% 50%;
+    transform: rotate(180deg);
+}
+
+.dragon .blush {
+    position: absolute;
+    top: 46px;
+    width: 15px;
+    height: 9px;
+    background: url(./image/blush.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: 11;
+    animation: blush .5s ease infinite alternate;
+}
+
+.dragon .blush.left {
+    left: 43px;
+}
+
+.dragon .blush.right {
+    left: 120px;
+}
+
+.dragon .mouth {
+    position: absolute;
+    top: 52px;
+    left: 49px;
+    width: 78px;
+    height: 56px;
+    background: url(./image/mouth.png) no-repeat;
+    background-size: 100%;
+    z-index: 11;
+    animation: openMouth 1s ease infinite;
+}
+
+.dragon .tail-sting {
+    position: absolute;
+    top: 67px;
+    left: 139px;
+    width: 40px;
+    height: 38px;
+    background: url(./image/tail-sting.png) no-repeat;
+    background-size: contain;
+    z-index: 9;
+    transform-origin: 0 100%;
+    animation: tailUp .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+
+.shadow-wrapper {
+    position: absolute;
+    top: 110px;
+    width: 100%;
+}
+
+.shadow {
+    margin: 0 auto;
+    width: 110px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    z-index: 0;
+    animation: zoomIn .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+
+.fire-wrapper {
+    position: absolute;
+    width: 40px;
+    top: 60px;
+    left: 88px;
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 100%;
+    animation: fireUp 1s ease-in infinite;
+}
+
+.fire {
+    padding-bottom: 135%;
+    width: 100%;
+    height: 100%;
+    background: url(./image/fire.png) no-repeat;
+    background-size: contain;
+    animation: fire 1s ease-out infinite;
+}
+
+.progress {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.progress .outer {
+    width: 100%;
+    height: 14px;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.progress .inner {
+    width: 0;
+    height: 100%;
+    background: #ffcd33;
+    animation: loading 2s linear infinite;
+}
+
+@keyframes zoomIn {
+    100% {
+        transform: scale(1.16, 1.16);
+    }
+}
+
+@keyframes swingRight {
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes swingLeft {
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes blush {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes openMouth {
+    0% {
+        -webkit-clip-path: ellipse(20% 0% at 50% 0);
+                clip-path: ellipse(20% 0% at 50% 0);
+    }
+
+    50% {
+        -webkit-clip-path: ellipse(100% 100% at 50% 0);
+                clip-path: ellipse(100% 100% at 50% 0);
+    }
+
+    70% {
+        -webkit-clip-path: ellipse(100% 100% at 50% 0);
+                clip-path: ellipse(100% 100% at 50% 0);
+    }
+
+    100% {
+        -webkit-clip-path: ellipse(20% 0% at 50% 0);
+                clip-path: ellipse(20% 0% at 50% 0);
+    }
+}
+
+@keyframes tailUp {
+    0% {
+        transform: scaleY(0.9);
+    }
+
+    100% {
+        transform: scaleY(1.06);
+    }
+}
+
+@keyframes loading {
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fireUp {
+    0% {
+        top: 70px;
+    }
+
+    20% {
+        top: 70px;
+    }
+
+    100% {
+        top: -80px;
+    }
+}
+
+@keyframes fire {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.8;
+    }
+
+    20% {
+        transform: scale(0, 0);
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1, 1);
+        opacity: 0;
+    }
+}
