@@ -1,9 +1,11 @@
 #div2 {
+  position: fixed; /* 固定定位 */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* 确保导航栏在最上层 */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 可选的阴影效果 */
+  /* z-index: 1000;  */
+  /* 确保导航栏在最上层 */
+  border-bottom: 2px solid #ccc; /* 添加下边框 */
 }
 
 #loading-container {
@@ -15,29 +17,27 @@
   height: 30px;
   line-height: 30px;
   background-color: white;
+  display: flex; /* 使用 Flexbox */
+  justify-content: space-around; /* 水平分布 */
+  align-items: center; /* 垂直居中 */
 }
 
 
 #loading-container ul{
-  width: 100%;
   display: flex; /* 使用 Flexbox 布局 */
   justify-content: space-around; /* 自动调整间距以适应页面宽度 */
-  align-items: center; /* 垂直居中 */
   margin: 0 0px;
+  padding: 0; /* 去掉默认内边距 */
   height: 100%; /* 高度继承父元素 */
   list-style: none; /* 去掉默认的列表样式 */
 }
 
-#loading-container.fixed{
-  position: fixed;
-  top:0;
-}
 #loading-container ul li {
   list-style: none;
-  float:left;
   font-family: KaiTi;
   font-size: 10px;
   font-weight: bold;
+  margin: 0 10px; /* 在每个li之间添加左右间隔 */
 }
 #loading-container ul li a{
   color: black;

@@ -6,7 +6,7 @@
     <title>Document</title>
     
 
-    <link rel="stylesheet" href="worcloud_style.css">
+    <link rel="stylesheet" href="Summary.css">
     <link rel="stylesheet" href="libs/bootstrap.min.css">
     <link rel="stylesheet" href="libs/bootstrap.min_5.1.0.css">
     <link rel="stylesheet" href="libs/css2.css">
@@ -15,7 +15,12 @@
 <script src="./libs/jquery-1.7.1.min.js"></script>
 <script src="./libs/jquery-ui.min.js"></script>
 <script src="./libs/vue@2.js"></script> 
+<script src="libs/jspdf.umd.min.js"></script>
+<script src="libs/html2canvas.min.js"></script>
 <script src="./libs/marked.min.js"></script>
+<script src="libs/purify.min.js"></script>
+
+
 <link rel="stylesheet" href="./libs/font-awesome/css/all.min.css">
 
 </head>
@@ -43,7 +48,32 @@
         </div>
       </nav>
       
-      
+
+      <!-- 小恐龙 -->
+      <div class="main">
+        <div class="shadow-wrapper">
+            <div class="shadow"></div>
+        </div>
+        <div class="dragon">
+            <div class="body"></div>
+            <div class="horn-left"></div>
+            <div class="horn-right"></div>
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="blush left"></div>
+            <div class="blush right"></div>
+            <div class="mouth"></div>
+            <div class="tail-sting"></div>
+        </div>
+        <div class="fire-wrapper">
+            <div class="fire"></div>
+        </div>
+        <div class="progress">
+            <div class="outer">
+                <div class="inner"></div>
+            </div>
+        </div>
+    </div>
 
 
       <div id="summary-container" style="text-align: left; margin-top: 20px;">
