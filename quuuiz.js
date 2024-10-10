@@ -60,13 +60,31 @@ function generateQuestions(questions) {
         questionNumber.classList.add('purple-box', 'question-num');
         questionNumber.textContent = "第" + (index + 1) + "题";
 
+        // 创建新的 div
+        const biaoqian = document.createElement('div');
+        header.classList.add('biaoqian');
+        biaoqian.classList.add('light-box');
+        // 根据 index + 1 的值来设置文本内容
+        const questionIndex = index + 1;
+        if (questionIndex >= 1 && questionIndex <= 3) {
+            biaoqian.textContent = "巩固";
+        } else if (questionIndex >= 4 && questionIndex <= 7) {
+            biaoqian.textContent = "提升";
+        } else if (questionIndex >= 8 && questionIndex <= 10) {
+            biaoqian.textContent = "挑战";
+        }
+        
+
         const questionType = document.createElement('span');
         questionType.classList.add('purple-box');
         questionType.textContent = question.type;
 
         header.appendChild(questionNumber);
+        header.appendChild(biaoqian);
         header.appendChild(questionType);
         questionBox.appendChild(header);
+
+
 
         // 第二层
         const questionText = document.createElement('div');
@@ -121,7 +139,7 @@ function generateQuestions(questions) {
 loadQuestions();
 
 
-/*
+
 function getRandomQuestions(questions, num) {
     // 获取查询字符串
     const queryString = window.location.search;
@@ -148,8 +166,8 @@ function getRandomQuestions(questions, num) {
 
     return selectedQuestions;
 }
-*/
 
+/*
 // 随机选择指定数量的题目
 function getRandomQuestions(questions, num) {
     const selectedQuestions = [];
@@ -166,8 +184,7 @@ function getRandomQuestions(questions, num) {
     return selectedQuestions;
 }
 
-
-
+*/
 
 
 
@@ -380,7 +397,7 @@ function updateTimer() {
 
 updateTimer();
 
-
+/*
 
 const navbar = document.getElementById('navbar');
 let offsetX, offsetY, isDragging = false;
@@ -430,7 +447,50 @@ window.addEventListener('resize', () => {
     navbar.style.left = `${newLeft}px`;
 });
 
+*/
+const navbar = document.getElementById('navbar');
+let offsetX, offsetY, isDragging = false;
 
+
+navbar.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - navbar.getBoundingClientRect().right;
+    offsetY = e.clientY - navbar.getBoundingClientRect().bottom;
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+});
+
+function onMouseMove(e) {
+    if (isDragging) {
+        
+        let newRight = window.innerWidth - (e.clientX - offsetX);
+        let newBottom = window.innerHeight - (e.clientY - offsetY);
+
+        if (newRight < 0) newRight = 0; 
+        if (newBottom < 0) newBottom = 0; 
+        if (newRight > window.innerWidth - navbar.offsetWidth) newRight = window.innerWidth - navbar.offsetWidth; // Left boundary
+        if (newBottom > window.innerHeight - navbar.offsetHeight) newBottom = window.innerHeight - navbar.offsetHeight; // Top boundary
+
+       
+        navbar.style.right = `${newRight}px`;
+        navbar.style.bottom = `${newBottom}px`;
+    }
+}
+
+
+function onMouseUp() {
+    isDragging = false;
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
+}
+
+
+window.addEventListener('resize', () => {
+    const newRight = Math.max(window.innerWidth - navbar.offsetWidth - 10, 0);
+    const newBottom = Math.max(window.innerHeight - navbar.offsetHeight - 10, 0);
+    navbar.style.right = `${newRight}px`;
+    navbar.style.bottom = `${newBottom}px`;
+});
 
 
 // 点击白板图标收起/展开导航栏

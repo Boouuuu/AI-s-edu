@@ -1,8 +1,8 @@
-
 // ECharts 实例化示例
 var chart1 = echarts.init(document.querySelector('.chart1'));
 var chart2 = echarts.init(document.querySelector('.chart2'));
 var wordcloud = echarts.init(document.querySelector('.wordcloud'));
+var barChart = echarts.init(document.querySelector('.barChart'));
 
 // 读取 finaldata.json 文件
 fetch('finaldata.json')
@@ -23,7 +23,6 @@ fetch('finaldata.json')
             // 提取可读的日期和时间
             submissionTimes[submitTime] = submissionTimes[submitTime] || { correctCount: 0, totalTime: submission.ttime };
             
-
             submission.userAnswers.forEach(answer => {
                 const title = answer.questionTitle;
                 const isCorrect = answer.isCorrect;
@@ -56,12 +55,88 @@ fetch('finaldata.json')
         });
     });
 
+     // 计算条形图正确率
+    const totalQuestions = questionTypeCounts['单选题'] + questionTypeCounts['多选题'];
+    const singleChoiceAccuracy = (TypeCounts['单选题'] / questionTypeCounts['单选题']) * 100 || 0; // 避免除以零
+    const multipleChoiceAccuracy = (TypeCounts['多选题'] / questionTypeCounts['多选题']) * 100 || 0; // 避免除以零
+       
+
+    console.log('单选正确率:', TypeCounts['单选题']);
+   console.log('多选正确:', TypeCounts['多选题']);
+    
+
         console.log('标题统计:', titleCounts);
         console.log('正确答案统计:', correctCounts);
         console.log('提交时间统计:', submissionTimes);
         console.log('问题类型统计:', questionTypeCounts);
-        console.log('总题数统计:', questionTypeCounts['单选题']+questionTypeCounts['多选题']);
+        console.log('总题数统计:', totalQuestions);
 
+
+    // 调用生成条形图的函数
+    generateQuestionTypeBarChart(singleChoiceAccuracy, multipleChoiceAccuracy);
+
+        const submissionTimeKeys = Object.keys(submissionTimes);
+        const earliestSubmission = new Date(submissionTimeKeys[0]);
+        const latestSubmission = new Date(submissionTimeKeys[submissionTimeKeys.length - 1]);
+        // 格式化时间为可读格式
+        const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+        const formattedEarliest = earliestSubmission.toLocaleString('zh-CN', options);
+        const formattedLatest = latestSubmission.toLocaleString('zh-CN', options);
+        // 将时间戳插入到对应部分
+        const timestampBox = document.querySelector('.timestamp');
+        timestampBox.innerHTML = ` 回溯时间：${formattedEarliest}<br> 当前时间：${formattedLatest}`;
+        
+        
+        const scrollingContainer = document.getElementById('scrolling-container');
+
+        // 示例内容
+        const content = [
+            "这里是滚动内容1",
+            "这里是滚动内容2",
+            "这里是滚动内容3",
+            "这里是滚动内容4",
+            "这里是滚动内容5",
+            "这里是滚动内容6",
+            "这里是滚动内容7",
+            "这里是滚动内容8"
+        ];
+
+        // 填充内容
+        function fillContent() {
+            content.forEach(text => {
+                // 创建一个新的 div 作为框
+                const box = document.createElement('div');
+                box.classList.add('content-box'); // 添加类名以便于样式设置
+
+                // 创建一个 p 元素并填充文本
+                const p = document.createElement('p');
+                p.textContent = text;
+
+                // 将 p 元素添加到框中
+                box.appendChild(p);
+
+                // 将框添加到滚动容器中
+                scrollingContainer.appendChild(box);
+            });
+
+            // 复制内容以实现循环效果
+            content.forEach(text => {
+                const box = document.createElement('div');
+                box.classList.add('content-box');
+
+                const p = document.createElement('p');
+                p.textContent = text;
+
+                box.appendChild(p);
+                scrollingContainer.appendChild(box);
+            });
+        }
+
+        fillContent();
+
+        
+        
+        
         // 生成词云图数据
         const wordCloudData = Object.keys(titleCounts).map(title => ({
             name: title,
@@ -96,6 +171,11 @@ fetch('finaldata.json')
 
 
 
+
+
+
+
+
 function generateWordCloud(wordCloudData) {
     console.log("Word Cloud Data:", wordCloudData);  // 检查数据
     
@@ -125,6 +205,58 @@ function generateWordCloud(wordCloudData) {
     // 确认设置已执行
     console.log("词云图已设置");
 }
+
+
+
+// 生成单选与多选正确率条形图的函数
+function generateQuestionTypeBarChart(singleChoiceAccuracy, multipleChoiceAccuracy) {
+    const barOption = {
+        title: { text: '题型正确率条形图' },
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c}%'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['单选题', '多选题']
+        },
+        yAxis: {
+            type: 'value',
+            name: '正确率 (%)',
+            min: 0,
+            max: 100
+        },
+        series: [{
+            name: '单选题',
+            data: [singleChoiceAccuracy],
+            type: 'bar',
+            itemStyle: {
+                color: '#4CAF50' // 单选题颜色
+            }
+        }, {
+            name: '多选题',
+            data: [multipleChoiceAccuracy],
+            type: 'bar',
+            itemStyle: {
+                color: '#FF7F7F' // 多选题颜色
+            }
+        }],
+        barCategoryGap: '50%', // 控制类别之间的间隔，调整以实现居中对齐
+    };
+
+    // 设置条形图
+    barChart.setOption(barOption);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 function generateSubmissionTimeLineChart(submissionLineChartData) {
@@ -228,6 +360,7 @@ window.onresize = function() {
     chart1.resize();
     chart2.resize();
     wordcloud.resize();
+    barChart.resize();
 };
 
 

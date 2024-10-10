@@ -4235,5 +4235,206 @@
       }
     ],
     "__v": 0
+  },
+  {
+    "_id": "6706a1219bb2e41707cd0491",
+    "username": "Booo",
+    "submitTime": "2024-10-09T15:28:33.662Z",
+    "ttime": "1:40",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 452,
+        "isCorrect": true,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nx = (i for i in range(3))\nfor i in x:\n    print(i)",
+        "options": [
+          "0 1 2",
+          "错误",
+          "0 1 2 0 1 2",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "6706a1219bb2e41707cd0492"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 148,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "为了检验连续变量x，y之间的线性关系，下列哪种图最合适？",
+        "options": [
+          "散点图",
+          "条形图",
+          "直方图",
+          "都不对"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "6706a1219bb2e41707cd0493"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 421,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nx = 'abcd'\nfor i in range(x):\n    print(i)",
+        "options": [
+          "abcd",
+          "0 1 2 3",
+          "错误",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "6706a1219bb2e41707cd0494"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 114,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "假设，下图是逻辑回归的代价函数，现在，图中有多少个局部最小值？",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "6706a1219bb2e41707cd0495"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 62,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "python不支持的数据类型有",
+        "options": [
+          "char",
+          "int",
+          "float",
+          "list"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "6706a1219bb2e41707cd0496"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 247,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "下列哪一项在神经网络中引入了非线性？",
+        "options": [
+          "随机梯度下降",
+          "修正线性单元（ReLU）",
+          "卷积函数",
+          "以上都不正确"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "B",
+        "_id": "6706a1219bb2e41707cd0497"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 158,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "以下哪种方法不属于特征选择的标准方法？",
+        "options": [
+          "嵌入",
+          "过滤",
+          "包装",
+          "抽样"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "6706a1219bb2e41707cd0498"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 314,
+        "isCorrect": true,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "以下哪个不能是变量？",
+        "options": [
+          "__init__",
+          "in",
+          "it",
+          "on"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "6706a1219bb2e41707cd0499"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 267,
+        "isCorrect": true,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "假设你需要调整参数来最小化代价函数（cost function），可以使用下列哪项技术？",
+        "options": [
+          "穷举搜索",
+          "随机搜索",
+          "Bayesian优化",
+          "以上任意一种"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "6706a1219bb2e41707cd049a"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 235,
+        "isCorrect": false,
+        "questionTitle": "机器学习与深度学习",
+        "questionType": "单选题",
+        "questionText": "为了得到和 SVD 一样的投射（projection），你需要在 PCA 中怎样做？",
+        "options": [
+          "将数据转换成零均值",
+          "将数据转换成零中位数",
+          "无法做到"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "A",
+        "_id": "6706a1219bb2e41707cd049b"
+      }
+    ],
+    "__v": 0
   }
 ]

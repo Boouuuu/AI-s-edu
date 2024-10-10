@@ -46,8 +46,20 @@ body {
 
 .timestamp {
     flex: 0.25;
+    font-size: 24px; /* 放大字体 */
+    line-height: 1.5; /* 行间距 */
+    color: #4c2c96; /* 字体颜色 */
+     font-family: electronicFont;
     border-image: url('../image/panel.png') 30 stretch; /* 边框图 */
 }
+
+
+@font-face {
+    font-family: electronicFont;
+    src: url(./DS-DIGIT.TTF);
+}
+
+
 
 .chart1, .chart2 {
     flex: 1;
@@ -55,11 +67,67 @@ body {
 
 .upper {
     flex: 1; /* 默认为占据剩余空间 */
+    display: flex;
+    flex-direction: row; /* 设置为横向排列 */
+}
+.left {
+    flex: 2; /* 占据三分之一的宽度 */
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    justify-content: space-around; /* 上下均匀分布 */
+}
+
+.right {
+    flex: 3; /* 占据三分之二的宽度 */
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    justify-content: space-around; /* 上下均匀分布 */
+}
+
+.boox {
+    padding: 10px; /* 添加一些内边距 */
+    text-align: center; /* 文字居中 */
+    color: #2e398a; /* 字体颜色 */
+    border: 1px solid #f5a570; /* 添加边框以便可见 */
+}
+
+
+.barChart{
+    flex: 1; /* 默认为占据剩余空间 */
 }
 
 .lower {
     flex: 2; /* 占据剩余高度的三分之二 */
+    position: relative;
+    overflow: hidden; /* 避免溢出 */
+   
 }
+
+.scrolling-container {
+    position: absolute;
+    bottom: 0; /* 从底部开始 */
+    width: 100%;
+    animation: scroll 30s linear infinite; /* 添加滚动动画 */
+}
+
+.content-box {
+    border: 1px solid #ccc; /* 边框 */
+    background-color: rgba(172, 249, 240, 0.8); /* 半透明背景 */
+    margin: 5px; /* 上下边距 */
+    padding: 10px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+}
+
+/* 滚动动画 */
+@keyframes scroll {
+    0% { transform: translateY(100%); } /* 从底部开始 */
+    100% { transform: translateY(-100%); } /* 向上滚动 */
+}
+
+.scrolling-container p {
+    margin: 0; /* 取消 p 的默认外边距 */
+}
+
 
 .wordcloud {
     flex: 2; /* 占据剩余高度的三分之二 */
@@ -74,6 +142,10 @@ body {
     }
     .box {
         aspect-ratio: 16 / 9; /* 保持 16:9 比例 */
+        min-height: 100px; /* 设置一个最小高度以保持可视性 */
+    }
+    .barChart{
+        aspect-ratio: 16 / 15; /* 保持 16:9 比例 */
         min-height: 100px; /* 设置一个最小高度以保持可视性 */
     }
 }

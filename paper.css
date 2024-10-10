@@ -45,6 +45,15 @@ body {
     font-size: 14px; /* 设置小一点的字号 */
 }
 
+.light-box {
+    background-color: purple;
+    color: rgb(247, 209, 98);
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 14px; /* 设置小一点的字号 */
+    margin-right: 10px;
+}
+
 .question-text {
     margin: 10px 0;
     font-size: 15px; /* 设置小一点的字号 */
@@ -83,25 +92,26 @@ body {
 
 /* 可拖动导航栏样式 */
 #navbar {
-    width: 200px; /* 固定宽度 */
-    height: 260px; /* 固定高度 */
+    width: 160px; /* 固定宽度 */
+    height: 160px; /* 固定高度 */
     position:  fixed;/* 修改为fixed */
-    top: 50px;
-    left: calc(50% - 55px); /* 水平居中，减去一半的宽度 */
+    bottom: 300px;
+    right: calc(30% + 55px); /* 水平居中，减去一半的宽度 */
     background-color: white;
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column; /* 竖向布局 */
     transition: width 0.3s, height 0.3s; /* 平滑过渡 */
+    border-radius: 50px; /* 圆角半径，可以根据需要调整 */
 
 }
 
 /* 收起状态 */
 #navbar.collapsed {
-    width: 50px; /* 收起后宽度 */
-    height: 30px; /* 收起后高度 */
+    width: 40px; /* 收起后宽度 */
+    height: 20px; /* 收起后高度 */
 }
 
 /* 第一层 */
@@ -110,8 +120,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #b575f0;
+    padding: 5px;
+    background-color: #c88ffd;
     color: rgb(255, 241, 44);
 }
 
@@ -125,10 +135,10 @@ body {
     background-color: #f5f8fd; /* 绿色背景 */
     color: rgb(62, 65, 125); /* 白色文字 */
     border: 2px solid #14183a; /* 边框：2px 实线，颜色为较深绿色 */
-    padding: 8px 15px; /* 内边距 */
+    padding: 4px 13px; /* 内边距 */
     cursor: pointer; /* 鼠标悬停时显示手型 */
     border-radius: 10px; /* 圆角 */
-    font-size: 8px; /* 字体大小 */
+    font-size: 10px; /* 字体大小 */
     transition: background-color 0.3s, border-color 0.3s; /* 动画效果 */
 }
 .return-button:hover {
@@ -144,8 +154,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #be99e1;
+    padding: 7px;
+    background-color: #8c5edb;
     color: rgb(255, 241, 44);
 }
 
@@ -155,8 +165,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 7px;
-    background-color: #e4b7f4;
+    padding: 3px;
+    background-color: #ebc7f8;
     color: rgb(228, 52, 52);
 
 }
@@ -168,20 +178,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 6px;
     overflow-y: auto;
     overflow-x: hidden; /* 禁止横向滚动 */
     background-color: rgb(249, 246, 250);
 }
 
 .questions-container {
-    height: 60px;
+    height: 30px;
 }
 
 .questions-number {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 6px;
 }
 
 .question-circle {
@@ -211,10 +221,10 @@ body {
     flex-direction: row; /* 横向排列 */
     justify-content: space-around; /* 内容居中并均匀分布 */
     align-items: center;
-    padding: 10px;
-    background-color: #d8c0f0;
+    padding: 6px;
+    background-color: #d3b3f4;
     flex-shrink: 0;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 

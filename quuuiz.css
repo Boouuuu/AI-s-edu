@@ -44,6 +44,15 @@ body {
     font-size: 14px; /* 设置小一点的字号 */
 }
 
+.light-box {
+    background-color: purple;
+    color: rgb(247, 209, 98);
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 14px; /* 设置小一点的字号 */
+    margin-right: 10px;
+}
+
 .question-text {
     margin: 10px 0;
     font-size: 15px; /* 设置小一点的字号 */
@@ -68,11 +77,11 @@ body {
 
 /* 可拖动导航栏样式 */
 #navbar {
-    width: 190px; /* 固定宽度 */
-    height: 180px; /* 固定高度 */
+    width: 160px; /* 固定宽度 */
+    height: 116px; /* 固定高度 */
     position:  fixed;/* 修改为fixed */
-    top: 50px;
-    left: calc(50% - 55px); /* 水平居中，减去一半的宽度 */
+    bottom: 300px;
+    right: calc(30% + 55px); /* 水平居中，减去一半的宽度 */
     background-color: white;
     border: 2px solid #ccc;
     border-radius: 10px;
@@ -85,8 +94,8 @@ body {
 
 /* 收起状态 */
 #navbar.collapsed {
-    width: 50px; /* 收起后宽度 */
-    height: 50px; /* 收起后高度 */
+    width: 40px; /* 收起后宽度 */
+    height: 40px; /* 收起后高度 */
 }
 
 /* 第一层 */
@@ -95,9 +104,11 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     background-color: #b575f0;
     color: rgb(255, 241, 44);
+    border-radius: 5px; /* 可选：圆角 */
+    
 }
 
 .whiteboard-icon {
@@ -110,13 +121,14 @@ body {
 }
 
 #submit-btn {
-    padding: 5px 10px;
-    font-size: 14px;
+    padding: 5px 14px;
+    font-size: 11px;
     background-color: rgb(238, 245, 242);
     color: #e10c0c;
     border: none;
     cursor: pointer;
-    margin-top: 5px;
+    margin-top: 1px;
+    border-radius: 5px; /* 可选：圆角 */
 }
 
 #submit-btn:hover {
@@ -129,20 +141,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 1px;
+    border: 3px solid #907da1; /* 设置边框颜色和宽度 */
+   
     overflow-y: auto;
     overflow-x: hidden; /* 禁止横向滚动 */
     background-color: rgb(249, 246, 250);
 }
 
 .questions-container {
-    height: 60px;
+    height: 30px;
 }
 
 .questions-number {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 6px;
 }
 
 .question-circle {
@@ -172,10 +186,10 @@ body {
     flex-direction: row; /* 横向排列 */
     justify-content: space-around; /* 内容居中并均匀分布 */
     align-items: center;
-    padding: 10px;
+    padding: 6px;
     background-color: #d8c0f0;
     flex-shrink: 0;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 /* 鼠标拖动光标样式 */
