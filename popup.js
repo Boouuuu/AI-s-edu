@@ -1,5 +1,7 @@
 let isPrinting = false;
 
+
+
 document.getElementById('send').addEventListener('click', sendUserInput);
 //拿到选中项的值  option中value值
 // console.log(select.text()); //拿到选中项的文本
@@ -23,6 +25,11 @@ function sendUserInput() {
 
   if (userInput.trim() === '') return; // Prevent sending empty messages
   // 然后它检查用户输入是否为空或仅包含空格字符。如果是，则返回并阻止发送空消息。
+
+  // 将有效的用户输入存储
+  let userinputto = userInput;
+ console.log(userInput);
+
 
   document.getElementById('userInput').value = ''; // Clear the input field
   // 最后，它将“userInput”HTML 元素的值设置为空字符串，从而有效地清除输入字段。
@@ -93,6 +100,40 @@ for (let i = 0; i < select.options.length; i++) {
     });
 
     observer.observe(aiMessageElement, { childList: true, subtree: true });
+
+              // 准备提交给后端的数据
+      const submissioninput = {
+        username: localStorage.getItem('username'), // 从 localStorage 中获取用户名
+        submitTime: new Date().toISOString(), // 当前时间戳
+        usertext: userinputto, // 用户的输入
+        text: aiMessageElement.innerHTML // AI 的响应内容
+      };
+
+      console.log(aiMessageElement.innerHTML);
+      // 发送提交数据到后端
+      fetch('http://localhost:5000/submitinput', { // 更新为完整的接口 URL
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(submissioninput) // 将数据转换为 JSON 字符串
+      })
+      .then((res) => {
+        if (!res.ok) {
+            throw new Error('提交数据失败');
+        }
+        return res.text(); // 或者 res.json() 根据返回的数据格式
+      })
+      .then((message) => {
+        console.log(message); // 显示成功信息
+        console.log( submissioninput);
+      })
+      .catch((error) => {
+        console.error('提交数据时出错:', error); // 捕获并显示错误信息
+      });
+
+
+   
 
     // Re-enable userInput and send button after AI has finished "printing"
     isPrinting=false;

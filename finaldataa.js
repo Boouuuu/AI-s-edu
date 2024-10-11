@@ -1,3 +1,37 @@
+/*document.addEventListener('DOMContentLoaded', async () => {
+    const container = document.getElementById('submission-time-container');
+    
+    // 从 localStorage 获取用户名
+    const username = localStorage.getItem('username');
+    console.log(username);
+    
+    try {
+        console.log('尝试获取提交记录列表...');
+
+        // 发送请求以获取提交记录
+        const response = await fetch(`http://localhost:5000/finalto?username=${encodeURIComponent(username)}`);
+
+        if (!response.ok) {
+            console.error(`请求失败，状态码: ${response.status}`);
+            throw new Error(`HTTP错误: ${response.status}`);
+        }
+
+        const submissions = await response.json();
+        console.log('获取的提交记录:', submissions);
+
+    } catch (error) {
+        console.error('获取提交记录时出错:', error.message);
+        const errorBox = document.createElement('div');
+        errorBox.classList.add('submission-time-box');
+        errorBox.textContent = '获取提交记录时出错，请稍后再试。';
+        container.appendChild(errorBox);
+    }
+});
+
+
+
+
+
 // ECharts 实例化示例
 var chart1 = echarts.init(document.querySelector('.chart1'));
 var chart2 = echarts.init(document.querySelector('.chart2'));
@@ -89,18 +123,10 @@ fetch('finaldata.json')
         
         const scrollingContainer = document.getElementById('scrolling-container');
 
-        // 示例内容
-        const content = [
-            "这里是滚动内容1",
-            "这里是滚动内容2",
-            "这里是滚动内容3",
-            "这里是滚动内容4",
-            "这里是滚动内容5",
-            "这里是滚动内容6",
-            "这里是滚动内容7",
-            "这里是滚动内容8"
-        ];
+        const content = submissions.map(submission => {
+            return `${submission.submitTime} - ${submission.usertext}: ${submission.text}`;});
 
+        console
         // 填充内容
         function fillContent() {
             content.forEach(text => {
@@ -171,8 +197,201 @@ fetch('finaldata.json')
 
 
 
+*/
 
+// ECharts 实例化示例
+var chart1 = echarts.init(document.querySelector('.chart1'));
+var chart2 = echarts.init(document.querySelector('.chart2'));
+var wordcloud = echarts.init(document.querySelector('.wordcloud'));
+var barChart = echarts.init(document.querySelector('.barChart'));
 
+    document.addEventListener('DOMContentLoaded', async () => {
+        const container = document.getElementById('submission-time-container');
+        const scrollingContainer = document.getElementById('scrolling-container');
+    
+        const username = localStorage.getItem('username');
+        console.log(username);
+    
+        if (!username) {
+            console.error('未找到用户名，请先登录。');
+            const errorBox = document.createElement('div');
+            errorBox.classList.add('submission-time-box');
+            errorBox.textContent = '未找到用户名，请先登录。';
+            container.appendChild(errorBox);
+            return; // 提前退出
+        }
+    
+        try {
+            console.log('尝试获取提交记录列表...');
+            const response = await fetch(`http://localhost:5000/fianlto?username=${encodeURIComponent(username)}`);
+    
+            if (!response.ok) {
+                console.error(`请求失败，状态码: ${response.status}`);
+                throw new Error(`HTTP错误: ${response.status}`);
+            }
+    
+            const submissions = await response.json();
+            console.log('获取的提交记录:', submissions);
+    
+            // 读取 finaldata.json 文件
+            const dataResponse = await fetch('finaldata.json');
+            if (!dataResponse.ok) {
+                throw new Error(`无法读取数据，状态码: ${dataResponse.status}`);
+            }
+            
+            const data = await dataResponse.json();
+            console.log('读取的数据:', data);
+    
+            // 处理提交记录
+            const titleCounts = {};
+            const correctCounts = {};
+            const submissionTimes = {};
+            const questionTypeCounts = { 单选题: 0, 多选题: 0 };
+            const TypeCounts = { 单选题: 0, 多选题: 0 };
+    
+            data.forEach(submission => {
+                const date = new Date(submission.submitTime);
+                const submitTime = date.toISOString().slice(0, 19).replace('T', ' ');
+                submissionTimes[submitTime] = submissionTimes[submitTime] || { correctCount: 0, totalTime: submission.ttime };
+    
+                submission.userAnswers.forEach(answer => {
+                    const title = answer.questionTitle;
+                    const isCorrect = answer.isCorrect;
+    
+                    titleCounts[title] = (titleCounts[title] || 0) + 1;
+                    if (isCorrect) {
+                        correctCounts[title] = (correctCounts[title] || 0) + 1;
+                        submissionTimes[submitTime].correctCount++;
+                    }
+    
+                    const questionType = answer.questionType;
+                    if (questionType === "单选题") {
+                        questionTypeCounts['单选题']++;
+                        if (isCorrect) {
+                            TypeCounts['单选题']++;
+                        }
+                    } else if (questionType === "多选题") {
+                        questionTypeCounts['多选题']++;
+                        if (isCorrect) {
+                            TypeCounts['多选题']++;
+                        }
+                    }
+                });
+            });
+    
+            // 计算正确率
+            const totalQuestions = questionTypeCounts['单选题'] + questionTypeCounts['多选题'];
+            const singleChoiceAccuracy = (TypeCounts['单选题'] / questionTypeCounts['单选题']) * 100 || 0;
+            const multipleChoiceAccuracy = (TypeCounts['多选题'] / questionTypeCounts['多选题']) * 100 || 0;
+    
+            console.log('单选正确率:', TypeCounts['单选题']);
+            console.log('多选正确:', TypeCounts['多选题']);
+            console.log('标题统计:', titleCounts);
+            console.log('正确答案统计:', correctCounts);
+            console.log('提交时间统计:', submissionTimes);
+            console.log('问题类型统计:', questionTypeCounts);
+            console.log('总题数统计:', totalQuestions);
+    
+            // 填充内容
+            totalQuestionsBox.textContent = `${totalQuestions}`; // 填充总题数
+            submissionTimesBox.textContent = `${Object.keys(submissionTimes).length}`; // 填充提交次数
+
+            // 调用生成条形图的函数
+            generateQuestionTypeBarChart(singleChoiceAccuracy, multipleChoiceAccuracy);
+    
+            // 格式化提交时间
+            const submissionTimeKeys = Object.keys(submissionTimes);
+            if (submissionTimeKeys.length === 0) {
+                throw new Error('没有提交记录。');
+            }
+    
+            const earliestSubmission = new Date(submissionTimeKeys[0]);
+            const latestSubmission = new Date(submissionTimeKeys[submissionTimeKeys.length - 1]);
+    
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            const formattedEarliest = earliestSubmission.toLocaleString('zh-CN', options);
+            const formattedLatest = latestSubmission.toLocaleString('zh-CN', options);
+    
+            // 将时间戳插入到对应部分
+            const timestampBox = document.querySelector('.timestamp');
+            timestampBox.innerHTML = ` 回溯时间：${formattedEarliest}<br> 当前时间：${formattedLatest}`;
+    
+            const content = submissions.map(submission => {
+                // 转换提交时间为可读格式
+                const  readTime = new  Date(submission.submitTime);
+                const readdTime = readTime.toISOString().slice(0, 19).replace('T', ' ');
+                // 将 submission.text 的 Markdown 格式转换为 HTML
+                const renderedText = marked(submission.text);
+        
+                return `${readdTime} <br><br> ${submission.usertext}:<br><br> ${renderedText}`;
+            });
+    
+            console.log(content);
+    
+            // 填充内容
+            function fillContent() {
+               
+                function createContentBox(text) {
+                    const box = document.createElement('div');
+                    box.classList.add('content-box');
+                    
+                    // 直接使用 innerHTML 插入内容，允许换行
+                    box.innerHTML = text;
+            
+                    scrollingContainer.appendChild(box);
+                }
+            
+                // 填充内容
+                content.forEach(text => {
+                    createContentBox(text);
+                });
+            
+                // 复制内容以实现循环效果
+                content.forEach(text => {
+                    createContentBox(text);
+                });
+            }
+    
+            fillContent();
+    
+            // 生成词云图数据
+            const wordCloudData = Object.keys(titleCounts).map(title => ({
+                name: title,
+                value: titleCounts[title]
+            }));
+            generateWordCloud(wordCloudData);
+            console.log(wordCloudData);
+            console.log("成功");
+    
+            // 生成正确率数据
+            const accuracyData = Object.keys(titleCounts).map(title => {
+                const total = titleCounts[title];
+                const correct = correctCounts[title] || 0;
+                return {
+                    title: title,
+                    accuracy: (correct / total) * 100 // 转换为百分比
+                };
+            });
+            console.log('正确率数据:', accuracyData);
+            generateAccuracyLineChart(accuracyData);
+    
+            // 生成提交时间折线图数据
+            const submissionLineChartData = Object.keys(submissionTimes).map(date => ({
+                date: date,
+                correctCount: submissionTimes[date].correctCount,
+                totalTime: submissionTimes[date].totalTime
+            }));
+            console.log('提交时间折线图数据:', submissionLineChartData);
+            generateSubmissionTimeLineChart(submissionLineChartData);
+        } catch (error) {
+            console.error('获取提交记录时出错:', error.message);
+            const errorBox = document.createElement('div');
+            errorBox.classList.add('submission-time-box');
+            errorBox.textContent = '获取提交记录时出错，请稍后再试。';
+            container.appendChild(errorBox);
+        }
+    });
+    
 
 
 
