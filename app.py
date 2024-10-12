@@ -386,15 +386,18 @@ def recommend():
     # 获取来自前端的 JSON 数据
     data = request.json
     text = data.get("example_key", "")  # 提取值，如果不存在则返回空字符串
+    if text!="":
+        # 模型加载和推荐算法
+        model = SentenceTransformer('distiluse-base-multilingual-cased')
+        input_embedding = model.encode([text])  # 对输入文本进行编码
+        pre_embeddings = np.load('pre_embeddings.npy')  # 加载预先计算的短文本向量
+        similarity_matrix = cosine_similarity(input_embedding, pre_embeddings)  # 计算余弦相似度
 
-    # 模型加载和推荐算法
-    model = SentenceTransformer('distiluse-base-multilingual-cased')
-    input_embedding = model.encode([text])  # 对输入文本进行编码
-    pre_embeddings = np.load('pre_embeddings.npy')  # 加载预先计算的短文本向量
-    similarity_matrix = cosine_similarity(input_embedding, pre_embeddings)  # 计算余弦相似度
+        # 找出相似度最高的30条短文本的索引
+        top_indices = np.argsort(similarity_matrix[0])[-31:-1][::-1]  # 从高到低排序
+    else:
+        top_indices = np.array([i+1]for i in range(498))
 
-    # 找出相似度最高的30条短文本的索引
-    top_indices = np.argsort(similarity_matrix[0])[-31:-1][::-1]  # 从高到低排序
 
 
 

@@ -93,11 +93,25 @@ for (let i = 0; i < select.options.length; i++) {
     });
 
     observer.observe(aiMessageElement, { childList: true, subtree: true });
+    smallTag.textContent = value; // 设置小标签的内容为选择的值
+    smallTag.style.fontSize = '0.8em'; // 设置为小标签的大小
+    smallTag.style.position = 'absolute'; // 绝对定位
+    smallTag.style.left = '0'; // 左对齐
+    smallTag.style.bottom = '0'; // 底部对齐
+    smallTag.style.padding = '2px'; // 设置适当的内边距
+    smallTag.style.backgroundColor = '#f0f0f0'; // 添加背景色，可以自定义
+    smallTag.style.borderRadius = '4px'; // 添加圆角，增强视觉效果
 
+    // 将小标签插入到当前的 userMessage 元素中
+    let userMessage = document.querySelector('.userMessage'); // 假设 .userMessage 是当前元素的类名
+    userMessage.appendChild(smallTag);
+    
     // Re-enable userInput and send button after AI has finished "printing"
     isPrinting=false;
     document.getElementById('userInput').disabled = false;
     document.getElementById('send').disabled = false;
+    let smallTag = document.createElement('span');
+
 }
 );
   

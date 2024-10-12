@@ -37,7 +37,7 @@
   font-family: KaiTi;
   font-size: 10px;
   font-weight: bold;
-  margin: 0 10px; /* 在每个li之间添加左右间隔 */
+  margin: 0 5px; /* 在每个li之间添加左右间隔 */
 }
 #loading-container ul li a{
   color: black;
