@@ -154,7 +154,7 @@ app.get('/submission-times', async (req, res) => {
 import fs from 'fs';
 import path from 'path';
 
-// 获取所有提交时间的路由
+// 获取所有提交记录的路由
 app.get('/submission-all', async (req, res) => {
     try {
         const username = req.query.username; // 从查询参数获取用户名
@@ -223,9 +223,9 @@ app.post('/summary-data', (req, res) => {
 
 app.get('/ana', async (req, res) => {
     try {
-        const { username, startTime, endTime } = req.query; // 从查询参数获取用户名、起始时间和结束时间
-        
-        console.log('请求参数:', { username, startTime, endTime });
+        //const { username, startTime, endTime } = req.query; // 从查询参数获取用户名、起始时间和结束时间
+        const username = req.query.username; // 从查询参数获取用户名
+       // console.log('请求参数:', { username, startTime, endTime });
 
         if (!username) {
             console.error('错误: 用户名未提供');
@@ -242,14 +242,24 @@ app.get('/ana', async (req, res) => {
             return res.status(404).send('未找到对应的提交记录');
         }
 
-        // 筛选提交时间在指定时间段内的记录
+        /*// 筛选提交时间在指定时间段内的记录
         const filteredSubmissions = submissions.filter(submission => {
             const submitTime = new Date(submission.submitTime);
             const isInTimeRange = (!startTime || submitTime >= new Date(startTime)) && 
                                   (!endTime || submitTime <= new Date(endTime));
             return isInTimeRange;
         });
+        */
 
+        // 获取当前日期并计算两周前的日期
+        const twoWeeksAgo = new Date();
+        twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+
+        // 筛选最近两周内的提交记录
+        const filteredSubmissions = submissions.filter(submission => {
+            const submitTime = new Date(submission.submitTime);
+            return submitTime >= twoWeeksAgo;
+        });
         console.log('筛选后符合条件的记录数量:', filteredSubmissions.length);
 
         // 如果没有找到符合条件的提交记录
@@ -271,6 +281,55 @@ app.get('/ana', async (req, res) => {
 });
 
 
+// 定义新的提交数据模型
+const SubmissionInputSchema = new mongoose.Schema({
+    username: { type: String, required: true },
+    submitTime: { type: String, required: true },
+    usertext:{type: String, required: true},
+    text: { type: String, required: true }
+}, { collection: 'SubmissionInput' });
+
+// 创建模型
+const SubmissionInput = mongoose.model('SubmissionInput', SubmissionInputSchema);
+
+// 定义处理提交的路由
+app.post('/submitinput', async (req, res) => {
+    const submissioninput = req.body; // 从请求体中获取提交的数据
+
+    try {
+        const subinput = new SubmissionInput(submissioninput);
+        await subinput.save();
+        res.status(201).send('数据已成功提交');
+    } catch (error) {
+        res.status(500).send('提交过程中出现错误: ' + error.message);
+    }
+});
+
+// 获取所有提交记录的路由
+app.get('/fianlto', async (req, res) => {
+    try {
+        const username = req.query.username; // 从查询参数获取用户名
+        
+        console.log(username);
+
+        if (!username) {
+            return res.status(400).send('用户名未提供');
+        }
+
+        // 根据用户名查找对应的提交记录
+        const submissioniinput = await SubmissionInput.find({ username });
+
+        // 如果没有找到提交记录
+        if (submissioniinput.length === 0) {
+            return res.status(404).send('未找到对应的提交记录');
+        }
+
+        // 直接返回提交记录
+        return res.status(200).json(submissioniinput);
+    } catch (error) {
+        res.status(500).send('获取提交时间时出错: ' + error.message);
+    }
+});
 
 // 启动服务器
 app.listen(PORT, () => {

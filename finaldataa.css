@@ -3,7 +3,8 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #b6e7ed, #b6bcf8); /* 渐变浅蓝色 */
-    overflow-x: hidden; /* 不允许出现横向滚动条 */
+    overflow-x: hidden; /* 不允许出现横向滚动条 *//* 设置边框图 */
+
 }
 .container {
     display: flex;
@@ -46,8 +47,20 @@ body {
 
 .timestamp {
     flex: 0.25;
+    font-size: 24px; /* 放大字体 */
+    line-height: 1.5; /* 行间距 */
+    color: #4c2c96; /* 字体颜色 */
+     font-family: electronicFont;
     border-image: url('../image/panel.png') 30 stretch; /* 边框图 */
 }
+
+
+@font-face {
+    font-family: electronicFont;
+    src: url(./DS-DIGIT.TTF);
+}
+
+
 
 .chart1, .chart2 {
     flex: 1;
@@ -55,11 +68,80 @@ body {
 
 .upper {
     flex: 1; /* 默认为占据剩余空间 */
+    display: flex;
+    flex-direction: row; /* 设置为横向排列 */
+    border-width: 5px; /* 边框的宽度 */
+    border-style: solid; /* 边框的样式 */
+    border-image-source: url('../image/main_bottom_bottom.png'); /* 边框图 */
+    border-image-slice: 3; /* 切片值 */
+    border-image-width: 5; /* 边框图的宽度 */
+}
+.leftt {
+    flex: 2; /* 占据三分之一的宽度 */
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    justify-content: space-around; /* 上下均匀分布 */
+    font-size: 19px; /* 放大字体 */
+    font-family: 'Dancing Script', cursive; /* 设置草书字体 */
+   
+}
+
+.rightt {
+    flex: 2; /* 占据三分之二的宽度 */
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    justify-content: space-around; /* 上下均匀分布 */
+    font-size: 24px; /* 放大字体 */
+   
+}
+
+.boox {
+    padding: 10px; /* 添加一些内边距 */
+    text-align: center; /* 文字居中 */
+    color: #2e398a; /* 字体颜色 */
+    font-family: electronicFont;
+    border-width: 10px; /* 边框的宽度 */
+    border-style: solid; /* 边框的样式 */
+    border-image-source: url('../image/center_num.png'); /* 边框图 */
+}
+
+
+.barChart{
+    flex: 1; /* 默认为占据剩余空间 */
 }
 
 .lower {
     flex: 2; /* 占据剩余高度的三分之二 */
+    position: relative;
+    overflow: hidden; /* 避免溢出 */
+   
 }
+
+.scrolling-container {
+    position: absolute;
+    bottom: 0; /* 从底部开始 */
+    width: 100%;
+    animation: scroll 30s linear infinite; /* 添加滚动动画 */
+}
+
+.content-box {
+    border: 1px solid #ccc; /* 边框 */
+    background-color: rgba(172, 249, 240, 0.8); /* 半透明背景 */
+    margin: 5px; /* 上下边距 */
+    padding: 10px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+}
+
+/* 滚动动画 */
+@keyframes scroll {
+    0% { transform: translateY(100%); } /* 从底部开始 */
+    100% { transform: translateY(-100%); } /* 向上滚动 */
+}
+
+.scrolling-container p {
+    margin: 0; /* 取消 p 的默认外边距 */
+}
+
 
 .wordcloud {
     flex: 2; /* 占据剩余高度的三分之二 */
@@ -74,6 +156,10 @@ body {
     }
     .box {
         aspect-ratio: 16 / 9; /* 保持 16:9 比例 */
+        min-height: 100px; /* 设置一个最小高度以保持可视性 */
+    }
+    .barChart{
+        aspect-ratio: 16 / 15; /* 保持 16:9 比例 */
         min-height: 100px; /* 设置一个最小高度以保持可视性 */
     }
 }
