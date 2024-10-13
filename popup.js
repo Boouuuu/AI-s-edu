@@ -42,10 +42,22 @@ for (let i = 0; i < select.options.length; i++) {
   console.log(`Index: ${i}, Value: ${select.options[i].value}`);
 }
   let index = select.selectedIndex;
-  let value = select.options[index].value.bold().fontcolor('red');
-  if (value !== '解答') {
-    userInput += `<p>${value}</p>`;
-  }
+  let value = select.options[index].value.bold()//.fontcolor('purple');
+  //if (value !== '解答') {
+  // 创建一个新的p元素  
+  let newValueElement = document.createElement('p');  
+    
+  // 为p元素添加类名  
+  newValueElement.className = 'message userMessage selectedValue'; // 可以根据需要调整类名  
+    
+  // 由于JavaScript字符串没有.bold()或.fontcolor()方法，我们需要使用HTML或CSS来设置样式  
+  // 这里我们使用innerHTML来插入带有样式的文本（使用<b>标签来加粗文本，<span>标签来设置颜色）  
+  newValueElement.innerHTML = `<b><span style="color: purple;">${value}</span></b>`;  
+    
+  // 将新的p元素添加到messagesDiv中  
+  messagesDiv.appendChild(newValueElement);  
+  //}
+
   // alert(`${value}`);
   messagesDiv.innerHTML += `<p class="message userMessage">${userInput}</p>`;
   // messagesDiv.innerHTML += `<p>${select}</p>`;

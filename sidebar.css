@@ -15,13 +15,11 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("./image/back.png");
+  background-image: url("./image/2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  opacity: 0.7;
-
-   /* 设置透明度 */
+  opacity: 0.8; /* 设置透明度 */
   z-index: -1; /* 确保背景在其他内容下面 */
 }
 
@@ -49,7 +47,7 @@ body::before {
 #chatbox {
   width: 100%;
   /* top:20px; */
-  max-height: 405px; /* 设置最大高度，超过时滚动 */
+  max-height: 485px; /* 设置最大高度 */
   opacity: 1;
   padding: 0px;
   display: flex;
@@ -233,6 +231,8 @@ body::before {
   width: 90%;
   margin-bottom: 10px;
   padding: 10px;
+  color: rgb(12, 12, 12);
+  font-weight:300;
   border-radius: 5px;
   color: #24292f;
   background-color: rgb(255, 255, 255, 0.8);
@@ -247,19 +247,33 @@ body::before {
 }
 
 .userMessage {
-  color: white;
-  margin-right: 10px;
+  color: rgb(9, 0, 0);
   font-size: 1.4rem;
-  width: auto;
-  font-weight: 500;
-  background-color: rgb(100, 237, 172, 0.7);
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 13px;
-  line-height: 1.75;
-  word-wrap: break-word;
-  word-break: normal;
+  font-weight: bold;
+  float: right; /* 使元素浮动到右侧 */
+  margin-left: 10px; /* 保持间距 */
+  background-color: #ebe58d; /* 设置背景色为淡灰色 */
+  padding: 8px; /* 设置内边距 */
+  border-radius: 5px; /* 设置边框圆角 */
+}
+
+.selectedValue {  
+  font-size: 0.7em; /* 缩小字体，这里设置为原始大小的90% */
+  background-color: #c8c8ff; /* 设置背景色为淡灰色 */
+  font-family: '幼圆', 'Microsoft YaHei', sans-serif; /* 设置字体为幼圆，如果不支持则回退到微软雅黑，最后是无衬线字体作为备选 */
+  padding: 5px; /* 添加内边距以保持一致性 */
+  margin-bottom: 7px; /* 添加下边距以在.selectedValue和.userMessage之间创建空间 */
+  border-radius: 5px; /* 保持圆角一致性 */
+  clear: both; /* 清除浮动，确保不会与浮动元素重叠 */ 
+}
+.aiMessage {
+  color: rgb(12, 12, 12);
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 10px;
+  border-radius: 5px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  float: right;
+  clear: both; /* 清除浮动，确保不会与浮动元素重叠 */
 }
 
 

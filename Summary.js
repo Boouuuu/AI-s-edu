@@ -121,40 +121,7 @@ function displaySummary(summary) {
 }
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('SearchButton').addEventListener('click', () => {
-        const searchTerm = document.getElementById('SearchInput').value.trim().toLowerCase();
-        highlightTerms(searchTerm);
-    });
-});
 
-
-function highlightTerms(term) {
-    const summaryDiv = document.getElementById('summary');
-    if (!summaryDiv) {
-        console.error('Summary div not found.');
-        return;
-    }
-
-    // 获取当前的 HTML 内容
-    let innerHTML = summaryDiv.innerHTML;
-    console.log(innerHTML);
-
-    // 创建正则表达式，匹配函数名和库名
-    const regex = new RegExp(`(${term})`, 'gi');
-
-    // 高亮匹配的文本
-    innerHTML = innerHTML.replace(regex, '<span style="color: red;">$1</span>');
-
-    // 更新摘要内容
-    summaryDiv.innerHTML = innerHTML;
-
-    // 如果需要，滚动到第一个匹配项
-    const firstMatch = summaryDiv.querySelector('span');
-    if (firstMatch) {
-        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-}
 
 // 保存为图片
 document.getElementById('savebutton').addEventListener('click', function () {
@@ -197,10 +164,81 @@ document.getElementById('savebutton').addEventListener('click', function () {
 //         y: 10,
 //     });
 // });
-
 // 导航栏
 fetch('navbar.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('navbar').innerHTML = data;
     });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('SearchButton');
+    const searchInput = document.getElementById('SearchInput');
+    const summaryDiv = document.getElementById('summary');
+    
+
+    searchButton.addEventListener('click', (event) => {
+        event.preventDefault(); // 阻止表单默认提交行为
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        if (searchTerm) {
+            highlightTerms(searchTerm, summaryDiv);
+        } else {
+            clearHighlights(summaryDiv);
+        }
+    });
+
+});
+
+
+
+function highlightTerms(term, container) {
+    if (!container) {
+        console.error('Container not found.');
+        return;
+    }
+
+    console.log('Highlighting terms in the container');
+
+    // 获取容器内的 HTML 内容
+    let innerHTML = container.innerHTML;
+    console.log(innerHTML);
+    // 创建正则表达式，匹配搜索词
+    const regex = new RegExp(`(${term})`, 'gi');
+
+    // 高亮匹配的文本
+    innerHTML = innerHTML.replace(regex, '<span style="background-color: #ff9999;">$1</span>');
+
+    // 更新容器内容
+    container.innerHTML = innerHTML;
+
+    // 检查是否找到匹配项
+    const matches = container.querySelectorAll('span');
+    if (matches.length > 0) {
+        console.log(`Found ${matches.length} matches`);
+        // 如果需要，滚动到第一个匹配项
+        matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+        console.log('No matches found');
+    }
+}
+
+function clearHighlights(container) {  
+    if (!container) {  
+        console.error('Container not found.');  
+        return;  
+    }  
+  
+    console.log('Clearing highlights from the container');  
+  
+    // 获取容器内的所有 span 元素  
+    const spans = container.querySelectorAll('span');  
+    spans.forEach(span => {  
+        // 替换为原始文本（去除高亮）  
+        span.replaceWith(document.createTextNode(span.textContent));  
+    });  
+
+  
+    console.log('Highlights cleared');  
+}
+
