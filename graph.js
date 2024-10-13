@@ -15,8 +15,54 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 });
 
+document.getElementById('import-json-button').addEventListener('click', function() {
+    // 创建一个文件输入元素
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.json'; // 限制文件类型为 JSON
+
+    // 监听文件选择事件
+    fileInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            // 调用 loadGraphData 函数并传递选择的文件
+            loadGraphData(file);
+        }
+    });
+
+    // 触发文件选择对话框
+    fileInput.click();
+});
+
+   
+// 声明全局变量 nodes 和 links
+let nodes = [];
+let links = [];
+
+async function loadGraphData(file) {
+    try {
+        // 使用 FileReader 读取文件内容
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const jsonData = JSON.parse(e.target.result);
+            // 提取 nodes 和 links 数组
+        nodes = jsonData.nodes;
+        links = jsonData.links;
+
+            // 这里可以处理 JSON 数据，例如更新 nodes 和 links 数组
+            console.log('导入的 JSON 数据:',nodes);
+
+            // 假设你有一个函数 updateGraph 来更新图表
+            updateGraph(jsonData);
+        };
+        reader.readAsText(file);
+    } catch (error) {
+        console.error('读取文件时出错:', error);
+    }}
 
 
+
+/*
 const nodes = [  
     { id: "Python", important: true },  
     { id: "基础语法", important: false },  
@@ -91,11 +137,16 @@ const links = [
     { source: "数据分析", target: "Python" },
     { source: "基础知识", target: "Python" },
 ];
+*/
 
+// 定义一个异步函数来确保 loadGraphData 完成后再执行后续操作
+async function updateGraph() {
+  
 const width = window.innerWidth; // 获取当前窗口宽度
 const height = window.innerHeight; // 获取当前窗口高度
 
 console.log(width);
+
 
 const svg = d3.select("#graph-svg")
     .attr("viewBox", `0 0 ${width} ${height}`)
@@ -142,7 +193,7 @@ const node = svg.append("g")
 
 // 节点圆圈
 node.append("circle")
-    .attr("r", d => d.important ? 25 : 20)
+    .attr("r", d => d.important ? 25 : 20) //大小
     .attr("fill", d => d.id === "Python" ? "#ff9999" : (d.important ? "#b8e9f8" : "#b8e9f8")); // 设置 "Python" 为浅红色
 
 // 节点文本
@@ -150,7 +201,8 @@ node.append("text")
     .text(d => d.id)
     .attr("dy", 4)
     .attr("text-anchor", "middle")
-    .attr("fill", "#000");
+    .attr("fill", "#000")
+    .attr("font-size", "13px"); // 设置字体大小
 
 // 处理窗口调整事件
 window.addEventListener('resize', () => {
@@ -323,3 +375,5 @@ searchButton.addEventListener("click", () => {
         searchInput.style.display = "none"; // 确保在过渡结束后隐藏
     }, 300);
 });
+}
+

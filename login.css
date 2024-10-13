@@ -1,11 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
   
   html,body,main {
     height: 100%;
+    background-image: url(./image/5.jpg);/*更换了背景图*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; /* 将背景图像在元素中垂直和水平方向上居中对齐 */
+  }
+  main{
+      margin: 0;
+      padding: 0;
+      height: 0%;
   }
   
   body {
@@ -14,9 +19,13 @@
   
   a {
     text-decoration: none;
-    color: #444;
+    color: #681664;
   }
   
   ul,li{
     list-style: none;
   }
+
+  .errormsg {
+    color: black;
+}

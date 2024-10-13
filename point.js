@@ -1,3 +1,10 @@
+setTimeout(function() {
+    document.querySelectorAll('.greeting').forEach(function(element) {
+      element.classList.add('faded-out');
+    });
+    document.querySelector('.description').classList.add('faded-out');
+  }, 3000);
+
 let bubbleCount = 0; // 记录气泡数量
 
 function showBubble() {

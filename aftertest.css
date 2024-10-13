@@ -6,9 +6,24 @@ body {
     background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
     height: 100vh;
 }
+.loader {
+    width: 100px;
+    height: 100px;
+    animation: bounce 2s linear infinite;
+    display: none; /* 默认不显示 */
+    top: 55%; /* 置于垂直中间 */
+    left: 42%; /* 置于水平中间 */
+    position: absolute; /* 使用绝对定位 */
+}
 
-
-         
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 .btn-grad {
     background-image: linear-gradient(to right, #134E5E 0%, #71B280  51%, #134E5E  100%);
     margin: 2px;
@@ -37,6 +52,9 @@ body {
 .container {
     text-align: center;
     padding: 50px;
+    font-family: Arial, sans-serif; /* 设置字体 */  
+    font-size: 16px; /* 设置字体大小 */
+    color: #030303; /* 设置字体颜色为深灰色 */
 }
 .challenge{
     text-align: center;

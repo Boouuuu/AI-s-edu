@@ -4,7 +4,7 @@ fetch('navbar.html')
   .then(data => {
     document.getElementById('navbar').innerHTML = data;
   });
-  
+document.getElementById('loader').style.display = 'block';
 document.getElementById('generate-button').addEventListener('click', async () => {
     console.log('测验Button clicked!');
     chrome.runtime.sendMessage({ message: 'getCodeSnippets' }, (response) => {
@@ -31,7 +31,7 @@ document.getElementById('generate-button').addEventListener('click', async () =>
     const recommendedIds = data.recommended_ids.join(', ');
     // 跳转到 quiz.html，并将推荐的题号作为查询参数传递
     window.location.href = `quuuiz.html?recommendedIds=${encodeURIComponent(recommendedIds)}`;
-
+    document.getElementById('loader').style.display = 'none'; // 隐藏加载动画
     
     const similarities = data.similarities.join(', ');
     console.log("`推荐的题号: ${recommendedIds}\n相似度: ${similarities}`") ;

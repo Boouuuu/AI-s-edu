@@ -1,0 +1,283 @@
+{
+    "nodes": [
+        {
+            "id": "Python",
+            "important": true
+        },
+        {
+            "id": "基础语法",
+            "important": false
+        },
+        {
+            "id": "数据类型",
+            "important": false
+        },
+        {
+            "id": "变量与常量",
+            "important": false
+        },
+        {
+            "id": "运算符与表达式",
+            "important": false
+        },
+        {
+            "id": "控制结构",
+            "important": false
+        },
+        {
+            "id": "数据结构",
+            "important": false
+        },
+        {
+            "id": "列表与元组",
+            "important": false
+        },
+        {
+            "id": "字典与集合",
+            "important": false
+        },
+        {
+            "id": "面向对象",
+            "important": true
+        },
+        {
+            "id": "类与对象",
+            "important": false
+        },
+        {
+            "id": "继承与多态",
+            "important": false
+        },
+        {
+            "id": "封装与抽象",
+            "important": false
+        },
+        {
+            "id": "常用库",
+            "important": true
+        },
+        {
+            "id": "标准库",
+            "important": false
+        },
+        {
+            "id": "第三方库",
+            "important": false
+        },
+        {
+            "id": "Flask",
+            "important": false
+        },
+        {
+            "id": "Django",
+            "important": false
+        },
+        {
+            "id": "数据分析",
+            "important": false
+        },
+        {
+            "id": "NumPy",
+            "important": false
+        },
+        {
+            "id": "Pandas",
+            "important": false
+        },
+        {
+            "id": "机器学习",
+            "important": true
+        },
+        {
+            "id": "Scikit-learn",
+            "important": false
+        },
+        {
+            "id": "TensorFlow",
+            "important": false
+        },
+        {
+            "id": "函数式编程",
+            "important": false
+        },
+        {
+            "id": "Lambda表达式",
+            "important": false
+        },
+        {
+            "id": "高阶函数",
+            "important": false
+        },
+        {
+            "id": "闭包与装饰器",
+            "important": false
+        },
+        {
+            "id": "模块与包",
+            "important": false
+        },
+        {
+            "id": "异常处理",
+            "important": false
+        },
+        {
+            "id": "文件操作",
+            "important": false
+        },
+        {
+            "id": "I/O操作",
+            "important": false
+        },
+        {
+            "id": "正则表达式",
+            "important": false
+        },
+        {
+            "id": "多线程与多进程",
+            "important": false
+        },
+        {
+            "id": "基础知识",
+            "important": true
+        }
+    ],
+    "links": [
+        {
+            "source": "基础语法",
+            "target": "基础知识"
+        },
+        {
+            "source": "数据类型",
+            "target": "基础知识"
+        },
+        {
+            "source": "变量与常量",
+            "target": "基础知识"
+        },
+        {
+            "source": "运算符与表达式",
+            "target": "基础知识"
+        },
+        {
+            "source": "控制结构",
+            "target": "基础知识"
+        },
+        {
+            "source": "数据结构",
+            "target": "基础知识"
+        },
+        {
+            "source": "列表与元组",
+            "target": "数据结构"
+        },
+        {
+            "source": "字典与集合",
+            "target": "数据结构"
+        },
+        {
+            "source": "类与对象",
+            "target": "面向对象"
+        },
+        {
+            "source": "继承与多态",
+            "target": "面向对象"
+        },
+        {
+            "source": "封装与抽象",
+            "target": "面向对象"
+        },
+        {
+            "source": "标准库",
+            "target": "常用库"
+        },
+        {
+            "source": "第三方库",
+            "target": "常用库"
+        },
+        {
+            "source": "Flask",
+            "target": "常用库"
+        },
+        {
+            "source": "Django",
+            "target": "常用库"
+        },
+        {
+            "source": "NumPy",
+            "target": "数据分析"
+        },
+        {
+            "source": "Pandas",
+            "target": "数据分析"
+        },
+        {
+            "source": "Scikit-learn",
+            "target": "机器学习"
+        },
+        {
+            "source": "TensorFlow",
+            "target": "机器学习"
+        },
+        {
+            "source": "Lambda表达式",
+            "target": "函数式编程"
+        },
+        {
+            "source": "高阶函数",
+            "target": "函数式编程"
+        },
+        {
+            "source": "闭包与装饰器",
+            "target": "函数式编程"
+        },
+        {
+            "source": "模块与包",
+            "target": "Python"
+        },
+        {
+            "source": "异常处理",
+            "target": "Python"
+        },
+        {
+            "source": "文件操作",
+            "target": "Python"
+        },
+        {
+            "source": "I/O操作",
+            "target": "文件操作"
+        },
+        {
+            "source": "正则表达式",
+            "target": "基础知识"
+        },
+        {
+            "source": "多线程与多进程",
+            "target": "Python"
+        },
+        {
+            "source": "常用库",
+            "target": "Python"
+        },
+        {
+            "source": "面向对象",
+            "target": "Python"
+        },
+        {
+            "source": "函数式编程",
+            "target": "Python"
+        },
+        {
+            "source": "机器学习",
+            "target": "Python"
+        },
+        {
+            "source": "数据分析",
+            "target": "Python"
+        },
+        {
+            "source": "基础知识",
+            "target": "Python"
+        }
+    ]
+}
+
