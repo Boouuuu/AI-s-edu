@@ -52,7 +52,7 @@ for (let i = 0; i < select.options.length; i++) {
     
   // 由于JavaScript字符串没有.bold()或.fontcolor()方法，我们需要使用HTML或CSS来设置样式  
   // 这里我们使用innerHTML来插入带有样式的文本（使用<b>标签来加粗文本，<span>标签来设置颜色）  
-  newValueElement.innerHTML = `<b><span style="color: purple;">${value}</span></b>`;  
+  newValueElement.innerHTML = `<b><span style="color: purple;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;">${value}</span></b>`;  
     
   // 将新的p元素添加到messagesDiv中  
   messagesDiv.appendChild(newValueElement);  
@@ -112,14 +112,7 @@ for (let i = 0; i < select.options.length; i++) {
     });
 
     observer.observe(aiMessageElement, { childList: true, subtree: true });
-    smallTag.textContent = value; // 设置小标签的内容为选择的值
-    smallTag.style.fontSize = '0.8em'; // 设置为小标签的大小
-    smallTag.style.position = 'absolute'; // 绝对定位
-    smallTag.style.left = '0'; // 左对齐
-    smallTag.style.bottom = '0'; // 底部对齐
-    smallTag.style.padding = '2px'; // 设置适当的内边距
-    smallTag.style.backgroundColor = '#f0f0f0'; // 添加背景色，可以自定义
-    smallTag.style.borderRadius = '4px'; // 添加圆角，增强视觉效果
+
 
               // 准备提交给后端的数据
       const submissioninput = {

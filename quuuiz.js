@@ -2,7 +2,8 @@ async function loadQuestions() {
     try {
         const response = await fetch('dataa.json');
         const questions = await response.json();
-        console.log('加载的问题:', questions); // 输出加载的问题
+        // console.log('加载的问题:', questions); 
+        // 输出加载的问题
         generateQuestions(questions);
     } catch (error) {
         console.error('加载问题时出错:', error);

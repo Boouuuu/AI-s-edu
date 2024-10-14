@@ -35,6 +35,7 @@ document.getElementById('generate-button').addEventListener('click', async () =>
     
     const similarities = data.similarities.join(', ');
     console.log("`推荐的题号: ${recommendedIds}\n相似度: ${similarities}`") ;
+    debugger;
 
     
 });
@@ -42,19 +43,58 @@ document.getElementById('generate-button').addEventListener('click', async () =>
 
 
 
-function cleanCode(codes) {
-    // 合并所有代码段为一个字符串
-    let combinedCode = codes.join(' '); // 使用空格合并数组元素
+function cleanCode(codeSnippets) {
+    const functions = new Set(); // 用来存储唯一的函数
+    const libraries = new Set(); // 用来存储唯一的库
+    const keywords = new Set([
+        "False", "None", "True", "and", "as", "assert", "async", "await",
+        "break", "class", "continue", "def", "del", "elif", "else", "except",
+        "finally", "for", "from", "global", "if", "import", "in", "is",
+        "lambda", "nonlocal", "not", "or", "pass", "raise", "return",
+        "try", "while", "with", "yield"
+    ]);
 
-    // 使用正则表达式去除注释
-    // combinedCode = combinedCode.replace(/#.*$/gm, ''); // 删除以 # 开头的注释
-    
+    // 合并所有代码段为一个字符串
+    let combinedCode = codeSnippets.join(' '); // 使用空格合并数组元素
+
     // 删除多余的空行并用一个空格替代换行符
     combinedCode = combinedCode.replace(/\n+/g, ' '); // 替换多个换行符为一个空格
     combinedCode = combinedCode.replace(/\s+/g, ' '); // 替换多个空格为一个空格
 
-    return combinedCode.trim(); // 返回清理后的代码
+    // 处理每段代码
+    codeSnippets.forEach(code => {
+        // 匹配导入的库
+        const importRegex = /import\s+(\w+)|from\s+(\w+)\s+import/g;
+        let importMatch;
+        while ((importMatch = importRegex.exec(code)) !== null) {
+            libraries.add(importMatch[1] || importMatch[2]);
+        }
+
+        // 匹配函数定义
+        const funcRegex = /(?<!\w)([a-zA-Z_]\w*(?:\.[a-zA-Z_]\w*)*)(?=\()/g;
+        let funcMatch;
+        while ((funcMatch = funcRegex.exec(code)) !== null) {
+            functions.add(funcMatch[1]); // 使用 Set 添加函数
+        }
+
+        // 匹配 Python 关键字
+        const keywordRegex = new RegExp(`\\b(${Array.from(keywords).join('|')})\\b`, 'g');
+        let keywordMatch;
+        while ((keywordMatch = keywordRegex.exec(code)) !== null) {
+            keywords.add(keywordMatch[0]); // 添加匹配到的关键字
+        }
+    });
+
+    // 将函数、库和关键字合并为一个字符串，且用空格分隔
+    let result = [
+        ...Array.from(functions),
+        ...Array.from(libraries),
+        ...Array.from(keywords)
+    ].join(' ');
+
+    return result.trim(); // 返回清理后的代码并包含函数、库和关键字
 }
+
 
 
 

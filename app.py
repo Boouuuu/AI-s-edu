@@ -397,6 +397,7 @@ def recommend():
         top_indices = np.argsort(similarity_matrix[0])[-31:-1][::-1]  # 从高到低排序
     else:
         top_indices = np.array([i+1]for i in range(498))
+        print("没找到文本，加载了全部！")
 
 
 

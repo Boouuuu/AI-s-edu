@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* z-index: 1000;  */
+  z-index: 1000; 
   /* 确保导航栏在最上层 */
   border-bottom: 2px solid #ccc; /* 添加下边框 */
 }
