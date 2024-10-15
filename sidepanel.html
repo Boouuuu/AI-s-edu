@@ -20,6 +20,19 @@
     integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <link href="libs/css2.css" rel="stylesheet">
   <link href="libs\font-awesome\css\all.min.css" rel="stylesheet">
+
+
+<script>
+    // 页面加载时淡入效果
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.add('fade-in');
+    });
+
+    // 离开页面时触发淡出效果
+    window.addEventListener("beforeunload", function () {
+        document.body.classList.remove('fade-in');
+    });
+</script>
 </head>
 
 <body>

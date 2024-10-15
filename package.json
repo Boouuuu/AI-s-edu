@@ -1,7 +1,11 @@
 {
    "type": "module",
    "dependencies": {
+      "@wcex/cn-fontsource": "^1.0.37",
       "bcrypt": "^5.1.1",
+      "cn-fontsource-honglei-sim-regular": "^1.0.6",
+      "cn-fontsource-slideqiuhong-regular": "^1.0.6",
+      "cn-fontsource-source-han-serif-sc-vf-regular": "^1.0.1",
       "cors": "^2.8.5",
       "express": "^4.21.0",
       "mongoose": "^8.7.0",

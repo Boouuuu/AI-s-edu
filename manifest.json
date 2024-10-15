@@ -11,7 +11,9 @@
            "<all_urls>"
         ],
         "js": [ "libs/jquery-3.7.1.min.js", "libs/jquery-ui.min.js", "libs/jquery-1.7.1.min.js",
-        "libs/jquery.min.js","content.js","summary.js","aftertest.js","Real-time_monitoring.js","service-worker.js","Error_summary.js"]
+        "libs/jquery.min.js","content.js","summary.js","aftertest.js","Real-time_monitoring.js","service-worker.js","Error_summary.js"
+        
+      ]
       }
     ],
 
@@ -19,8 +21,8 @@
     "service_worker": "service-worker.js"
   },
   "action": {
-    "default_title": "慧码导师",
-    "default_popup": "login.html"     
+    "default_title": "慧码导师"
+
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self';"

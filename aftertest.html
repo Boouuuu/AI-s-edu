@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学习挑战</title>
+    <link rel="stylesheet" href="node_modules/cn-fontsource-source-han-serif-sc-vf-regular/font.css"></link>
+    <link rel="stylesheet" href="node_modules/cn-fontsource-honglei-sim-regular/font.css"></link>
     <link rel="stylesheet" href="aftertest.css">
     <script src="libs/jquery-1.7.1.min.js"></script>
     <script src="./libs/jquery.min.js"></script>
@@ -13,12 +15,25 @@
     <link href="libs/css2.css" rel="stylesheet">
     <link href="libs\font-awesome\css\all.min.css" rel="stylesheet">
 
+
+    <script>
+        // 页面加载时淡入效果
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add('fade-in');
+        });
+
+        // 离开页面时触发淡出效果
+        window.addEventListener("beforeunload", function () {
+            document.body.classList.remove('fade-in');
+        });
+    </script>
+
 </head>
 <body>
     <div id="navbar"></div>
     <div class="container">
-        <h1>学习了这堂课，相信你一定收获满满</h1>
-        <h1>快来挑战10道课后习题，检验一下你的学习成果吧！</h1>
+        <h1 class="title1">学习了这堂课，相信你一定收获满满</h1>
+        <h1 class="title2">快来挑战10道课后习题，检验一下你的学习成果吧！</h1>
     </div>
         <div class="challenge">
         <button class="btn-grad" id="generate-button">

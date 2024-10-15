@@ -534,6 +534,7 @@ def recommend():
             [p_data[0][i] for i in middle_indices] + \
             [p_data[0][i] for i in lowest_indices]
 
+    print(result)
 # 返回推荐的索引和相似度
 # 获取对应的相似度值
     # top_similarities = similarity_matrix[0][result]

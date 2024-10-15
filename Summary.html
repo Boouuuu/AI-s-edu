@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="libs/bootstrap.min.css">
     <link rel="stylesheet" href="libs/bootstrap.min_5.1.0.css">
     <link rel="stylesheet" href="libs/css2.css">
+    <link rel="stylesheet" href="node_modules/cn-fontsource-source-han-serif-sc-vf-regular/font.css"></link>
+    <link rel="stylesheet" href="node_modules/cn-fontsource-honglei-sim-regular/font.css"></link>
     <script src="./libs/jquery.min.js"></script>
 <script src="./libs/jquery-3.7.1.min.js"></script>
 <script src="./libs/jquery-1.7.1.min.js"></script>
@@ -19,10 +21,20 @@
 <script src="libs/html2canvas.min.js"></script>
 <script src="./libs/marked.min.js"></script>
 <script src="libs/purify.min.js"></script>
-
-
 <link rel="stylesheet" href="./libs/font-awesome/css/all.min.css">
 
+
+<script>
+    // 页面加载时淡入效果
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.add('fade-in');
+    });
+
+    // 离开页面时触发淡出效果
+    window.addEventListener("beforeunload", function () {
+        document.body.classList.remove('fade-in');
+    });
+</script>
 </head>
 <body>
 
