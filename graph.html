@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python 知识图谱</title>
     <link rel="stylesheet" href="graph.css">
-  
-    
-   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
 
     <div id="navbar">scdsvsb</div>
-    
+
     <div id="search-container">
+        <button id="toggle-button">个性化</button> <!-- 添加切换按钮 -->
         <button id="import-json-button">文件</button>
         <input type="text" id="search-input" placeholder="搜索节点...">
         <button id="search-button">🔍</button>
     </div>
-    
-    <svg id="graph-svg">
-    </svg> <!-- 添加这个 SVG 元素 -->
+
+    <div id="container">
+        <div id="graph-container">
+            <svg id="graph-svg"></svg> <!-- 原图谱容器 (可选) -->
+        </div>
+        <div id="alternative-container" style="display: block;"> <!-- 备用内容容器 -->
+            
+        </div>
+    </div>
+
     <script src="d3/d3.v6.min.js"></script>
     <script src="graph.js"></script>
 </body>

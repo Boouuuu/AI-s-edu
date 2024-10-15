@@ -13,6 +13,8 @@ from torch import nn
 from torch.nn.init import xavier_uniform_
 from torch.nn.init import constant_
 from torch.nn.init import xavier_normal_
+from torch_geometric.data import Data
+from torch_geometric.nn import GATConv 
 import math
 import torch.nn.functional as F
 from enum import IntEnum
@@ -374,6 +376,33 @@ class CosinePositionalEmbedding(nn.Module):
         return self.weight[:, :x.size(Dim.seq), :]  # ( 1,seq,  Feature)
 
 
+
+class ModifiedGAT(torch.nn.Module):
+    def __init__(self, in_channels, out_channels, heads=1, num_layers=3):
+        super(ModifiedGAT, self).__init__()
+        self.num_layers = num_layers
+        self.gat_layers = torch.nn.ModuleList()  # 使用 ModuleList 来存储多个 GATConv 层
+
+        # 添加多个 GATConv 层
+        for i in range(num_layers):
+            if i == 0:
+                self.gat_layers.append(GATConv(in_channels, out_channels, heads=heads, concat=True))
+            else:
+                self.gat_layers.append(GATConv(out_channels * heads, out_channels, heads=1, concat=False))
+
+    def forward(self, data):
+        x, edge_index = data.x, data.edge_index
+        
+        # 多层 GATConv 的前向传播
+        for layer in self.gat_layers:
+            x = layer(x, edge_index)
+            x = F.elu(x)  # 使用 ELU 激活函数
+        
+        return x
+
+
+
+
 app = Flask(__name__)
 CORS(app)  # 启用CORS
 
@@ -546,6 +575,172 @@ def recommend():
     
     
     # return jsonify(recommended_ids=top_indices)
+
+
+# 创建全局模型和优化器
+model = ModifiedGAT(in_channels=1, out_channels=2)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+
+# 用于存储推荐学习路径
+recommended_learning_paths = []
+
+
+@app.route('/gatdata', methods=['POST'])
+def generate_gat_data():
+    global num_points,knowledge_points, embeddings, recommended_learning_paths,edge_index  # 使用全局变量存储数据
+    
+    # 从请求中获取 JSON 数据
+    data = request.get_json()
+    
+    # 检查请求中是否有 links
+    if 'links' not in data:
+        return jsonify({'error': '未提供 links 数据'}), 400
+    
+    links = data['links']
+
+    # 步骤1：提取唯一的知识点
+    knowledge_points = set()
+    for link in links:
+        knowledge_points.add(link["source"])
+        knowledge_points.add(link["target"])
+
+    knowledge_points = list(knowledge_points)  # 转换为列表
+    num_points = len(knowledge_points)
+
+    # 创建知识点到索引的映射
+    kp_to_index = {kp: idx for idx, kp in enumerate(knowledge_points)}
+
+    # 打印知识点和映射关系
+    print("知识点:", knowledge_points)
+    print("知识点到索引映射:", kp_to_index)
+
+    # 步骤2：根据链接创建边索引
+    edge_index = []
+    for link in links:
+        source_idx = kp_to_index.get(link["source"])
+        target_idx = kp_to_index.get(link["target"])
+        
+        if source_idx is not None and target_idx is not None:
+            edge_index.append([source_idx, target_idx])
+        else:
+            print(f"未找到源或目标知识点: {link['source']} -> {link['target']}")
+
+    edge_index = torch.tensor(edge_index, dtype=torch.long).t().contiguous()  # 转置为正确的形状
+
+    # 打印边索引
+    print("边索引:\n", edge_index)
+
+    # 返回操作成功的响应
+    return jsonify({'message': '请求成功'}), 200  # 返回状态码 200，表示请求成功
+
+
+@app.route('/train', methods=['POST'])
+def train_model():
+    global num_points,knowledge_points, embeddings, recommended_learning_paths,edge_index  # 使用全局变量存储数据
+    # 从前端获取知识点、正确率和边关系数据
+
+    content=request.get_json()
+    knowledge = content['knowledge']  # 知识点列表
+    titleCounts = content['titleCounts']  # 各知识点的尝试次数
+    correctCounts = content['correctCounts']  # 各知识点的正确次数
+    
+
+    # 步骤3：为每个知识点创建学生掌握度，若知识点未包含，则掌握度为0
+    #num_points = len(knowledge)
+    student_accuracies = torch.zeros(num_points)
+
+    # 计算每个知识点的正确率
+    accuracyRates = {}
+    for index, title in enumerate(knowledge):
+        totalAttempts = titleCounts.get(title, 0)  # 获取尝试次数
+        correctAttempts = correctCounts.get(title, 0)  # 获取正确次数
+        accuracyRate = (correctAttempts / totalAttempts) * 100 if totalAttempts > 0 else 0.5  # 计算正确率
+        accuracyRates[title] = accuracyRate
+        student_accuracies[index] = accuracyRate / 100  # 将正确率标准化到 [0, 1]
+
+
+    # 步骤4：创建图数据
+    graph_data = Data(x=student_accuracies.unsqueeze(1), edge_index=edge_index)
+
+    # 输出图数据
+    print("图数据内容:")
+    print(graph_data)
+    # 模型训练步骤
+    model.train()
+    for epoch in range(100):
+        optimizer.zero_grad()
+        out = model(graph_data)
+        target = torch.ones_like(out)  # 假设目标嵌入
+        loss = F.mse_loss(out, target) #L2损失
+
+        # 增加对边关系的惩罚
+        edge_penalty = 0.0
+        for i,(u, v) in enumerate(graph_data.edge_index.t().tolist()):
+            edge_penalty += F.mse_loss(out[u], out[v])  # 计算连接的节点之间的嵌入损失
+
+        #将边惩罚添加到总损失中
+        total_loss = loss + 0.8 * edge_penalty  # 0.01 是惩罚项的权重
+
+        total_loss.backward()
+    
+        optimizer.step()
+
+        if epoch % 10 == 0:
+            print(f'Epoch {epoch}, Loss: {loss.item()}')
+
+    # 模型推断阶段
+    model.eval()
+    with torch.no_grad():
+        embeddings = model(graph_data)
+
+    return 'Training started!', 200
+
+
+
+
+@app.route('/gatcenter', methods=['POST'])
+def generate_recommendations():
+    global knowledge_points, embeddings, recommended_learning_paths,edge_index  # 使用全局变量存储数据
+    
+    # 获取前端传入的核心知识点
+    core_knowledge_point = request.form.get('core_knowledge_point')
+    if not core_knowledge_point:
+        return jsonify({'error': '未提供核心知识点'}), 400
+
+    if core_knowledge_point not in knowledge_points:
+        return jsonify({'error': f'核心知识点 {core_knowledge_point} 不在知识点列表中'}), 400
+
+    core_index = knowledge_points.index(core_knowledge_point)
+    core_embedding = embeddings[core_index]
+
+    # 计算与核心知识点的余弦相似度
+    similarity = F.cosine_similarity(embeddings, core_embedding.unsqueeze(0), dim=1)
+    recommendations = torch.argsort(similarity, descending=True)
+
+    
+    # 推荐学习路径信息
+    recommended_learning_paths = []
+    for idx in recommendations:
+        if idx != core_index:  # 排除核心知识点本身
+            knowledge_point = knowledge_points[idx]
+            similarity_value = similarity[idx].item()
+            embedding_value = embeddings[idx].numpy().tolist()  # 转换为列表
+            recommended_learning_paths.append({
+                'knowledge_point': knowledge_point,
+                'similarity': similarity_value,
+                'embedding': embedding_value
+            })
+
+    return jsonify({
+        'core_knowledge_point': core_knowledge_point,
+        'recommended_learning_paths': recommended_learning_paths
+    })
+
+# 新的接口
+@app.route('/gatrespond', methods=['GET'])
+def gatrespond():
+    return jsonify(recommended_learning_paths)  # 返回推荐的学习路径
+
 
 
 # 启动 Flask 应用

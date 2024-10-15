@@ -25,7 +25,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
   if (!tab.url) return;
   await chrome.sidePanel.setOptions({
     tabId,
-    path: 'sidepanel.html',
+    path: 'login.html',
     enabled: true
   });
 });

@@ -1,3 +1,18 @@
+// 切换视图的功能
+const toggleButton = document.getElementById('toggle-button');
+const graphContainer = document.getElementById('graph-container');
+const alternativeContainer = document.getElementById('alternative-container');
+
+toggleButton.addEventListener('click', function() {
+    if (graphContainer.style.display === 'none') {
+        graphContainer.style.display = 'block';
+        alternativeContainer.style.display = 'none';
+    } else {
+        graphContainer.style.display = 'none';
+        alternativeContainer.style.display = 'block';
+    }
+});
+
 // 在页面加载后加载 navbar.html
 document.addEventListener("DOMContentLoaded", function() {
     fetch('navbar.html')
@@ -15,6 +30,82 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 });
 
+ // 处理提交记录
+ var titleCounts = {};
+ var correctCounts = {};
+ var submissionTimes = {}; // 记录每个提交时间的正确答案数量和总时间
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const username = localStorage.getItem('username');
+    console.log(username);
+
+    if (!username) {
+        console.error('未找到用户名，请先登录。');
+        const errorBox = document.createElement('div');
+        errorBox.classList.add('submission-time-box');
+        errorBox.textContent = '未找到用户名，请先登录。';
+        container.appendChild(errorBox);
+        return; // 提前退出
+    }
+
+    console.log('尝试获取提交记录列表...');
+    const response = await fetch(`http://localhost:5000/fianlto?username=${encodeURIComponent(username)}`);
+
+    if (!response.ok) {
+        console.error(`请求失败，状态码: ${response.status}`);
+        throw new Error(`HTTP错误: ${response.status}`);
+    }
+
+    const submissions = await response.json();
+    console.log('获取的提交记录:', submissions);
+
+    // 读取 finaldata.json 文件
+    const dataResponse = await fetch('finaldata.json');
+    if (!dataResponse.ok) {
+        throw new Error(`无法读取数据，状态码: ${dataResponse.status}`);
+    }
+    
+    const data = await dataResponse.json();
+    console.log('读取的数据:', data);
+
+
+    data.forEach(submission => {
+        const date = new Date(submission.submitTime);
+        const submitTime = date.toISOString().slice(0, 19).replace('T', ' ');
+
+        submissionTimes[submitTime] = submissionTimes[submitTime] || { correctCount: 0, totalTime: submission.ttime };
+
+        submission.userAnswers.forEach(answer => {
+            const title = answer.questionTitle;
+            const isCorrect = answer.isCorrect;
+
+            titleCounts[title] = (titleCounts[title] || 0) + 1; // 统计总提交次数
+            if (isCorrect) {
+                correctCounts[title] = (correctCounts[title] || 0) + 1; // 统计正确答案次数
+                submissionTimes[submitTime].correctCount++;
+            }
+        });
+    });
+});
+
+    // 定义一个异步函数用于发送数据
+    async function sendDataToServer() {
+        // 准备发送到后端的数据
+        const postData = {
+            knowledge: Object.keys(titleCounts),  // 知识点列表
+            titleCounts: titleCounts,  // 各知识点的尝试次数
+            correctCounts: correctCounts  // 各知识点的正确次数
+        };
+        console.log(postData);
+        
+        // 使用 Axios 发送 POST 请求到后端以训练模型
+        try {
+            const response = await axios.post('http://127.0.0.1:5001/train', postData);
+            console.log('成功:', response.data);  // 输出成功响应
+        } catch (error) {
+            console.error('错误:', error);  // 输出错误信息
+        }
+    }
 document.getElementById('import-json-button').addEventListener('click', function() {
     // 创建一个文件输入元素
     const fileInput = document.createElement('input');
@@ -26,6 +117,7 @@ document.getElementById('import-json-button').addEventListener('click', function
         const file = event.target.files[0];
         if (file) {
             // 调用 loadGraphData 函数并传递选择的文件
+            loaddata(file);
             loadGraphData(file);
         }
     });
@@ -34,10 +126,47 @@ document.getElementById('import-json-button').addEventListener('click', function
     fileInput.click();
 });
 
-   
+
+function loaddata(file) {
+    const reader = new FileReader();
+
+    // 读取文件内容
+    reader.onload = function(event) {
+        const jsonData = event.target.result;
+        try {
+            const parsedData = JSON.parse(jsonData);
+            console.log(parsedData);
+            // 发送数据到 Flask 后端
+            sendDataToFlask(parsedData);
+            sendDataToServer(); // 调用发送数据的函数
+        } catch (error) {
+            console.error('无效的 JSON 文件:', error);
+        }
+    };
+
+    // 读取文件为文本
+    reader.readAsText(file);
+}
+
+function sendDataToFlask(data) {
+    // 使用 Axios 发送 POST 请求
+    axios.post('http://127.0.0.1:5001/gatdata', data)
+        .then(function (response) {
+            console.log('成功:', response.data);
+            // 在这里处理返回的数据
+        })
+        .catch(function (error) {
+            console.error('错误:', error);
+        });
+}
+
+
+
 // 声明全局变量 nodes 和 links
 let nodes = [];
 let links = [];
+// 定义全局变量，用于保存当前节点的名字
+var currentnode="Python";
 
 async function loadGraphData(file) {
     try {
@@ -60,84 +189,6 @@ async function loadGraphData(file) {
         console.error('读取文件时出错:', error);
     }}
 
-
-
-/*
-const nodes = [  
-    { id: "Python", important: true },  
-    { id: "基础语法", important: false },  
-    { id: "数据类型", important: false },  
-    { id: "变量与常量", important: false },  
-    { id: "运算符与表达式", important: false },  
-    { id: "控制结构", important: false },  
-    { id: "数据结构", important: false },  
-    { id: "列表与元组", important: false },  
-    { id: "字典与集合", important: false },  
-    { id: "面向对象", important: true },  
-    { id: "类与对象", important: false },  
-    { id: "继承与多态", important: false },  
-    { id: "封装与抽象", important: false },  
-    { id: "常用库", important: true },  
-    { id: "标准库", important: false },  
-    { id: "第三方库", important: false },  
-    { id: "Flask", important: false },  
-    { id: "Django", important: false },  
-    { id: "数据分析", important: false },  
-    { id: "NumPy", important: false },  
-    { id: "Pandas", important: false },  
-    { id: "机器学习", important: true },  
-    { id: "Scikit-learn", important: false },  
-    { id: "TensorFlow", important: false },  
-    { id: "函数式编程", important: false },  
-    { id: "Lambda表达式", important: false },  
-    { id: "高阶函数", important: false },  
-    { id: "闭包与装饰器", important: false },  
-    { id: "模块与包", important: false },  
-    { id: "异常处理", important: false },  
-    { id: "文件操作", important: false },  
-    { id: "I/O操作", important: false },  
-    { id: "正则表达式", important: false },  
-    { id: "多线程与多进程", important: false },
-    { id: "基础知识", important: true }    
-];
-
-const links = [
-    { source: "基础语法", target: "基础知识" },
-    { source: "数据类型", target: "基础知识" },
-    { source: "变量与常量", target: "基础知识" },
-    { source: "运算符与表达式", target: "基础知识" },
-    { source: "控制结构", target: "基础知识" },
-    { source: "数据结构", target: "基础知识" },
-    { source: "列表与元组", target: "数据结构" },
-    { source: "字典与集合", target: "数据结构" },
-    { source: "类与对象", target: "面向对象" },
-    { source: "继承与多态", target: "面向对象" },
-    { source: "封装与抽象", target: "面向对象" },
-    { source: "标准库", target: "常用库" },
-    { source: "第三方库", target: "常用库" },
-    { source: "Flask", target: "常用库" },
-    { source: "Django", target: "常用库" },
-    { source: "NumPy", target: "数据分析" },
-    { source: "Pandas", target: "数据分析" },
-    { source: "Scikit-learn", target: "机器学习" },
-    { source: "TensorFlow", target: "机器学习" },
-    { source: "Lambda表达式", target: "函数式编程" },
-    { source: "高阶函数", target: "函数式编程" },
-    { source: "闭包与装饰器", target: "函数式编程" },
-    { source: "模块与包", target: "Python" },
-    { source: "异常处理", target: "Python" },
-    { source: "文件操作", target: "Python" },
-    { source: "I/O操作", target: "文件操作" },
-    { source: "正则表达式", target: "基础知识" },
-    { source: "多线程与多进程", target: "Python" },
-    { source: "常用库", target: "Python" },
-    { source: "面向对象", target: "Python" },
-    { source: "函数式编程", target: "Python" },
-    { source: "机器学习", target: "Python" },
-    { source: "数据分析", target: "Python" },
-    { source: "基础知识", target: "Python" },
-];
-*/
 
 // 定义一个异步函数来确保 loadGraphData 完成后再执行后续操作
 async function updateGraph() {
@@ -229,6 +280,7 @@ simulation
 simulation.force("link").links(links);
 
 
+
 // 处理点击事件
 node.on("click", function(event, d) {
 
@@ -237,6 +289,8 @@ node.on("click", function(event, d) {
         n.fy = null; // 清除上一个中心节点的fy
     });
 
+    currentnode = d.id; 
+    console.log(currentnode); 
 
     const targetX = initCenter.x; // 页面中心X坐标
     const targetY = initCenter.y; // 页面中心Y坐标
@@ -245,11 +299,14 @@ node.on("click", function(event, d) {
     d.fx = targetX;
     d.fy = targetY;
 
+
     // 更新仿真
     simulation.alpha(1).restart();
 
     // 让其他节点随着点击的节点移动
     simulation.force("center", d3.forceCenter(targetX, targetY));
+
+
 
     console.log(width);
     // 计算视口中心
@@ -375,5 +432,197 @@ searchButton.addEventListener("click", () => {
         searchInput.style.display = "none"; // 确保在过渡结束后隐藏
     }, 300);
 });
+}
+
+
+    // 定义主函数，用于处理按钮点击事件
+    document.getElementById('toggle-button').addEventListener('click', function() {
+        if (currentnode) {
+            sendCoreKnowledgePoint(currentnode);
+            fetchRecommendedPaths(); // 调用获取推荐路径的函数
+        } else {
+            console.error("currentnode is not defined."); // 如果没有定义，输出错误
+        }
+    });
+
+
+
+// 定义发送核心知识点的函数
+function sendCoreKnowledgePoint(currentnode) {
+    console.log(currentnode);
+    const formData = new FormData();  // 创建一个 FormData 对象
+    formData.append('core_knowledge_point', currentnode);  // 将核心知识点加入表单数据
+
+    // 使用 axios 发送 POST 请求到后端
+    axios.post('http://127.0.0.1:5001/gatcenter', formData)
+        .then(function(response) {
+            // 处理后端返回的推荐学习路径数据
+            const recommendedPaths=response.data.recommended_learning_paths;
+            console.log('推荐路径:', response.data.recommended_learning_paths);
+            processPaths(recommendedPaths) ;
+            // 在这里可以进一步处理推荐路径，比如更新前端界面展示推荐的内容
+        })
+        .catch(function(error) {
+            console.error('请求失败:', error);
+        });
+}
+
+/*
+
+// 定义获取个性化推荐数据的函数
+function fetchRecommendedPaths() {
+    axios.get('http://127.0.0.1:5001/gatrespond')
+        .then(function(response) {
+            if (response.data) {
+                const recommendedPaths = response.data; // 获取推荐的学习路径数据
+                console.log('个性化推荐路径:', recommendedPaths);
+                processPaths(recommendedPaths); // 调用处理数据的函数
+            } else {
+                console.error('响应数据为空');
+            }
+        })
+        .catch(function(error) {
+            console.error('获取个性化数据失败:', error);
+        });
+}
+*/
+
+
+
+        // 定义处理数据并绘制图形的函数
+        function processPaths(recommendedPaths) {
+            // 清空原本的SVG内容
+            d3.select("#alternative-container").select("svg").remove(); // 清空之前的SVG
+            console.log('推荐路径数据:', recommendedPaths); // 打印数据查看格式
+
+            // 使用 Flask 作为核心节点
+            const coreNode = {};
+            coreNode.id=currentnode;
+
+            // 根据相似度构建节点
+            const nodes = recommendedPaths.map(d => ({
+                id: d.knowledge_point, // 使用知识点作为节点 ID
+                similarity: d.similarity // 相似度存储，但在绘制中不需要用到
+            }));
+
+            // 将核心节点添加到节点数组
+            nodes.unshift(coreNode);
+
+            // 检查 nodes 的结构
+            console.log('节点数据:', nodes); // 打印节点数据查看格式
+
+            // 根据节点的相似度构建边（连线）
+            const links = recommendedPaths.map(d => ({
+                source: coreNode.id,
+                target: d.knowledge_point,
+                length: 1 / (1 - d.similarity) * 1000 // 放大差异比例，增加节点之间的距离
+            }));
+
+            // 检查 links 的结构
+            console.log('连线数据:', links); // 打印连线数据查看格式
+
+            // 获取备用内容容器中的SVG画布
+            const svg = d3.select("#alternative-container").append("svg")
+                .attr("width", 800)
+                .attr("height", 600)
+                .call(d3.zoom().on("zoom", function(event) {
+                    svgGroup.attr("transform", event.transform); // 移动和缩放
+                }));
+
+            // 创建一个组元素，用于放置节点和连线
+            const svgGroup = svg.append("g");
+
+            // 创建力导向图模拟
+            const simulation = d3.forceSimulation(nodes)
+                .force("link", d3.forceLink().distance(d => {
+                    const link = links.find(l => l.target === d.id);
+                    return link ? link.length : 50; // 增加默认距离
+                }).id(d => d.id))
+                .force("charge", d3.forceManyBody().strength(-3000)) // 增加节点之间的斥力
+                .force("center", d3.forceCenter(800 / 2, 600 / 2)); // 800 和 600 是 SVG 的宽和高
+
+            // 绘制连线
+            const link = svgGroup.append("g")
+                .attr("class", "links")
+                .selectAll("line")
+                .data(links)
+                .enter().append("line")
+                .attr("class", "link");
+
+            // 绘制节点
+            const nodeGroup = svgGroup.append("g")
+                .attr("class", "nodes")
+                .selectAll("g")
+                .data(nodes)
+                .enter().append("g")
+                .attr("class", "node");
+
+            // 节点圆圈
+            nodeGroup.append("circle")
+                .attr("class", "node")
+                .attr("r", d => d.id === 'Flask' ? 25 : 20) // 核心节点大一点，其他节点稍小
+                .attr("fill", d => {
+                    // 根据相似度设置节点颜色
+                    if (d.id === currentnode) {
+                        return "#ff9999"; // 核心节点浅红色
+                    } else if (d.similarity && d.similarity >= 0.999999) {
+                        return "#FFA07A"; // 相似度在 0.995 内的节点橙色
+                    } else {
+                        return "#ADD8E6"; // 其他节点蓝色
+                    }
+                });
+
+            // 节点文本
+            nodeGroup.append("text")
+                .text(d => d.id) // 显示知识点中文名字
+                .attr("dy", 4) // 垂直位置调整
+                .attr("text-anchor", "middle")
+                .attr("fill", "#000")
+                .attr("font-size", "12px"); // 设置字体大小
+
+            // 启动模拟
+            simulation
+                .nodes(nodes)
+                .on("tick", ticked);
+
+            simulation.force("link")
+                .links(links);
+
+            // 定义每个tick的行为
+            function ticked() {
+                link
+                    .attr("x1", d => d.source.x)
+                    .attr("y1", d => d.source.y)
+                    .attr("x2", d => d.target.x)
+                    .attr("y2", d => d.target.y);
+
+                nodeGroup
+                    .attr("transform", d => `translate(${d.x}, ${d.y})`); // 更新节点位置
+            }
+
+
+        // 处理节点点击的函数
+        function NodeClick(node) {
+        // 固定核心节点位置
+        const coreNodeIndex = nodes.findIndex(n => n.id === 'Flask');
+        const coreNode = nodes[coreNodeIndex];
+
+        coreNode.fx = coreNode.x; // 固定核心节点X位置
+        coreNode.fy = coreNode.y; // 固定核心节点Y位置
+
+        // 增大与其他节点的斥力
+        const originalStrength = -2000; // 原始斥力
+        const increasedStrength = -5000; // 增强的斥力
+
+        simulation.force("charge").strength(increasedStrength);
+        simulation.alpha(1).restart(); // 重新启动模拟
+
+        // 恢复原状
+        setTimeout(() => {
+            coreNode.fx = null; // 释放核心节点的位置
+            simulation.force("charge").strength(originalStrength); // 恢复原始斥力
+            simulation.alpha(1).restart(); // 重新启动模拟
+        }, 3000);
+    }
 }
 
