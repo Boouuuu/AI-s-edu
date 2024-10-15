@@ -199,6 +199,8 @@ fetch('finaldata.json')
 
 */
 
+
+
 // ECharts 实例化示例
 var chart1 = echarts.init(document.querySelector('.chart1'));
 var chart2 = echarts.init(document.querySelector('.chart2'));
@@ -316,6 +318,8 @@ var barChart = echarts.init(document.querySelector('.barChart'));
             const timestampBox = document.querySelector('.timestamp');
             timestampBox.innerHTML = ` 回溯时间：${formattedEarliest}<br> 当前时间：${formattedLatest}`;
     
+           
+     
             const content = submissions.map(submission => {
                 // 转换提交时间为可读格式
                 const  readTime = new  Date(submission.submitTime);
@@ -352,7 +356,11 @@ var barChart = echarts.init(document.querySelector('.barChart'));
                 });
             }
     
-            fillContent();
+           
+            fillContent(); // 在 DOM 加载完成后调用
+            
+            
+            
     
             // 生成词云图数据
             const wordCloudData = Object.keys(titleCounts).map(title => ({

@@ -25,12 +25,25 @@ $('.flip-modal').addEventListener('click', function(e){
     $('.flip-modal').style.display = 'none'
   }
 })
+
+
 document.addEventListener('click', function(){
   $('.flip-modal').style.display = 'none'
 })
 
+
+let isSubmitted = false; // 用于跟踪提交状态
+console.log(isSubmitted);
 $('.modal-login form').addEventListener('submit', async function(e) {
   e.preventDefault();
+  console.log(isSubmitted);
+    // 如果已经提交成功，判断用户点击的是什么按钮
+    if (isSubmitted) {
+      console.log(isSubmitted);
+      // 直接跳转到 graph.html
+      window.location.href = 'graph.html'; 
+      return;
+    }
   
   const username = $('.modal-login input[name=username]').value;
   const password = $('.modal-login input[name=password]').value;
@@ -58,11 +71,21 @@ $('.modal-login form').addEventListener('submit', async function(e) {
     if (response.ok) {
       const data = await response.json();
       localStorage.setItem('username', data.username); // 存储用户名
-      console.log(username);
-
       alert(data.message);
-        // 在这里可以处理登录成功后的逻辑，比如跳转到首页
-        window.location.href = 'graph.html'; // 替换为你的首页地址
+      
+      // 显示新的按钮
+      const redirectButton = document.getElementById('redirectButton');
+      redirectButton.style.display = 'block'; // 显示按钮
+
+      // 处理 redirectButton 的点击事件
+      redirectButton.addEventListener('click',  function() {
+        
+            window.location.href = 'finaldataa.html';
+      });
+
+      isSubmitted = true; // 标记为已提交
+      console.log(isSubmitted);
+          
     } else {
         const errorMessage = await response.text();
         document.querySelector('.modal-login .errormsg').innerText = errorMessage; // 显示错误信息
@@ -72,6 +95,7 @@ $('.modal-login form').addEventListener('submit', async function(e) {
 }
 
 });
+
 
 
 $('.modal-register form').addEventListener('submit', async function(e) {

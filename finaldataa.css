@@ -1,3 +1,6 @@
+/* styles.css */
+@import url('node_modules/typeface-dancing-script/index.css'); /* 引入字体定义文件 */
+
 body {
     height: 100%;
     margin: 0;
@@ -121,7 +124,7 @@ body {
     position: absolute;
     bottom: 0; /* 从底部开始 */
     width: 100%;
-    animation: scroll 30s linear infinite; /* 添加滚动动画 */
+    animation: scroll 300s linear infinite; /* 添加滚动动画 */
 }
 
 .content-box {

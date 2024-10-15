@@ -1,3 +1,4 @@
+
 // 切换视图的功能
 const toggleButton = document.getElementById('toggle-button');
 const graphContainer = document.getElementById('graph-container');
@@ -88,6 +89,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 });
 
+/*
     // 定义一个异步函数用于发送数据
     async function sendDataToServer() {
         // 准备发送到后端的数据
@@ -106,6 +108,60 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error('错误:', error);  // 输出错误信息
         }
     }
+    */
+
+    // 定义一个异步函数用于发送数据
+async function sendDataToServer() {
+    // 准备发送到后端的数据
+    const postData = {
+        knowledge: Object.keys(titleCounts),  // 知识点列表
+        titleCounts: titleCounts,  // 各知识点的尝试次数
+        correctCounts: correctCounts  // 各知识点的正确次数
+    };
+    console.log(postData);
+    
+    // 使用 fetch 发送 POST 请求到后端以训练模型
+    try {
+        const response = await fetch('http://127.0.0.1:5001/train', {
+            method: 'POST',  // 请求方法
+            headers: {
+                'Content-Type': 'application/json'  // 设置请求头
+            },
+            body: JSON.stringify(postData)  // 将数据转换为 JSON 字符串
+        });
+
+        // 检查响应是否成功
+        if (!response.ok) {
+            throw new Error(`网络响应不正常: ${response.status}`); // 抛出错误
+        }
+
+        const data = await response.json();  // 解析 JSON 数据
+        console.log('成功:', data);  // 输出成功响应
+    } catch (error) {
+        console.error('错误:', error);  // 输出错误信息
+    }
+}
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const url = './graph.json'; // 远程或本地文件的 URL
+
+    fetch(url)
+        .then(response => response.blob())  // 将文件内容作为 Blob 获取
+        .then(blob => {
+            const file = new File([blob], "graph.json", { type: 'application/json' });
+            
+            // 将 file 对象传递给 loaddata 函数
+            loaddata(file);
+            loadGraphData(file);
+        })
+        .catch(error => console.error('Error fetching file:', error));
+});
+
+
+
+
 document.getElementById('import-json-button').addEventListener('click', function() {
     // 创建一个文件输入元素
     const fileInput = document.createElement('input');
@@ -125,6 +181,10 @@ document.getElementById('import-json-button').addEventListener('click', function
     // 触发文件选择对话框
     fileInput.click();
 });
+
+
+
+
 
 
 function loaddata(file) {
@@ -148,6 +208,7 @@ function loaddata(file) {
     reader.readAsText(file);
 }
 
+/*
 function sendDataToFlask(data) {
     // 使用 Axios 发送 POST 请求
     axios.post('http://127.0.0.1:5001/gatdata', data)
@@ -159,6 +220,35 @@ function sendDataToFlask(data) {
             console.error('错误:', error);
         });
 }
+*/
+
+function sendDataToFlask(data) {
+    // 使用 fetch 发送 POST 请求
+    fetch('http://127.0.0.1:5001/gatdata', {
+        method: 'POST',  // 请求方法
+        headers: {
+            'Content-Type': 'application/json'  // 设置请求头为 JSON
+        },
+        body: JSON.stringify(data)  // 将数据转换为 JSON 字符串
+    })
+    .then(response => {
+        // 检查响应是否成功
+        if (!response.ok) {
+            throw new Error(`网络响应不正常: ${response.status}`); // 抛出错误
+        }
+        return response.json();  // 解析 JSON 数据
+    })
+    .then(data => {
+        console.log('成功:', data);  // 输出成功响应
+        // 在这里处理返回的数据
+    })
+    .catch(error => {
+        console.error('错误:', error);  // 输出错误信息
+    });
+}
+
+
+
 
 
 
@@ -200,6 +290,7 @@ console.log(width);
 
 
 const svg = d3.select("#graph-svg")
+    .html('') 
     .attr("viewBox", `0 0 ${width} ${height}`)
     .call(d3.zoom().on("zoom", (event) => {
         svg.attr("transform", event.transform);
@@ -439,14 +530,14 @@ searchButton.addEventListener("click", () => {
     document.getElementById('toggle-button').addEventListener('click', function() {
         if (currentnode) {
             sendCoreKnowledgePoint(currentnode);
-            fetchRecommendedPaths(); // 调用获取推荐路径的函数
+            //fetchRecommendedPaths(); // 调用获取推荐路径的函数
         } else {
             console.error("currentnode is not defined."); // 如果没有定义，输出错误
         }
     });
 
 
-
+/*
 // 定义发送核心知识点的函数
 function sendCoreKnowledgePoint(currentnode) {
     console.log(currentnode);
@@ -466,6 +557,38 @@ function sendCoreKnowledgePoint(currentnode) {
             console.error('请求失败:', error);
         });
 }
+*/
+
+// 定义发送核心知识点的函数
+function sendCoreKnowledgePoint(currentnode) {
+    console.log(currentnode);
+    const formData = new FormData();  // 创建一个 FormData 对象
+    formData.append('core_knowledge_point', currentnode);  // 将核心知识点加入表单数据
+
+    // 使用 fetch 发送 POST 请求到后端
+    fetch('http://127.0.0.1:5001/gatcenter', {
+        method: 'POST',  // 请求方法
+        body: formData  // 将 FormData 对象作为请求体
+    })
+    .then(response => {
+        // 检查响应状态
+        if (!response.ok) {
+            throw new Error(`网络响应不正常: ${response.status}`); // 抛出错误
+        }
+        return response.json();  // 解析 JSON 数据
+    })
+    .then(data => {
+        // 处理后端返回的推荐学习路径数据
+        const recommendedPaths = data.recommended_learning_paths;
+        console.log('推荐路径:', recommendedPaths);
+        processPaths(recommendedPaths);
+        // 在这里可以进一步处理推荐路径，比如更新前端界面展示推荐的内容
+    })
+    .catch(error => {
+        console.error('请求失败:', error);  // 输出错误信息
+    });
+}
+
 
 /*
 

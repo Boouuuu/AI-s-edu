@@ -636,7 +636,7 @@ def generate_gat_data():
 
 @app.route('/train', methods=['POST'])
 def train_model():
-    global num_points,knowledge_points, embeddings, recommended_learning_paths,edge_index  # 使用全局变量存储数据
+    global knowledge,num_points,knowledge_points, embeddings, recommended_learning_paths,edge_index  # 使用全局变量存储数据
     # 从前端获取知识点、正确率和边关系数据
 
     content=request.get_json()
@@ -679,7 +679,7 @@ def train_model():
             edge_penalty += F.mse_loss(out[u], out[v])  # 计算连接的节点之间的嵌入损失
 
         #将边惩罚添加到总损失中
-        total_loss = loss + 0.8 * edge_penalty  # 0.01 是惩罚项的权重
+        total_loss = loss + 0.9 * edge_penalty  # 0.01 是惩罚项的权重
 
         total_loss.backward()
     
@@ -693,22 +693,34 @@ def train_model():
     with torch.no_grad():
         embeddings = model(graph_data)
 
-    return 'Training started!', 200
+   # 确保返回的内容是一个有效的 JSON 对象
+    response = {'message': 'Training started!', 'status': 'success'}  # 示例响应
+    return jsonify(response)
 
 
 
 
 @app.route('/gatcenter', methods=['POST'])
 def generate_recommendations():
-    global knowledge_points, embeddings, recommended_learning_paths,edge_index  # 使用全局变量存储数据
+    global knowledge, knowledge_points, embeddings, recommended_learning_paths,edge_index  # 使用全局变量存储数据
     
     # 获取前端传入的核心知识点
     core_knowledge_point = request.form.get('core_knowledge_point')
     if not core_knowledge_point:
         return jsonify({'error': '未提供核心知识点'}), 400
 
-    if core_knowledge_point not in knowledge_points:
-        return jsonify({'error': f'核心知识点 {core_knowledge_point} 不在知识点列表中'}), 400
+    #if core_knowledge_point not in knowledge_points:
+    #   return jsonify({'error': f'核心知识点 {core_knowledge_point} 不在知识点列表中'}), 400
+
+
+    learned_knowledge_points=[]
+    unlearned_knowledge_points=[]
+
+    for kp in knowledge_points:
+        if kp in knowledge:
+            learned_knowledge_points.append(kp)
+        else:
+            unlearned_knowledge_points.append(kp)
 
     core_index = knowledge_points.index(core_knowledge_point)
     core_embedding = embeddings[core_index]
@@ -721,7 +733,7 @@ def generate_recommendations():
     # 推荐学习路径信息
     recommended_learning_paths = []
     for idx in recommendations:
-        if idx != core_index:  # 排除核心知识点本身
+        if idx != core_index :  # 排除核心知识点本身
             knowledge_point = knowledge_points[idx]
             similarity_value = similarity[idx].item()
             embedding_value = embeddings[idx].numpy().tolist()  # 转换为列表
@@ -730,7 +742,9 @@ def generate_recommendations():
                 'similarity': similarity_value,
                 'embedding': embedding_value
             })
-
+        if len(recommended_learning_paths) >= 10:  # 只保留前十个相似度最高的知识点
+            break
+      
     return jsonify({
         'core_knowledge_point': core_knowledge_point,
         'recommended_learning_paths': recommended_learning_paths

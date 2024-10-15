@@ -4436,5 +4436,1701 @@
       }
     ],
     "__v": 0
+  },
+  {
+    "_id": "670e197bacb74e1bb2c79eb9",
+    "username": "Booo",
+    "submitTime": "2024-10-15T07:27:55.748Z",
+    "ttime": "0:39",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 476,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> example = 'helle'\n>>> example.find('e')",
+        "options": [
+          "错误",
+          "-1",
+          "1",
+          "0"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "C",
+        "_id": "670e197bacb74e1bb2c79eba"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 475,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "给定一个字符串 example='hello'，example.count('l') 的输出是什么？",
+        "options": [
+          "2",
+          "1",
+          "None",
+          "0"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "A",
+        "_id": "670e197bacb74e1bb2c79ebb"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 474,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> max('你是什么')",
+        "options": [
+          "错误",
+          "u",
+          "t",
+          "y"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "670e197bacb74e1bb2c79ebc"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 306,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "标识符的最大可能长度是多少？",
+        "options": [
+          "31 个字符",
+          "63 个字符",
+          "79 个字符",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "670e197bacb74e1bb2c79ebd"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 305,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "Python 在处理标识符时区分大小写吗？",
+        "options": [
+          "是",
+          "否",
+          "取决于机器",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "A",
+        "_id": "670e197bacb74e1bb2c79ebe"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 432,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x, y in d.items():\n    print(x, y)",
+        "options": [
+          "0 1 2",
+          "abc",
+          "0 a 1 b 2 c",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "C",
+        "_id": "670e197bacb74e1bb2c79ebf"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 347,
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "round(0.5) – round(-0.5) 的结果是什么？",
+        "options": [
+          "1.0",
+          "2.0",
+          "0.0",
+          "值取决于 Python 版本"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "670e197bacb74e1bb2c79ec0"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 70,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果是\r\nl = [“F”,“f”]\r\ndef fun(a):\r\n    l.append(a)\r\nreturn\r\nfun(“C”)\r\nprint(l)",
+        "options": [
+          "[‘F’, ‘f’]",
+          "[‘C’]",
+          "出错",
+          "[‘F’, ‘f’, ‘C’]"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "D",
+        "_id": "670e197bacb74e1bb2c79ec1"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 56,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": [
+          "返回一个列表类型，包括字典d中所有键",
+          "返回一个集合类型，包括字典d中所有键",
+          "返回一种dict_keys类型，包括字典d中所有键",
+          "返回一个元组类型，包括字典d中所有键"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "670e197bacb74e1bb2c79ec2"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 15,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下会出现错误的是",
+        "options": [
+          "‘北京’.encode()",
+          "‘北京’.decode()",
+          "‘北京’.encode().decode()",
+          "以上都不会错误"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "B",
+        "_id": "670e197bacb74e1bb2c79ec3"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "670e30d9acb74e1bb2c7a192",
+    "username": "Booo",
+    "submitTime": "2024-10-15T09:07:37.046Z",
+    "ttime": "0:01",
+    "doneCount": 0,
+    "notDoneCount": 10,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 476,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> example = 'helle'\n>>> example.find('e')",
+        "options": [
+          "错误",
+          "-1",
+          "1",
+          "0"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e30d9acb74e1bb2c7a193"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 475,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "给定一个字符串 example='hello'，example.count('l') 的输出是什么？",
+        "options": [
+          "2",
+          "1",
+          "None",
+          "0"
+        ],
+        "userSelection": [],
+        "correctAnswer": "A",
+        "_id": "670e30d9acb74e1bb2c7a194"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 474,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> max('你是什么')",
+        "options": [
+          "错误",
+          "u",
+          "t",
+          "y"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e30d9acb74e1bb2c7a195"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 306,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "标识符的最大可能长度是多少？",
+        "options": [
+          "31 个字符",
+          "63 个字符",
+          "79 个字符",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e30d9acb74e1bb2c7a196"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 305,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "Python 在处理标识符时区分大小写吗？",
+        "options": [
+          "是",
+          "否",
+          "取决于机器",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "A",
+        "_id": "670e30d9acb74e1bb2c7a197"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 432,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x, y in d.items():\n    print(x, y)",
+        "options": [
+          "0 1 2",
+          "abc",
+          "0 a 1 b 2 c",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e30d9acb74e1bb2c7a198"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 347,
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "round(0.5) – round(-0.5) 的结果是什么？",
+        "options": [
+          "1.0",
+          "2.0",
+          "0.0",
+          "值取决于 Python 版本"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e30d9acb74e1bb2c7a199"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 70,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果是\r\nl = [“F”,“f”]\r\ndef fun(a):\r\n    l.append(a)\r\nreturn\r\nfun(“C”)\r\nprint(l)",
+        "options": [
+          "[‘F’, ‘f’]",
+          "[‘C’]",
+          "出错",
+          "[‘F’, ‘f’, ‘C’]"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e30d9acb74e1bb2c7a19a"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 56,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": [
+          "返回一个列表类型，包括字典d中所有键",
+          "返回一个集合类型，包括字典d中所有键",
+          "返回一种dict_keys类型，包括字典d中所有键",
+          "返回一个元组类型，包括字典d中所有键"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e30d9acb74e1bb2c7a19b"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 15,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下会出现错误的是",
+        "options": [
+          "‘北京’.encode()",
+          "‘北京’.decode()",
+          "‘北京’.encode().decode()",
+          "以上都不会错误"
+        ],
+        "userSelection": [],
+        "correctAnswer": "B",
+        "_id": "670e30d9acb74e1bb2c7a19c"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "670e63ce787c66e1336c41f4",
+    "username": "Booo",
+    "submitTime": "2024-10-15T12:45:02.227Z",
+    "ttime": "2:11",
+    "doneCount": 0,
+    "notDoneCount": 10,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 476,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> example = 'helle'\n>>> example.find('e')",
+        "options": [
+          "错误",
+          "-1",
+          "1",
+          "0"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e63ce787c66e1336c41f5"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 475,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "给定一个字符串 example='hello'，example.count('l') 的输出是什么？",
+        "options": [
+          "2",
+          "1",
+          "None",
+          "0"
+        ],
+        "userSelection": [],
+        "correctAnswer": "A",
+        "_id": "670e63ce787c66e1336c41f6"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 474,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> max('你是什么')",
+        "options": [
+          "错误",
+          "u",
+          "t",
+          "y"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e63ce787c66e1336c41f7"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 306,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "标识符的最大可能长度是多少？",
+        "options": [
+          "31 个字符",
+          "63 个字符",
+          "79 个字符",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e63ce787c66e1336c41f8"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 305,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "Python 在处理标识符时区分大小写吗？",
+        "options": [
+          "是",
+          "否",
+          "取决于机器",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "A",
+        "_id": "670e63ce787c66e1336c41f9"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 432,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x, y in d.items():\n    print(x, y)",
+        "options": [
+          "0 1 2",
+          "abc",
+          "0 a 1 b 2 c",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e63ce787c66e1336c41fa"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 347,
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "round(0.5) – round(-0.5) 的结果是什么？",
+        "options": [
+          "1.0",
+          "2.0",
+          "0.0",
+          "值取决于 Python 版本"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e63ce787c66e1336c41fb"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 70,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果是\r\nl = [“F”,“f”]\r\ndef fun(a):\r\n    l.append(a)\r\nreturn\r\nfun(“C”)\r\nprint(l)",
+        "options": [
+          "[‘F’, ‘f’]",
+          "[‘C’]",
+          "出错",
+          "[‘F’, ‘f’, ‘C’]"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e63ce787c66e1336c41fc"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 56,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": [
+          "返回一个列表类型，包括字典d中所有键",
+          "返回一个集合类型，包括字典d中所有键",
+          "返回一种dict_keys类型，包括字典d中所有键",
+          "返回一个元组类型，包括字典d中所有键"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e63ce787c66e1336c41fd"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 15,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下会出现错误的是",
+        "options": [
+          "‘北京’.encode()",
+          "‘北京’.decode()",
+          "‘北京’.encode().decode()",
+          "以上都不会错误"
+        ],
+        "userSelection": [],
+        "correctAnswer": "B",
+        "_id": "670e63ce787c66e1336c41fe"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "670e77c3787c66e1336c4415",
+    "username": "Booo",
+    "submitTime": "2024-10-15T14:10:11.727Z",
+    "ttime": "0:08",
+    "doneCount": 0,
+    "notDoneCount": 10,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 476,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> example = 'helle'\n>>> example.find('e')",
+        "options": [
+          "错误",
+          "-1",
+          "1",
+          "0"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e77c3787c66e1336c4416"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 475,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "给定一个字符串 example='hello'，example.count('l') 的输出是什么？",
+        "options": [
+          "2",
+          "1",
+          "None",
+          "0"
+        ],
+        "userSelection": [],
+        "correctAnswer": "A",
+        "_id": "670e77c3787c66e1336c4417"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 474,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> max('你是什么')",
+        "options": [
+          "错误",
+          "u",
+          "t",
+          "y"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e77c3787c66e1336c4418"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 306,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "标识符的最大可能长度是多少？",
+        "options": [
+          "31 个字符",
+          "63 个字符",
+          "79 个字符",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e77c3787c66e1336c4419"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 305,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "Python 在处理标识符时区分大小写吗？",
+        "options": [
+          "是",
+          "否",
+          "取决于机器",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "A",
+        "_id": "670e77c3787c66e1336c441a"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 432,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x, y in d.items():\n    print(x, y)",
+        "options": [
+          "0 1 2",
+          "abc",
+          "0 a 1 b 2 c",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e77c3787c66e1336c441b"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 347,
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "round(0.5) – round(-0.5) 的结果是什么？",
+        "options": [
+          "1.0",
+          "2.0",
+          "0.0",
+          "值取决于 Python 版本"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e77c3787c66e1336c441c"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 70,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果是\r\nl = [“F”,“f”]\r\ndef fun(a):\r\n    l.append(a)\r\nreturn\r\nfun(“C”)\r\nprint(l)",
+        "options": [
+          "[‘F’, ‘f’]",
+          "[‘C’]",
+          "出错",
+          "[‘F’, ‘f’, ‘C’]"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e77c3787c66e1336c441d"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 56,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": [
+          "返回一个列表类型，包括字典d中所有键",
+          "返回一个集合类型，包括字典d中所有键",
+          "返回一种dict_keys类型，包括字典d中所有键",
+          "返回一个元组类型，包括字典d中所有键"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e77c3787c66e1336c441e"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 15,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下会出现错误的是",
+        "options": [
+          "‘北京’.encode()",
+          "‘北京’.decode()",
+          "‘北京’.encode().decode()",
+          "以上都不会错误"
+        ],
+        "userSelection": [],
+        "correctAnswer": "B",
+        "_id": "670e77c3787c66e1336c441f"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "670e84ea787c66e1336c463e",
+    "username": "Booo",
+    "submitTime": "2024-10-15T15:06:18.139Z",
+    "ttime": "0:20",
+    "doneCount": 10,
+    "notDoneCount": 0,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 476,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> example = 'helle'\n>>> example.find('e')",
+        "options": [
+          "错误",
+          "-1",
+          "1",
+          "0"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "670e84ea787c66e1336c463f"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 475,
+        "isCorrect": true,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "给定一个字符串 example='hello'，example.count('l') 的输出是什么？",
+        "options": [
+          "2",
+          "1",
+          "None",
+          "0"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "670e84ea787c66e1336c4640"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 474,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> max('你是什么')",
+        "options": [
+          "错误",
+          "u",
+          "t",
+          "y"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "D",
+        "_id": "670e84ea787c66e1336c4641"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 306,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "标识符的最大可能长度是多少？",
+        "options": [
+          "31 个字符",
+          "63 个字符",
+          "79 个字符",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "670e84ea787c66e1336c4642"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 305,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "Python 在处理标识符时区分大小写吗？",
+        "options": [
+          "是",
+          "否",
+          "取决于机器",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "A",
+        "_id": "670e84ea787c66e1336c4643"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 432,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x, y in d.items():\n    print(x, y)",
+        "options": [
+          "0 1 2",
+          "abc",
+          "0 a 1 b 2 c",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "C",
+        "_id": "670e84ea787c66e1336c4644"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 347,
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "round(0.5) – round(-0.5) 的结果是什么？",
+        "options": [
+          "1.0",
+          "2.0",
+          "0.0",
+          "值取决于 Python 版本"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "D",
+        "_id": "670e84ea787c66e1336c4645"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 70,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果是\r\nl = [“F”,“f”]\r\ndef fun(a):\r\n    l.append(a)\r\nreturn\r\nfun(“C”)\r\nprint(l)",
+        "options": [
+          "[‘F’, ‘f’]",
+          "[‘C’]",
+          "出错",
+          "[‘F’, ‘f’, ‘C’]"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "670e84ea787c66e1336c4646"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 56,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": [
+          "返回一个列表类型，包括字典d中所有键",
+          "返回一个集合类型，包括字典d中所有键",
+          "返回一种dict_keys类型，包括字典d中所有键",
+          "返回一个元组类型，包括字典d中所有键"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "670e84ea787c66e1336c4647"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 15,
+        "isCorrect": true,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下会出现错误的是",
+        "options": [
+          "‘北京’.encode()",
+          "‘北京’.decode()",
+          "‘北京’.encode().decode()",
+          "以上都不会错误"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "B",
+        "_id": "670e84ea787c66e1336c4648"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "670e853a787c66e1336c4873",
+    "username": "Booo",
+    "submitTime": "2024-10-15T15:07:38.541Z",
+    "ttime": "0:18",
+    "doneCount": 5,
+    "notDoneCount": 5,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 476,
+        "isCorrect": true,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> example = 'helle'\n>>> example.find('e')",
+        "options": [
+          "错误",
+          "-1",
+          "1",
+          "0"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "C",
+        "_id": "670e853a787c66e1336c4874"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 475,
+        "isCorrect": true,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "给定一个字符串 example='hello'，example.count('l') 的输出是什么？",
+        "options": [
+          "2",
+          "1",
+          "None",
+          "0"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "670e853a787c66e1336c4875"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 474,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> max('你是什么')",
+        "options": [
+          "错误",
+          "u",
+          "t",
+          "y"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "D",
+        "_id": "670e853a787c66e1336c4876"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 306,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "标识符的最大可能长度是多少？",
+        "options": [
+          "31 个字符",
+          "63 个字符",
+          "79 个字符",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "C"
+        ],
+        "correctAnswer": "D",
+        "_id": "670e853a787c66e1336c4877"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 305,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "Python 在处理标识符时区分大小写吗？",
+        "options": [
+          "是",
+          "否",
+          "取决于机器",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "A",
+        "_id": "670e853a787c66e1336c4878"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 432,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x, y in d.items():\n    print(x, y)",
+        "options": [
+          "0 1 2",
+          "abc",
+          "0 a 1 b 2 c",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e853a787c66e1336c4879"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 347,
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "round(0.5) – round(-0.5) 的结果是什么？",
+        "options": [
+          "1.0",
+          "2.0",
+          "0.0",
+          "值取决于 Python 版本"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e853a787c66e1336c487a"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 70,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果是\r\nl = [“F”,“f”]\r\ndef fun(a):\r\n    l.append(a)\r\nreturn\r\nfun(“C”)\r\nprint(l)",
+        "options": [
+          "[‘F’, ‘f’]",
+          "[‘C’]",
+          "出错",
+          "[‘F’, ‘f’, ‘C’]"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e853a787c66e1336c487b"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 56,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": [
+          "返回一个列表类型，包括字典d中所有键",
+          "返回一个集合类型，包括字典d中所有键",
+          "返回一种dict_keys类型，包括字典d中所有键",
+          "返回一个元组类型，包括字典d中所有键"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "C",
+        "_id": "670e853a787c66e1336c487c"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 15,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下会出现错误的是",
+        "options": [
+          "‘北京’.encode()",
+          "‘北京’.decode()",
+          "‘北京’.encode().decode()",
+          "以上都不会错误"
+        ],
+        "userSelection": [],
+        "correctAnswer": "B",
+        "_id": "670e853a787c66e1336c487d"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "670e85fb787c66e1336c4abc",
+    "username": "Booo",
+    "submitTime": "2024-10-15T15:10:51.296Z",
+    "ttime": "0:01",
+    "doneCount": 0,
+    "notDoneCount": 10,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 476,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> example = 'helle'\n>>> example.find('e')",
+        "options": [
+          "错误",
+          "-1",
+          "1",
+          "0"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e85fb787c66e1336c4abd"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 475,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "给定一个字符串 example='hello'，example.count('l') 的输出是什么？",
+        "options": [
+          "2",
+          "1",
+          "None",
+          "0"
+        ],
+        "userSelection": [],
+        "correctAnswer": "A",
+        "_id": "670e85fb787c66e1336c4abe"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 474,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> max('你是什么')",
+        "options": [
+          "错误",
+          "u",
+          "t",
+          "y"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e85fb787c66e1336c4abf"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 306,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "标识符的最大可能长度是多少？",
+        "options": [
+          "31 个字符",
+          "63 个字符",
+          "79 个字符",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e85fb787c66e1336c4ac0"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 305,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "Python 在处理标识符时区分大小写吗？",
+        "options": [
+          "是",
+          "否",
+          "取决于机器",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "A",
+        "_id": "670e85fb787c66e1336c4ac1"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 432,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x, y in d.items():\n    print(x, y)",
+        "options": [
+          "0 1 2",
+          "abc",
+          "0 a 1 b 2 c",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e85fb787c66e1336c4ac2"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 347,
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "round(0.5) – round(-0.5) 的结果是什么？",
+        "options": [
+          "1.0",
+          "2.0",
+          "0.0",
+          "值取决于 Python 版本"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e85fb787c66e1336c4ac3"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 70,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果是\r\nl = [“F”,“f”]\r\ndef fun(a):\r\n    l.append(a)\r\nreturn\r\nfun(“C”)\r\nprint(l)",
+        "options": [
+          "[‘F’, ‘f’]",
+          "[‘C’]",
+          "出错",
+          "[‘F’, ‘f’, ‘C’]"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e85fb787c66e1336c4ac4"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 56,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": [
+          "返回一个列表类型，包括字典d中所有键",
+          "返回一个集合类型，包括字典d中所有键",
+          "返回一种dict_keys类型，包括字典d中所有键",
+          "返回一个元组类型，包括字典d中所有键"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e85fb787c66e1336c4ac5"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 15,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下会出现错误的是",
+        "options": [
+          "‘北京’.encode()",
+          "‘北京’.decode()",
+          "‘北京’.encode().decode()",
+          "以上都不会错误"
+        ],
+        "userSelection": [],
+        "correctAnswer": "B",
+        "_id": "670e85fb787c66e1336c4ac6"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "670e867c787c66e1336c4d19",
+    "username": "Booo",
+    "submitTime": "2024-10-15T15:13:00.560Z",
+    "ttime": "0:01",
+    "doneCount": 0,
+    "notDoneCount": 10,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 476,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> example = 'helle'\n>>> example.find('e')",
+        "options": [
+          "错误",
+          "-1",
+          "1",
+          "0"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e867c787c66e1336c4d1a"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 475,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "给定一个字符串 example='hello'，example.count('l') 的输出是什么？",
+        "options": [
+          "2",
+          "1",
+          "None",
+          "0"
+        ],
+        "userSelection": [],
+        "correctAnswer": "A",
+        "_id": "670e867c787c66e1336c4d1b"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 474,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> max('你是什么')",
+        "options": [
+          "错误",
+          "u",
+          "t",
+          "y"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e867c787c66e1336c4d1c"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 306,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "标识符的最大可能长度是多少？",
+        "options": [
+          "31 个字符",
+          "63 个字符",
+          "79 个字符",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e867c787c66e1336c4d1d"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 305,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "Python 在处理标识符时区分大小写吗？",
+        "options": [
+          "是",
+          "否",
+          "取决于机器",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "A",
+        "_id": "670e867c787c66e1336c4d1e"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 432,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x, y in d.items():\n    print(x, y)",
+        "options": [
+          "0 1 2",
+          "abc",
+          "0 a 1 b 2 c",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e867c787c66e1336c4d1f"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 347,
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "round(0.5) – round(-0.5) 的结果是什么？",
+        "options": [
+          "1.0",
+          "2.0",
+          "0.0",
+          "值取决于 Python 版本"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e867c787c66e1336c4d20"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 70,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果是\r\nl = [“F”,“f”]\r\ndef fun(a):\r\n    l.append(a)\r\nreturn\r\nfun(“C”)\r\nprint(l)",
+        "options": [
+          "[‘F’, ‘f’]",
+          "[‘C’]",
+          "出错",
+          "[‘F’, ‘f’, ‘C’]"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e867c787c66e1336c4d21"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 56,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": [
+          "返回一个列表类型，包括字典d中所有键",
+          "返回一个集合类型，包括字典d中所有键",
+          "返回一种dict_keys类型，包括字典d中所有键",
+          "返回一个元组类型，包括字典d中所有键"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e867c787c66e1336c4d22"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 15,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下会出现错误的是",
+        "options": [
+          "‘北京’.encode()",
+          "‘北京’.decode()",
+          "‘北京’.encode().decode()",
+          "以上都不会错误"
+        ],
+        "userSelection": [],
+        "correctAnswer": "B",
+        "_id": "670e867c787c66e1336c4d23"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "670e8765787c66e1336c50c2",
+    "username": "Booo",
+    "submitTime": "2024-10-15T15:16:53.835Z",
+    "ttime": "0:17",
+    "doneCount": 4,
+    "notDoneCount": 6,
+    "markedCount": 0,
+    "userAnswers": [
+      {
+        "questionNumber": 1,
+        "iid": 476,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> example = 'helle'\n>>> example.find('e')",
+        "options": [
+          "错误",
+          "-1",
+          "1",
+          "0"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "C",
+        "_id": "670e8765787c66e1336c50c3"
+      },
+      {
+        "questionNumber": 2,
+        "iid": 475,
+        "isCorrect": true,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "给定一个字符串 example='hello'，example.count('l') 的输出是什么？",
+        "options": [
+          "2",
+          "1",
+          "None",
+          "0"
+        ],
+        "userSelection": [
+          "A"
+        ],
+        "correctAnswer": "A",
+        "_id": "670e8765787c66e1336c50c4"
+      },
+      {
+        "questionNumber": 3,
+        "iid": 474,
+        "isCorrect": false,
+        "questionTitle": "字符串",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\n>>> max('你是什么')",
+        "options": [
+          "错误",
+          "u",
+          "t",
+          "y"
+        ],
+        "userSelection": [
+          "B"
+        ],
+        "correctAnswer": "D",
+        "_id": "670e8765787c66e1336c50c5"
+      },
+      {
+        "questionNumber": 4,
+        "iid": 306,
+        "isCorrect": true,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "标识符的最大可能长度是多少？",
+        "options": [
+          "31 个字符",
+          "63 个字符",
+          "79 个字符",
+          "以上都不是"
+        ],
+        "userSelection": [
+          "D"
+        ],
+        "correctAnswer": "D",
+        "_id": "670e8765787c66e1336c50c6"
+      },
+      {
+        "questionNumber": 5,
+        "iid": 305,
+        "isCorrect": false,
+        "questionTitle": "变量名",
+        "questionType": "单选题",
+        "questionText": "Python 在处理标识符时区分大小写吗？",
+        "options": [
+          "是",
+          "否",
+          "取决于机器",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "A",
+        "_id": "670e8765787c66e1336c50c7"
+      },
+      {
+        "questionNumber": 6,
+        "iid": 432,
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "questionType": "单选题",
+        "questionText": "以下 Python 代码的输出是什么？\n\nd = {0: 'a', 1: 'b', 2: 'c'}\nfor x, y in d.items():\n    print(x, y)",
+        "options": [
+          "0 1 2",
+          "abc",
+          "0 a 1 b 2 c",
+          "以上都不是"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e8765787c66e1336c50c8"
+      },
+      {
+        "questionNumber": 7,
+        "iid": 347,
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "questionType": "单选题",
+        "questionText": "round(0.5) – round(-0.5) 的结果是什么？",
+        "options": [
+          "1.0",
+          "2.0",
+          "0.0",
+          "值取决于 Python 版本"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e8765787c66e1336c50c9"
+      },
+      {
+        "questionNumber": 8,
+        "iid": 70,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "下面代码的输出结果是\r\nl = [“F”,“f”]\r\ndef fun(a):\r\n    l.append(a)\r\nreturn\r\nfun(“C”)\r\nprint(l)",
+        "options": [
+          "[‘F’, ‘f’]",
+          "[‘C’]",
+          "出错",
+          "[‘F’, ‘f’, ‘C’]"
+        ],
+        "userSelection": [],
+        "correctAnswer": "D",
+        "_id": "670e8765787c66e1336c50ca"
+      },
+      {
+        "questionNumber": 9,
+        "iid": 56,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "给定字典d，以下选项中对d.keys()的描述正确的是",
+        "options": [
+          "返回一个列表类型，包括字典d中所有键",
+          "返回一个集合类型，包括字典d中所有键",
+          "返回一种dict_keys类型，包括字典d中所有键",
+          "返回一个元组类型，包括字典d中所有键"
+        ],
+        "userSelection": [],
+        "correctAnswer": "C",
+        "_id": "670e8765787c66e1336c50cb"
+      },
+      {
+        "questionNumber": 10,
+        "iid": 15,
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "questionType": "单选题",
+        "questionText": "以下会出现错误的是",
+        "options": [
+          "‘北京’.encode()",
+          "‘北京’.decode()",
+          "‘北京’.encode().decode()",
+          "以上都不会错误"
+        ],
+        "userSelection": [],
+        "correctAnswer": "B",
+        "_id": "670e8765787c66e1336c50cc"
+      }
+    ],
+    "__v": 0
   }
 ]
