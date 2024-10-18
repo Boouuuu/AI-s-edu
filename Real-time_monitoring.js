@@ -21,16 +21,7 @@ function checkOutputsForErrors() {
         console.log(`Collected ${errors.length} errors.`);
         callLargeModelForHelp(errors)
     }
-    // console.log('222');
-    
-    // const selection = window.getSelection();
-    // const selectedOutputCells = Array.from(document.querySelectorAll('.cell .selected .output_area'))
-    //     .filter(cell => selection.rangeCount > 0 && selection.containsNode(cell, true));
 
-    // // 打印选中的输出块内容
-    // selectedOutputCells.forEach(cell => {
-    //     console.log(cell.innerText); // 或使用 cell.textContent
-    // });
 
 
 }
