@@ -57,7 +57,7 @@ body::before {
 #chatbox {
   width: 100%;
   /* top:20px; */
-  max-height: 435px; /* 设置最大高度 */
+  max-height: 70%; /* 设置最大高度 */
   opacity: 1;
   padding: 0px;
   display: flex;

@@ -48,7 +48,7 @@ header .login:hover {
  left: 50%;
  top: 50%;
  transform: translate(-50%,-50%);
- width: 400px;
+ width:80%;
  padding: 16px;
  background-color: rgba(115,145,145,0.05);
  box-shadow: 0 2px 2px 3px rgba(0,0,0,0.3)
@@ -96,6 +96,7 @@ header .login:hover {
 .modal .content .input-field {
  position: relative;
  margin-top: 10px;
+ width: 85%;
 }
 
 .modal .content .input-field .fa {
@@ -120,7 +121,7 @@ header .login:hover {
  outline: none;
  color: #fff;
  position: absolute;
- left: calc(50% - 32px);
+ left: 40%;
 }
 
 .modal .content input[type=submit]:hover {
@@ -140,4 +141,8 @@ header .login:hover {
  transform: translate(-50%,-50%) rotateY(180deg);
  backface-visibility: hidden;
  transition: all 1s;
+}
+
+::-webkit-scrollbar {
+display: hidden;
 }

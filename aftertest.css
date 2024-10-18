@@ -1,14 +1,29 @@
 
 @keyframes pageEnter {
-    from {
+    0% {
       opacity: 0;
       transform: scale(0.95);
     }
-    to {
+    40% {
+      opacity: 0; /* 保持较长时间的虚化状态 */
+      transform: scale(0.98); /* 逐渐缩放接近原始大小 */
+    }
+    100% {
       opacity: 1;
       transform: scale(1);
     }
   }
+#loader{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 2s linear infinite;
+    display: none; /* 默认不显示 */
+    left: 50%; /* 置于水平中间 */
+}
 body {
     animation: pageEnter 1.5s ease;
     font-family: Arial, sans-serif;
@@ -23,15 +38,7 @@ body {
 .fade-out {
     opacity: 0; /* 淡出效果 */
 }
-.loader {
-    width: 100px;
-    height: 100px;
-    animation: bounce 2s linear infinite;
-    display: none; /* 默认不显示 */
-    top: 55%; /* 置于垂直中间 */
-    left: 42%; /* 置于水平中间 */
-    position: absolute; /* 使用绝对定位 */
-}
+
 
 @keyframes bounce {
     0%, 100% {
@@ -101,4 +108,26 @@ h1 {
 
 .sword-icon {
     font-size: 25px; /* 图标大小 */
+}
+
+.ready{
+    font-size: 1.1em;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#div1{
+    position:absolute;
+    width:322px;
+    height:14px;
+    border:1px #707888 solid;
+    overflow:hidden
+}
+#div22{  
+    border: none;
+    margin-top: 40px;
+    font-size:1.5em;
+    color:#f4f4f4;
+    font-weight: bold;
 }

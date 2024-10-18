@@ -84,7 +84,7 @@ function main() {
       })
         .then((response) => response.json()).then((response)=>{console.log(response.data.content[0].data)
         const summary=document.createElement('div');
-        summary.innerHTML=response.data.content[0].data;
+        summary.innerHTML=marked(response.data.content[0].data);
         document.body.appendChild(summary);
         console.log('插入成功');
         })

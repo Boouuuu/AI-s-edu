@@ -1,7 +1,7 @@
 
 {
   "manifest_version": 3,
-  "name": "AI's edu",
+  "name": "慧码导师",
   "version": "1.0.0",
   "description": "Hope to help you learn python effectively!",
   "content_scripts": [
@@ -21,13 +21,8 @@
     "service_worker": "service-worker.js"
   },
   "action": {
-<<<<<<< Updated upstream
     "default_title": "慧码导师"
-
-=======
-    "default_title": "AI's edu",
-    "default_popup": "login.html"  
->>>>>>> Stashed changes
+    
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self';"

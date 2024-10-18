@@ -1,52 +1,52 @@
 [
     {
-        "isCorrect": true,
-        "questionTitle": "While 和 For 循环",
-        "serialNumber": 452
-    },
-    {
-        "isCorrect": true,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 148
-    },
-    {
         "isCorrect": false,
-        "questionTitle": "While 和 For 循环",
-        "serialNumber": 421
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 114
+        "questionTitle": "字符串",
+        "serialNumber": 476
     },
     {
         "isCorrect": true,
-        "questionTitle": "Python基础",
-        "serialNumber": 62
+        "questionTitle": "字符串",
+        "serialNumber": 475
     },
     {
         "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 247
-    },
-    {
-        "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 158
+        "questionTitle": "字符串",
+        "serialNumber": 474
     },
     {
         "isCorrect": true,
         "questionTitle": "变量名",
-        "serialNumber": 314
-    },
-    {
-        "isCorrect": true,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 267
+        "serialNumber": 306
     },
     {
         "isCorrect": false,
-        "questionTitle": "机器学习与深度学习",
-        "serialNumber": 235
+        "questionTitle": "变量名",
+        "serialNumber": 305
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "While 和 For 循环",
+        "serialNumber": 432
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "数字类型",
+        "serialNumber": 347
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "serialNumber": 70
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "serialNumber": 56
+    },
+    {
+        "isCorrect": false,
+        "questionTitle": "Python基础",
+        "serialNumber": 15
     }
 ]

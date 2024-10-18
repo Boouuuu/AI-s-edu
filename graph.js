@@ -106,6 +106,27 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error('错误:', error);  // 输出错误信息
         }
     }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const url = './graph.json'; // 远程或本地文件的 URL
+
+    fetch(url)
+        .then(response => response.blob())  // 将文件内容作为 Blob 获取
+        .then(blob => {
+            const file = new File([blob], "graph.json", { type: 'application/json' });
+            
+            // 将 file 对象传递给 loaddata 函数
+            loaddata(file);
+            loadGraphData(file);
+        })
+        .catch(error => console.error('Error fetching file:', error));
+});
+
+
+
+
+
 document.getElementById('import-json-button').addEventListener('click', function() {
     // 创建一个文件输入元素
     const fileInput = document.createElement('input');
@@ -200,6 +221,7 @@ console.log(width);
 
 
 const svg = d3.select("#graph-svg")
+    .html('') 
     .attr("viewBox", `0 0 ${width} ${height}`)
     .call(d3.zoom().on("zoom", (event) => {
         svg.attr("transform", event.transform);

@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', async () => {
     const container = document.getElementById('submission-time-container');
     
@@ -38,4 +40,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('获取提交时间时出错:', error);
         container.innerHTML = '<p>无法加载提交时间，请稍后再试。</p>';
     }
+});
+
+// 获取 returniuu 元素
+const returniuu = document.getElementById('returniu');
+// 添加点击事件监听器
+returniuu.addEventListener('click', function() {
+    // 跳转到 aftertest.html
+    window.location.href = 'aftertest.html';
 });

@@ -20,7 +20,6 @@ function sendUserInput() {
   // 此代码首先检查打印过程当前是否正在进行。如果是，则返回并且不允许用户发送另一条消息，直到当前消息完全打印为止。
 
   let userInput = document.getElementById('userInput').value;
-
   // 接下来，它从 ID 为“userInput”的 HTML 元素中检索用户输入的值。
 
   if (userInput.trim() === '') return; // Prevent sending empty messages
@@ -57,12 +56,13 @@ for (let i = 0; i < select.options.length; i++) {
   // 将新的p元素添加到messagesDiv中  
   messagesDiv.appendChild(newValueElement);  
   //}
-
+  newValueElement.scrollIntoView({ behavior: 'smooth' });
   // alert(`${value}`);
   messagesDiv.innerHTML += `<p class="message userMessage">${userInput}</p>`;
   // messagesDiv.innerHTML += `<p>${select}</p>`;
   // 这段代码首先获取了一个 ID 为 "messages" 的 HTML 元素，并将用户输入的消息作为一个带有 "message userMessage" 类的段落元素添加到该元素中。
-
+// 自动滚动到最新的用户消息块
+  
   // Hide the API key note
   document.getElementById('api-key-note').style.display = 'none';
   // 接下来，它隐藏了一个 ID 为 "api-key-note" 的 HTML 元素。
@@ -86,7 +86,8 @@ for (let i = 0; i < select.options.length; i++) {
       aiMessageElement.innerHTML = htmlContent; // 设置HTML内容
       messagesDiv.appendChild(aiMessageElement);
       // 当浏览器扩展返回响应时，代码将响应文本分割成单个单词，并创建一个包含 "message" 和 "aiMessage" 类的段落元素。接着将该段落元素添加到 ID 为 "messages" 的 HTML 元素中。
-
+      // 自动滚动到最新的 AI 回答块
+      aiMessageElement.scrollIntoView({ behavior: 'smooth' });
       isPrinting = true;
       // 最后，代码将布尔变量 `isPrinting` 设置为 `true`，表示当前正在打印 AI 的响应。
 
